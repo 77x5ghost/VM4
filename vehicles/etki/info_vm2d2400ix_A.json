@@ -1,0 +1,33 @@
+{
+"0-120 mph":73.2,
+"Performance Class":"4",
+"Drivetrain":"AWD",
+"100-200 km/h":84.1,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":10,
+"Years":{
+  "min":1987,
+  "max":1989
+},
+"Value":6650,
+"0-100 mph":32.4,
+"TorquePeakRPM":"2800 - 5100",
+"0-200 km/h":94.1,
+"Off-Road Score":34,
+"Configuration":"2400ix (A)",
+"default_color":"Pearl White",
+"Transmission":"Automatic",
+"60-100 mph":23.2,
+"0-60 mph":9.2,
+"Config Type":"Factory",
+"100-0 km/h":42.6,
+"Top Speed":57.2873,
+"Power":145.749,
+"Torque":211.607,
+"PowerPeakRPM":4700,
+"Description":"All-wheel drive 2-door model with anti-lock brakes, equipped with a 2.4 liter engine",
+"Weight/Power":9.93103,
+"60-0 mph":122.1,
+"60-120 mph":63.6,
+"Weight":1440
+}

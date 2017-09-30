@@ -1,0 +1,11 @@
+{
+"pickup_skin_vmtrex": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"T-REX",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmtrex",
+}
+}

@@ -1,0 +1,33 @@
+{
+"0-120 mph":13.6,
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"100-200 km/h":9.8,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.6,
+"Years":{
+  "min":1987,
+  "max":1989
+},
+"Value":24000,
+"0-100 mph":12.9,
+"TorquePeakRPM":"4000 - 5350",
+"0-200 km/h":14.6,
+"Off-Road Score":35,
+"Configuration":"Abuchi Drift (M)",
+"default_color":"Pearl White",
+"Transmission":"Manual",
+"60-100 mph":7.5,
+"0-60 mph":5.4,
+"Config Type":"Custom",
+"100-0 km/h":47.7,
+"Top Speed":48.3797,
+"Power":568.864,
+"Torque":802.006,
+"PowerPeakRPM":"4800 - 5950",
+"Description":"This Pro-Drift i-Series is equipped with a turbocharged 3.0L engine producing more torque than a T-REX Roamer and a fine-tuned suspension allow this car to drift-perfectly through every turn it has to go through.",
+"Weight/Power":2.43838,
+"60-0 mph":135.7,
+"60-120 mph":9,
+"Weight":1385
+}

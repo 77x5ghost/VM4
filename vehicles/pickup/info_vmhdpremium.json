@@ -1,0 +1,23 @@
+{
+"Performance Class":"3",
+"Drivetrain":"4WD",
+"Body Style":"Pickup",
+"Value":8500,
+"TorquePeakRPM":"2700 - 4650",
+"Off-Road Score":46,
+"Configuration":"D35 V8 4WD Premium (A)",
+"Description":"The flagship model of the D-series lineup, the Premium D35 had extra features the normal D35 didn't. A camper shell was added, along with a bumper lip, hood deflector, and an improved interior for comfort.",
+"Transmission":"Automatic",
+"0-60 mph":11.4,
+"Config Type":"Factory",
+"100-0 km/h":50.4,
+"Top Speed":43.5191,
+"default_color":"Bermuda Blue",
+"Torque":319.125,
+"Weight":2960,
+"Power":222.185,
+"Weight/Power":13.3333,
+"60-0 mph":144.6,
+"PowerPeakRPM":5250,
+"0-100 km/h":12.3
+}

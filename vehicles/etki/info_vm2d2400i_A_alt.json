@@ -1,0 +1,33 @@
+{
+"0-120 mph":69.9,
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"100-200 km/h":70.3,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":9.8,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":6350,
+"0-100 mph":31.2,
+"TorquePeakRPM":"2800 - 5100",
+"0-200 km/h":80.1,
+"Off-Road Score":34,
+"Configuration":"2400i (A)",
+"default_color":"Bermuda Blue",
+"Transmission":"Automatic",
+"60-100 mph":22.2,
+"0-60 mph":9,
+"Config Type":"Factory",
+"100-0 km/h":42.5,
+"Top Speed":58.1271,
+"Power":145.749,
+"Torque":211.607,
+"PowerPeakRPM":4700,
+"Description":"Mid-trim 2-door facelift model with anti-lock brakes, equipped with a 2.4 liter engine",
+"Weight/Power":9.55172,
+"60-0 mph":120.3,
+"60-120 mph":60.6,
+"Weight":1385
+}

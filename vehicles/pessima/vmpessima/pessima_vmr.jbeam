@@ -1,0 +1,11 @@
+{
+"pessima_skin_vmr": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"R-Paint Job",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmr",
+}
+}

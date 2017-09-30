@@ -1,0 +1,21 @@
+{
+
+"vmrally": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Rally Team #75",
+        "value":500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrally",
+}
+"vmhc": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI Hillclimb",
+        "value":560,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmhc",
+}
+}

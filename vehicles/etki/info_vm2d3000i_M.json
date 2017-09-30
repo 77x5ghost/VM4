@@ -1,0 +1,33 @@
+{
+"0-120 mph":22.4,
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"100-200 km/h":18,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":6.3,
+"Years":{
+  "min":1985,
+  "max":1989
+},
+"Value":7090,
+"0-100 mph":14.7,
+"TorquePeakRPM":"3100 - 5000",
+"0-200 km/h":24.3,
+"Off-Road Score":34,
+"Configuration":"3000i (M)",
+"default_color":"Shale Green",
+"Transmission":"Manual",
+"60-100 mph":8.8,
+"0-60 mph":5.9,
+"Config Type":"Factory",
+"100-0 km/h":46.6,
+"Top Speed":72.7847,
+"Power":207.399,
+"Torque":311.795,
+"PowerPeakRPM":"4600 - 5800",
+"Description":"Mid-trim 2-door model, equipped with a 3.0 liter engine",
+"Weight/Power":6.81159,
+"60-0 mph":135.2,
+"60-120 mph":16.3,
+"Weight":1410
+}

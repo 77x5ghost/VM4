@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmpoliceuk": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) UK Police Car",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpoliceuk",
+}
+}

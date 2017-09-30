@@ -1,0 +1,63 @@
+{
+"etki_trim_td": {
+    "information":{
+        "authors":"BeamNG, edited by Bernd",
+        "name":"Trim",
+        "value":100,
+    }
+    "slotType" : "etki_trim_td",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etki_trim_body", ["etki_body"]],
+         ["etki_trim_fender_R", ["etki_fender_R"]],
+         ["etki_trim_fender_L", ["etki_fender_L"]],
+         ["etki_trim_door_FR_td", ["etki_door_FR"]],
+         ["etki_trim_door_FL_td", ["etki_door_FL"]],
+         ["etki_trim_door_RR_td", ["etki_body"]],
+         ["etki_trim_door_RL_td", ["etki_body"]],
+    ],
+}
+"etki_trim_alt_td": {
+    "information":{
+        "authors":"BeamNG, edited by Bernd",
+        "name":"Chrome Trim",
+        "value":200,
+    }
+    "slotType" : "etki_trim_td",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etki_trim_body", ["etki_body"]],
+         ["etki_trim_fender_R", ["etki_fender_R"]],
+         ["etki_trim_fender_L", ["etki_fender_L"]],
+         ["etki_trim_door_FR_td", ["etki_door_FR"]],
+         ["etki_trim_door_FL_td", ["etki_door_FL"]],
+         ["etki_trim_door_RR_td", ["etki_body"]],
+         ["etki_trim_door_RL_td", ["etki_body"]],
+
+         ["etki_trim_body_alt", ["etki_body"]],
+         ["etki_trim_fender_R_alt_td", ["etki_fender_R"]],
+         ["etki_trim_fender_L_alt_td", ["etki_fender_L"]],
+         ["etki_trim_door_FR_alt_td", ["etki_door_FR"]],
+         ["etki_trim_door_FL_alt_td", ["etki_door_FL"]],
+         ["etki_trim_door_RR_alt_td", ["etki_body"]],
+         ["etki_trim_door_RL_alt_td", ["etki_body"]],
+         ["etki_trim_bumper_F_alt_td", ["etki_bumper_F"]],
+         ["etki_trim_bumper_R_alt_td", ["etki_bumper_R"]],
+    ],
+}
+"etki_trim_kit_td": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Brigsby Body Kit",
+        "value":300,
+    }
+    "slotType" : "etki_trim_td",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etki_door_FR_kit_td", ["etki_door_FR"]],
+         ["etki_door_FL_kit_td", ["etki_door_FL"]],
+         ["etki_door_RR_kit_td", ["etki_body"]],
+         ["etki_door_RL_kit_td", ["etki_body"]],
+    ],
+}
+}

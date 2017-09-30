@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmtouring": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Covet Touring #18",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmtouring",
+}
+}

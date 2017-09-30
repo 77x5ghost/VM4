@@ -1,0 +1,33 @@
+{
+"0-120 mph":13.6,
+"Performance Class":"8",
+"Drivetrain":"AWD",
+"100-200 km/h":9.5,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":4.7,
+"Years":{
+  "min":1987,
+  "max":1989
+},
+"Value":50500,
+"0-100 mph":9.6,
+"TorquePeakRPM":"4150 - 5350",
+"0-200 km/h":14.2,
+"Off-Road Score":28,
+"Configuration":"2400tix TTSport Evolution (M)",
+"default_color":"Pearl White",
+"Transmission":"Manual",
+"60-100 mph":5.2,
+"0-60 mph":4.5,
+"Config Type":"Factory",
+"100-0 km/h":39.9,
+"Top Speed":76.4505,
+"Power":356.198,
+"Torque":499.431,
+"PowerPeakRPM":"4850 - 6250",
+"Description":"Factory 2-door homologation model, with all-wheel drive, a Brigsby body kit, and race suspension",
+"Weight/Power":4.14326,
+"60-0 mph":114.8,
+"60-120 mph":9,
+"Weight":1475
+}

@@ -1,0 +1,93 @@
+{
+"moonhawk_glassvmconvertible": {
+    "information":{
+        "authors":"BeamNG , Ninetynine",
+        "name":"Glass",
+        "value":1200,
+    }
+    "slotType" : "moonhawk_glassvmconv",
+    "selfCollisionThickness":0.02,
+    "remoteCollisionThickness":0.06,
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         {"deformGroup":"moonhawk_windshield_break", "deformMaterialBase":"moonhawk_glass", "deformMaterialDamaged":"moonhawk_windshield_dmg"},
+         ["moonhawk_windshield", ["moonhawk_windshield"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+
+         {"deformGroup":"moonhawk_windshield_break", "deformMaterialBase":"glass_invisible", "deformMaterialDamaged":"glass_mirror"}
+         ["moonhawk_windshield_dmg", ["moonhawk_windshield"]],
+
+         {"deformGroup":"moonhawk_windshield_break", "deformMaterialBase":"moonhawk_glass_int", "deformMaterialDamaged":"moonhawk_glass_int"},
+         ["moonhawk_windshield_int", ["moonhawk_windshield"]],
+         {"deformGroup":""}
+
+
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_GLASS"},
+         {"nodeWeight":2.14},
+         {"group":["moonhawk_windshield","gps"]},
+         //windshield node
+         ["wi1r", -0.32, -0.58, 1.17],
+         ["wi1l", 0.32, -0.58, 1.17],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamPrecompression":1, "beamLongBound":1.0, "beamShortBound":1.0},
+          //windshield
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"beamSpring":996830,"beamDamp":84},
+          {"beamDeform":3591,"beamStrength":"FLT_MAX"},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"deformGroup":"moonhawk_windshield_break","deformationTriggerRatio":0.03},
+          ["wi1r","wi1l"],
+
+          ["wi1r","r1"],
+          ["wi1l","r1"],
+          ["wi1r","r1rr"],
+          ["wi1l","r1ll"],
+
+          ["wi1r","p1r"],
+          ["wi1l","p1l"],
+          ["wi1r","p2r"],
+          ["wi1l","p2l"],
+
+          ["wi1r","b11r"],
+          ["wi1l","b11l"],
+          ["wi1r","b11rr"],
+          ["wi1l","b11ll"],
+
+          ["wi1r","b11l"],
+          ["wi1l","b11r"],
+
+          ["wi1r","p2rr"],
+          ["wi1l","p2ll"],
+
+          {"beamDeform":4011,"beamStrength":11450},
+          ["r1","b11r"],
+          ["r1","b11l"],
+
+          ["r1","b11rr"],
+          ["r1","b11ll"],
+
+          ["r1rr","b11rr"],
+          ["r1ll","b11ll"],
+
+          ["r1rr","b11r"],
+          ["r1ll","b11l"],
+
+
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"deformGroup":""},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+    ],
+}
+}

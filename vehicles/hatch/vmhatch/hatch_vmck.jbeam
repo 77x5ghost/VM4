@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmck": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"C/K Custom",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmck",
+}
+}

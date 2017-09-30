@@ -1,0 +1,20 @@
+{
+"van_skin_vmwcpd": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"WCPD S.R.T",
+        "value":300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmwcpd",
+    }
+    "van_skin_vmbaja": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Baja Van #50",
+            "value":500,
+        }
+        "slotType" : "paint_design",
+        "globalSkin" : "vmbaja",
+}
+}

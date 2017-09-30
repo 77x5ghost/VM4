@@ -1,0 +1,272 @@
+{
+"etkc_taillight_Rvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Right Tinted Taillight",
+        "value":190,
+    }
+    "slotType" : "etkc_taillight_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etkc_taillightframe_R", ["etkc_taillight_R"]],
+         {"deformGroup":"etkc_taillightglass_R_break", "deformMaterialBase":"etkc_glassvm", "deformMaterialDamaged":"etkc_glass_dmgvm"}
+         ["etkc_taillightglass_Rvm", ["etkc_taillight_R"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.3}],
+         {"deformGroup":""},
+         {"deformGroup":"etkc_taillightglass_R_break", "deformMaterialBase":"etkc_lights", "deformMaterialDamaged":"etkc_lights_dmg"}
+         ["etkc_taillight_R", ["etkc_taillight_R"]],
+         {"deformGroup":""},
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":110
+            "lightBrightness":0.1
+            "lightRange":15
+            "lightColor":{"r":255, "g":20, "b":0, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":false
+            "flareName":"vehicleBrakeLightFlare"
+            "flareScale":0.15
+        }
+        //taillights
+        ["brake" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":0, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":0.8, "z":-0.02},"deformGroup":"etkc_taillightglass_R_break"}],
+        ["lowhighbeam" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":0, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":0.8, "z":-0.02},"deformGroup":"etkc_taillightglass_R_break"}],
+        {"lightColor":{"r":255, "g":255, "b":0, "a":255},"flareScale":0.08}
+        ["signal_R" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":0, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.55, "z":-0.02},"deformGroup":"etkc_taillightglass_R_break"}],
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":80
+            "lightBrightness":0.1
+            "lightRange":30
+            "lightColor":{"r":255, "g":255, "b":255, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":false
+            "flareName":"vehicleReverseLightFlare"
+            "flareScale":0.1
+            "cookieName":"art/special/BNG_light_cookie_headlight.png"
+            "texSize":512
+            "shadowSoftness":0.5
+        },
+        ["reverse" ,         "SPOTLIGHT"        , "tl4r", "tl3r", "tl2r", {"x":0, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.65, "y":0.55, "z":-0.03},"deformGroup":"etkc_taillightglass_R_break"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--taillight--
+         //right
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"nodeWeight":0.95},
+         {"group":"etkc_taillight_R"},
+         ["tl1r",-0.52, 2.075, 0.91{"selfCollision":false}],
+         ["tl3r",-0.555, 2.10, 0.75],
+         ["tl2r",-0.715, 2.01, 0.91],
+         ["tl4r",-0.74, 2.03, 0.75],
+         {"selfCollision":false}
+         ["tl5r",-0.67, 1.97, 0.83],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--taillight--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":600600,"beamDamp":90},
+          {"beamDeform":13350,"beamStrength":62750},
+          {"deformGroup":"etkc_taillightglass_R_break", "deformationTriggerRatio":0.01}
+          //taillight main shape
+          //r
+          ["tl1r","tl2r"],
+          ["tl3r","tl4r"],
+          ["tl1r","tl3r"],
+          ["tl2r","tl4r"],
+
+          ["tl1r","tl4r"],
+          ["tl2r","tl3r"],
+
+          ["tl1r","tl5r"],
+          ["tl2r","tl5r"],
+          ["tl3r","tl5r"],
+          ["tl4r","tl5r"],
+
+          //attach
+          {"beamSpring":500600,"beamDamp":90},
+          {"beamDeform":9150,"beamStrength":18500},
+          //r
+          {"breakGroup":"etkc_taillight_a_R"},
+          ["tl2r","q5r"],
+          ["tl1r","q6r"],
+          //["tl2r","q11r"],
+          ["tl2r","q10r"],
+          ["tl1r","q5r"],
+          ["tl4r","q12r"],
+
+          {"breakGroup":"etkc_taillight_b_R"},
+          ["tl5r","q5r"],
+          ["tl5r","q12r"],
+          ["tl5r","q13r"],
+          //["tl4r","q11r"],
+          ["tl4r","q10r"],
+          ["tl4r","q5r"],
+          ["tl3r","q13r"],
+          ["tl2r","q6r"],
+          {"breakGroup":""},
+          {"deformGroup":""}
+
+          //taillight support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":600600,"beamDamp":90},
+          {"beamDeform":13200,"beamStrength":330000},
+          ["tl2r","q10r"],
+          ["tl4r","q10r"],
+          ["tl2r","q4r"],
+          ["tl1r","q5r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right taillight
+            {"group":"etkc_taillight_R"},
+            {"dragCoef":2.25},
+            ["tl1r","tl3r","tl4r"],
+            ["tl1r","tl4r","tl2r"],
+            {"group":""},
+    ],
+}
+"etkc_taillight_Lvm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Left Tinted Taillight",
+        "value":190,
+    }
+    "slotType" : "etkc_taillight_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etkc_taillightframe_L", ["etkc_taillight_L"]],
+         {"deformGroup":"etkc_taillightglass_L_break", "deformMaterialBase":"etkc_glassvm", "deformMaterialDamaged":"etkc_glass_dmgvm"}
+         ["etkc_taillightglass_Lvm", ["etkc_taillight_L"],[]{"deformSound":"GlassBreakSound2", "deformVolume":0.3}],
+         {"deformGroup":""},
+         {"deformGroup":"etkc_taillightglass_L_break", "deformMaterialBase":"etkc_lights", "deformMaterialDamaged":"etkc_lights_dmg"}
+         ["etkc_taillight_L", ["etkc_taillight_L"]],
+         {"deformGroup":""},
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":110
+            "lightBrightness":0.1
+            "lightRange":15
+            "lightColor":{"r":255, "g":20, "b":0, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":false
+            "flareName":"vehicleBrakeLightFlare"
+            "flareScale":0.15
+        }
+        //taillights
+        ["brake" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":180, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":0.8, "z":0.02},"deformGroup":"etkc_taillightglass_L_break"}],
+        ["lowhighbeam" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":180, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.3, "y":0.8, "z":0.02},"deformGroup":"etkc_taillightglass_L_break"}],
+        {"lightColor":{"r":255, "g":255, "b":0, "a":255},"flareScale":0.08}
+        ["signal_L" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":180, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.4, "y":0.55, "z":-0.02},"deformGroup":"etkc_taillightglass_L_break"}],
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":80
+            "lightBrightness":0.1
+            "lightRange":30
+            "lightColor":{"r":255, "g":255, "b":255, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":false
+            "flareName":"vehicleReverseLightFlare"
+            "flareScale":0.1
+            "cookieName":"art/special/BNG_light_cookie_headlight.png"
+            "texSize":512
+            "shadowSoftness":0.5
+        },
+        ["reverse" ,         "SPOTLIGHT"        , "tl4l", "tl3l", "tl2l", {"x":180, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.65, "y":0.55, "z":0.03},"deformGroup":"etkc_taillightglass_L_break"}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--taillight--
+         //left
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"nodeWeight":0.95},
+         {"group":"etkc_taillight_L"},
+         ["tl1l", 0.52, 2.075, 0.91{"selfCollision":false}],
+         ["tl3l", 0.555, 2.10, 0.75],
+         ["tl2l", 0.715, 2.01, 0.91],
+         ["tl4l", 0.74, 2.03, 0.75],
+         {"selfCollision":false}
+         ["tl5l", 0.67, 1.97, 0.83],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--taillight--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":600600,"beamDamp":90},
+          {"beamDeform":13350,"beamStrength":128000},
+          {"deformGroup":"etkc_taillightglass_L_break", "deformationTriggerRatio":0.01}
+          //taillight main shape
+          //l
+          ["tl1l","tl2l"],
+          ["tl3l","tl4l"],
+          ["tl1l","tl3l"],
+          ["tl2l","tl4l"],
+
+          ["tl1l","tl4l"],
+          ["tl2l","tl3l"],
+
+          ["tl1l","tl5l"],
+          ["tl2l","tl5l"],
+          ["tl3l","tl5l"],
+          ["tl4l","tl5l"],
+
+          //attach
+          {"beamSpring":500600,"beamDamp":90},
+          {"beamDeform":9150,"beamStrength":18500},
+          //l
+          {"breakGroup":"etkc_taillight_a_L"},
+          ["tl2l","q5l"],
+          ["tl1l","q6l"],
+          //["tl2l","q11l"],
+          ["tl2l","q10l"],
+          ["tl1l","q5l"],
+          ["tl4l","q12l"],
+
+          {"breakGroup":"etkc_taillight_b_L"},
+          ["tl5l","q5l"],
+          ["tl5l","q12l"],
+          ["tl5l","q13l"],
+          //["tl4l","q11l"],
+          ["tl4l","q10l"],
+          ["tl4l","q5l"],
+          ["tl3l","q13l"],
+          ["tl2l","q6l"],
+          {"breakGroup":""},
+          {"deformGroup":""}
+
+          //taillight support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":600600,"beamDamp":90},
+          {"beamDeform":13200,"beamStrength":330000},
+          ["tl2l","q10l"],
+          ["tl4l","q10l"],
+          ["tl2l","q4l"],
+          ["tl1l","q5l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //left taillight
+            {"group":"etkc_taillight_L"},
+            {"dragCoef":2.25},
+            ["tl3l","tl1l","tl4l"],
+            ["tl4l","tl1l","tl2l"],
+            {"group":""},
+    ],
+}
+}

@@ -1,0 +1,11 @@
+{
+"burnside_skin_vmpace": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Pace Car",
+        "value":250,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpace",
+}
+}

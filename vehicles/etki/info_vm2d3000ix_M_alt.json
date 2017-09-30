@@ -1,0 +1,33 @@
+{
+"0-120 mph":22.8,
+"Performance Class":"5",
+"Drivetrain":"AWD",
+"100-200 km/h":19.1,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.8,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":8700,
+"0-100 mph":14.5,
+"TorquePeakRPM":"3100 - 5000",
+"0-200 km/h":24.9,
+"Off-Road Score":34,
+"Configuration":"3000ix (M)",
+"default_color":"Opal Green",
+"Transmission":"Manual",
+"60-100 mph":9.1,
+"0-60 mph":5.4,
+"Config Type":"Factory",
+"100-0 km/h":43.4,
+"Top Speed":70.0471,
+"Power":207.399,
+"Torque":311.795,
+"PowerPeakRPM":"4600 - 5800",
+"Description":"All-wheel drive 2-door facelift model with anti-lock brakes and sport wheels, equipped with a 3.0 liter engine",
+"Weight/Power":7.05314,
+"60-0 mph":123.4,
+"60-120 mph":17.3,
+"Weight":1460
+}

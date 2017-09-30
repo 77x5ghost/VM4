@@ -1,0 +1,87 @@
+{
+"hatch_glassvmt": {
+    "information":{
+        "authors":"BeamNG , Ninetynine",
+        "name":"Yuso Panels",
+        "value":500,
+    },
+
+    "slotType" : "hatch_glass",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //glass
+        {"deformGroup":"hatch_windshield_break", "deformMaterialBase":"hatch_glass", "deformMaterialDamaged":"hatch_windshield_dmg"},
+        ["hatch_windshield", ["hatch_body","hatch_windshield"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+        {"deformGroup":"hatch_windshield_break", "deformMaterialBase":"hatch_glass_int", "deformMaterialDamaged":"hatch_glass_int"},
+        ["hatch_windshield_int", ["hatch_body","hatch_windshield"]],
+        {"deformGroup":"hatch_windshield_break", "deformMaterialBase":"glass_invisible", "deformMaterialDamaged":"glass_mirror"},
+        ["hatch_windshield_dmg", ["hatch_body","hatch_windshield"]],
+        {"deformGroup":""},
+        ["hatch_sideglass_Rvmt", ["hatch_body"]]
+        ["hatch_sideglass_R_intvmt", ["hatch_body"]],
+        ["hatch_sideglass_Lvmt", ["hatch_body"]],
+        ["hatch_sideglass_L_intvmt", ["hatch_body"]],
+
+        ["hatch_wipers", ["hatch_body"]],
+        ["hatch_intmirror", ["hatch_windshield"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true}
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_GLASS"},
+        {"nodeWeight":1.74},
+        {"group":["hatch_windshield","gps"]},
+        //windshield node
+        ["wi1", 0, -0.62, 1.1],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //windshield node
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"beamSpring":1104460,"beamDamp":116},
+          {"beamDeform":4875,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"hatch_windshield_break", "deformationTriggerRatio":0.005},
+          ["wi1","rf1r"],
+          ["wi1","rf1"],
+          ["wi1","rf1l"],
+          ["wi1","p1r"],
+          ["wi1","p1l"],
+          ["wi1","p2r"],
+          ["wi1","p2l"],
+          ["wi1","f6r"],
+          ["wi1","f6l"],
+          ["wi1","f6rr"],
+          ["wi1","f6ll"],
+
+          ["wi1","p2rr"],
+          ["wi1","p2ll"],
+          {"beamDeform":4485,"beamStrength":6885},
+          ["f6r","rf1"],
+          ["f6l","rf1"],
+          ["p1r","p1l"],
+          //side glass
+          {"beamDeform":5850,"beamStrength":5610},
+          ["q2r","rf3r"],
+          ["q2r","rf4r"],
+          ["q1r","p5r"],
+          ["p5r","rf2r"],
+          ["p4r","rf4r"],
+          ["p4r","q3r"],
+          ["q1r","rf3r"],
+          ["q2l","rf3l"],
+          ["q2l","rf4l"],
+          ["q1l","p5l"],
+          ["p5l","rf2l"],
+          ["p4l","rf4l"],
+          ["p4l","q3l"],
+          ["q1l","rf3l"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+    ],
+},
+}

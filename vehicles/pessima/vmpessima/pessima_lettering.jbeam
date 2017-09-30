@@ -1,0 +1,67 @@
+{
+"pessima_lettering_vmitr": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"i-TEC iT-R Trunk Lettering",
+        "value":20,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunkvmitrp", ["pessima_trunk"]],
+    ],
+}
+"pessima_logo_Fvmitr": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"iT-R Ibishu Logo",
+        "value":20,
+    }
+    "slotType" : "pessima_logo_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_logo_Fvmitrp", ["pessima_hood"]],
+    ],
+}
+"pessima_lettering_vmitr_grille": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"i-TR Lettering",
+        "value":5,
+    }
+    "slotType" : "pessima_logo_F_grille",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_vmitr_grillep", ["pessima_grille"]],
+    ],
+    }
+    "pessima_logo_Fvm85": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Ibishu Logo",
+            "value":10,
+        }
+        "slotType" : "pessima_logo_Fvm85",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             ["pessima_logo_F_grille_85vm", ["pessima_grille"]],
+        ],
+        }
+        "pessima_lettering_GTvm": {
+            "information":{
+                "authors":"BeamNG , Ninetynine",
+                "name":"GT Trunk Lettering",
+                "value":12,
+            }
+            "slotType" : "pessima_lettering_trunk",
+            "flexbodies": [
+                 ["mesh", "[group]:", "nonFlexMaterials"],
+                 ["pessima_lettering_trunk", ["pessima_trunk"]],
+                 ["pessima_lettering_2.0" ["pessima_trunk"]],
+                 ["pessima_lettering_turbo" ["pessima_trunk"]],
+                 ["pessima_lettering_GTvm", ["pessima_trunk"]],
+
+            ],
+
+}
+}

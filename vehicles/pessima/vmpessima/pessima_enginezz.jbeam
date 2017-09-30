@@ -1,0 +1,175 @@
+{
+"pessima_engine_18vmdohc": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"1.8L DOHC I4 Engine",
+        "value":700,
+    }
+    "slotType" : "pessima_engine",
+   "slots": [
+        ["type", "default", "description"]
+        ["pessima_exhaust","pessima_exhaust", "Exhaust"],
+        ["pessima_transmission","pessima_transmission_5M", "Transmission"],
+        ["pessima_intake_dohc","pessima_intake_dohc", "Intake & Exhaust",{"coreSlot":true}],
+        ["pessima_radiator","pessima_radiator", "Radiator"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine":{
+        "torque":[
+            ["rpm", "torque"]
+             [0, 0],
+        [500, 116],
+        [1000, 134],
+        [2000, 150],
+        [3000, 173],
+        [4000, 173],
+        [4500, 177],
+        [5000, 175],
+        [6000, 166],
+        [7000, 151],
+        [7500, 141],
+        [8000, 130],
+        [8500, 116],
+    ],
+
+        "idleRPM":850,
+        "maxRPM":8000,
+        "inertia":0.10,
+        "friction":13
+        "dynamicFriction":0.018
+        "burnEfficiency":0.35
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.022
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":4
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":120
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1900,
+        "clutchLaunchTargetRPM":2400,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2800,3300,3600,3800,3800]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6100
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_engine_sohc", ["pessima_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--1.8L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_engine"}
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":17},
+         ["e1r", 0.18, -1.62, 0.24,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e1l", 0.18, -1.38, 0.24],
+         ["e2r", -0.29, -1.62, 0.24,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e2l", -0.29, -1.38, 0.24],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", 0.18, -1.66, 0.75,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e3l", 0.18, -1.28, 0.75],
+         ["e4r", -0.29, -1.66, 0.75,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e4l", -0.29, -1.28, 0.75],
+         ["tc1", 0, -1.65, 0.42],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"{"isExhaust":true}],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          ["tc1","e2l"],
+          ["tc1","e2r"],
+          {"beamSpring":60600,"beamDamp":50},
+          {"beamDeform":1000,"beamStrength":2000},
+          //rad tube beams
+          {"breakGroup":"radtube"},
+          ["e3r","f15l"],
+          ["e3r","f15"],
+          ["e3r","f15l"],
+          ["e3r","f15"],
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

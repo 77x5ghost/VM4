@@ -1,0 +1,11 @@
+{
+"roamer_skin_trex": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"T-REX",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "trex",
+}
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmitasha": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Itasha Miku Livery",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmitasha",
+}
+}

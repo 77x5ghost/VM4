@@ -1,0 +1,11 @@
+{
+"sunburst_skin_rallyvmd": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Rally R4 Dirty",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rallyvmd",
+}
+}

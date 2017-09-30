@@ -1,0 +1,37 @@
+{
+"hatch_brake_Fvmrolly": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"'Rolly' Front Brakes",
+        "value":200,
+    },
+    "slotType" : "hatch_brake_F",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_F","brakepad_F", "Front Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //brake discs
+        ["hatch_brakedisc_FR", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], ["hatch"]],
+        ["hatch_brakedisc_FL", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], ["hatch"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"brakeTorque":5000},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":50},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.24},
+        {"brakeMass":4.0},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.0},
+    ],
+},
+}

@@ -1,0 +1,12 @@
+{
+
+"vmemoji": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Emoji Paint Job",
+        "value":2000,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmemoji",
+}
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_cup": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Sunburst Sport Cup",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "cup",
+}
+}

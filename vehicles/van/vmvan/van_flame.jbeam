@@ -1,0 +1,11 @@
+{
+"van_skin_flame": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Paintable Flame",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "flame",
+}
+}

@@ -1,0 +1,113 @@
+{
+"etki_glass_td": {
+    "information":{
+        "authors":"BeamNG, edited by Bernd and Ninetynine",
+        "name":"Glass",
+        "value":1100,
+    }
+    "slotType" : "etki_glass_td",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //glass
+         {"deformGroup":"etki_windshield_break", "deformMaterialBase":"etki_glass", "deformMaterialDamaged":"etki_windshield_dmg"}
+         ["etki_windshield", ["etki_windshield"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+
+         {"deformGroup":"etki_windshield_break", "deformMaterialBase":"etki_glass_int", "deformMaterialDamaged":"etki_glass_int"}
+         ["etki_windshield_int", ["etki_windshield"]],
+
+         {"deformGroup":"etki_windshield_break", "deformMaterialBase":"glass_invisible", "deformMaterialDamaged":"glass_mirror"}
+         ["etki_windshield_dmg", ["etki_windshield"]],
+
+         {"deformGroup":"etki_backlight_break", "deformMaterialBase":"etki_glass", "deformMaterialDamaged":"etki_glass_dmgvm2d"}
+         ["etki_backlight", ["etki_body"],[]{"deformSound":"GlassBreakSound9", "deformVolume":0.8}],
+         {"deformGroup":"etki_backlight_break", "deformMaterialBase":"etki_glass_int", "deformMaterialDamaged":"etki_glass_dmgvm2d"}
+         ["etki_backlight_int", ["etki_body"]],
+
+         {"deformGroup":"etki_sideglass_L_break", "deformMaterialBase":"etki_glass", "deformMaterialDamaged":"etki_glass_dmgvm2d"}
+         ["etki_doorglass_RL_td", ["etki_body"],[]{"deformSound":"GlassBreakSound5", "deformVolume":0.5}],
+         {"deformGroup":"etki_sideglass_L_break", "deformMaterialBase":"etki_glass_int", "deformMaterialDamaged":"etki_glass_dmgvm2d"}
+         {"deformGroup":"etki_sideglass_R_break", "deformMaterialBase":"etki_glass", "deformMaterialDamaged":"etki_glass_dmgvm2d"}
+         ["etki_doorglass_RR_td", ["etki_body"],[]{"deformSound":"GlassBreakSound6", "deformVolume":0.5}],
+         {"deformGroup":"etki_sideglass_R_break", "deformMaterialBase":"etki_glass_int", "deformMaterialDamaged":"etki_glass_dmgvm2d"}
+         ["etki_doorglass_RR_int_td", ["etki_body"]],
+         {"deformGroup":""}
+         ["etki_wipers", ["etki_body", "etki_engine_bay"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_GLASS"},
+         {"nodeWeight":3.5},
+         {"group":["gps","etki_windshield"]},
+         ["wi1", 0.00000, -0.55000, 1.11000],
+         {"group":""},
+
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamSpring":1470600,"beamDamp":120},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //weak windshield beams
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"beamDeform":6750,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"etki_windshield_break","deformationTriggerRatio":0.03},
+
+          ["rf1","wi1"],
+          ["rf1r","wi1"],
+          ["rf1l","wi1"],
+          ["wi1","f6r"],
+          ["wi1","f6l"],
+          ["wi1","p1r"],
+          ["wi1","p1l"],
+          ["wi1","f6rr"],
+          ["wi1","f6ll"],
+
+          ["wi1","p2rr"],
+          ["wi1","p2ll"],
+          {"beamDeform":7750,"beamStrength":12750},
+          ["rf1","f6r"],
+          ["rf1","f6l"],
+
+          ["p1r","p1l"],
+
+          ["rf1r","f6r"],
+          ["rf1l","f6l"],
+
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"beamSpring":1300600,"beamDamp":60},
+          {"deformGroup":"etki_backlight_break", "deformationTriggerRatio":0.03}
+          //brittle glass beams
+          {"beamDeform":8000,"beamStrength":8000},
+          {"breakGroup":"etki_backlight"},
+          ["rf4","tb1"],
+          ["rf4","tb1l"],
+          ["rf4","tb1r"],
+          ["rf4r","tb1"],
+          ["rf4l","tb1"],
+
+          ["tb1r","rf4l"],
+          ["tb1l","rf4r"],
+          ["p10r","p10l"],
+
+          ["p10r","rf4l"],
+          ["p10r","tb1l"],
+          ["p10l","rf4r"],
+          ["p10l","tb1r"],
+
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"deformGroup":""}
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":""},
+
+
+    ],
+}
+}

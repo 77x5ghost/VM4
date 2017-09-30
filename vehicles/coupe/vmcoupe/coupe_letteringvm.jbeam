@@ -1,0 +1,32 @@
+{
+"coupe_lettering_Zvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC Z Trunk Lettering",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_vmz", ["coupe_trunk"]],
+          ["coupe_lettering_vmitec", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_ZSvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC ZS Trunk Lettering",
+        "value":12,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_vmzs", ["coupe_trunk"]],
+          ["coupe_lettering_vmitec", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+}

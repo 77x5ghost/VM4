@@ -1,0 +1,256 @@
+{
+"sbr_rollcagevm1": {
+    "information":{
+        "authors":"BeamNG (edited by danielon398767)",
+        "name":"Black Roll Cage",
+        "value":1500,
+    },
+
+    "slotType" : "sbr_rollcage",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["sbr_rollcage_vm1", ["sbr_body"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //redefine nodes to make them heavier
+        {"frictionCoef":0.5},
+        {"collision":true}
+        {"selfCollision":false}
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"sbr_body"},
+        //roof
+        {"nodeWeight":3.7},
+         ["rf1r", -0.57, -0.16, 1.16,{"group":["sbr_roof","sbr_windshield"]}],
+         ["rf1", 0, -0.32, 1.18,{"nodeWeight":1.3,"group":["sbr_roof","sbr_windshield"]}],
+         ["rf1l", 0.57, -0.16, 1.16,{"group":["sbr_roof","sbr_windshield"]}],
+         ["rf2r", -0.57, 0.14, 1.17],
+         ["rf2", 0, 0.11, 1.21{"nodeWeight":1.3}],
+         ["rf2l", 0.57, 0.14, 1.17],
+         ["rf3r", -0.57, 0.44, 1.17],
+         ["rf3", 0, 0.44, 1.21{"nodeWeight":1.3}],
+         ["rf3l", 0.57, 0.44, 1.17],
+         ["rf4r", -0.57, 0.74, 1.17],
+         ["rf4", 0, 0.76, 1.20{"nodeWeight":1.3}],
+         ["rf4l", 0.57, 0.74, 1.17],
+         ["rf5r", -0.57, 1.07, 1.13,{"group":["sbr_roof"]}],
+         ["rf5", 0, 1.09, 1.15,{"nodeWeight":1.3,"group":["sbr_roof"]}],
+         ["rf5l", 0.57, 1.07, 1.13,{"group":["sbr_roof"]}],
+         //pillars
+         //a
+         ["p1r", -0.61, -0.40, 0.98,{"group":["sbr_roof","sbr_windshield"]}],
+         ["p1l", 0.61, -0.40, 0.98,{"group":["sbr_roof","sbr_windshield"]}],
+         ["p2r", -0.685, -0.30, 0.98,{"group":""}],
+         ["p2l", 0.685, -0.30, 0.98,{"group":""}],
+         ["p2rr", -0.58, -0.28, 0.94{"group":""}]
+         ["p2ll", 0.58, -0.28, 0.94{"group":""}]
+         //b
+         ["p3r", -0.68, 0.39, 0.99],
+         ["p3l", 0.68, 0.39, 0.99],
+         ["p4r", -0.68, 0.49, 0.99],
+         ["p4l", 0.68, 0.49, 0.99],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8500,"beamDamp":800},
+          {"beamDeform":70000,"beamStrength":"FLT_MAX"},
+          //door x
+          ["f5rr","f3rr"],
+          ["f5ll","f3ll"],
+          ["f5rr","f4rr"],
+          ["f5ll","f4ll"],
+
+          ["q4r","f1rr"],
+          ["q4l","f1ll"],
+
+          //roof to rear wheel well
+          ["rf2r","rs1r"],
+          ["rf2l","rs1l"],
+          ["rf2r","q5r"],
+          ["rf2l","q5l"],
+          ["rf2r","f9r"],
+          ["rf2l","f9l"],
+          //x
+          ["rf2l","rs1r"],
+          ["rf2r","rs1l"],
+          ["rf2l","q5r"],
+          ["rf2r","q5l"],
+
+          //x behind seats
+          ["q1r","f3ll"],
+          ["q1l","f3rr"],
+
+          //a pillar rigids
+          ["rf2r","p1r"],
+          ["rf2l","p1l"],
+          ["rf2r","p2rr"],
+          ["rf2l","p2ll"],
+
+          ["rf1r","d10r"]
+          ["rf1l","f6ll"],
+
+          ["f6rr","f1rr"],
+          ["f6ll","f1ll"]
+          ["p2rr","f5rr"],
+          ["p2ll","f5ll"],
+
+          ["rf1r","f5rr"]
+          ["rf1l","f5ll"],
+
+          ["rf1r","f1rr"]
+          ["rf1l","f1ll"],
+
+          ["rf2r","f6rr"],
+          ["rf2l","f6ll"],
+
+          //b pillar rigids
+          ["p3r","f8r"],
+          ["p3l","f8l"],
+          ["q1r","f8r"],
+          ["q1l","f8l"],
+          ["rf2r","f3rr"],
+          ["rf2l","f3ll"],
+
+          ["p3r","rf2"],
+          ["p3l","rf2"],
+          ["p4r","rf2"],
+          ["p4l","rf2"],
+
+          //horiz bar
+          ["rf2r","rf2l"],
+          ["rf1r","rf1l"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sbr_rollcagevm2": {
+    "information":{
+        "authors":"BeamNG (edited by danielon398767)",
+        "name":"Bodycolored Roll Cage",
+        "value":1700,
+    },
+
+    "slotType" : "sbr_rollcage",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["sbr_rollcage_vm2", ["sbr_body"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //redefine nodes to make them heavier
+        {"frictionCoef":0.5},
+        {"collision":true}
+        {"selfCollision":false}
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"sbr_body"},
+        //roof
+        {"nodeWeight":3.7},
+         ["rf1r", -0.57, -0.16, 1.16,{"group":["sbr_roof","sbr_windshield"]}],
+         ["rf1", 0, -0.32, 1.18,{"nodeWeight":1.3,"group":["sbr_roof","sbr_windshield"]}],
+         ["rf1l", 0.57, -0.16, 1.16,{"group":["sbr_roof","sbr_windshield"]}],
+         ["rf2r", -0.57, 0.14, 1.17],
+         ["rf2", 0, 0.11, 1.21{"nodeWeight":1.3}],
+         ["rf2l", 0.57, 0.14, 1.17],
+         ["rf3r", -0.57, 0.44, 1.17],
+         ["rf3", 0, 0.44, 1.21{"nodeWeight":1.3}],
+         ["rf3l", 0.57, 0.44, 1.17],
+         ["rf4r", -0.57, 0.74, 1.17],
+         ["rf4", 0, 0.76, 1.20{"nodeWeight":1.3}],
+         ["rf4l", 0.57, 0.74, 1.17],
+         ["rf5r", -0.57, 1.07, 1.13,{"group":["sbr_roof"]}],
+         ["rf5", 0, 1.09, 1.15,{"nodeWeight":1.3,"group":["sbr_roof"]}],
+         ["rf5l", 0.57, 1.07, 1.13,{"group":["sbr_roof"]}],
+         //pillars
+         //a
+         ["p1r", -0.61, -0.40, 0.98,{"group":["sbr_roof","sbr_windshield"]}],
+         ["p1l", 0.61, -0.40, 0.98,{"group":["sbr_roof","sbr_windshield"]}],
+         ["p2r", -0.685, -0.30, 0.98,{"group":""}],
+         ["p2l", 0.685, -0.30, 0.98,{"group":""}],
+         ["p2rr", -0.58, -0.28, 0.94{"group":""}]
+         ["p2ll", 0.58, -0.28, 0.94{"group":""}]
+         //b
+         ["p3r", -0.68, 0.39, 0.99],
+         ["p3l", 0.68, 0.39, 0.99],
+         ["p4r", -0.68, 0.49, 0.99],
+         ["p4l", 0.68, 0.49, 0.99],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8500,"beamDamp":800},
+          {"beamDeform":70000,"beamStrength":"FLT_MAX"},
+          //door x
+          ["f5rr","f3rr"],
+          ["f5ll","f3ll"],
+          ["f5rr","f4rr"],
+          ["f5ll","f4ll"],
+
+          ["q4r","f1rr"],
+          ["q4l","f1ll"],
+
+          //roof to rear wheel well
+          ["rf2r","rs1r"],
+          ["rf2l","rs1l"],
+          ["rf2r","q5r"],
+          ["rf2l","q5l"],
+          ["rf2r","f9r"],
+          ["rf2l","f9l"],
+          //x
+          ["rf2l","rs1r"],
+          ["rf2r","rs1l"],
+          ["rf2l","q5r"],
+          ["rf2r","q5l"],
+
+          //x behind seats
+          ["q1r","f3ll"],
+          ["q1l","f3rr"],
+
+          //a pillar rigids
+          ["rf2r","p1r"],
+          ["rf2l","p1l"],
+          ["rf2r","p2rr"],
+          ["rf2l","p2ll"],
+
+          ["rf1r","d10r"]
+          ["rf1l","f6ll"],
+
+          ["f6rr","f1rr"],
+          ["f6ll","f1ll"]
+          ["p2rr","f5rr"],
+          ["p2ll","f5ll"],
+
+          ["rf1r","f5rr"]
+          ["rf1l","f5ll"],
+
+          ["rf1r","f1rr"]
+          ["rf1l","f1ll"],
+
+          ["rf2r","f6rr"],
+          ["rf2l","f6ll"],
+
+          //b pillar rigids
+          ["p3r","f8r"],
+          ["p3l","f8l"],
+          ["q1r","f8r"],
+          ["q1l","f8l"],
+          ["rf2r","f3rr"],
+          ["rf2l","f3ll"],
+
+          ["p3r","rf2"],
+          ["p3l","rf2"],
+          ["p4r","rf2"],
+          ["p4l","rf2"],
+
+          //horiz bar
+          ["rf2r","rf2l"],
+          ["rf1r","rf1l"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

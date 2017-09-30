@@ -1,0 +1,11 @@
+{
+"midsize_skin_plastic": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Plastic",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "plastic",
+}
+}

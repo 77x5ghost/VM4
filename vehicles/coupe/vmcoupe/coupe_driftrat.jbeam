@@ -1,0 +1,11 @@
+{
+"sunburst_skin_driftrat": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Drift Rat",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "driftrat",
+}
+}

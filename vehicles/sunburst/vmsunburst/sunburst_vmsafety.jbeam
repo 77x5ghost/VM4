@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmsafety": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Official Hirochi Safety Car",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmsafety",
+}
+}

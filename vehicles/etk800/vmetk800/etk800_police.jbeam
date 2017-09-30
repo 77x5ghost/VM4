@@ -1,0 +1,408 @@
+{
+"etk800_lightbarvmsc": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"SafetyCar Light Bar",
+        "value":800,
+    }
+    "slotType" : "etk800_lightbar",
+
+    "glowMap":{
+            "eurlightbarBvm":                   {"simpleFunction":"lightbar", "off":"eurlightbarBvm", "on":"eurlightbarB_onvm"},
+            "eurlightbarB2vm":                   {"simpleFunction":"lightbar", "off":"eurlightbarB2vm", "on":"eurlightbarB2_onvm"},
+            "eurlightbar_signvm":                   {"simpleFunction":"lightbar", "off":"eurlightbar_signvm", "on":"eurlightbar_sign_onvm"},
+            "modlightbarB":                   {"simpleFunction":"lightbar", "off":"modlightbarB", "on":"modlightbarB_on"},
+        },
+
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ["eurlightbar_basevm", ["etk800_lightbar"], [], {"pos":{"x": 0.0, "y":0.29, "z":1.41}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.12, "y":1.12, "z":1.12}}],
+        ["eurlightbar_lightvm", ["etk800_lightbar"], [], {"pos":{"x": 0.0, "y":0.29, "z":1.41}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.12, "y":1.12, "z":1.12}}],
+
+        ["eurlightbar_signvm", ["etk800_lightbar"], [], {"pos":{"x": 0.0, "y":0.29, "z":1.41}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.12, "y":1.12, "z":1.12}}],
+
+        ["eurled_avm", ["etk800_bumper_F"], [], {"pos":{"x": -0.15, "y":-2.145, "z":0.71}, "rot":{"x":-15, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        ["eurled_bvm", ["etk800_bumper_F"], [], {"pos":{"x": 0.15, "y":-2.145, "z":0.71}, "rot":{"x":-15, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"etk800_lightbar"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":0.76},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         ["etk800_lightbar_1", 0.0, 0.22, 1.55],
+         ["etk800_lightbar_2", 0.0, 0.20, 1.44],
+         ["etk800_lightbar_3", 0.0, 0.36, 1.55],
+         ["etk800_lightbar_4", 0.0, 0.38, 1.44],
+
+         ["etk800_lightbar_1l", 0.57, 0.22, 1.55],
+         ["etk800_lightbar_2l", 0.59, 0.20, 1.42],
+         ["etk800_lightbar_3l", 0.57, 0.36, 1.55],
+         ["etk800_lightbar_4l", 0.59, 0.38, 1.42],
+
+         ["etk800_lightbar_1r", -0.57, 0.22, 1.55],
+         ["etk800_lightbar_2r", -0.59, 0.20, 1.42],
+         ["etk800_lightbar_3r", -0.57, 0.36, 1.55],
+         ["etk800_lightbar_4r", -0.59, 0.38, 1.42],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+		  //Main shape
+          ["etk800_lightbar_1","etk800_lightbar_2"],
+          ["etk800_lightbar_2","etk800_lightbar_3"],
+          ["etk800_lightbar_3","etk800_lightbar_4"],
+          ["etk800_lightbar_4","etk800_lightbar_1"],
+          ["etk800_lightbar_1","etk800_lightbar_3"],
+          ["etk800_lightbar_2","etk800_lightbar_4"],
+
+          ["etk800_lightbar_1l","etk800_lightbar_2l"],
+          ["etk800_lightbar_2l","etk800_lightbar_3l"],
+          ["etk800_lightbar_3l","etk800_lightbar_4l"],
+          ["etk800_lightbar_4l","etk800_lightbar_1l"],
+          ["etk800_lightbar_1l","etk800_lightbar_3l"],
+          ["etk800_lightbar_2l","etk800_lightbar_4l"],
+
+          ["etk800_lightbar_1r","etk800_lightbar_2r"],
+          ["etk800_lightbar_2r","etk800_lightbar_3r"],
+          ["etk800_lightbar_3r","etk800_lightbar_4r"],
+          ["etk800_lightbar_4r","etk800_lightbar_1r"],
+          ["etk800_lightbar_1r","etk800_lightbar_3r"],
+          ["etk800_lightbar_2r","etk800_lightbar_4r"],
+
+          ["etk800_lightbar_1r","etk800_lightbar_1"],
+          ["etk800_lightbar_2r","etk800_lightbar_2"],
+          ["etk800_lightbar_3r","etk800_lightbar_3"],
+          ["etk800_lightbar_4r","etk800_lightbar_4"],
+
+          ["etk800_lightbar_1l","etk800_lightbar_1"],
+          ["etk800_lightbar_2l","etk800_lightbar_2"],
+          ["etk800_lightbar_3l","etk800_lightbar_3"],
+          ["etk800_lightbar_4l","etk800_lightbar_4"],
+
+		  //Center to left cross-beams
+          ["etk800_lightbar_4l","etk800_lightbar_3"],
+          ["etk800_lightbar_3l","etk800_lightbar_4"],
+          ["etk800_lightbar_3","etk800_lightbar_1l"],
+          ["etk800_lightbar_3l","etk800_lightbar_1"],
+          ["etk800_lightbar_1","etk800_lightbar_2l"],
+          ["etk800_lightbar_2","etk800_lightbar_1l"],
+          ["etk800_lightbar_2l","etk800_lightbar_4"],
+          ["etk800_lightbar_4l","etk800_lightbar_2"],
+
+          ["etk800_lightbar_4l","etk800_lightbar_1"],
+          ["etk800_lightbar_2l","etk800_lightbar_3"],
+          ["etk800_lightbar_4","etk800_lightbar_1l"],
+          ["etk800_lightbar_2","etk800_lightbar_3l"],
+
+		  //Center to right cross-beams
+          ["etk800_lightbar_4r","etk800_lightbar_3"],
+          ["etk800_lightbar_3r","etk800_lightbar_4"],
+          ["etk800_lightbar_3","etk800_lightbar_1r"],
+          ["etk800_lightbar_3r","etk800_lightbar_1"],
+          ["etk800_lightbar_1","etk800_lightbar_2r"],
+          ["etk800_lightbar_2","etk800_lightbar_1r"],
+          ["etk800_lightbar_2r","etk800_lightbar_4"],
+          ["etk800_lightbar_4r","etk800_lightbar_2"],
+
+          ["etk800_lightbar_4r","etk800_lightbar_1"],
+          ["etk800_lightbar_2r","etk800_lightbar_3"],
+          ["etk800_lightbar_4","etk800_lightbar_1r"],
+          ["etk800_lightbar_2","etk800_lightbar_3r"],
+
+		  //To body
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":4000,"beamStrength":6000},
+          {"breakGroup":"etk800_lightbar_breakl"},
+          ["etk800_lightbar_4","rf2"],
+          ["etk800_lightbar_4","rf1"],
+          ["etk800_lightbar_3","rf2"],
+          ["etk800_lightbar_3","rf1"],
+          ["etk800_lightbar_2","rf2"],
+          ["etk800_lightbar_2","rf1"],
+          ["etk800_lightbar_1","rf2"],
+          ["etk800_lightbar_1","rf1"],
+		  //
+          ["etk800_lightbar_4l","rf2l"],
+          ["etk800_lightbar_4l","rf1l"],
+          ["etk800_lightbar_3l","rf2l"],
+          ["etk800_lightbar_3l","rf1l"],
+          ["etk800_lightbar_2l","rf2l"],
+          ["etk800_lightbar_2l","rf1l"],
+          ["etk800_lightbar_1l","rf2l"],
+          ["etk800_lightbar_1l","rf1l"],
+		  //
+          ["etk800_lightbar_4","rf2l"],
+          ["etk800_lightbar_4","rf1l"],
+          ["etk800_lightbar_3","rf2l"],
+          ["etk800_lightbar_3","rf1l"],
+          ["etk800_lightbar_2","rf2l"],
+          ["etk800_lightbar_2","rf1l"],
+          ["etk800_lightbar_1","rf2l"],
+          ["etk800_lightbar_1","rf1l"],
+		  //
+          ["etk800_lightbar_4l","rf2"],
+          ["etk800_lightbar_4l","rf1"],
+          ["etk800_lightbar_3l","rf2"],
+          ["etk800_lightbar_3l","rf1"],
+          ["etk800_lightbar_2l","rf2"],
+          ["etk800_lightbar_2l","rf1"],
+          ["etk800_lightbar_1l","rf2"],
+          ["etk800_lightbar_1l","rf1"],
+
+
+          {"breakGroup":"etk800_lightbar_breakr"},
+          ["etk800_lightbar_4","rf2"],
+          ["etk800_lightbar_4","rf1"],
+          ["etk800_lightbar_3","rf2"],
+          ["etk800_lightbar_3","rf1"],
+          ["etk800_lightbar_2","rf2"],
+          ["etk800_lightbar_2","rf1"],
+          ["etk800_lightbar_1","rf2"],
+          ["etk800_lightbar_1","rf1"],
+		  //
+          ["etk800_lightbar_4r","rf2l"],
+          ["etk800_lightbar_4r","rf1r"],
+          ["etk800_lightbar_3r","rf2r"],
+          ["etk800_lightbar_3r","rf1r"],
+          ["etk800_lightbar_2r","rf2r"],
+          ["etk800_lightbar_2r","rf1r"],
+          ["etk800_lightbar_1r","rf2r"],
+          ["etk800_lightbar_1r","rf1r"],
+		  //
+          ["etk800_lightbar_4","rf2r"],
+          ["etk800_lightbar_4","rf1r"],
+          ["etk800_lightbar_3","rf2r"],
+          ["etk800_lightbar_3","rf1r"],
+          ["etk800_lightbar_2","rf2r"],
+          ["etk800_lightbar_2","rf1r"],
+          ["etk800_lightbar_1","rf2r"],
+          ["etk800_lightbar_1","rf1r"],
+		  //
+          ["etk800_lightbar_4r","rf2"],
+          ["etk800_lightbar_4r","rf1"],
+          ["etk800_lightbar_3r","rf2"],
+          ["etk800_lightbar_3r","rf1"],
+          ["etk800_lightbar_2r","rf2"],
+          ["etk800_lightbar_2r","rf1"],
+          ["etk800_lightbar_1r","rf2"],
+          ["etk800_lightbar_1r","rf1"],
+
+          {"breakGroup":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "quads": [
+            ["id1:","id2:","id3:","id4:"],
+            {"group":"etk800_lightbar"},
+            {"dragCoef":10},
+            ["etk800_lightbar_3l","etk800_lightbar_4l","etk800_lightbar_4","etk800_lightbar_3"],
+            ["etk800_lightbar_1l","etk800_lightbar_3l","etk800_lightbar_3","etk800_lightbar_1"],
+            ["etk800_lightbar_1l","etk800_lightbar_2l","etk800_lightbar_4l","etk800_lightbar_3l"],
+            ["etk800_lightbar_1","etk800_lightbar_2","etk800_lightbar_2l","etk800_lightbar_1l"],
+            ["etk800_lightbar_4l","etk800_lightbar_2l","etk800_lightbar_2","etk800_lightbar_4"],
+
+            ["etk800_lightbar_3","etk800_lightbar_4","etk800_lightbar_4r","etk800_lightbar_3r"],
+            ["etk800_lightbar_1","etk800_lightbar_3","etk800_lightbar_3r","etk800_lightbar_1r"],
+            ["etk800_lightbar_3r","etk800_lightbar_4r","etk800_lightbar_2r","etk800_lightbar_1r"],
+            ["etk800_lightbar_1r","etk800_lightbar_2r","etk800_lightbar_2","etk800_lightbar_1"],
+            ["etk800_lightbar_4","etk800_lightbar_2","etk800_lightbar_2r","etk800_lightbar_4r"],
+
+
+            {"group":""},
+    ],
+
+    }
+    "etk800_vmtaxisigngert": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Yellow Taxi Sign",
+            "value":200,
+        }
+        "slotType" : "etk800_lightbar",
+
+        "glowMap":{
+                "eurlightbarBvm":                   {"simpleFunction":"lightbar", "off":"eurlightbarBvm", "on":"eurlightbarB_onvm"},
+                "eurlightbarB2vm":                   {"simpleFunction":"lightbar", "off":"eurlightbarB2vm", "on":"eurlightbarB2_onvm"},
+                "eurlightbar_signvm":                   {"simpleFunction":"lightbar", "off":"eurlightbar_signvm", "on":"eurlightbar_sign_onvm"},
+                "modlightbarB":                   {"simpleFunction":"lightbar", "off":"modlightbarB", "on":"modlightbarB_on"},
+            },
+
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+            ["etk800_vmtaxisign", ["etk800_lightbar"], [], {"pos":{"x": 0.0, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+
+        ],
+         "nodes": [
+             ["id", "posX", "posY", "posZ"],
+             {"group":"etk800_lightbar"},
+             {"selfCollision":true}
+             {"collision":true}
+             {"nodeWeight":0.76},
+             {"frictionCoef":0.7},
+             {"nodeMaterial":"|NM_METAL"},
+             ["etk800_lightbar_1", 0.15111, 0.36091, 1.55000],
+             ["etk800_lightbar_2", 0.15111, 0.34091, 1.43001],
+             ["etk800_lightbar_3", 0.15111, 0.50091, 1.55000],
+             ["etk800_lightbar_4", 0.15111, 0.52091, 1.43001],
+
+             ["etk800_lightbar_1l", 0.52241, 0.36091, 1.55000],
+             ["etk800_lightbar_2l", 0.57600, 0.34091, 1.41001],
+             ["etk800_lightbar_3l", 0.52241, 0.50091, 1.55000],
+             ["etk800_lightbar_4l", 0.57600, 0.52091, 1.41001],
+
+
+
+
+
+             {"group":""},
+        ],
+
+        "beams": [
+              ["id1:", "id2:"],
+              {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+              {"beamSpring":300000,"beamDamp":60},
+              {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+    		  //Main shape
+              ["etk800_lightbar_1","etk800_lightbar_2"],
+              ["etk800_lightbar_2","etk800_lightbar_3"],
+              ["etk800_lightbar_3","etk800_lightbar_4"],
+              ["etk800_lightbar_4","etk800_lightbar_1"],
+              ["etk800_lightbar_1","etk800_lightbar_3"],
+              ["etk800_lightbar_2","etk800_lightbar_4"],
+
+              ["etk800_lightbar_1l","etk800_lightbar_2l"],
+              ["etk800_lightbar_2l","etk800_lightbar_3l"],
+              ["etk800_lightbar_3l","etk800_lightbar_4l"],
+              ["etk800_lightbar_4l","etk800_lightbar_1l"],
+              ["etk800_lightbar_1l","etk800_lightbar_3l"],
+              ["etk800_lightbar_2l","etk800_lightbar_4l"],
+
+
+
+
+
+
+
+
+
+
+
+
+
+              ["etk800_lightbar_1l","etk800_lightbar_1"],
+              ["etk800_lightbar_2l","etk800_lightbar_2"],
+              ["etk800_lightbar_3l","etk800_lightbar_3"],
+              ["etk800_lightbar_4l","etk800_lightbar_4"],
+
+    		  //Center to left cross-beams
+              ["etk800_lightbar_4l","etk800_lightbar_3"],
+              ["etk800_lightbar_3l","etk800_lightbar_4"],
+              ["etk800_lightbar_3","etk800_lightbar_1l"],
+              ["etk800_lightbar_3l","etk800_lightbar_1"],
+              ["etk800_lightbar_1","etk800_lightbar_2l"],
+              ["etk800_lightbar_2","etk800_lightbar_1l"],
+              ["etk800_lightbar_2l","etk800_lightbar_4"],
+              ["etk800_lightbar_4l","etk800_lightbar_2"],
+
+              ["etk800_lightbar_4l","etk800_lightbar_1"],
+              ["etk800_lightbar_2l","etk800_lightbar_3"],
+              ["etk800_lightbar_4","etk800_lightbar_1l"],
+              ["etk800_lightbar_2","etk800_lightbar_3l"],
+
+    		  //Center to right cross-beams
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    		  //To body
+              {"beamSpring":300000,"beamDamp":60},
+              {"beamDeform":4000,"beamStrength":6000},
+              {"breakGroup":"etk800_lightbar_breakl"},
+              ["etk800_lightbar_4","rf2"],
+              ["etk800_lightbar_3","rf2"],
+              ["etk800_lightbar_2","rf2"],
+              ["etk800_lightbar_1","rf2"],
+    		  //
+              ["etk800_lightbar_4l","rf2l"],
+              ["etk800_lightbar_3l","rf2l"],
+              ["etk800_lightbar_2l","rf2l"],,
+              ["etk800_lightbar_1l","rf2l"],
+    		  //
+              ["etk800_lightbar_4","rf2l"],
+              ["etk800_lightbar_3","rf2l"],
+              ["etk800_lightbar_2","rf2l"],
+              ["etk800_lightbar_1","rf2l"],
+    		  //
+              ["etk800_lightbar_4l","rf2"],
+              ["etk800_lightbar_3l","rf2"],
+              ["etk800_lightbar_2l","rf2"],
+              ["etk800_lightbar_1l","rf2"],
+
+
+              {"breakGroup":"etk800_lightbar_breakr"},
+              ["etk800_lightbar_4","rf2"],
+              ["etk800_lightbar_3","rf2"],
+              ["etk800_lightbar_2","rf2"],
+              ["etk800_lightbar_1","rf2"],
+    		  //
+
+
+
+
+
+
+
+
+    		  //
+
+
+
+
+
+
+
+
+
+              {"breakGroup":""},
+
+              {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        ],
+        "quads": [
+                ["id1:","id2:","id3:","id4:"],
+                {"group":"etk800_lightbar"},
+                {"dragCoef":10},
+                ["etk800_lightbar_3l","etk800_lightbar_4l","etk800_lightbar_4","etk800_lightbar_3"],
+                ["etk800_lightbar_1l","etk800_lightbar_3l","etk800_lightbar_3","etk800_lightbar_1"],
+                ["etk800_lightbar_1l","etk800_lightbar_2l","etk800_lightbar_4l","etk800_lightbar_3l"],
+                ["etk800_lightbar_1","etk800_lightbar_2","etk800_lightbar_2l","etk800_lightbar_1l"],
+                ["etk800_lightbar_4l","etk800_lightbar_2l","etk800_lightbar_2","etk800_lightbar_4"],
+
+                ["etk800_lightbar_3","etk800_lightbar_4","etk800_lightbar_4r","etk800_lightbar_3r"],
+                ["etk800_lightbar_1","etk800_lightbar_3","etk800_lightbar_3r","etk800_lightbar_1r"],
+                ["etk800_lightbar_3r","etk800_lightbar_4r","etk800_lightbar_2r","etk800_lightbar_1r"],
+                ["etk800_lightbar_1r","etk800_lightbar_2r","etk800_lightbar_2","etk800_lightbar_1"],
+                ["etk800_lightbar_4","etk800_lightbar_2","etk800_lightbar_2r","etk800_lightbar_4r"],
+
+
+                {"group":""},
+        ],
+}
+}

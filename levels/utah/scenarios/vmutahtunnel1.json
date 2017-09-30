@@ -1,0 +1,47 @@
+[
+{
+    "name": "Tunnel Escape",
+    "description": "Escape from the tunnel , but keep your eyes open.",
+    "authors": "Ninetynine",
+    "previews": ["vmutahtunnel1.png"],
+    "difficulty": "90",
+    "date": 1436960028,
+    "levelObjects": {
+        "tod" : {
+            "time" : 0.50,
+            "dayLength" : 120,
+            "play" : false,
+            },
+        
+    },
+    "vehicles":
+    {
+        "scenario_player1":
+        { 
+            "driver":
+            {
+                "player":true,
+                "startFocus": true ,
+                "required": true
+            },
+            "goal" :
+            {
+                "timeLimit":
+                {
+                    "maxTime":145,
+                    "waitTime":0,
+                    "msg":"Too slow."
+                }
+            }
+        },
+        "*":
+            {
+                "playerUsable": false
+            },
+    },
+    "lapConfig": ["utewp1", "utewp2", "utewp3"],
+    "radiusMultiplierAI": 2
+},
+]
+
+

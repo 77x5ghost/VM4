@@ -1,0 +1,33 @@
+{
+"0-120 mph":21.8,
+"Performance Class":"6",
+"Drivetrain":"AWD",
+"100-200 km/h":18,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.6,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":17700,
+"0-100 mph":13.7,
+"TorquePeakRPM":"3350 - 5200",
+"0-200 km/h":23.6,
+"Off-Road Score":34,
+"Configuration":"2400tix TTSport (M)",
+"default_color":"Maroon",
+"Transmission":"Manual",
+"60-100 mph":8.4,
+"0-60 mph":5.3,
+"Config Type":"Factory",
+"100-0 km/h":40.3,
+"Top Speed":69.9336,
+"Power":207.036,
+"Torque":296.33,
+"PowerPeakRPM":"4750 - 6150",
+"Description":"Facelifted 2-door sport model, with anti-lock brakes, all-wheel drive, a turbo, sport suspension, wheels, and a spoiler",
+"Weight/Power":7.05314,
+"60-0 mph":114.5,
+"60-120 mph":16.3,
+"Weight":1460
+}

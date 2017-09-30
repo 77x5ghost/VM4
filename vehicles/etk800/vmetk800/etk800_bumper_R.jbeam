@@ -1,0 +1,17 @@
+{
+"etk800_diffuser_R_856alpvm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Montana Rear Diffuser",
+        "value":180,
+    }
+    "slotType" : "etk800_diffuser_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_diffuser_R_alpvm", ["etk800_bumper_R"]],
+         ["etk800_vmalp_r_grille", ["etk800_bumper_R"]],
+         ["etk800_exhausttip_R_a", ["etk800_exhaust"]],
+         ["etk800_exhausttip_L_a", ["etk800_exhaust"]],
+    ],
+}
+}

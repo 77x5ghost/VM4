@@ -1,0 +1,11 @@
+{
+"barstow_skin_transamvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"TRANS-AM #9",
+        "value":1000,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "transamvm",
+}
+}

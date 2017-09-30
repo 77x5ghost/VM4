@@ -1,0 +1,11 @@
+{
+"sunburst_skin_ibi": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"'Ibishu' Rear Panel",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "ibi",
+}
+}

@@ -1,0 +1,303 @@
+{
+"hatch_suspension_Fvmrolly": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Independent Front Suspension",
+        "value":150,
+    },
+
+    "slotType" : "hatch_suspension_Fvmrolly",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_brake_F","hatch_brake_F", "Front Brakes"],
+        ["wheel_F_4","steelwheel_01a_13x5_F", "Front Wheels", {"nodeOffset":{"x":"$trackwidth_F", "y":-1.25, "z":0.288}}],
+        ["hatch_wheeldata_F","hatch_wheeldata_F", "Front Spindles"{"coreSlot":true}],
+        ["hatch_coilover_Fvmrolly","hatch_coilover_Fvmrolly", "Front Struts"],
+        ["hatch_swaybar_F","hatch_swaybar_F", "Front Sway Bar"],
+        ["hatch_steering","hatch_steering", "Steering"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$camber_FR", "range", "", "Alignment", 0.98, 0.96, 1.04, "Front Right Camber", "Percentage of adjustment range"]
+        ["$camber_FL", "range", "", "Alignment", 0.98, 0.96, 1.04, "Front Left Camber", "Percentage of adjustment range"]
+        ["$trackwidth_F", "range", "m", "Alignment", 0.26, 0.26, 0.29, "Front Track Width", "Widen or narrow the wheel track"{"stepDis":0.005}]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //front running gear
+        ["hatch_upperarm_F", ["hatch_uppermounts_a_F","hatch_uppermounts_b_F","hatch_upperarm_F"]],
+        ["hatch_lowerarm_F", ["hatch_lowermounts_F","hatch_lowerarm_F","hatch_lowerarm_F"]],
+        ["hatch_hub_FR", ["hatch_hub_F"]],
+        ["hatch_hub_FL", ["hatch_hub_F"]],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_a_FR","wheelhub_a_FL","wheelhub_b_FR","wheelhub_b_FL"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--FRONT INDEPENDENT SUSPENSION--
+         {"collision":true},
+         {"selfCollision":false},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         //front hub
+         //this is the steering axis
+         {"nodeWeight":3.1},
+         //--overwritten by race or rally coilover
+         ["fh1r", -0.715,  -1.27, 0.183{"group":["hatch_hub_F","hatch_lowerarm_F"]}],
+         ["fh1l",  0.715,  -1.27, 0.183{"group":["hatch_hub_F","hatch_lowerarm_F"]}],
+         ["fh2r", -0.64, -1.23, 0.64{"group":["hatch_hub_F","hatch_upperarm_F"]}],
+         ["fh2l",  0.64, -1.23, 0.64{"group":["hatch_hub_F","hatch_upperarm_F"]}],
+         //tie rod goes here
+         ["fh3r", -0.655, -1.09, 0.26{"group":["hatch_hub_F","hatch_tierod_F"]}],
+         ["fh3l",  0.655, -1.09, 0.26{"group":["hatch_hub_F","hatch_tierod_F"]}],
+         {"nodeWeight":2.0},
+         {"group":"hatch_shockbottom_F"},
+         //bottom of shock
+         ["fh4r", -0.525, -1.25, 0.17],
+         ["fh4l",  0.525, -1.25, 0.17],
+         //brake hub node
+         {"nodeWeight":3.1},
+         {"group":"hatch_hub_F"},
+         ["fh5r", -0.72, -1.40, 0.288],
+         ["fh5l",  0.72, -1.40, 0.288],
+         //nodeCoupling
+         {"nodeWeight":1.5},
+         //["fnc1r", -0.72, -1.25, 0.288],
+         //["fnc1l",  0.72, -1.25, 0.288],
+         {"collision":false},
+         {"selfCollision":false},
+         {"group":""},
+    ],
+        "beams": [
+          ["id1:", "id2:"],
+          //--FRONT RUNNING GEAR--
+          //double wishbone suspension
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamDeform":79000,"beamStrength":230000},
+          {"beamSpring":5501000,"beamDamp":100},
+          //front hub
+          ["fh1r","fh2r"],
+          ["fh1l","fh2l"],
+          ["fh1r","fh3r"],
+          ["fh1l","fh3l"],
+          ["fh2r","fh3r"],
+          ["fh2l","fh3l"],
+
+          ["fh1r","fh5r"],
+          ["fh1l","fh5l"],
+          ["fh2r","fh5r"],
+          ["fh2l","fh5l"],
+          ["fh3r","fh5r"],
+          ["fh3l","fh5l"],
+
+          //attach to wheel
+          {"optional":true},
+          {"breakGroup":"wheel_FR"},
+          ["fh1r","fw1r"],
+          ["fh2r","fw1r"],
+          ["fh3r","fw1r"],
+          ["fh5r","fw1r"],
+          ["fh1r","fw1rr"],
+          ["fh2r","fw1rr"],
+          ["fh3r","fw1rr"],
+          ["fh5r","fw1rr"],
+          {"breakGroup":"wheel_FL"},
+          ["fh1l","fw1l"],
+          ["fh2l","fw1l"],
+          ["fh3l","fw1l"],
+          ["fh5l","fw1l"],
+          ["fh1l","fw1ll"],
+          ["fh2l","fw1ll"],
+          ["fh3l","fw1ll"],
+          ["fh5l","fw1ll"],
+          {"breakGroup":""},
+          {"optional":false},
+
+          //nodeCoupling
+          {"beamSpring":2001000,"beamDamp":100},
+          //["fh1r","fnc1r"],
+          //["fh1l","fnc1l"],
+          //["fh2r","fnc1r"],
+          //["fh2l","fnc1l"],
+          //["fh3r","fnc1r"],
+          //["fh3l","fnc1l"],
+          //["fh5r","fnc1r"],
+          //["fh5l","fnc1l"],
+
+          //lower arm
+          {"beamSpring":9001000,"beamDamp":100},
+          {"beamDeform":91000,"beamStrength":250000},
+          {"breakGroup":"lower_arm_FR"},
+          ["fx2r","fh1r"],
+          ["fx1r","fh1r"],
+          {"breakGroup":"lower_arm_FL"},
+          ["fx2l","fh1l"],
+          ["fx1l","fh1l"],
+          {"breakGroup":""},
+
+          //stays unbroken to keep coilover from stretching after control arm breaks
+          {"beamSpring":4001000,"beamDamp":100},
+          {"beamDeform":34000,"beamStrength":250000},
+          ["fx2l","fh4l"],
+          ["fx2r","fh4r"],
+          ["fx1r","fh4r"],
+          ["fx1l","fh4l"],
+          ["fh1l","fh4l"],
+          ["fh1r","fh4r"],
+
+          //upper arm
+          {"beamSpring":5001000,"beamDamp":100},
+          {"beamDeform":81000,"beamStrength":150000},
+          //camber adjust
+          {"breakGroup":"upper_arm_FR"},
+          ["fh2r","fx3r"{"beamPrecompression":"$camber_FR"}],
+          ["fh2r","fx4r"{"beamPrecompression":"$camber_FR"}],
+          {"breakGroup":"upper_arm_FL"},
+          ["fh2l","fx3l"{"beamPrecompression":"$camber_FL"}],
+          ["fh2l","fx4l"{"beamPrecompression":"$camber_FL"}],
+          {"beamPrecompression":1.0},
+          {"breakGroup":""},
+
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":5000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"breakGroup":""},
+          {"breakGroupType":0},
+
+          //front limiters
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.45, "beamShortBound":0.45},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":750000,"beamStrength":1780000},
+          {"beamLimitSpring":8001000,"beamLimitDamp":2500},
+          //firewall
+          {"optional":true},
+          {"breakGroup":"wheel_FR"},
+          ["fw1rr","f1rr"],
+          ["fw1r","f1rr"],
+          ["fw1r","f1r"],
+          ["fw1rr","f1r"],
+          ["fw1rr","f5rr"],
+          ["fw1r","f5rr"],
+          ["fw1r","f5r"],
+          ["fw1rr","f5r"],
+          ["fw1r","f7r"],
+          ["fw1rr","f7r"],
+          {"breakGroup":"wheel_FL"},
+          ["fw1ll","f1ll"],
+          ["fw1l","f1ll"],
+          ["fw1l","f1l"],
+          ["fw1ll","f1l"],
+          ["fw1ll","f5ll"],
+          ["fw1l","f5ll"],
+          ["fw1l","f5l"],
+          ["fw1ll","f5l"],
+          ["fw1l","f7l"],
+          ["fw1ll","f7l"],
+          {"breakGroup":""},
+          {"optional":false},
+
+          //front end
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.3, "beamShortBound":0.3},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":24000,"beamStrength":400000},
+          {"beamLimitSpring":2001000,"beamLimitDamp":200},
+          {"optional":true},
+          {"breakGroup":"wheel_FR"},
+          ["fw1rr","s5r"],
+          ["fw1r","s5r"],
+          {"breakGroup":"wheel_FL"},
+          ["fw1ll","s5l"],
+          ["fw1l","s5l"],
+          {"breakGroup":""},
+          {"optional":false},
+
+          //steering anti invert
+          {"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":5001000,"beamDamp":250,"beamDeform":100000,"beamStrength":400000},
+          {"beamPrecompression":0.88},
+          ["fh3r","fx1l"]
+          ["fh3l","fx1r"]
+          {"beamPrecompression":0.73},
+          ["fh3r","fx1r"],
+          ["fh3l","fx1l"],
+          {"beamPrecompression":1},
+
+          //suspension anti-invert
+          {"beamSpring":0,"beamDamp":0,"beamDeform":175000,"beamStrength":400000},
+          {"beamLimitSpring":12001000,"beamLimitDamp":1000},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.30},
+          ["fh2r","fx1r"],
+          ["fh2l","fx1l"],
+          ["fh2r","fx2r"],
+          ["fh2l","fx2l"],
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.20, "beamShortBound":0.30},
+          ["fh4r","fx3r"],
+          ["fh4l","fx3l"],
+          ["fh4r","fx4r"],
+          ["fh4l","fx4l"],
+
+          //hard travel limit
+          {"beamPrecompression":0.7, "beamType":"|BOUNDED", "beamLongBound":4, "beamShortBound":0.14},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":50000,"beamStrength":150000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":2500},
+          //["fh1r","fs1r"{"beamLimitDampRebound":0}],
+          //["fh1l","fs1l"{"beamLimitDampRebound":0}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //cancel out brake properties
+            {"brakeTorque":0},
+            {"parkingTorque":0},
+            {"enableBrakeThermals":false},
+            {"brakeDiameter":false},
+            {"brakeMass":false},
+            {"brakeType":false},
+            {"rotorMaterial":false},
+            {"brakeVentingCoef":false},
+    ],
+},
+
+"hatch_coilover_Fvmrolly": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"'Rolly' Front Struts",
+        "value":200,
+    },
+
+    "slotType" : "hatch_coilover_Fvmrolly",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_coilover_F", ["hatch_shockbottom_F","hatch_shocktop_F"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //front springs with soft initial bump stop
+          {"beamPrecompression":1.45, "beamType":"|BOUNDED", "beamLongBound":0.0, "beamShortBound":0.19},
+          {"beamDeform":70000,"beamStrength":125000},
+          {"beamSpring":24000,"beamDamp":0},
+          {"beamLimitSpring":201000,"beamLimitDamp":2000},
+          ["fh1r","fs1r"{"soundFile":"art/sound/spring_creak.ogg","volumeFactor":5.5,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":7000}],
+          ["fh1l","fs1l"{"soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.8,"decayMode":1,"decayFactor":5,"pitchFactor":4,"maxStress":600}],
+          //harder bump stop
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.09},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":1501000,"beamLimitDamp":15000},
+          ["fh1r","fs1r"{"beamLimitDampRebound":0}],
+          ["fh1l","fs1l"{"beamLimitDampRebound":0}],
+          //shocks
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":0,"beamDamp":2500},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          ["fh1r","fs1r"{"beamDampFast":1200,"beamDampRebound":3800,"beamDampReboundFast":1900,"beamDampVelocitySplit":0.09}],
+          ["fh1l","fs1l"{"beamDampFast":1200,"beamDampRebound":3800,"beamDampReboundFast":1900,"beamDampVelocitySplit":0.09}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

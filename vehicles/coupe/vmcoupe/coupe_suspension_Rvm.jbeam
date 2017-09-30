@@ -1,0 +1,55 @@
+{
+"coupe_coilover_R_rallyvm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"VM Rally Rear Coilovers",
+        "value":850,
+    }
+
+    "slotType" : "coupe_coilover_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_coilover_R", ["coupe_shockbottom_R","coupe_shocktop_R"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$rideheight_R", "range", "", "Alignment", 1.29, 0.95, 2.5, "Rear Ride Height", "Percentage of adjustment range"]
+        ["$spring_R", "range", "N/m", "Suspension", 27000, 10000, 70000, "Rear Spring Rate", "Spring stiffness"{"stepDis":500}]
+        ["$damp_bump_R", "range", "N/m/s", "Suspension", 5000, 500, 10000, "Rear Bump Damping", "Shock stiffness in slow compression"{"stepDis":100}]
+        ["$damp_bump_R_fast", "range", "N/m/s", "Suspension", 2500, 500, 5000, "Rear Fast Bump Damping", "Shock stiffness in fast compression"{"stepDis":100}]
+        ["$damp_rebound_R", "range", "N/m/s", "Suspension", 9000, 500, 20000, "Rear Rebound Damping", "Shock stiffness in slow extension"{"stepDis":100}]
+        ["$damp_rebound_R_fast", "range", "N/m/s", "Suspension", 4000, 500, 10000, "Rear Fast Rebound Damping", "Shock stiffness in fast extension"{"stepDis":100}]
+        ["$damp_knee_R", "range", "m/s", "Suspension", 0.12, 0.0, 0.25, "Rear Damping Knee", "Threshold at which shock transitions between slow and fast damping"]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--REAR INDEPENDENT SUSPENSION--
+         {"collision":true},
+         {"selfCollision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         //fix the toe curve
+         {"nodeWeight":5.5},
+         ["rh6r",-0.6, 1.43, 0.327{"group":["coupe_tierod_R","coupe_hub_R"]}],
+         ["rh6l", 0.6, 1.43, 0.327{"group":["coupe_tierod_R","coupe_hub_R"]}],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //rear springs - no soft bump stop - advanced dampers
+          {"beamPrecompression":"$rideheight_R", "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamDeform":128500,"beamStrength":167500},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamSpring":"$spring_R","beamDamp":"$damp_bump_R"},
+          ["rh1l","r1ll",{"beamDampRebound":"$damp_rebound_R","beamDampVelocitySplit":"$damp_knee_R","beamDampFast":"$damp_bump_R_fast","beamDampReboundFast":"$damp_rebound_R_fast","soundFile":"art/sound/spring_creak.ogg","volumeFactor":4,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":10000}],
+          ["rh1r","r1rr",{"beamDampRebound":"$damp_rebound_R","beamDampVelocitySplit":"$damp_knee_R","beamDampFast":"$damp_bump_R_fast","beamDampReboundFast":"$damp_rebound_R_fast","soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.8,"decayMode":1,"decayFactor":5,"pitchFactor":2,"maxStress":11000}],
+          //hard bump stop
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.14},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":1501000,"beamLimitDamp":20000},
+          ["rh1r","r1rr"{"beamLimitDampRebound":0}],
+          ["rh1l","r1ll"{"beamLimitDampRebound":0}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

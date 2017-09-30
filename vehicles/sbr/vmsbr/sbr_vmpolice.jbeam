@@ -1,0 +1,12 @@
+{
+
+"vmpolice": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) Police car",
+        "value":1100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpolice",
+}
+}

@@ -1,0 +1,11 @@
+{
+"etk800_skin_vmmontana": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Montana F8",
+        "value":1000,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmmontana",
+}
+}

@@ -1,0 +1,11 @@
+{
+"etkc_skin_vpackvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Victory Package",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vpackvm",
+}
+}

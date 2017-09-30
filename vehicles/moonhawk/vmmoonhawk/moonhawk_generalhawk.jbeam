@@ -1,0 +1,11 @@
+{
+"moonhawk_skin_generalhawk": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"General Hawk",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "generalhawk",
+}
+}

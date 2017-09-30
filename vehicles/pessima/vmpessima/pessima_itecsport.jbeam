@@ -1,0 +1,11 @@
+{
+"pessima_skin_vmitecsport": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"I-TEC Sport Factory",
+        "value":1400,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmitecsport",
+}
+}

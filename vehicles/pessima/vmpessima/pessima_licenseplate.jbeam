@@ -1,0 +1,26 @@
+{
+"pessima_licenseplate_Fvm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front License Plate Alternative 1",
+        "value":0,
+    }
+    "slotType" : "pessima_licenseplate_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["pessima_bumper_F"],[],{"pos":{"x":0.0, "y":-2.19532, "z":0.42398}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
+"pessima_licenseplate_Fvm1": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front License Plate Alternative 2",
+        "value":0,
+    }
+    "slotType" : "pessima_licenseplate_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["pessima_bumper_F"],[],{"pos":{"x":0.34414, "y":-2.17294, "z":0.42398}, "rot":{"x":0, "y":0, "z":6.225}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
+}

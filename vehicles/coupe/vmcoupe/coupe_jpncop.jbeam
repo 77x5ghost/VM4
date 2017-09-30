@@ -1,0 +1,11 @@
+{
+"sunburst_skin_jpncop": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Japanese Police",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "jpncop",
+}
+}

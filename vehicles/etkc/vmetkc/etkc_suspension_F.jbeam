@@ -1,0 +1,38 @@
+{
+"etkc_strut_F_ttvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"ttSport V Front Struts",
+        "value":1000,
+    },
+    "slotType" : "etkc_strut_F",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["etkc_strut_F", ["etkc_strut_F"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //front progressive springs
+          {"beamPrecompression":1.01, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.26},
+          {"beamDeform":137500,"beamStrength":172500},
+          {"beamSpring":56000,"beamDamp":0},
+          {"beamLimitSpring":301000,"beamLimitDamp":0},
+          ["fh4r","fs1r",{"soundFile":"art/sound/spring_creak.ogg","volumeFactor":4,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":24000}],
+          ["fh4l","fs1l",{"soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.6,"decayMode":1,"decayFactor":4,"pitchFactor":2,"maxStress":5600}],
+          //dampers
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":0,"beamDamp":3800},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          ["fh4r","fs1r",{"beamDampFast":1700,"beamDampRebound":7000,"beamDampReboundFast":3500,"beamDampVelocitySplit":0.09}],
+          ["fh4l","fs1l",{"beamDampFast":1700,"beamDampRebound":7000,"beamDampReboundFast":3500,"beamDampVelocitySplit":0.09}],
+          //bump stops
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.28},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":1001000,"beamLimitDamp":5000},
+          ["fh4r","fs1r"{"beamLimitDampRebound":0}],
+          ["fh4l","fs1l"{"beamLimitDampRebound":0}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

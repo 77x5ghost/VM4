@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vpack": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"V-Package Paint Job",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vpack",
+}
+}

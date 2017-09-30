@@ -1,0 +1,11 @@
+{
+"pessima_skin_vmdrift": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"EDGE Drift Team",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmdrift",
+}
+}

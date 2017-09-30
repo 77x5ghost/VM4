@@ -1,0 +1,11 @@
+{
+"fullsize_skin_riviera": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Riviera Retro",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "riviera",
+}
+}

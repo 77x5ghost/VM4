@@ -1,0 +1,11 @@
+{
+"etk800_skin_vmsc": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Safety Car",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmsc",
+}
+}

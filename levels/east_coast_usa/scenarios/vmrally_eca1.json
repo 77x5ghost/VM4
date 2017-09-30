@@ -1,0 +1,17 @@
+[
+{
+    "name": "(VM) East Coast Rally Stage 1",
+    "description": "A scenic rallycourse through the forest of ECA.",
+    "authors": "Ninetynine",
+    "previews": ["vmrally_eca1.png"],
+    "difficulty": "55",
+    "tod" : {
+            "time" : 0.70,
+            "dayLength" : 120,
+            "play" : false,
+    },
+    "lapConfig": ["rwp1", "rwp2", "rwp3", "rwp4", "rwp5", "rwp6", "rwp7", "rwp8", "rwp9", "rwp10", "rwp11", "rwp12", "rwp13"],
+    "radiusMultiplierAI": 2
+},
+]
+

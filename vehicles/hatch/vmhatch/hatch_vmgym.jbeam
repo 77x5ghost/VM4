@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmgym": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Gymkhana",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmgym",
+}
+}

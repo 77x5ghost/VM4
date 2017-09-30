@@ -1,0 +1,23 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Body Style":"Box Truck",
+"Value":38000,
+"TorquePeakRPM":"2500 - 4900",
+"Off-Road Score":35,
+"Configuration":"H45 WCPD (A)",
+"Transmission":"Automatic",
+"0-100 km/h":13.8,
+"0-60 mph":12.7,
+"Config Type":"Custom",
+"100-0 km/h":53.9,
+"Top Speed":42.3388,
+"default_color":"Pearl White",
+"Torque":367.389,
+"Power":246.354,
+"Description":"The WCPD Special Response Team Vehicle is based on a H45 Ambulance and is equipped with a heavy duty suspension , a bullbar and a 5.5L V8",
+"Weight/Power":15.3659,
+"60-0 mph":154.6,
+"PowerPeakRPM":4750,
+"Weight":3780
+}

@@ -1,0 +1,11 @@
+{
+"pickup_skin_vmsonoma": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"SONOMA Factory Paint Job",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmsonoma",
+}
+}

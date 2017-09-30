@@ -1,0 +1,11 @@
+{
+"roamer_skin_trcinv": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Roamer TRC Paint Job Inverted",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "trcinv",
+}
+}

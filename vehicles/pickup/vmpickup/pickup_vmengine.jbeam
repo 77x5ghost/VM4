@@ -1,0 +1,42 @@
+{
+"pickup_enginetuning_v8_vmsonoma": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Sonoma Supercharger",
+        "value":1300,
+    }
+    "slotType" : "pickup_enginetuning_v8",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_supercharger", ["pickup_engine", "pickup_framecab"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "enginetorque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 195],
+        [1000, 233],
+        [2000, 375],
+        [3000, 495],
+        [4000, 520],
+        [5000, 390],
+        [6000, 239],
+        [6600, 150]
+    ],
+    "engine":{
+        "idleRPM":1000,
+        "shiftDownRPM":2000,
+        "shiftUpRPM":4700,
+        "maxRPM":5500,
+        "inertia":0.22,
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.31
+        "clutchTorque":500
+        "revLimiterRPMDrop":50,
+        "throttleSensitivity":1.25
+        //revised shift points
+
+        "cylinderWallTemperatureDamageThreshold":180
+    },
+
+},
+}

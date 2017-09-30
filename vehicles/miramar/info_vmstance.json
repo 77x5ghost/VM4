@@ -1,0 +1,22 @@
+{
+"Performance Class":"3",
+"Drivetrain":"RWD",
+"Value":13000,
+"TorquePeakRPM":"2050 - 3650",
+"Off-Road Score":29,
+"Configuration":"Stanced (M)",
+"PowerPeakRPM":"3900 - 5150",
+"0-100 km/h":10.6,
+"0-60 mph":9.8,
+"Config Type":"Custom",
+"100-0 km/h":42.7,
+"Top Speed":37.6782,
+"Transmission":"Manual",
+"Torque":153.755,
+"Weight":1110,
+"Description":"A heavily modified base model, with stanced wheels, lowered suspension, new fenders, and TIMS Egota wheels.",
+"Weight/Power":13.7037,
+"60-0 mph":125.3,
+"Power":81.8919,
+"default_color":"Moonlight"
+}

@@ -1,0 +1,33 @@
+{
+"0-120 mph":13.6,
+"Performance Class":"8",
+"Drivetrain":"RWD",
+"100-200 km/h":9.8,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.2,
+"Years":{
+  "min":1985,
+  "max":1987
+},
+"Value":52500,
+"0-100 mph":10.1,
+"TorquePeakRPM":"4150 - 5350",
+"0-200 km/h":15,
+"Off-Road Score":28,
+"Configuration":"Race #23 (M)",
+"default_color":"Pearl White",
+"Transmission":"Manual",
+"60-100 mph":5.1,
+"0-60 mph":5,
+"Config Type":"Custom",
+"100-0 km/h":44.3,
+"Top Speed":77.3652,
+"Power":356.198,
+"Torque":499.431,
+"PowerPeakRPM":"4850 - 6250",
+"Description":"Touring car based on the 2-door Evolution I. This car was driven by the official ETK Motorsport team and won many german touring car trophies through it's 2 years of usage.",
+"Weight/Power":4.01685,
+"60-0 mph":127.5,
+"60-120 mph":9,
+"Weight":1430
+}

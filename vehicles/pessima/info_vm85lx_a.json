@@ -1,0 +1,30 @@
+{
+"Performance Class":"3",
+"Drivetrain":"FWD",
+"100-200 km/h":58.1,
+"0-100 km/h":9.8,
+"Value":2355,
+"0-200 km/h":67.9,
+"TorquePeakRPM":"3300 - 5550",
+"default_color":"Champagne",
+"Description":"Mid-Trim model of the 1986 Pessima. Equipped with a DOHC Engine and black interior",
+"Configuration":"2.0 LX (A)",
+"0-100 mph":27.7,
+"Weight":1320,
+"60-100 mph":18.6,
+"0-60 mph":9.1,
+"Config Type":"Factory",
+"100-0 km/h":47.4,
+"PowerPeakRPM":5400,
+"Power":127.137,
+"Torque":166.028,
+"Transmission":"Automatic",
+"Off-Road Score":28,
+"Weight/Power":10.3937,
+"60-0 mph":136.3,
+"Years":{
+  "min":1986,
+  "max":1988
+},
+"Top Speed":60.2839
+}

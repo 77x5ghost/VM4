@@ -1,0 +1,11 @@
+{
+"sunburst_skin_tsukuba": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Tsukuba Edition Livery",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "tsukuba",
+}
+}

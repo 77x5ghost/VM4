@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmtr": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Turbo Rabbit",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmtr",
+}
+}

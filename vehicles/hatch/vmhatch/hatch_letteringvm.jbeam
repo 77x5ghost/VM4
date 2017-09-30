@@ -1,0 +1,71 @@
+{
+"hatch_logo_vmk_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Kyusokuna Badge",
+        "value":15,
+    }
+    "slotType" : "hatch_logo_F_grille",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_lettering_vmk_F", ["hatch_fascia"]],
+    ],
+}
+"hatch_logo_Fvmr": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Red Ibishu Logo ",
+        "value":15,
+    }
+    "slotType" : "hatch_logo_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_logo_F_vmr", ["hatch_hood"]],
+    ],
+}
+"hatch_lettering_vmitr": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"1.6 iTR Lettering",
+        "value":20,
+    }
+    "slotType" : "hatch_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_lettering_vmitec", ["hatch_tailgate"]],
+         ["hatch_lettering_vmitr", ["hatch_tailgate"]],
+         ["hatch_logo_Rvmr", ["hatch_tailgate"]],
+         ["hatch_lettering_vmitr_R", ["hatch_fender_R"]],
+         ["hatch_lettering_vmitr_L", ["hatch_fender_L"]],
+    ],
+}
+"hatch_lettering_vmits": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"1.6 iTS Lettering",
+        "value":20,
+    }
+    "slotType" : "hatch_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_lettering_vmitec", ["hatch_tailgate"]],
+         ["hatch_lettering_vmits", ["hatch_tailgate"]],
+         ["hatch_logo_Rvm", ["hatch_tailgate"]],
+         ["hatch_lettering_vmits_R", ["hatch_fender_R"]],
+         ["hatch_lettering_vmits_L", ["hatch_fender_L"]],
+    ],
+}
+"hatch_lettering_vmitec": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"1.6 i-TEC Lettering",
+        "value":10,
+    }
+    "slotType" : "hatch_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_lettering_vmitec", ["hatch_tailgate"]],
+         ["hatch_logo_Rvm", ["hatch_tailgate"]],
+    ],
+}
+}

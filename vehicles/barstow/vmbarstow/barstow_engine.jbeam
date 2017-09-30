@@ -1,0 +1,205 @@
+{
+"barstow_engine_v8_291vmold": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Old 291 CUI V8 Engine [VM]",
+        "value":390,
+    }
+    "slotType" : "barstow_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["barstow_exhaust_R","barstow_exhaust_R", "Right Exhaust"],
+        ["barstow_exhaust_L","barstow_exhaust_L", "Left Exhaust"],
+        ["barstow_transmission","barstow_transmission_3A", "Transmission"],
+        ["barstow_intake_v8_291","barstow_intake_v8_291", "Intake",{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine":{
+        "torque":[
+            ["rpm", "torque"]
+        [0, 0],
+        [500, 180],
+        [1000, 305],
+        [1500, 372],
+        [2000, 409],
+        [2500, 421],
+        [3000, 421],
+        [3500, 414],
+        [4000, 382],
+        [5000, 285],
+        [6000, 220],
+        [7000, 100],
+        [8000, 50],
+    ],
+
+        "idleRPM":700,
+        "maxRPM":5000,
+        "revLimiterRPMDrop":0,
+        "inertia":1.5,
+        "friction":20
+        "dynamicFriction":0.025
+        "burnEfficiency":0.29
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.055
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":8
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":140
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]}
+        "radiator": {"[engineGroup]:":["radiator"]}
+        "engineBlock": {"[engineGroup]:":["engine_block"]}
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "V8_2",
+        "mainGain": -18,
+        "maxLoadMix": 0.6,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.65,
+        "eqLowGain": -5,
+        "eqLowFreq": 150,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0,
+        "lowCutFreq":90,
+        //"eqFundamentalGain": -15,
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1500,
+        "clutchLaunchTargetRPM":2000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,1800,2400,2600,2600,2600]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4800
+    },
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["radiatorFanSpin"  , "barstow_coolingfan_v8", "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["barstow_engine_v8_291vmold", ["barstow_engine"]],
+        ["barstow_header_v8_291vmold", ["barstow_engine"]],
+        {"deformGroup":"radtube_break", "deformMaterialBase":"barstow", "deformMaterialDamaged":"invis"},
+        ["barstow_radtube_v8", ["barstow_radtube","barstow_engine"]],
+        {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true}
+         {"group":"barstow_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":26.7},
+         {"chemEnergy":2000,"burnRate":0.39,"flashPoint":650,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2},
+         ["e1r", -0.13, -0.94, 0.20],
+         ["e1l", 0.13, -0.94, 0.20],
+         ["e2r", -0.13, -1.50, 0.30],
+         ["e2l", 0.13, -1.50, 0.30],
+         {"selfCollision":true},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.32, -0.94, 0.76{"isExhaust":true}],
+         ["e3l", 0.32, -0.94, 0.76],
+         ["e4r", -0.32, -1.50, 0.76],
+         ["e4l", 0.32, -1.50, 0.76],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":9130830,"beamDamp":168},
+          {"beamDeform":364500,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"{"isExhaust":true}],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          //radtube
+          {"beamSpring":166830,"beamDamp":84},
+          {"beamDeform":2025,"beamStrength":7000},
+          ["e2r","ra1r"],
+          ["e2l","ra1r"],
+          ["e4r","ra1r"],
+          ["e4l","ra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"groundModel":"metal"},
+            /*
+            ["e5l", "e1l", "e3l"],
+            ["e4r", "e3r", "e2r"],
+            ["e3r", "e1r", "e2r"],
+            ["e1r", "e1l", "e2r"],
+            ["e2r", "e1l", "e2l"],
+            ["e3l", "e1l", "e3r"],
+            ["e3r", "e1l", "e1r"],
+            ["e4r", "e4l", "e3l"],
+            ["e4r", "e3l", "e3r"],
+            ["e4r", "e2r", "e4l"],
+            ["e4l", "e2r", "e2l"],
+            ["e4l", "e2l", "e6l"],
+            ["e6l", "e3l", "e4l"],
+            ["e6l", "e2l", "e5l"],
+            ["e6l", "e5l", "e3l"],
+            ["e2l", "e1l", "e5l"],
+            */
+            {"triangleType":"NONCOLLIDABLE"},
+            ["e2l", "e2r", "e1r"],
+            ["e1r", "e1l", "e2l"],
+            {"triangleType":"NORMALTYPE"},
+    ],
+}
+}

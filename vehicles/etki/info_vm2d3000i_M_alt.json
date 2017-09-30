@@ -1,0 +1,33 @@
+{
+"0-120 mph":23.7,
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"100-200 km/h":20.1,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":6.1,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":7640,
+"0-100 mph":15.1,
+"TorquePeakRPM":"3100 - 5000",
+"0-200 km/h":26.1,
+"Off-Road Score":34,
+"Configuration":"3000i (M)",
+"default_color":"Steel Gray",
+"Transmission":"Manual",
+"60-100 mph":9.4,
+"0-60 mph":5.7,
+"Config Type":"Factory",
+"100-0 km/h":42.5,
+"Top Speed":68.2897,
+"Power":207.399,
+"Torque":311.795,
+"PowerPeakRPM":"4600 - 5800",
+"Description":"Mid-trim 2-door facelift model with anti-lock brakes, equipped with a 3.0 liter engine",
+"Weight/Power":6.8599,
+"60-0 mph":121.7,
+"60-120 mph":17.9,
+"Weight":1420
+}

@@ -1,0 +1,62 @@
+{
+"sunburst_betacustomwagspoiler": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Custom Spoiler",
+        "value":230,
+    }
+    "slotType" : "sunburst_wagspoiler",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_spoiler_vmwagrs", ["sunburst_trunk"]],
+    ],
+    }
+    "sunburst_betafactoryrswagspoiler": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Sport RS Spoiler",
+            "value":190,
+        }
+        "slotType" : "sunburst_wagspoiler",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             ["sunburst_spoiler_vmwagrsstk", ["sunburst_trunk"]],
+        ],
+        }
+        "sunburst_wagrearspoilerlowlip": {
+            "information":{
+                "authors":"Ninetynine",
+                "name":"Sport S Tailgate Lip",
+                "value":50,
+            }
+            "slotType" : "sunburst_wagspoilerlow",
+            "flexbodies": [
+                 ["mesh", "[group]:", "nonFlexMaterials"],
+                 ["sunburst_spoiler_vmwaglow", ["sunburst_trunk"]],
+            ],
+            }
+            "sunburst_wagrearspoilerlowlip2": {
+                "information":{
+                    "authors":"Ninetynine",
+                    "name":"Sport RS Tailgate Lip",
+                    "value":95,
+                }
+                "slotType" : "sunburst_wagspoilerlow",
+                "flexbodies": [
+                     ["mesh", "[group]:", "nonFlexMaterials"],
+                     ["sunburst_spoiler_vmwaglow2", ["sunburst_trunk"]],
+                ],
+                }
+                "sunburst_betafactorySwagspoiler": {
+                    "information":{
+                        "authors":"Ninetynine",
+                        "name":"Sport Spoiler",
+                        "value":110,
+                    }
+                    "slotType" : "sunburst_wagspoiler",
+                    "flexbodies": [
+                         ["mesh", "[group]:", "nonFlexMaterials"],
+                         ["sunburst_spoiler_vmwags", ["sunburst_trunk"]],
+                    ],
+}
+}

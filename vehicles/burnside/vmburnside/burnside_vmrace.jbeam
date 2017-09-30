@@ -1,0 +1,11 @@
+{
+"burnside_skin_vmrace": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Race Car",
+        "value":300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrace",
+}
+}

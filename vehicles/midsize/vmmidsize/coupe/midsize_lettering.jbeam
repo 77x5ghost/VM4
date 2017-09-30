@@ -1,0 +1,57 @@
+{
+"midsize_lettering_vmcp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Trunk Lettering",
+        "value":5,
+    }
+    "slotType" : "midsize_lettering_trunkvmc",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_vmcp", ["midsize_trunk"]],
+         ["midsize_badge_trunkvmc", ["midsize_trunk"]],
+    ],
+    }
+    "midsize_lettering_vmcpdx": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"DX Trunk Lettering",
+            "value":5,
+        }
+        "slotType" : "midsize_lettering_trunkvmc",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             ["midsize_lettering_vmcp", ["midsize_trunk"]],
+             ["midsize_badge_trunkvmc", ["midsize_trunk"]],
+            ["midsize_lettering_DX", ["midsize_trunk"]],
+        ],
+        }
+        "midsize_lettering_vmcplx": {
+            "information":{
+                "authors":"BeamNG",
+                "name":"LX Trunk Lettering",
+                "value":7,
+            }
+            "slotType" : "midsize_lettering_trunkvmc",
+            "flexbodies": [
+                 ["mesh", "[group]:", "nonFlexMaterials"],
+                 ["midsize_lettering_vmcp", ["midsize_trunk"]],
+                 ["midsize_badge_trunkvmc", ["midsize_trunk"]],
+                ["midsize_lettering_LX", ["midsize_trunk"]],
+            ],
+            }
+            "midsize_lettering_vmcpv6": {
+                "information":{
+                    "authors":"BeamNG",
+                    "name":"V6 Trunk Lettering",
+                    "value":10,
+                }
+                "slotType" : "midsize_lettering_trunkvmc",
+                "flexbodies": [
+                     ["mesh", "[group]:", "nonFlexMaterials"],
+                     ["midsize_lettering_vmcp", ["midsize_trunk"]],
+                     ["midsize_badge_trunkvmc", ["midsize_trunk"]],
+                    ["midsize_lettering_V6", ["midsize_trunk"]],
+                ],
+}
+}

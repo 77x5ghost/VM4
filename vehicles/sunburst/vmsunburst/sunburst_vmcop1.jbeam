@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmcop1": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Cop 1",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmcop1",
+}
+}

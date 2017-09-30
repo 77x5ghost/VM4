@@ -1,0 +1,12 @@
+{
+
+"vmrace1": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Spordoreka Race Car #33",
+        "value":3600,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrace1",
+}
+}

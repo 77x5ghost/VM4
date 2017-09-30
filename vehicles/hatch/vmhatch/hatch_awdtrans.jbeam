@@ -1,0 +1,1007 @@
+{
+"hatch_transmissionvm_4A": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"4-Speed Automatic Transmission (Four Wheel Drive)",
+        "value":300,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_F","hatch_differential_F", "Front Differential"],
+		["hatch_transfercasevm","hatch_transfercasevm_AWD", "Transfer Case"{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-1.95, 0, 2.72, 1.52, 0.98, 0.64]
+        "parkLockTorque":1500,
+        "oneWayViscousCoef":8,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter": 0.25,
+        "converterStiffness":9,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":200,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":1.5
+        "lowShiftDownRPM":1800,
+        "lowShiftUpRPM":2700,
+        "highShiftDownRPM":3300,
+        "torqueConverterLockupRPM":2200
+        "torqueConverterLockupMinGear":2
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_A", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //automatic transmission
+        ["gear_A",       "hatch_shifter_A",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0.2, "z":0.01}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0},      0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--4 Speed Auto--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmissionvm_4M": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"4-Speed Manual Transmission (Four Wheel Drive)",
+        "value":150,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_F","hatch_differential_F", "Front Differential"],
+        ["hatch_transfercasevm","hatch_transfercasevm_AWD", "Transfer Case"{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.15, 0, 3.25, 1.65, 1.03, 0.82],
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2500,2900,3200,3400,3400]
+        "lowShiftUpRPM":4800,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M",       "hatch_shifter_M",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch",       "hatch_clutchpedal",  "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--5 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmissionvm_5M": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"5-Speed Manual Transmission (Four Wheel Drive)",
+        "value":250,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_F","hatch_differential_F", "Front Differential"],
+        ["hatch_transfercasevm","hatch_transfercasevm_AWD", "Transfer Case"{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.15, 0, 3.25, 1.895, 1.26, 0.94, 0.77],
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        "lowShiftUpRPM":5000,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M",       "hatch_shifter_M",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch",       "hatch_clutchpedal",  "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--5 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmissionvm_6M_race": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Race 6-Speed Manual Transmission (Four Wheel Drive)",
+        "value":1200,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_F","hatch_differential_F", "Front Differential"],
+        ["hatch_transfercasevm","hatch_transfercasevm_AWD_race", "Transfer Case"{"coreSlot":true}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$gear_R", "range", ":1", "Transmission", -3.58, -5.0, -0.5, "Reverse Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_1", "range", ":1", "Transmission", 3.27, 0.5, 5.0, "1st Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_2", "range", ":1", "Transmission", 2.13, 0.5, 5.0, "2nd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_3", "range", ":1", "Transmission", 1.52, 0.5, 5.0, "3rd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_4", "range", ":1", "Transmission", 1.15, 0.5, 5.0, "4th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_5", "range", ":1", "Transmission", 0.92,  0.5, 5.0, "5th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_6", "range", ":1", "Transmission", 0.74, 0.5, 5.0, "6th Gear Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":["$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6"]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "transmissionShiftDelay":0.15,
+        "lowShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        "lowShiftUpRPM":5500,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M"   ,"hatch_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["parkingbrake"     ,"hatch_parkingbrake", "f7r","f7l","f8r",  {"x":90, "y":0, "z":0} , {"x":-35, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch"     ,"hatch_clutchpedal", "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--6 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transfercasevm_AWD": {
+    "information":{
+        "authors":"Ytrewq",
+        "name":"Viscous AWD Transfer Case",
+        "value":1100,
+    },
+    "slotType" : "hatch_transfercasevm",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["splitShaft", "transfercase", "gearbox", 1, {"splitType":"viscous", "primaryOutputID":2, "viscousCoef":15, "viscousTorque":500, "friction":5}],
+    ],
+},
+"hatch_transfercasevm_AWD_race": {
+    "information":{
+        "authors":"Ytrewq",
+        "name":"Race AWD Transfer Case",
+        "value":2500,
+    },
+    "slotType" : "hatch_transfercasevm",
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$difftorquesplit_C", "range", "", "Differentials", 0.5, 0.25, 0.75, "Center LSD Torque Split", "Percent torque to rear wheels", {"minDis":25, "maxDis":75}],
+        ["$lsdpreload_C", "range", "N/m", "Differentials", 50, 0, 500, "Center LSD Preload", "Initial cross torque between front and rear wheels"],
+        ["$lsdlockcoef_C", "range", "", "Differentials", 0.20, 0, 0.5, "Center LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_C", "range", "", "Differentials", 0.05, 0, 0.5, "Center LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "transfercase", "gearbox", 1, {"diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$lsdlockcoef_C", "lsdRevLockCoef":"$lsdlockcoefrev_C", "diffTorqueSplit":"$difftorquesplit_C", "friction":5}],
+    ],
+},
+"hatch_suspensionvm_R_AWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Independent Rear Suspension (Four Wheel Drive)",
+        "value":150,
+    },
+
+    "slotType" : "hatch_suspension_R",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_brake_R","hatch_brake_R", "Rear Brakes"],
+        ["wheel_R_4","steelwheel_01a_13x5_R", "Rear Wheels", {"nodeOffset":{"x":"$trackwidth_R", "y":1.25, "z":0.288}}],
+        ["hatch_wheeldata_R","hatch_wheeldata_R", "Rear Spindles"{"coreSlot":true}],
+        ["hatch_coilover_R","hatch_coilover_R", "Rear Struts"],
+        ["hatch_swaybar_R","hatch_swaybar_R", "Rear Sway Bar"],
+        ["hatch_differential_R","", "Rear Differential"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$camber_RR", "range", "", "Alignment", 0.995, 0.95, 1.05, "Rear Right Camber", "Percentage of adjustment range"]
+        ["$camber_RL", "range", "", "Alignment", 0.995, 0.95, 1.05, "Rear Left Camber", "Percentage of adjustment range"]
+        ["$toe_RR", "range", "", "Alignment", 0.998, 1.03, 0.97, "Rear Right Toe", "Percentage of adjustment range"]
+        ["$toe_RL", "range", "", "Alignment", 0.998, 1.03, 0.97, "Rear Left Toe", "Percentage of adjustment range"]
+        ["$trackwidth_R", "range", "m", "Alignment", 0.26, 0.26, 0.29, "Rear Track Width", "Widen or narrow the wheel track"{"stepDis":0.005}]
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //rear running gear
+        ["hatch_lowerarm_R", ["hatch_lowermounts_a_R","hatch_lowerarm_a_R","hatch_lowermounts_b_R","hatch_lowerarm_b_R"]],
+        ["hatch_upperarm_R", ["hatch_lowermounts_F","hatch_uppermounts_R","hatch_upperarm_R"]],
+        ["hatch_hub_R", ["hatch_hub_R","hatch_lowerarm_a_R","hatch_lowerarm_b_R","hatch_upperarm_R"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR INDEPENDENT SUSPENSION--
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"selfCollision":false},
+        {"collision":true},
+        //rear hub
+        {"group":"hatch_hub_R"},
+        {"nodeWeight":3.5},
+        ["rw2r", -0.68, 0.86, 0.22],
+        ["rw2l", 0.68, 0.86, 0.22],
+        {"collision":false},
+        ["rw3r", -0.58, 0.85, 0.17],
+        ["rw3l", 0.58, 0.85, 0.17],
+        {"collision":true},
+        {"selfCollision":true}
+        {"group":"hatch_lowerarm_a_R"},
+        ["rh1r", -0.58, 1.27, 0.24],
+        ["rh1l", 0.58, 1.27, 0.24],
+        {"selfCollision":false}
+        {"group":""},
+        ["rh2r", -0.57, 0.735, 0.21],
+        ["rh2l", 0.57, 0.735, 0.21],
+        {"group":"hatch_upperarm_R"},
+        ["rh3r", -0.6, 1.2, 0.46],
+        ["rh3l", 0.6, 1.2, 0.46],
+        {"group":"hatch_lowerarm_b_R"},
+        ["rh4r", -0.57, 0.85, 0.23],
+        ["rh4l", 0.57, 0.85, 0.23],
+        {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          //--REAR RUNNING GEAR--
+          //multilink suspension
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0,"beamPrecompression":1.0},
+          {"beamDeform":86000,"beamStrength":180000},
+          {"beamSpring":8001000,"beamDamp":70},
+
+          //lower arms
+          ["rx1r","rh1r"],
+          ["rx1l","rh1l"],
+          ["rx2r","rh2r"],
+          ["rx2l","rh2l"],
+
+          //upper arms
+          ["rx3r","rh3r"{"beamPrecompression":"$camber_RR"}],
+          ["rx3l","rh3l"{"beamPrecompression":"$camber_RL"}],
+
+          //rear hub
+          {"beamDeform":97000,"beamStrength":220000},
+          {"beamSpring":7001000,"beamDamp":80},
+          ["rh1r","rh3r"],
+          ["rh1l","rh3l"],
+          ["rh2r","rh3r"],
+          ["rh2l","rh3l"],
+          //attach to trailing arm pivot
+          ["rh1r","rh4r"],
+          ["rh1l","rh4l"],
+          ["rh2r","rh4r"],
+          ["rh2l","rh4l"],
+          ["rh3r","rh4r"],
+          ["rh3l","rh4l"],
+          ["rw3r","rh4r"],
+          ["rw3l","rh4l"],
+          {"beamDeform":68000,"beamStrength":150000},
+          ["rh3r","rw2r"],
+          ["rh1r","rw2r"],
+          ["rh2r","rw2r"],
+          ["rh3l","rw2l"],
+          ["rh1l","rw2l"],
+          ["rh2l","rw2l"],
+          ["rh4l","rw2l"],
+          ["rh4r","rw2r"],
+          ["rw2r", "rw3r"],
+          ["rh2r", "rw3r"],
+          ["rh1r", "rw3r"],
+          ["rh3r", "rw3r"],
+          ["rw2l", "rw3l"],
+          ["rh2l", "rw3l"],
+          ["rw3l", "rh1l"],
+          ["rw3l", "rh3l"],
+          {"optional":true},
+
+          //attach to wheel
+          {"beamSpring":4501000,"beamDamp":60},
+          {"breakGroup":"wheel_RR"},
+          ["rh3r","rw1r"{"name":"axle_RR"}],
+          ["rh3r","rw1rr"],
+          ["rh1r","rw1r"],
+          ["rh1r","rw1rr"],
+          ["rh2r","rw1r"],
+          ["rh4r","rw1rr"],
+          ["rh4r","rw1r"],
+          ["rw3r","rw1rr"],
+          ["rw3r","rw1r"],
+          ["rh2r","rw1rr"{"beamPrecompression":"$toe_RR"}],
+          ["rw2r","rw1rr"],
+          ["rw2r","rw1r"],
+          {"breakGroup":"wheel_RL"},
+          ["rh3l","rw1l"{"name":"axle_RL"}],
+          ["rh3l","rw1ll"],
+          ["rh1l","rw1l"],
+          ["rh1l","rw1ll"],
+          ["rh2l","rw1l"],
+          ["rh4l","rw1ll"],
+          ["rh4l","rw1l"],
+          ["rw3l","rw1ll"],
+          ["rw3l","rw1l"],
+          ["rh2l","rw1ll"{"beamPrecompression":"$toe_RL"}],
+          ["rw2l","rw1ll"],
+          ["rw2l","rw1l"],
+          {"breakGroup":""},
+          {"optional":false},
+
+          //damping for the trailing arm bushing
+          {"beamDeform":15000,"beamStrength":25000},
+          {"beamSpring":0,"beamDamp":500},
+          ["rh4l","f3l"],
+          ["rh4r","f3r"],
+          ["rh4l","f9l"],
+          ["rh4r","f9r"],
+
+          //multilink suspension
+          //rear limiters
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.2, "beamShortBound":0.27},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":58000,"beamStrength":150000},
+          {"beamLimitSpring":2501000,"beamLimitDamp":1800},
+          ["rh3r","r3r"],
+          ["rh3l","r3l"],
+          ["rh3r","f4r"],
+          ["rh3l","f4l"],
+          ["rh1r","r3r"],
+          ["rh1l","r3l"],
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.25, "beamShortBound":0.25},
+          //rear end collide
+          ["rh1r","q7r"],
+          ["rh1l","q7l"],
+          ["rh1r","r4r"],
+          ["rh1l","r4l"],
+          ["rh1r","r2r"],
+          ["rh1l","r2l"],
+          //inner collide
+          ["rh1r","f9r"],
+          ["rh1l","f9l"],
+          ["rh3r","f9r"],
+          ["rh3l","f9l"],
+          ["rh1r","f8r"],
+          ["rh1l","f8l"],
+          ["rh3r","f8r"],
+          ["rh3l","f8l"],
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.19, "beamShortBound":0.19},
+          ["rh2r","q7r"],
+          ["rh2l","q7l"],
+
+          //hard travel limit
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.17, "beamShortBound":0.2},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":50000,"beamStrength":150000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":15000},
+          ["rh1r","rs1r"{"beamLimitDampRebound":0}],
+          ["rh1l","rs1l"{"beamLimitDampRebound":0}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+          ["id1:","id2:","id3:"],
+          {"triangleType":"NONCOLLIDABLE"},
+          ["rh3r", "rh1r", "rw2r"],
+          ["rh3r", "rw2r", "rh2r"],
+          ["rh1r", "rh4r", "rw2r"],
+          ["rw2r", "rh4r", "rh2r"],
+          ["r3r",  "rx3r", "f9r"],
+
+          ["rh1l", "rh3l", "rw2l"],
+          ["rw2l", "rh3l", "rh2l"],
+          ["rh4l", "rh1l", "rw2l"],
+          ["rh4l", "rw2l", "rh2l"],
+          ["rx3l", "r3l",  "f9l"],
+          {"triangleType":"NORMALTYPE"},
+    ],
+    "rails": {
+        "trailing_arm_pivot_R":{"links:":["rx4r", "rx5r"], "broken:":[], "looped":false, "capped":true},
+        "trailing_arm_pivot_L":{"links:":["rx4l", "rx5l"], "broken:":[], "looped":false, "capped":true},
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["rh4r", "trailing_arm_pivot_R", true, true, 0.0, 3001000, 150000, 150000],
+        ["rh4l", "trailing_arm_pivot_L", true, true, 0.0, 3001000, 150000, 150000],
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            //cancel out brake properties
+            {"brakeTorque":0},
+            {"parkingTorque":0},
+            {"enableBrakeThermals":false},
+            {"brakeDiameter":false},
+            {"brakeMass":false},
+            {"brakeType":false},
+            {"rotorMaterial":false},
+            {"brakeVentingCoef":false},
+    ],
+}
+"hatch_differential_Rvm": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Rear Differential",
+        "value":450,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft","hatch_driveshaft", "Rear Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"open", "gearRatio": 3.89, "diffTorqueSplit":0.5, "friction":4}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0, 1.325, 0.29],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false}
+         {"group":"pessima_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+         ["rx1", 0.00, 1.205, 0.30{"group":["pessima_subframe_R","pessima_4ws"]}],
+         ["rx1l", 0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx1"],
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.03, "beamShortBound":0.03},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3600,"beamStrength":9500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":250},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1r","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1l","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_R_LSDvm": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Limited Slip Rear Differential",
+        "value":850,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft","hatch_driveshaft", "Rear Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio": 3.89, "lsdPreload":100, "lsdLockCoef":0.1, "lsdRevLockCoef":0.01, "friction":4}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":24},
+         ["rdiff", 0, 1.325, 0.29],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false}
+         {"group":"hatch_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+         ["rx1", 0.00, 1.205, 0.30{"group":["pessima_subframe_R","pessima_4ws"]}],
+         ["rx1l", 0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx1"],
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.03, "beamShortBound":0.03},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3600,"beamStrength":9500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":250},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1r","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1l","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_driveshaft": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Driveshaft",
+        "value":200,
+    }
+    "slotType" : "hatch_driveshaft",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["shaft", "driveshaft", "transfercase", 1, {"breakTriggerBeam":"driveshaft", "electricsName":"driveshaft", "friction":2}]
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.01, "beamShortBound":0.01},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":1500,"beamStrength":3500},
+          {"beamLimitSpring":10001000,"beamLimitDamp":250},
+          ["rdiff","ta1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_R_Variablevm2": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Adjustable Race Limited Slip Rear Differential (SR+)",
+        "value":850,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft","hatch_driveshaft", "Rear Driveshaft"],
+    ],
+	"variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 50, 0, 500, "Rear LSD Preload", "Initial cross torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.20, 0, 0.5, "Rear LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.10, 0, 0.5, "Rear LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+        ["$finaldrive", "range", ":1", "Differentials", 4.39, 2.0, 6.0, "Final Drive Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio": 4.5, "lsdPreload":100, "lsdLockCoef":0.1, "lsdRevLockCoef":0.01, "friction":4}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":24},
+         ["rdiff", 0, 1.325, 0.29],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false}
+         {"group":"hatch_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+         ["rx1", 0.00, 1.205, 0.30{"group":["pessima_subframe_R","pessima_4ws"]}],
+         ["rx1l", 0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx1"],
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.03, "beamShortBound":0.03},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3600,"beamStrength":9500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":250},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1r","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1l","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_R_Variablevm": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Adjustable Race Limited Slip Rear Differential",
+        "value":850,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft","hatch_driveshaft", "Rear Driveshaft"],
+    ],
+	"variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 50, 0, 500, "Rear LSD Preload", "Initial cross torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.20, 0, 0.5, "Rear LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.10, 0, 0.5, "Rear LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+        ["$finaldrive", "range", ":1", "Differentials", 4.39, 2.0, 6.0, "Final Drive Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio": 3.89, "lsdPreload":100, "lsdLockCoef":0.1, "lsdRevLockCoef":0.01, "friction":4}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":24},
+         ["rdiff", 0, 1.325, 0.29],
+         {"group":""},
+
+         //add weight
+         {"nodeWeight":11.4},
+         {"collision":true},
+         {"selfCollision":false}
+         {"group":"hatch_lowermounts_a_R"},
+         //control arm
+         ["rx1r", -0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+         ["rx1", 0.00, 1.205, 0.30{"group":["pessima_subframe_R","pessima_4ws"]}],
+         ["rx1l", 0.17, 1.205, 0.22{"group":["pessima_lowerarm_R","pessima_subframe_R"]}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx1"],
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.03, "beamShortBound":0.03},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3600,"beamStrength":9500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":250},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1r","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1l","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_F_Variablevm2": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Adjustable Race Limited Slip Front Differential (SR+)",
+        "value":800,
+    },
+
+    "slotType" : "hatch_differential_F",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 50, 0, 500, "Front LSD Preload", "Initial cross torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.20, 0, 0.5, "Front LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.10, 0, 0.5, "Front LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+        ["$finaldrive", "range", ":1", "Differentials", 4.5, 2.0, 6.0, "Final Drive Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "gearbox", 1, {"diffType":"lsd", "gearRatio":"$finaldrive", "lsdPreload":"$lsdpreload_F", "lsdLockCoef":"$lsdlockcoef_F", "lsdRevLockCoef":"$lsdlockcoefrev_F", "friction":4}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          {"optional":true},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_F_Variablevm": {
+    "information":{
+        "authors":"NinetyNine",
+        "name":"Adjustable Race Limited Slip Front Differential (AWD)",
+        "value":800,
+    },
+
+    "slotType" : "hatch_differential_F",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 50, 0, 500, "Front LSD Preload", "Initial cross torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.20, 0, 0.5, "Front LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.10, 0, 0.5, "Front LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+        ["$finaldrive", "range", ":1", "Differentials", 3.89, 2.0, 6.0, "Final Drive Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "gearbox", 1, {"diffType":"lsd", "gearRatio":"$finaldrive", "lsdPreload":"$lsdpreload_F", "lsdLockCoef":"$lsdlockcoef_F", "lsdRevLockCoef":"$lsdlockcoefrev_F", "friction":4}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          {"optional":true},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,14 @@
+{
+"midsize_imsspoiler1": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"iMS Spoiler",
+        "value":70,
+    }
+    "slotType" : "midsize_spoiler",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["vmmidsize_spoiler_ims", ["midsize_trunk"]],
+    ],
+}
+}

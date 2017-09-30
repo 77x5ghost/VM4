@@ -1,0 +1,11 @@
+{
+"super_skin_vmpolice": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Polizia",
+        "value":2500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpolice",
+}
+}

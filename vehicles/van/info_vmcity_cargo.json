@@ -1,0 +1,21 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Body Style":"Box Truck",
+"Value":8500,
+"TorquePeakRPM":"1200 - 4100",
+"Off-Road Score":35,
+"Configuration":"CityTrans i6 Cargo (A)",
+"default_color":"Jet Black",
+"Config Type":"Factory",
+"100-0 km/h":78.8,
+"Top Speed":25.2874,
+"Power":166.661,
+"Torque":290.144,
+"Transmission":"Automatic",
+"Description":"The H-Series designed for city use, with a more efficient I6 engine, quick ratio steering, and thinner wheels with less rolling resistance for increased gas mileage. Caution is advised when driving, center of gravity is high, making the vehicle prone to rolling over.",
+"Weight/Power":21.1145,
+"60-0 mph":258.5,
+"PowerPeakRPM":"4150 - 5200",
+"Weight":3505
+}

@@ -1,0 +1,33 @@
+{
+"0-120 mph":47.2,
+"Performance Class":"4",
+"Drivetrain":"AWD",
+"100-200 km/h":49.8,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":8.4,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":7400,
+"0-100 mph":24.3,
+"TorquePeakRPM":"2800 - 5100",
+"0-200 km/h":58.2,
+"Off-Road Score":35,
+"Configuration":"2400ix (M)",
+"default_color":"Light Brown",
+"Transmission":"Manual",
+"60-100 mph":16.5,
+"0-60 mph":7.8,
+"Config Type":"Factory",
+"100-0 km/h":43.4,
+"Top Speed":57.2111,
+"Power":145.749,
+"Torque":211.607,
+"PowerPeakRPM":4700,
+"Description":"All-wheel drive 2-door facelift model with anti-lock brakes and sport wheels, equipped with a 2.4 liter engine",
+"Weight/Power":9.93103,
+"60-0 mph":123.1,
+"60-120 mph":39.1,
+"Weight":1440
+}

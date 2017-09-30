@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmclassy": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Custom Red/white Two-Tone",
+        "value":450,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmclassy",
+}
+}

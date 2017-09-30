@@ -1,0 +1,11 @@
+{
+"moonhawk_skin_junker2": {
+    "information":{
+        "authors":"LT. Smell My",
+        "name":"Moonhawk Junker 2",
+        "value":60,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rustyjunker2",
+}
+}

@@ -1,0 +1,78 @@
+[
+{
+    "name": "Utah Chase 1",
+    "description": "Get the D25. But take care of your brand new car",
+    "authors": "Ninetynine",
+    "previews": ["vmutahchase1.png"],
+    "difficulty": "70",
+    "levelObjects": {
+        "tod" : {
+            "time" : 0.87,
+            "dayLength" : 120,
+            "play" : false,
+            },
+        
+    },
+    "vehicles":
+    {
+        "scenario_player0":
+        { 
+            "driver": 
+            { 
+                "player":true,
+                "startFocus": true,
+                "required": true,
+                "command":"electrics.toggle_lightbar_signal()"
+            },
+            "goal":
+            {
+                "distance":
+                {
+                    "maxDistance":200,
+                    "distanceEnable":30,
+                    "msg":"Suspect got away",
+                    "target":"speeder"
+                },
+                "damage":
+                {
+                    "damageLimit":3200,
+                    "msg":"You damaged the ETK. You're fired..",
+                    "purpose":"fail"
+                },
+                "wayPointAction":
+                {
+                    "wayPointNum":[1],
+                    "wayPointMsg":["Get him!"]
+                }
+            }
+        },
+        "speeder":
+        {
+            "driver":
+            {
+                "player":false,
+                "required": false,
+                "removeIfEmpty":true,
+                "ModeAI":"flee"
+            },
+            "goal":
+            {
+                "speed":
+                {
+                    "minSpeed":1.4,
+                    "maxTimeout":8,
+                    "msg":"Got him! ",
+                    "purpose":"win","delay":0
+                },
+                
+            }
+        },
+        "*": 
+        {
+            "playerUsable": false
+        },
+    },
+    "lapConfig": ["ecach2_wp_1","ecach2_wp_end"],
+    "radiusMultiplierAI": 1
+},
+]

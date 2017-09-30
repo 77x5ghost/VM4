@@ -1,0 +1,79 @@
+{
+"sbr_vmgrille_R_1": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Mesh Grille",
+        "value":50,
+    }
+    "slotType" : "sbr_vmgrille_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_vmgrille_R_1", ["sbr_bumper_R"]],
+    ],
+}
+"sbr_vmbadge_F_1": {
+    "information":{
+        "authors":"Beamng",
+        "name":"Hirochi Badge",
+        "value":10,
+    }
+    "slotType" : "sbr_vmbadge_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_logovm1", ["sbr_bumper_F"]],
+    ],
+}
+"sbr_vmgrille_F_1": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Mesh Grille (Outer Parts)",
+        "value":30,
+    }
+    "slotType" : "sbr_vmgrille_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_vmgrille_F_out1", ["sbr_bumper_F"]],
+    ],
+}
+"sbr_vmgrille_F_2": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Mesh Grille (Middle Part)",
+        "value":40,
+    }
+    "slotType" : "sbr_vmgrille_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_vmgrille_F_mid", ["sbr_bumper_F"]],
+    ],
+}
+"sbr_vmgrille_F_3": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Mesh Grille (Complete)",
+        "value":70,
+    }
+    "slotType" : "sbr_vmgrille_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_vmgrille_F_mid", ["sbr_bumper_F"]],
+         ["sbr_vmgrille_F_out1", ["sbr_bumper_F"]],
+    ],
+}
+"sbr_vmgrille_R_2": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Mesh Grille",
+        "value":100,
+    }
+    "slotType" : "sbr_vmgrille_R2",
+    "slots": [
+        ["type", "default", "description"]
+        ["sbr_licenseplate_Rvm2g","", "Rear License Plate (Grille)"],
+      ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_vmgrille_R_2", ["sbr_bumper_R"]],
+    ],
+}
+}

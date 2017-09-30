@@ -1,0 +1,11 @@
+{
+"pickup_skin_vmsheriff": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) Sheriff",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmsheriff",
+}
+}

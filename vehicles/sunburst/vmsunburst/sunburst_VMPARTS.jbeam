@@ -1,0 +1,309 @@
+{
+"sunburst_spoiler_racevm1": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"S213 Spoiler",
+        "value":1100,
+    }
+    "slotType" : "sunburst_spoiler",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_spoiler_Lvm1", ["sunburst_spoiler_sport"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--SPOILER--
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sunburst_spoiler_sport"},
+         {"collision":true}
+         {"selfCollision":true},
+         {"nodeWeight":0.6},
+         ["sp1rr",-0.7, 1.70, 0.93],
+         ["sp1r",-0.42, 1.90, 0.93],
+         ["sp1", 0.0, 1.95, 0.93],
+         ["sp1l", 0.42, 1.90, 0.93],
+         ["sp1ll", 0.7, 1.70, 0.93],
+
+         ["sp2rr",-0.69, 1.99, 0.98],
+         ["sp2r",-0.42, 2.11, 0.98],
+         ["sp2", 0.0, 2.13, 0.98],
+         ["sp2l", 0.42, 2.11, 0.98],
+         ["sp2ll", 0.69, 1.99, 0.98],
+
+        //top
+         ["sp3rr",-0.65, 1.75, 1.155],
+         ["sp3r",-0.42, 1.85, 1.15],
+         ["sp3t", 0.0, 1.90, 1.15],
+         ["sp3l", 0.42, 1.85, 1.15],
+         ["sp3ll", 0.65, 1.75, 1.155],
+
+         ["sp4rr",-0.62, 1.99, 1.19],
+         ["sp4r",-0.42, 2.11, 1.19],
+         ["sp4", 0.0, 2.13, 1.19],
+         ["sp4l", 0.42, 2.11, 1.19],
+         ["sp4ll", 0.62, 1.99, 1.19],
+         //rigidifier
+         {"group":""},
+         {"collision":false}
+         {"selfCollision":false},
+         ["sp3", 0.0, 2.04, 0.84],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--SPOILER--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":501000,"beamDamp":50},
+          {"beamDeform":24000,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["sp1rr","sp1r"],
+          ["sp1r","sp1"],
+          ["sp1l","sp1"],
+          ["sp1ll","sp1l"],
+          ["sp2rr","sp2r"],
+          ["sp2r","sp2"],
+          ["sp2l","sp2"],
+          ["sp2ll","sp2l"],
+
+          ["sp1rr","sp2rr"],
+          ["sp1r","sp2r"],
+          ["sp1","sp2"],
+          ["sp1l","sp2l"],
+          ["sp1ll","sp2ll"],
+
+          //surficial crossing
+          {"beamDeform":14000,"beamStrength":"FLT_MAX"},
+          ["sp1rr","sp2r"],
+          ["sp2rr","sp1r"],
+          ["sp1r","sp2"],
+          ["sp2r","sp1"],
+          ["sp1","sp2l"],
+          ["sp2","sp1l"],
+          ["sp1l","sp2ll"],
+          ["sp2l","sp1ll"],
+
+          //rigids
+          {"beamDeform":3500,"beamStrength":"FLT_MAX"},
+          ["sp1rr","sp1"],
+          ["sp1r","sp1l"],
+          ["sp1ll","sp1"],
+          ["sp2rr","sp2"],
+          ["sp2r","sp2l"],
+          ["sp2ll","sp2"],
+
+          //rigidifier
+          {"beamDeform":3500,"beamStrength":"FLT_MAX"},
+          {"beamSpring":501000,"beamDamp":50},
+          ["sp1rr","sp3"],
+          ["sp1r","sp3"],
+          ["sp1","sp3"],
+          ["sp1l","sp3"],
+          ["sp1ll","sp3"],
+          ["sp2rr","sp3"],
+          ["sp2r","sp3"],
+          ["sp2","sp3"],
+          ["sp2l","sp3"],
+          ["sp2ll","sp3"],
+
+          //top shape
+          ["sp3rr","sp3r"],
+          ["sp3r","sp3t"],
+          ["sp3l","sp3t"],
+          ["sp3ll","sp3l"],
+          ["sp4rr","sp4r"],
+          ["sp4r","sp4"],
+          ["sp4l","sp4"],
+          ["sp4ll","sp4l"],
+
+          ["sp3rr","sp4rr"],
+          ["sp3r","sp4r"],
+          ["sp3t","sp4"],
+          ["sp3l","sp4l"],
+          ["sp3ll","sp4ll"],
+
+          //top crossing
+          ["sp4ll","sp3l"],
+          ["sp4l","sp3ll"],
+          ["sp4l","sp3t"],
+          ["sp3l","sp4"],
+
+          ["sp4rr","sp3r"],
+          ["sp4r","sp3rr"],
+          ["sp4r","sp3t"],
+          ["sp3r","sp4"],
+
+          //top to bottom
+          ["sp3ll","sp1ll"],
+          ["sp4ll","sp2ll"],
+          ["sp3l","sp1l"],
+          ["sp4l","sp2l"],
+
+          ["sp3t","sp1"],
+          ["sp4","sp2"],
+
+          ["sp3rr","sp1rr"],
+          ["sp4rr","sp2rr"],
+          ["sp3r","sp1r"],
+          ["sp4r","sp2r"],
+
+          //side crossing
+          ["sp4ll","sp1ll"],
+          ["sp3ll","sp2ll"],
+          ["sp4ll","sp2l"],
+          ["sp4l","sp2ll"],
+          ["sp4l","sp2"],
+          ["sp4","sp2l"],
+          ["sp3ll","sp1l"],
+          ["sp3l","sp1ll"],
+          ["sp3l","sp1"],
+          ["sp3t","sp1l"],
+
+          ["sp4rr","sp1rr"],
+          ["sp3rr","sp2rr"],
+          ["sp4rr","sp2r"],
+          ["sp4r","sp2rr"],
+          ["sp4r","sp2"],
+          ["sp4","sp2r"],
+          ["sp3rr","sp1r"],
+          ["sp3r","sp1rr"],
+          ["sp3r","sp1"],
+          ["sp3t","sp1r"],
+
+          //interior crossing
+          ["sp3l","sp2l"],
+          ["sp4l","sp1l"],
+
+          ["sp4","sp1"],
+          ["sp3t","sp2"],
+
+          ["sp3r","sp2r"],
+          ["sp4r","sp1r"],
+
+          //attach
+          {"beamSpring":451000,"beamDamp":40},
+          {"beamDeform":5500,"beamStrength":8500},
+          //r
+          {"breakGroup":"sunburst_spoiler_R_attach"},
+          ["sp1rr","t3rr"],
+          ["sp1r","t3rr"],
+          ["sp1rr","t3r"],
+          ["sp1r","t3r"],
+
+          ["sp1rr","t2rr"],
+          ["sp1r","t2rr"],
+          ["sp1rr","t2r"],
+          ["sp1r","t2r"],
+
+          ["sp2rr","t3rr"],
+          ["sp2r","t3rr"],
+          ["sp2rr","t3r"],
+          ["sp2r","t3r"],
+
+          //l
+          {"breakGroup":"sunburst_spoiler_L_attach"},
+          ["sp1ll","t3ll"],
+          ["sp1l","t3ll"],
+          ["sp1ll","t3l"],
+          ["sp1l","t3l"],
+
+          ["sp1ll","t2ll"],
+          ["sp1l","t2ll"],
+          ["sp1ll","t2l"],
+          ["sp1l","t2l"],
+
+          ["sp2ll","t3ll"],
+          ["sp2l","t3ll"],
+          ["sp2ll","t3l"],
+          ["sp2l","t3l"],
+          {"breakGroup":""},
+
+          //anti stretch
+          {"beamSpring":0,"beamDamp":0,"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+          {"beamLimitSpring":1051000,"beamLimitDamp":150},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.03, "beamShortBound":1.0},
+          ["sp1rr","sp1ll"],
+          ["sp2rr","sp2ll"],
+
+          //spoiler support beams
+          {"beamType":"|SUPPORT", "beamLongBound":6},
+          {"beamSpring":401000,"beamDamp":40},
+          {"beamDeform":25000,"beamStrength":125000},
+          ["sp1ll","q3l"],
+          ["sp1rr","q3r"],
+          ["sp1ll","q9l"],
+          ["sp1rr","q9r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //trunk
+            {"dragCoef":20},
+            {"group":"sunburst_spoiler_race"},
+            ["sp1ll","sp2ll","sp2l",{"liftCoef":160}],
+            ["sp1ll","sp2l","sp1l",{"liftCoef":160}],
+            ["sp1l","sp2l","sp2",{"liftCoef":160}],
+            ["sp1l","sp2","sp1",{"liftCoef":160}],
+            ["sp1r","sp1","sp2",{"liftCoef":160}],
+            ["sp1r","sp2","sp2r",{"liftCoef":160}],
+            ["sp1rr","sp1r","sp2r",{"liftCoef":160}],
+            ["sp1rr","sp2r","sp2rr",{"liftCoef":160}],
+
+            ["sp3ll","sp4ll","sp3l",{"liftCoef":160}],
+            ["sp3l","sp4ll","sp4l",{"liftCoef":160}],
+            ["sp3l","sp4l","sp3t",{"liftCoef":160}],
+            ["sp3t","sp4l","sp4",{"liftCoef":160}],
+
+            ["sp3t","sp4","sp3r",{"liftCoef":160}],
+            ["sp3r","sp4","sp4r",{"liftCoef":160}],
+            ["sp3r","sp4r","sp4rr",{"liftCoef":160}],
+            ["sp3r","sp4rr","sp3rr",{"liftCoef":160}],
+            {"group":""},
+    ],
+    }
+    "sunburst_roof_plainvmc": {
+        "information":{
+            "authors":"BeamNG , Ninetynine",
+            "name":"Carbon Plain Roof",
+            "value":1500,
+        }
+        "slotType" : "sunburst_roof",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             ["sunburst_roof_plainvmc", ["sunburst_body"]],
+        ],
+    }
+    "sunburst_roof_sunvmc": {
+        "information":{
+            "authors":"BeamNG , Ninetynine",
+            "name":"Carbon Sunroof",
+            "value":2200,
+        }
+        "slotType" : "sunburst_roof",
+        "nodes": [
+             //redefine roof node heavier to simulate sunroof weight
+             ["id", "posX", "posY", "posZ"],
+             {"group":"sunburst_body"},
+             {"selfCollision":true},
+             {"collision":true},
+             {"nodeWeight":5.7},
+             {"frictionCoef":0.5},
+             {"nodeMaterial":"|NM_METAL"},
+             ["rf2r", -0.60, 0.31, 1.31],
+             ["rf2", 0, 0.31, 1.375{"nodeWeight":3.4}],
+             ["rf2l", 0.60, 0.31, 1.31],
+             {"group":""},
+        ],
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             //body
+             ["sunburst_roof_sunvmc", ["sunburst_body"]],
+             ["sunburst_roofcover", ["sunburst_body"]],
+             {"deformGroup":"sunburst_sunroof_break", "deformMaterialBase":"sunburst_glass", "deformMaterialDamaged":"sunburst_glass_dmg"}
+             ["sunburst_sunroof", ["sunburst_body"]],
+             {"deformGroup":"sunburst_sunroof_break", "deformMaterialBase":"sunburst_glass_int", "deformMaterialDamaged":"sunburst_glass_dmg"}
+             ["sunburst_sunroof_int", ["sunburst_body"]],
+             {"deformGroup":""}
+        ],
+}
+}

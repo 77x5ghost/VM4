@@ -1,0 +1,11 @@
+{
+"pessima_skin_nomi270": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI 270S",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "nomi270",
+}
+}

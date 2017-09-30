@@ -1,0 +1,33 @@
+{
+"0-120 mph":46.3,
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"100-200 km/h":51.1,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":9.3,
+"Years":{
+  "min":1985,
+  "max":1989
+},
+"Value":4600,
+"0-100 mph":26.1,
+"TorquePeakRPM":"2550 - 4950",
+"0-200 km/h":60.5,
+"Off-Road Score":28,
+"Configuration":"2400 (M)",
+"default_color":"Pleasant Blue",
+"Transmission":"Manual",
+"60-100 mph":17.4,
+"0-60 mph":8.7,
+"Config Type":"Factory",
+"100-0 km/h":47.1,
+"Top Speed":59.1191,
+"Power":129.846,
+"Torque":184.73,
+"PowerPeakRPM":5100,
+"Description":"2-door Base model, equipped with a 2.4 liter engine",
+"Weight/Power":10.6977,
+"60-0 mph":135.3,
+"60-120 mph":37.3,
+"Weight":1380
+}

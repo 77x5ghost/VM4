@@ -1,0 +1,11 @@
+{
+"moonhawk_skin_zbird": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Z-Bird",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "zbird",
+}
+}

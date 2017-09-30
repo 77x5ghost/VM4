@@ -1,0 +1,14 @@
+{
+"etk800_lettering_tailgate_vmf8": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"F8 Tailgate Lettering",
+        "value":60,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_vmf8", ["etk800_tailgate"]],
+    ],
+}
+}

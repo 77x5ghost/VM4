@@ -1,0 +1,11 @@
+{
+"pickup_skin_trc": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"D-Series TRC Paint Job",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "trc",
+}
+}

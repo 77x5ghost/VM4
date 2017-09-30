@@ -1,0 +1,11 @@
+{
+"pessima_skin_vmjpn": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) Japanese Police ",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmjpn",
+}
+}

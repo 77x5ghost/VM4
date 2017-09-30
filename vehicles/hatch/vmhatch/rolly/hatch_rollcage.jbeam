@@ -1,0 +1,740 @@
+
+
+{
+"hatch_rollcagevmrolly": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Roll Cage",
+        "value":1600,
+    },
+
+    "slotType" : "hatch_rollcagevmrolly",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_cagerolly","hatch_rolly", "'Rolly' Roll Cage"],
+
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //redefine nodes to make them heavier
+        {"frictionCoef":0.5},
+        {"collision":true}
+        {"selfCollision":false}
+        {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":9},
+         //floor
+         {"group":"hatch_rolly"},
+
+
+
+
+
+
+
+
+
+        //roof
+        {"nodeWeight":3.7},
+            ["xa2", 0.65025, -1.89902, 0.25986],
+            ["xa3", -0.64175, -1.89902, 0.25986],
+            ["xa4", 0.65025, -1.97959, 0.71018],
+            ["xa5", -0.64175, -1.97959, 0.71018],
+            ["xa6", 0.65025, -1.87125, 1.06984],
+            ["xa7", -0.64175, -1.87125, 1.06984],
+            ["xa8", 0.65025, -1.65365, 1.37963],
+            ["xa9", -0.64175, -1.65365, 1.37963],
+            ["xa10", 0.65025, -1.31306, 1.61975],
+            ["xa11", -0.64175, -1.31306, 1.61975],
+            ["xa12", 0.65025, -0.93672, 1.77957],
+            ["xa13", -0.64175, -0.93672, 1.77957],
+            ["xa18", 0.65025, -0.55255, 1.81908],
+            ["xa19", -0.64175, -0.55255, 1.81908],
+            ["xa20", 0.65025, -0.19413, 1.80924],
+            ["xa21", -0.64175, -0.19413, 1.80924],
+            ["xa22", 0.65025, 0.17148, 1.74994],
+            ["xa23", -0.64175, 0.17148, 1.74994],
+            ["xa24", 0.65025, 0.56842, 1.63151],
+            ["xa25", -0.64175, 0.56842, 1.63151],
+            ["xa26", 0.65025, 0.96535, 1.41392],
+            ["xa27", -0.64175, 0.96535, 1.41392],
+            ["xa28", 0.65025, 1.21404, 1.12749],
+            ["xa29", -0.64175, 1.21404, 1.12749],
+            ["xa30", 0.65025, 1.46064, 0.75217],
+            ["xa31", -0.64175, 1.46064, 0.75217],
+            ["xa32", 0.65025, 1.53905, 0.32746],
+            ["xa33", -0.64175, 1.53905, 0.32746],
+
+
+
+
+
+
+
+
+
+        ["rf3r", -0.52000, 0.50000, 1.32000],
+        ["rf3", 0.00000, 0.51000, 1.35000{"nodeWeight":1.4}],
+        ["rf3l", 0.52000, 0.50000, 1.32000],
+         //pillars
+         //a
+
+
+
+
+
+
+         //b
+
+
+
+
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2200550,"beamDamp":50},
+          {"beamDeform":360000,"beamStrength":"FLT_MAX"},
+          //rollyattach to body
+       ["xa2", "s7l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+       ["xa3", "s7r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa3", "s7l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+       ["xa2", "s7r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa11", "f6r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "f6l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "f6l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "f6r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa5", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa5", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa29", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa29", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa7", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa7", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa20", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa20", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa21", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa21", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa22", "rf3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa22", "rf3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa23", "rf3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa23", "rf3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa24", "rf2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa24", "rf2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa25", "rf2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa25", "rf2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "q3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "q3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "rf4l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "rf4r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "rf4l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "rf4r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa30", "q3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa30", "q3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa31", "q3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa31", "q3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa32", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa32", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa33", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa33", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+         //internal strenght
+
+         ["xa8", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa2", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa3", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa2", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa3", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa9", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa18", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa18", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa19", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa29", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa29", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa13", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa10", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa11", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa4", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa5", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa4", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa5", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa2", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa3", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa3", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa4", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa21", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa22", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa24", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa31", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+
+
+
+
+
+
+
+
+          //rolly
+
+          ["xa2", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa2", "xa3",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa2", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa3", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa3", "xa2",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa3", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa5", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa5", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa5", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa7", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa7", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa7", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "xa10",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "xa11",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa9", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa9", "xa10",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa9", "xa11",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa10", "xa11",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa10", "xa12",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa10", "xa13",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "xa10",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "xa12",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "xa13",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa13", "xa12",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa13", "xa19",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa13", "xa18",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa12", "xa13",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa12", "xa19",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa12", "xa18",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa19",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa19", "xa18",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa19", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa19", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa26", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa26", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa26", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa27", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa27", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa27", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "xa30",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "xa31",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa29", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa29", "xa30",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa29", "xa31",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "xa31",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "xa30",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa32", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+
+
+
+
+
+
+          //crossing bars
+
+
+
+          ["q1l", "q1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+
+    ],
+"triangles": [
+        ["id1:","id2:","id3:"],
+        //rolly
+        {"group":"hatch_rolly"},
+        {"dragCoef":6},
+        ["xa9","xa8","xa10"],
+        ["xa9","xa10","xa11"],
+        ["xa9","xa6","xa8"],
+        ["xa7","xa6","xa9"],
+        ["xa5","xa6","xa7"],
+        ["xa5","xa4","xa6"],
+        ["xa3","xa4","xa5"],
+        ["xa3","xa2","xa4"],
+        ["xa11","xa12","xa13"],
+        ["xa11","xa10","xa12"],
+        ["xa13","xa18","xa19"],
+        ["xa13","xa12","xa18"],
+        ["xa19","xa18","xa20"],
+        ["xa19","xa20","xa21"],
+        ["xa21","xa22","xa23"],
+        ["xa21","xa20","xa22"],
+        ["xa23","xa22","xa24"],
+        ["xa23","xa24","xa25"],
+        ["xa25","xa24","xa26"],
+        ["xa25","xa26","xa27"],
+        ["xa27","xa26","xa28"],
+        ["xa27","xa28","xa29"],
+        ["xa29","xa30","xa31"],
+        ["xa29","xa28","xa30"],
+        ["xa31","xa30","xa32"],
+        ["xa31","xa32","xa33"],
+
+        {"dragCoef":0},
+        {"breakGroup":"hatch_rolly"},
+        {"breakGroup":""},
+        {"dragCoef":0},
+],
+},
+"hatch_rollcagevmrollybodycoloreed": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Bodycolored Roll Cage",
+        "value":1700,
+    },
+
+    "slotType" : "hatch_rollcagevmrolly",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_cagerolly_bodycol","hatch_rolly", "'Rolly' Roll Cage"],
+
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //redefine nodes to make them heavier
+        {"frictionCoef":0.5},
+        {"collision":true}
+        {"selfCollision":false}
+        {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":9},
+         //floor
+         {"group":"hatch_rolly"},
+
+
+
+
+
+
+
+
+
+        //roof
+        {"nodeWeight":3.7},
+            ["xa2", 0.65025, -1.89902, 0.25986],
+            ["xa3", -0.64175, -1.89902, 0.25986],
+            ["xa4", 0.65025, -1.97959, 0.71018],
+            ["xa5", -0.64175, -1.97959, 0.71018],
+            ["xa6", 0.65025, -1.87125, 1.06984],
+            ["xa7", -0.64175, -1.87125, 1.06984],
+            ["xa8", 0.65025, -1.65365, 1.37963],
+            ["xa9", -0.64175, -1.65365, 1.37963],
+            ["xa10", 0.65025, -1.31306, 1.61975],
+            ["xa11", -0.64175, -1.31306, 1.61975],
+            ["xa12", 0.65025, -0.93672, 1.77957],
+            ["xa13", -0.64175, -0.93672, 1.77957],
+            ["xa18", 0.65025, -0.55255, 1.81908],
+            ["xa19", -0.64175, -0.55255, 1.81908],
+            ["xa20", 0.65025, -0.19413, 1.80924],
+            ["xa21", -0.64175, -0.19413, 1.80924],
+            ["xa22", 0.65025, 0.17148, 1.74994],
+            ["xa23", -0.64175, 0.17148, 1.74994],
+            ["xa24", 0.65025, 0.56842, 1.63151],
+            ["xa25", -0.64175, 0.56842, 1.63151],
+            ["xa26", 0.65025, 0.96535, 1.41392],
+            ["xa27", -0.64175, 0.96535, 1.41392],
+            ["xa28", 0.65025, 1.21404, 1.12749],
+            ["xa29", -0.64175, 1.21404, 1.12749],
+            ["xa30", 0.65025, 1.46064, 0.75217],
+            ["xa31", -0.64175, 1.46064, 0.75217],
+            ["xa32", 0.65025, 1.53905, 0.32746],
+            ["xa33", -0.64175, 1.53905, 0.32746],
+
+
+
+
+
+
+
+
+
+        ["rf3r", -0.52000, 0.50000, 1.32000],
+        ["rf3", 0.00000, 0.51000, 1.35000{"nodeWeight":1.4}],
+        ["rf3l", 0.52000, 0.50000, 1.32000],
+         //pillars
+         //a
+
+
+
+
+
+
+         //b
+
+
+
+
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2200550,"beamDamp":50},
+          {"beamDeform":360000,"beamStrength":"FLT_MAX"},
+          //rollyattach to body
+       ["xa2", "s7l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+       ["xa3", "s7r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa3", "s7l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+       ["xa2", "s7r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa11", "f6r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "f6l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "f6l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "f6r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa5", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa5", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa29", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa29", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa7", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa7", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa20", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa20", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa21", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa21", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa22", "rf3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa22", "rf3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa23", "rf3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa23", "rf3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa24", "rf2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa24", "rf2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa25", "rf2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa25", "rf2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "q3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "q3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "rf4l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa26", "rf4r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "rf4l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa27", "rf4r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa30", "q3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa30", "q3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa31", "q3l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa31", "q3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa32", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa32", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa33", "r2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa33", "r2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+         //internal strenght
+
+         ["xa8", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa2", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa3", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa2", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa3", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa9", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa8", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa9", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa18", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa19", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa18", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa19", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa29", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa28", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa29", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa13", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa12", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa13", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa11", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa10", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa10", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa11", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa4", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa5", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa4", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa5", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa2", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa3", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa3", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+        ["xa4", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa21", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa22", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa24", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "f6ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa31", "f6rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+
+
+
+
+
+
+
+
+          //rolly
+
+          ["xa2", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa2", "xa3",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa2", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa3", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa3", "xa2",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa3", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "xa5",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa4", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa5", "xa4",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa5", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa5", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "xa7",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa6", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa7", "xa6",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa7", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa7", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "xa9",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "xa10",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa8", "xa11",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa9", "xa8",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa9", "xa10",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa9", "xa11",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa10", "xa11",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa10", "xa12",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa10", "xa13",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "xa10",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "xa12",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa11", "xa13",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa13", "xa12",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa13", "xa19",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa13", "xa18",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa12", "xa13",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa12", "xa19",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa12", "xa18",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa19",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa18", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa19", "xa18",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa19", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa19", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "xa21",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa20", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "xa20",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa21", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "xa23",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa22", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "xa22",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa23", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "xa25",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa24", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "xa24",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa25", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa26", "xa27",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa26", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa26", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa27", "xa26",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa27", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa27", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "xa29",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "xa30",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa28", "xa31",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa29", "xa28",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa29", "xa30",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa29", "xa31",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "xa31",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa30", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "xa30",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "xa32",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["xa31", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+         ["xa32", "xa33",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+
+
+
+
+
+
+          //crossing bars
+
+
+
+          ["q1l", "q1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+
+    ],
+"triangles": [
+        ["id1:","id2:","id3:"],
+        //rolly
+        {"group":"hatch_rolly"},
+        {"dragCoef":6},
+        ["xa9","xa8","xa10"],
+        ["xa9","xa10","xa11"],
+        ["xa9","xa6","xa8"],
+        ["xa7","xa6","xa9"],
+        ["xa5","xa6","xa7"],
+        ["xa5","xa4","xa6"],
+        ["xa3","xa4","xa5"],
+        ["xa3","xa2","xa4"],
+        ["xa11","xa12","xa13"],
+        ["xa11","xa10","xa12"],
+        ["xa13","xa18","xa19"],
+        ["xa13","xa12","xa18"],
+        ["xa19","xa18","xa20"],
+        ["xa19","xa20","xa21"],
+        ["xa21","xa22","xa23"],
+        ["xa21","xa20","xa22"],
+        ["xa23","xa22","xa24"],
+        ["xa23","xa24","xa25"],
+        ["xa25","xa24","xa26"],
+        ["xa25","xa26","xa27"],
+        ["xa27","xa26","xa28"],
+        ["xa27","xa28","xa29"],
+        ["xa29","xa30","xa31"],
+        ["xa29","xa28","xa30"],
+        ["xa31","xa30","xa32"],
+        ["xa31","xa32","xa33"],
+
+        {"dragCoef":0},
+        {"breakGroup":"hatch_rolly"},
+        {"breakGroup":""},
+        {"dragCoef":0},
+],
+},
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmrally1": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) Rally",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrally1",
+}
+}

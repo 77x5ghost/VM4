@@ -1,0 +1,12 @@
+{
+
+"vmnomi": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI 500R Paint Job",
+        "value":1000,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmnomi",
+}
+}

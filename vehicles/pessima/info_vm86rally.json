@@ -1,0 +1,28 @@
+{
+"Performance Class":"8",
+"Drivetrain":"4WD",
+"Value":23000,
+"0-100 km/h":4.9,
+"TorquePeakRPM":"5200 - 6300",
+"Weight":1415,
+"Off-Road Score":34,
+"Configuration":"Rally #1 (M)",
+"default_color":"Pearl White",
+"0-100 mph":10,
+"60-100 mph":5.2,
+"0-60 mph":4.7,
+"Config Type":"Custom",
+"100-0 km/h":40.1,
+"Top Speed":53.4191,
+"Power":341.585,
+"Torque":408.664,
+"Description":"The famous 1986 Dreid Rally Car is a never forgotten legend. Equipped with a turbocharged i4 engine , a lifted rally suspension and a bodykit , this car is one of the best , and most iconic rally cars in history.",
+"Transmission":"Manual",
+"Weight/Power":4.14956,
+"60-0 mph":115.3,
+"Years":{
+  "min":1986,
+  "max":1988
+},
+"PowerPeakRPM":"5700 - 6750"
+}

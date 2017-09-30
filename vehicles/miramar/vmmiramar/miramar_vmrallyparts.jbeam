@@ -1,0 +1,218 @@
+{
+"vmmiramar_rallylights": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rally Lights + Mudflaps",
+        "value":300,
+    }
+    "slotType" : "miramar_grille",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["vmmiramar_mudflap_FR", ["miramar_fender_R"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         ["vmmiramar_mudflap_FL", ["miramar_fender_L"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         ["vmmiramar_mudflap_RL", ["miramar_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         ["vmmiramar_mudflap_RR", ["miramar_body"],[],{"pos":{"x":0,"y":0,"z":0}}],
+         ["rallylight_barred", ["pessima_rallylight_R"],[]{"pos":{"x":-0.131,"y":-1.84,"z":0.72}}],
+         ["rallylight_barred", ["pessima_rallylight_L"],[]{"pos":{"x": 0.131,"y":-1.84,"z":0.72}}],
+
+         {"deformGroup":"pessima_rallylight_R_break", "deformMaterialBase":"light_generic", "deformMaterialDamaged":"light_generic_dmg"}
+         ["rallylight_inner", ["pessima_rallylight_R"],[]{"pos":{"x":-0.131,"y":-1.84,"z":0.72}}],
+         {"deformGroup":"pessima_rallylight_L_break", "deformMaterialBase":"light_generic", "deformMaterialDamaged":"light_generic_dmg"}
+         ["rallylight_inner", ["pessima_rallylight_L"],[]{"pos":{"x": 0.131,"y":-1.84,"z":0.72}}],
+
+         {"deformGroup":"pessima_rallylight_R_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"}
+         ["rallylight_glass", ["pessima_rallylight_R"],[]{"pos":{"x":-0.131,"y":-1.84,"z":0.72}"deformSound":"GlassBreakSound4", "deformVolume":0.5}],
+         {"deformGroup":"pessima_rallylight_L_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"}
+         ["rallylight_glass", ["pessima_rallylight_L"],[]{"pos":{"x": 0.131,"y":-1.84,"z":0.72}"deformSound":"GlassBreakSound3", "deformVolume":0.5}],
+         {"deformGroup":""}
+    ],
+
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":120
+            "lightBrightness":0.35
+            "lightRange":150
+            "lightColor":{"r":255, "g":255, "b":200, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":true
+            "flareName":"vehicleHeadLightFlare"
+            "flareScale":0.2
+            "cookieName":"art/special/BNG_light_cookie_headlight.png"
+            "texSize":512
+            "shadowSoftness":0.5
+        }
+        ["highbeam"    , "SPOTLIGHT"        , "rli3r", "rli4r", "rli1r", {"x":180, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.5, "y":0.5, "z":0.0},"deformGroup":"pessima_rallylight_R_break"}],,
+        ["highbeam"    , "SPOTLIGHT"        , "rli3l", "rli4l", "rli1l", {"x":0, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.5, "y":0.5, "z":-0.0},"deformGroup":"pessima_rallylight_L_break"}],
+     ],
+
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--HEADLIGHT--
+         //left
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"nodeWeight":0.7},
+         {"group":"pessima_rallylight_R"},
+
+         ["rli1r", -0.20800, -1.87540, 0.78912],
+         ["rli2r", -0.06800, -1.87540, 0.78912],
+         ["rli3r", -0.20800, -1.87540, 0.66912],
+         ["rli4r", -0.06800, -1.87540, 0.66912],
+         ["rli5r", -0.13800, -1.82040, 0.72912],
+         {"group":"pessima_rallylight_L"},
+
+         ["rli1l", 0.19600, -1.87540, 0.78912],
+         ["rli2l", 0.05600, -1.87540, 0.78912],
+         ["rli3l", 0.19600, -1.87540, 0.66912],
+         ["rli4l", 0.05600, -1.87540, 0.66912],
+         ["rli5l", 0.12600, -1.82040, 0.72912],
+         {"group":""},
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--RALLY LIGHT--
+          {"beamSpring":351000,"beamDamp":30},
+          {"beamDeform":13350,"beamStrength":128000},
+          {"deformationTriggerRatio":0.05}
+          {"deformGroup":"pessima_rallylight_R_break"}
+          //main shape
+          ["rli1r","rli2r"],
+          ["rli2r","rli3r"],
+          ["rli3r","rli4r"],
+          ["rli2r","rli4r"],
+          ["rli1r","rli4r"],
+          ["rli1r","rli3r"],
+
+          ["rli1r","rli5r"],
+          ["rli2r","rli5r"],
+          ["rli3r","rli5r"],
+          ["rli4r","rli5r"],
+          {"deformGroup":"pessima_rallylight_L_break"}
+          ["rli1l","rli2l"],
+          ["rli2l","rli3l"],
+          ["rli3l","rli4l"],
+          ["rli2l","rli4l"],
+          ["rli1l","rli4l"],
+          ["rli1l","rli3l"],
+
+          ["rli1l","rli5l"],
+          ["rli2l","rli5l"],
+          ["rli3l","rli5l"],
+          ["rli4l","rli5l"],
+
+          //attach
+          {"beamSpring":201000,"beamDamp":50},
+          {"beamDeform":2150,"beamStrength":5000},
+          {"breakGroup":"pessima_rallylight_R"},
+          {"breakGroupType":0}
+          {"deformGroup":"pessima_rallylight_R_break"}
+
+          ["rli1r","fc1r"],
+          ["rli1r","fc1"],
+          ["rli2r","fc1r"],
+          ["rli2r","fc1"],
+          ["rli3r","fc1r"],
+          ["rli3r","fc1"],
+          ["rli4r","fc1r"],
+          ["rli4r","fc1"],
+          ["rli5r","fc1r"],
+          ["rli5r","fc1"],
+          ["rli3r","fc2r"],
+          ["rli3r","fc2"],
+          ["rli5r","fc2r"],
+          ["rli5r","fc2"],
+
+          ["rli5r","fc6"],
+
+          {"breakGroup":"pessima_rallylight_L"},
+          {"deformGroup":"pessima_rallylight_L_break"}
+
+          ["rli1l","fc1l"],
+          ["rli1l","fc1"],
+          ["rli2l","fc1l"],
+          ["rli2l","fc1"],
+          ["rli3l","fc1l"],
+          ["rli3l","fc1"],
+          ["rli4l","fc1l"],
+          ["rli4l","fc1"],
+          ["rli5l","fc1l"],
+          ["rli5l","fc1"],
+          ["rli3l","fc2l"],
+          ["rli3l","fc2"],
+          ["rli5l","fc2l"],
+          ["rli5l","fc2"],
+
+          ["rli5l","fc6"],
+          {"breakGroup":""},
+          {"deformGroup":""}
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":6},
+            {"group":"pessima_rallylight_R"},
+            ["rli1r","rli3r","rli4r"],
+            ["rli1r","rli4r","rli2r"],
+
+            ["rli2r","rli5r","rli1r"],
+            ["rli1r","rli5r","rli3r"],
+            ["rli3r","rli5r","rli4r"],
+            ["rli4r","rli5r","rli2r"],
+            {"group":"pessima_rallylight_L"},
+            ["rli3l","rli1l","rli4l"],
+            ["rli4l","rli1l","rli2l"],
+
+            ["rli5l","rli2l","rli1l"],
+            ["rli5l","rli1l","rli3l"],
+            ["rli5l","rli3l","rli4l"],
+            ["rli5l","rli4l","rli2l"],
+
+            {"group":""},
+
+    ],
+}
+"pessima_mudflap_FR": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Right Mudflap",
+        "value":40,
+    },
+    "slotType" : "pessima_mudflap_FR",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["pessima_mudflap_FR", ["pessima_fender_R", "pessima_mudflap_FR"],[],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+}
+"pessima_mudflap_FL": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Left Mudflap",
+        "value":40,
+    },
+    "slotType" : "pessima_mudflap_FL",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["pessima_mudflap_FL", ["pessima_fender_L", "pessima_mudflap_FL"],[],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+}
+"pessima_mudflap_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Mudflaps",
+        "value":80,
+    },
+    "slotType" : "pessima_mudflap_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["pessima_mudflap_RR", ["pessima_bumper_R"],[],{"pos":{"x":-0.0001,"y":0,"z":0}}],
+        ["pessima_mudflap_RL", ["pessima_bumper_R"],[],{"pos":{"x":0.0001,"y":0,"z":0}}],
+    ],
+}
+}

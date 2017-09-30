@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmlprace": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM #04 Race Car",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmlprace",
+}
+}

@@ -1,0 +1,20 @@
+{
+"burnside_skin_vmrod": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VarietyMod Rod",
+        "value":1000,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrod",
+}
+"burnside_skin_vmrat": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Junk-Rod",
+        "value":100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrat",
+}
+}

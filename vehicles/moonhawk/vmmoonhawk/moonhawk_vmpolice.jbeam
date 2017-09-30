@@ -1,0 +1,11 @@
+{
+"moonhawk_skin_vmpolice": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Police (VarietyMod)",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpolice",
+}
+}

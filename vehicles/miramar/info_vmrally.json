@@ -1,0 +1,22 @@
+{
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"Value":35000,
+"TorquePeakRPM":"2300 - 3450",
+"Off-Road Score":35,
+"Configuration":"Rally #4 (M)",
+"PowerPeakRPM":"4050 - 5300",
+"0-100 km/h":9.4,
+"0-60 mph":9.2,
+"Config Type":"Custom",
+"100-0 km/h":40.3,
+"Top Speed":35.2173,
+"Transmission":"Manual",
+"Torque":169.432,
+"Weight":1115,
+"Description":"The official Miramar Rally Car is a completely rebuilt GTz. Ibishu kept it's engine stock , but replaced the stock suspension by a professional rally-suspension. Other parts like a rollcage , rally-lights and mudflaps were also added",
+"Weight/Power":12.9651,
+"60-0 mph":117.5,
+"Power":86.9899,
+"default_color":"Pearl White"
+}

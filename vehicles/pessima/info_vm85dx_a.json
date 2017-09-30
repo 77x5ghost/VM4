@@ -1,0 +1,28 @@
+{
+"Performance Class":"3",
+"Drivetrain":"FWD",
+"Value":1800,
+"0-100 km/h":12,
+"TorquePeakRPM":"3650 - 5150",
+"Weight":1315,
+"Off-Road Score":28,
+"Configuration":"1.8 DX (A)",
+"default_color":"Steel Gray",
+"0-100 mph":38,
+"60-100 mph":26.8,
+"0-60 mph":11.2,
+"Config Type":"Factory",
+"100-0 km/h":47.3,
+"Top Speed":50.024,
+"Power":101.42,
+"Torque":136.558,
+"Description":"This is the base model for the '86 Pessima. Includes a 1.8 SOHC engine, and has barely any entertainment in it.",
+"Transmission":"Automatic",
+"Weight/Power":13.0198,
+"60-0 mph":136.1,
+"Years":{
+  "min":1986,
+  "max":1988
+},
+"PowerPeakRPM":"5350 - 6250"
+}

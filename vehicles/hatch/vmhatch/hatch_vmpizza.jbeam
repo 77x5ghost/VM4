@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmpizza": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"East Coast Pizza",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpizza",
+}
+}

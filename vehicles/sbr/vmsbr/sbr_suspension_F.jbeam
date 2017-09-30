@@ -1,0 +1,72 @@
+{
+"sbr_steeringvmqrr": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Quick Ratio Rally Steering",
+        "value":1700,
+    }
+    "slotType" : "sbr_steering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_steeringbox", ["sbr_body","sbr_lowermounts_a_F","sbr_lowermounts_b_F"]],
+         ["sbr_tierod_F", ["sbr_tierod_F","sbr_hub_F","sbr_lowerarm_FR","sbr_lowerarm_FL","sbr_lowermounts_a_F","sbr_tierod_inner"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$toe_FR", "range", "", "Alignment", 0.999, 0.98, 1.02, "Front Right Toe", "Percentage of adjustment range"]
+        ["$toe_FL", "range", "", "Alignment", 0.999, 0.98, 1.02, "Front Left Toe", "Percentage of adjustment range"]
+    ],
+    "rails": {
+        "steeringrack":{
+            "links:":["fh6r", "fh6l"], "broken:":[], "looped":false, "capped":true
+        }
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["fx5r", "steeringrack", true, true, 0.0, 12001000, 250000, 250000],
+        ["fx5l", "steeringrack", true, true, 0.0, 12001000, 250000, 250000],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--steering rod--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sbr_tierod_inner"},
+         {"nodeWeight":4.3},
+         ["fh6r", -0.21, -1.10, 0.177],
+         ["fh6l", 0.21, -1.10, 0.177],
+         {"group":""},
+    ],
+    "beams": [
+            ["id1:","id2:"],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+            {"beamSpring":12001000,"beamDamp":150,"beamDeform":99500,"beamStrength":192500},
+            ["fh6r","fh6l"],
+            //toe in
+            ["fh3r","fh6r"{"beamPrecompression":"$toe_FR"}],
+            ["fh3l","fh6l"{"beamPrecompression":"$toe_FL"}],
+            //steering damper
+            {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+            {"beamSpring":0,"beamDeform":16800,"beamStrength":42000},
+            {"beamLimitSpring":0,"beamLimitDamp":0},
+            ["fh3r","fx1r",{"beamDampVelocitySplit":0.15,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+            ["fh3l","fx2l",{"beamDampVelocitySplit":0.15,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+            ["fh5r","fx2r",{"beamDampVelocitySplit":0.15,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+            ["fh5l","fx2l",{"beamDampVelocitySplit":0.15,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ]
+    "hydros": [
+            ["id1:","id2:"],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+            {"beamSpring":3001000,"beamDamp":100,"beamDeform":49500,"beamStrength":92500},
+            ["fh6r","fx5l",{"factor":-0.305,"steeringWheelLock":460}],
+            ["fh6l","fx5r",{"factor":0.305,"steeringWheelLock":460}],
+            {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "input": {
+        "FFBcoef":4.5,
+    },
+}
+}

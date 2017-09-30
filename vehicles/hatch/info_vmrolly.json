@@ -1,0 +1,22 @@
+{
+"Performance Class":"1",
+"Drivetrain":"FWD",
+"Value":2350,
+"TorquePeakRPM":"5000 - 7150",
+"0-100 km/h":8.4,
+"Off-Road Score":43,
+"0-100 mph":27,
+"Weight":980,
+"Configuration":"'Rolly' (M)",
+"60-100 mph":19,
+"0-60 mph":8,
+"Config Type":"Custom",
+"Top Speed":52.3996,
+"Power":118.155,
+"Torque":123.928,
+"Transmission":"Manual",
+"Description":"A special show-car. 'Rolly' is very famous in the car-circus scene all over the world. in the right conditions this car is able to roll over without a single scratch, and to continue driving afterwards. The weight distribution and the roll-cage architecture make this possible. And remember ; This car is for rolling - not for crashing ;)",
+"Weight/Power":8.30508,
+"PowerPeakRPM":6500,
+"default_color":"Old White"
+}

@@ -1,0 +1,19 @@
+{
+"etk800_gauges_metric_vpack": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"V-Pack Metric Gauges",
+        "value":400,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etk800_needle_speedo", "f7r","f7l","f8r", {"x":20, "y":0, "z":0}, {"x":0, "y":0, "z":-3.27}     , {"x":0, "y":0, "z":0}, 0, 72.222, -35.5, 1],
+        ["rpm",         "etk800_needle_tacho", "f7r","f7l","f8r", {"x":20, "y":0, "z":0}, {"x":0, "y":0, "z":-0.03}     , {"x":0, "y":0, "z":0}, 0, 7500, -3500, 1],
+        ["fuel",         "etk800_needle_fuel", "f7r","f7l","f8r", {"x":20, "y":0, "z":0}, {"x":0, "y":0, "z":-90}     , {"x":0, "y":0, "z":0}, 0, 1, -0.5, 1],
+        ["oiltemp",       "etk800_needle_temp", "f7r","f7l","f8r", {"x":20, "y":0, "z":0}, {"x":0, "y":0, "z":-1}     , {"x":0, "y":0, "z":0}, 70, 170, -105, -1],
+    ],
+    "skinName" : "metric_vpack",
+}
+}

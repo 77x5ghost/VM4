@@ -1,0 +1,11 @@
+{
+"pickup_skin_vmcons": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Gabe's Constructions",
+        "value":170,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmcons",
+}
+}

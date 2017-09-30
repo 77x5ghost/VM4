@@ -1,0 +1,11 @@
+{
+"hatch_skin_black2tvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Two-Tone Black",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "black2tvm",
+}
+}

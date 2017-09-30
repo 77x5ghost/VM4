@@ -1,0 +1,11 @@
+{
+"sunburst_skin_s213": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"S213",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "s213",
+}
+}

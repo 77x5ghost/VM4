@@ -1,0 +1,857 @@
+{
+"sunburst_bumper_Fvmev": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"EV Front Bumper",
+        "value":90,
+    }
+    "slotType" : "sunburst_bumper_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_bumper_FEV", ["sunburst_bumper_F"]],
+    ],
+    "slots": [
+        ["type", "default", "description"]
+        ["sunburst_licenseplate_F","", "Front License Plate"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--FRONT BUMPER--
+         {"nodeWeight":0.65},
+         {"frictionCoef":1},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"group":"sunburst_bumper_F"},
+         {"collision":true},
+         {"selfCollision":true},
+         ["fb1rr", -0.71, -1.87, 0.54],
+         ["fb1r", -0.43, -2.0, 0.52],
+         ["fb1", 0, -2.12, 0.555],
+         ["fb1l", 0.43, -2.0, 0.52],
+         ["fb1ll", 0.71, -1.87, 0.54],
+
+         ["fb2rr", -0.73, -1.92, 0.50],
+         ["fb2r", -0.42, -2.09, 0.50],
+         ["fb2", 0, -2.16, 0.50],
+         ["fb2l", 0.42, -2.09, 0.50],
+         ["fb2ll", 0.73, -1.92, 0.50],
+
+         ["fb3rr", -0.72, -1.93, 0.19],
+         ["fb3r", -0.41, -2.07, 0.20],
+         ["fb3", 0, -2.14, 0.21],
+         ["fb3l", 0.41, -2.07, 0.20],
+         ["fb3ll", 0.72, -1.93, 0.19],
+
+         ["fb4rr", -0.83, -1.61, 0.52],
+         ["fb4ll", 0.83, -1.61, 0.52],
+
+         ["fb5rr", -0.81, -1.66, 0.18],
+         ["fb5ll", 0.81, -1.66, 0.18],
+
+         {"group":""},
+         {"collision":false}
+         {"selfCollision":false},
+         ["fb6", 0, -1.98, 0.21],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--FRONT BUMPER--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":151000,"beamDamp":150},
+          {"beamDeform":32000,"beamStrength":59000},
+          //front bumper main shape
+          {"deformGroup":"sunburst_foglightglass_R_break","deformationTriggerRatio":0.01}
+          ["fb4rr","fb1rr"],
+          ["fb1rr","fb1r"],
+          ["fb4rr","fb2rr"],
+          ["fb2rr","fb2r"],
+          {"deformGroup":"sunburst_foglightglass_L_break"}
+          ["fb1l","fb1ll"],
+          ["fb4ll","fb1ll"],
+          ["fb2l","fb2ll"],
+          ["fb4ll","fb2ll"],
+          {"deformGroup":""}
+
+          ["fb1r","fb1"],
+          ["fb1","fb1l"],
+
+          ["fb2r","fb2"],
+          ["fb2","fb2l"],
+
+          ["fb5rr","fb3rr"],
+          ["fb3rr","fb3r"],
+          ["fb3r","fb3"],
+          ["fb3","fb3l"],
+          ["fb3l","fb3ll"],
+          ["fb5ll","fb3ll"],
+
+          {"deformGroup":"sunburst_foglightglass_R_break"}
+          ["fb1rr","fb2rr"],
+          ["fb1r","fb2r"],
+          {"deformGroup":"sunburst_foglightglass_L_break"}
+          ["fb1l","fb2l"],
+          ["fb1ll","fb2ll"],
+          {"deformGroup":""}
+
+          ["fb1","fb2"],
+
+          ["fb2rr","fb3rr"],
+          ["fb2r","fb3r"],
+          ["fb2","fb3"],
+          ["fb2l","fb3l"],
+          ["fb2ll","fb3ll"],
+
+          ["fb4rr","fb5rr"],
+          ["fb4ll","fb5ll"],
+
+          //crossing
+          {"beamDeform":9750,"beamStrength":59000},
+          ["fb4rr","fb3rr"],
+          ["fb5rr","fb2rr"],
+          {"deformGroup":"sunburst_foglightglass_R_break"}
+          ["fb2rr","fb3r"],
+          ["fb3rr","fb2r"],
+          {"deformGroup":""}
+
+          ["fb2r","fb3"],
+          ["fb3r","fb2"],
+          ["fb2","fb3l"],
+          ["fb3","fb2l"],
+
+          {"deformGroup":"sunburst_foglightglass_L_break"}
+          ["fb2l","fb3ll"],
+          ["fb3l","fb2ll"],
+          {"deformGroup":""}
+
+          ["fb4ll","fb3ll"],
+          ["fb5ll","fb2ll"],
+
+          ["fb1rr","fb2r"],
+          ["fb1ll","fb2l"],
+          ["fb2rr","fb1r"],
+          ["fb2ll","fb1l"],
+          ["fb1r","fb2"],
+          ["fb1l","fb2"],
+          ["fb2r","fb1"],
+          ["fb2l","fb1"],
+
+          //rigids
+          {"beamDeform":3200,"beamStrength":59000},
+          {"beamSpring":101000,"beamDamp":150},
+          {"deformGroup":"sunburst_foglightglass_R_break"}
+          ["fb1rr","fb1"],
+          ["fb2rr","fb2"],
+          {"deformGroup":"sunburst_foglightglass_L_break"}
+          ["fb1","fb1ll"],
+          ["fb2","fb2ll"],
+          {"deformGroup":""}
+
+          ["fb1r","fb1l"],
+          ["fb2r","fb2l"],
+
+          ["fb3rr","fb3"],
+          ["fb3r","fb3l"],
+          ["fb3","fb3ll"],
+
+          ["fb1rr","fb3rr"],
+          ["fb1r","fb3r"],
+          ["fb1","fb3"],
+          ["fb1l","fb3l"],
+          ["fb1ll","fb3ll"],
+
+          //weak
+          {"beamDeform":2000,"beamStrength":50000},
+          {"beamSpring":72000,"beamDamp":100},
+          ["fb4rr","fb1r"],
+          ["fb1l","fb4ll"],
+          ["fb5rr","fb3r"],
+          ["fb3l","fb5ll"],
+          ["fb4rr","fb2r"],
+          ["fb2l","fb4ll"],
+
+          //rigidifier
+          {"beamDeform":1500,"beamStrength":"FLT_MAX"},
+          {"beamSpring":12000,"beamDamp":150},
+          ["fb1rr","fb6"],
+          ["fb1r","fb6"],
+          ["fb1","fb6"],
+          ["fb1l","fb6"],
+          ["fb1ll","fb6"],
+
+          ["fb2rr","fb6"],
+          ["fb2r","fb6"],
+          ["fb2","fb6"],
+          ["fb2l","fb6"],
+          ["fb2ll","fb6"],
+
+          ["fb3rr","fb6"],
+          ["fb3r","fb6"],
+          ["fb3","fb6"],
+          ["fb3l","fb6"],
+          ["fb3ll","fb6"],
+
+          {"beamDeform":1500,"beamStrength":"FLT_MAX"},
+          ["fb4rr","fb6"],
+          ["fb4ll","fb6"],
+
+          ["fb5rr","fb6"],
+          ["fb5ll","fb6"],
+
+          //attach
+          {"beamSpring":401000,"beamDamp":100},
+          {"beamDeform":4750,"beamStrength":12500},
+          //r
+          {"breakGroup":"sunburst_frontbumper_R"},
+          {"optional":true},
+          ["fb4rr","fe11r"],
+          ["fb1rr","fe11r"],
+          ["fb4rr","fe10r"],
+          {"optional":false},
+
+          ["fb5rr","f19rr"],
+          ["fb3rr","f19rr"],
+
+          //l
+          {"breakGroup":"sunburst_frontbumper_L"},
+          {"optional":true},
+          ["fb4ll","fe11l"],
+          ["fb1ll","fe11l"],
+          ["fb4ll","fe10l"],
+          {"optional":false},
+
+          ["fb5ll","f19ll"],
+          ["fb3ll","f19ll"],
+
+          //middle
+          {"beamDeform":2150,"beamStrength":12500},
+          {"breakGroup":"sunburst_frontbumper_M"},
+          ["fb1","f15r"],
+          ["fb1","f15"],
+          ["fb1","f15l"],
+          {"breakGroup":""},
+
+          //front bumper support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":181000,"beamDamp":10},
+          {"beamDeform":12000,"beamStrength":125000},
+          {"optional":true},
+          ["fb4rr","fe5r"],
+          ["fb4ll","fe5l"],
+
+          ["fb4rr","fe10r"],
+          ["fb4ll","fe10l"],
+
+          ["fb1rr","fe6r"],
+          ["fb1ll","fe6l"],
+
+          ["fb1rr","fe11r"],
+          ["fb1ll","fe11l"],
+
+          ["fb5rr","fe6r"],
+          ["fb5ll","fe6l"],
+
+          ["fb1rr","fe6r"],
+          ["fb1ll","fe6l"],
+
+          //
+          ["fb1","h5"],
+          ["fb1","h4"],
+
+          ["fb1r","h5r"],
+          ["fb1l","h5l"],
+
+          ["fb1r","h4r"],
+          ["fb1l","h4l"],
+
+          //
+          ["fb1r","he3r"],
+          ["fb1r","he1r"],
+
+          ["fb1l","he3l"],
+          ["fb1l","he1l"],
+
+          ["fb1rr","he4r"],
+          ["fb1ll","he4l"],
+
+          ["fb1rr","he2r"],
+          ["fb1ll","he2l"],
+          {"optional":false},
+
+          {"beamDeform":3850,"beamStrength":125000},
+          ["fb1r","f15"],
+          ["fb1","f15"],
+          ["fb1l","f15"],
+          ["fb1r","f15r"],
+          ["fb1","f15"],
+          ["fb1l","f15l"],
+          ["fb1","f15r"],
+          ["fb1","f15l"],
+
+          {"beamDeform":11850,"beamStrength":125000},
+          ["fb3r","f18r"],
+          ["fb3l","f18l"],
+
+          {"optional":true}
+          //["fb1r","f17r"],
+          //["fb1","f17"],
+          //["fb1l","f17l"],
+
+          //["fb3r","f16r"],
+          //["fb3","f16"],
+          //["fb3l","f16l"],
+
+          //["fb1r","f16r"],
+          //["fb1","f16"],
+          //["fb1l","f16l"],
+
+          //["fb3r","f17r"],
+          //["fb3","f17"],
+          //["fb3l","f17l"],
+
+          //["fb1r","f17r"],
+          //["fb1","f17"],
+          //["fb1l","f17l"],
+
+          //["fb3rr","f16rr"],
+          //["fb3ll","f16ll"],
+          //["fb1rr","f16rr"],
+          //["fb1ll","f16ll"],
+          {"optional":false}
+
+          ["fb3","f18r"],
+          ["fb3","f18l"],
+
+          ["fb3r","f18"],
+          ["fb3r","f18"],
+          ["fb3rr","f19rr"],
+          ["fb3ll","f19ll"],
+          ["fb1rr","f19rr"],
+          ["fb1ll","f19ll"],
+          ["fb5rr","f19rr"],
+          ["fb5ll","f19ll"],
+
+          ["fb1ll","fx1l"],
+          ["fb1rr","fx1r"],
+
+          ["fb3r","f11rr"],
+          ["fb3l","f11ll"],
+
+          //strong
+          {"beamDeform":28650,"beamStrength":125000},
+          {"optional":true}
+          //["fb1","f17"],
+          //["fb1","f16"],
+          //["fb3","f16"],
+          {"optional":false}
+
+          ["fb3","f18"],
+
+          //weak
+          {"beamDeform":6150,"beamStrength":125000},
+          ["fb3rr","f18r"],
+          ["fb3ll","f18l"],
+          ["fb5rr","f18r"],
+          ["fb5ll","f18l"],
+
+          ["fb1rr","f13rr"],
+          ["fb1ll","f13ll"],
+          ["fb1r","f13rr"],
+          ["fb1l","f13ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //front bumper
+            {"dragCoef":3},
+            {"group":"sunburst_bumper_F"},
+            ["fb1ll","fb2ll","fb4ll"],
+            ["fb2ll","fb3ll","fb5ll"],
+            ["fb2ll","fb5ll","fb4ll"],
+
+            ["fb1l","fb2l","fb2ll"],
+            ["fb1l","fb2ll","fb1ll"],
+            ["fb2l","fb3l","fb3ll"],
+            ["fb2l","fb3ll","fb2ll"],
+
+            ["fb1","fb2","fb2l"],
+            ["fb1","fb2l","fb1l"],
+            ["fb2","fb3","fb3l"],
+            ["fb2","fb3l","fb2l"],
+
+            ["fb2","fb1","fb2r"],
+            ["fb1","fb1r","fb2r"],
+            ["fb3","fb2","fb3r"],
+            ["fb2","fb2r","fb3r"],
+
+            ["fb2r","fb1r","fb2rr"],
+            ["fb1r","fb1rr","fb2rr"],
+            ["fb3r","fb2r","fb3rr"],
+            ["fb2r","fb2rr","fb3rr"],
+
+            ["fb2rr","fb1rr","fb4rr"],
+            ["fb3rr","fb2rr","fb5rr"],
+            ["fb5rr","fb2rr","fb4rr"],
+
+            //bottom
+            ["fb3rr","fb5rr","fb3r"],
+            ["fb3r","fb5rr","fb3"],
+            ["fb5ll","fb3ll","fb3l"],
+            ["fb5ll","fb3l","fb3"],
+            ["fb3","fb5rr","fb6"],
+            ["fb5ll","fb3","fb6"],
+            //bumper to hood and fender
+            {"dragCoef":0},
+            {"optional":true}
+            {"breakGroup":["sunburst_frontbumper_M","sunburst_hoodlatch"]},
+            ["h5", "fb1", "fb1l"],
+            ["h5", "fb1l", "h5l"],
+            ["h4l", "h5l", "h4ll"],
+            ["h5l", "fb1l", "h4ll"],
+            ["fb1l", "fb1ll", "h4ll"],
+            ["h4rr", "h5r", "h4r"],
+            ["h4rr", "fb1r", "h5r"],
+            ["h4rr", "fb1rr", "fb1r"],
+            ["h5r", "fb1r", "h5"],
+            ["h5", "fb1r", "fb1"],
+
+            {"breakGroup":["sunburst_fender_b_L","sunburst_frontbumper_M","sunburst_hoodlatch"]},
+            ["h4ll", "fb1ll", "fe11l"],
+            ["fe11l", "fb1ll", "fe6l"],
+            ["fb1ll", "fb4ll", "fe6l"],
+
+            {"breakGroup":["sunburst_fender_b_R","sunburst_frontbumper_M","sunburst_hoodlatch"]},
+            ["fb1rr", "h4rr", "fe11r"],
+            ["fb1rr","fe11r", "fe6r"],
+            ["fb4rr","fb1rr", "fe6r"],
+            {"optional":false}
+            {"breakGroup":""},
+            {"group":""},
+    ],
+    }
+    "sunburst_bumper_Fvmev2": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"EV Front Bumper with LED",
+        }
+        "slotType" : "sunburst_bumper_F",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             ["sunburst_bumper_FEV2", ["sunburst_bumper_F"]],
+        ],
+        "slots": [
+            ["type", "default", "description"]
+            ["sunburst_licenseplate_F","", "Front License Plate"],
+        ],
+        "nodes": [
+             ["id", "posX", "posY", "posZ"],
+             //--FRONT BUMPER--
+             {"nodeWeight":0.65},
+             {"frictionCoef":1},
+             {"nodeMaterial":"|NM_PLASTIC"},
+             {"group":"sunburst_bumper_F"},
+             {"collision":true},
+             {"selfCollision":true},
+             ["fb1rr", -0.71, -1.87, 0.54],
+             ["fb1r", -0.43, -2.0, 0.52],
+             ["fb1", 0, -2.12, 0.555],
+             ["fb1l", 0.43, -2.0, 0.52],
+             ["fb1ll", 0.71, -1.87, 0.54],
+
+             ["fb2rr", -0.73, -1.92, 0.50],
+             ["fb2r", -0.42, -2.09, 0.50],
+             ["fb2", 0, -2.16, 0.50],
+             ["fb2l", 0.42, -2.09, 0.50],
+             ["fb2ll", 0.73, -1.92, 0.50],
+
+             ["fb3rr", -0.72, -1.93, 0.19],
+             ["fb3r", -0.41, -2.07, 0.20],
+             ["fb3", 0, -2.14, 0.21],
+             ["fb3l", 0.41, -2.07, 0.20],
+             ["fb3ll", 0.72, -1.93, 0.19],
+
+             ["fb4rr", -0.83, -1.61, 0.52],
+             ["fb4ll", 0.83, -1.61, 0.52],
+
+             ["fb5rr", -0.81, -1.66, 0.18],
+             ["fb5ll", 0.81, -1.66, 0.18],
+
+             {"group":""},
+             {"collision":false}
+             {"selfCollision":false},
+             ["fb6", 0, -1.98, 0.21],
+        ],
+        "beams": [
+              ["id1:", "id2:"],
+              //--FRONT BUMPER--
+              {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+              {"beamSpring":151000,"beamDamp":150},
+              {"beamDeform":32000,"beamStrength":59000},
+              //front bumper main shape
+              {"deformGroup":"sunburst_foglightglass_R_break","deformationTriggerRatio":0.01}
+              ["fb4rr","fb1rr"],
+              ["fb1rr","fb1r"],
+              ["fb4rr","fb2rr"],
+              ["fb2rr","fb2r"],
+              {"deformGroup":"sunburst_foglightglass_L_break"}
+              ["fb1l","fb1ll"],
+              ["fb4ll","fb1ll"],
+              ["fb2l","fb2ll"],
+              ["fb4ll","fb2ll"],
+              {"deformGroup":""}
+
+              ["fb1r","fb1"],
+              ["fb1","fb1l"],
+
+              ["fb2r","fb2"],
+              ["fb2","fb2l"],
+
+              ["fb5rr","fb3rr"],
+              ["fb3rr","fb3r"],
+              ["fb3r","fb3"],
+              ["fb3","fb3l"],
+              ["fb3l","fb3ll"],
+              ["fb5ll","fb3ll"],
+
+              {"deformGroup":"sunburst_foglightglass_R_break"}
+              ["fb1rr","fb2rr"],
+              ["fb1r","fb2r"],
+              {"deformGroup":"sunburst_foglightglass_L_break"}
+              ["fb1l","fb2l"],
+              ["fb1ll","fb2ll"],
+              {"deformGroup":""}
+
+              ["fb1","fb2"],
+
+              ["fb2rr","fb3rr"],
+              ["fb2r","fb3r"],
+              ["fb2","fb3"],
+              ["fb2l","fb3l"],
+              ["fb2ll","fb3ll"],
+
+              ["fb4rr","fb5rr"],
+              ["fb4ll","fb5ll"],
+
+              //crossing
+              {"beamDeform":9750,"beamStrength":59000},
+              ["fb4rr","fb3rr"],
+              ["fb5rr","fb2rr"],
+              {"deformGroup":"sunburst_foglightglass_R_break"}
+              ["fb2rr","fb3r"],
+              ["fb3rr","fb2r"],
+              {"deformGroup":""}
+
+              ["fb2r","fb3"],
+              ["fb3r","fb2"],
+              ["fb2","fb3l"],
+              ["fb3","fb2l"],
+
+              {"deformGroup":"sunburst_foglightglass_L_break"}
+              ["fb2l","fb3ll"],
+              ["fb3l","fb2ll"],
+              {"deformGroup":""}
+
+              ["fb4ll","fb3ll"],
+              ["fb5ll","fb2ll"],
+
+              ["fb1rr","fb2r"],
+              ["fb1ll","fb2l"],
+              ["fb2rr","fb1r"],
+              ["fb2ll","fb1l"],
+              ["fb1r","fb2"],
+              ["fb1l","fb2"],
+              ["fb2r","fb1"],
+              ["fb2l","fb1"],
+
+              //rigids
+              {"beamDeform":3200,"beamStrength":59000},
+              {"beamSpring":101000,"beamDamp":150},
+              {"deformGroup":"sunburst_foglightglass_R_break"}
+              ["fb1rr","fb1"],
+              ["fb2rr","fb2"],
+              {"deformGroup":"sunburst_foglightglass_L_break"}
+              ["fb1","fb1ll"],
+              ["fb2","fb2ll"],
+              {"deformGroup":""}
+
+              ["fb1r","fb1l"],
+              ["fb2r","fb2l"],
+
+              ["fb3rr","fb3"],
+              ["fb3r","fb3l"],
+              ["fb3","fb3ll"],
+
+              ["fb1rr","fb3rr"],
+              ["fb1r","fb3r"],
+              ["fb1","fb3"],
+              ["fb1l","fb3l"],
+              ["fb1ll","fb3ll"],
+
+              //weak
+              {"beamDeform":2000,"beamStrength":50000},
+              {"beamSpring":72000,"beamDamp":100},
+              ["fb4rr","fb1r"],
+              ["fb1l","fb4ll"],
+              ["fb5rr","fb3r"],
+              ["fb3l","fb5ll"],
+              ["fb4rr","fb2r"],
+              ["fb2l","fb4ll"],
+
+              //rigidifier
+              {"beamDeform":1500,"beamStrength":"FLT_MAX"},
+              {"beamSpring":12000,"beamDamp":150},
+              ["fb1rr","fb6"],
+              ["fb1r","fb6"],
+              ["fb1","fb6"],
+              ["fb1l","fb6"],
+              ["fb1ll","fb6"],
+
+              ["fb2rr","fb6"],
+              ["fb2r","fb6"],
+              ["fb2","fb6"],
+              ["fb2l","fb6"],
+              ["fb2ll","fb6"],
+
+              ["fb3rr","fb6"],
+              ["fb3r","fb6"],
+              ["fb3","fb6"],
+              ["fb3l","fb6"],
+              ["fb3ll","fb6"],
+
+              {"beamDeform":1500,"beamStrength":"FLT_MAX"},
+              ["fb4rr","fb6"],
+              ["fb4ll","fb6"],
+
+              ["fb5rr","fb6"],
+              ["fb5ll","fb6"],
+
+              //attach
+              {"beamSpring":401000,"beamDamp":100},
+              {"beamDeform":4750,"beamStrength":12500},
+              //r
+              {"breakGroup":"sunburst_frontbumper_R"},
+              {"optional":true},
+              ["fb4rr","fe11r"],
+              ["fb1rr","fe11r"],
+              ["fb4rr","fe10r"],
+              {"optional":false},
+
+              ["fb5rr","f19rr"],
+              ["fb3rr","f19rr"],
+
+              //l
+              {"breakGroup":"sunburst_frontbumper_L"},
+              {"optional":true},
+              ["fb4ll","fe11l"],
+              ["fb1ll","fe11l"],
+              ["fb4ll","fe10l"],
+              {"optional":false},
+
+              ["fb5ll","f19ll"],
+              ["fb3ll","f19ll"],
+
+              //middle
+              {"beamDeform":2150,"beamStrength":12500},
+              {"breakGroup":"sunburst_frontbumper_M"},
+              ["fb1","f15r"],
+              ["fb1","f15"],
+              ["fb1","f15l"],
+              {"breakGroup":""},
+
+              //front bumper support beams
+              {"beamType":"|SUPPORT", "beamLongBound":4},
+              {"beamSpring":181000,"beamDamp":10},
+              {"beamDeform":12000,"beamStrength":125000},
+              {"optional":true},
+              ["fb4rr","fe5r"],
+              ["fb4ll","fe5l"],
+
+              ["fb4rr","fe10r"],
+              ["fb4ll","fe10l"],
+
+              ["fb1rr","fe6r"],
+              ["fb1ll","fe6l"],
+
+              ["fb1rr","fe11r"],
+              ["fb1ll","fe11l"],
+
+              ["fb5rr","fe6r"],
+              ["fb5ll","fe6l"],
+
+              ["fb1rr","fe6r"],
+              ["fb1ll","fe6l"],
+
+              //
+              ["fb1","h5"],
+              ["fb1","h4"],
+
+              ["fb1r","h5r"],
+              ["fb1l","h5l"],
+
+              ["fb1r","h4r"],
+              ["fb1l","h4l"],
+
+              //
+              ["fb1r","he3r"],
+              ["fb1r","he1r"],
+
+              ["fb1l","he3l"],
+              ["fb1l","he1l"],
+
+              ["fb1rr","he4r"],
+              ["fb1ll","he4l"],
+
+              ["fb1rr","he2r"],
+              ["fb1ll","he2l"],
+              {"optional":false},
+
+              {"beamDeform":3850,"beamStrength":125000},
+              ["fb1r","f15"],
+              ["fb1","f15"],
+              ["fb1l","f15"],
+              ["fb1r","f15r"],
+              ["fb1","f15"],
+              ["fb1l","f15l"],
+              ["fb1","f15r"],
+              ["fb1","f15l"],
+
+              {"beamDeform":11850,"beamStrength":125000},
+              ["fb3r","f18r"],
+              ["fb3l","f18l"],
+
+              {"optional":true}
+              //["fb1r","f17r"],
+              //["fb1","f17"],
+              //["fb1l","f17l"],
+
+              //["fb3r","f16r"],
+              //["fb3","f16"],
+              //["fb3l","f16l"],
+
+              //["fb1r","f16r"],
+              //["fb1","f16"],
+              //["fb1l","f16l"],
+
+              //["fb3r","f17r"],
+              //["fb3","f17"],
+              //["fb3l","f17l"],
+
+              //["fb1r","f17r"],
+              //["fb1","f17"],
+              //["fb1l","f17l"],
+
+              //["fb3rr","f16rr"],
+              //["fb3ll","f16ll"],
+              //["fb1rr","f16rr"],
+              //["fb1ll","f16ll"],
+              {"optional":false}
+
+              ["fb3","f18r"],
+              ["fb3","f18l"],
+
+              ["fb3r","f18"],
+              ["fb3r","f18"],
+              ["fb3rr","f19rr"],
+              ["fb3ll","f19ll"],
+              ["fb1rr","f19rr"],
+              ["fb1ll","f19ll"],
+              ["fb5rr","f19rr"],
+              ["fb5ll","f19ll"],
+
+              ["fb1ll","fx1l"],
+              ["fb1rr","fx1r"],
+
+              ["fb3r","f11rr"],
+              ["fb3l","f11ll"],
+
+              //strong
+              {"beamDeform":28650,"beamStrength":125000},
+              {"optional":true}
+              //["fb1","f17"],
+              //["fb1","f16"],
+              //["fb3","f16"],
+              {"optional":false}
+
+              ["fb3","f18"],
+
+              //weak
+              {"beamDeform":6150,"beamStrength":125000},
+              ["fb3rr","f18r"],
+              ["fb3ll","f18l"],
+              ["fb5rr","f18r"],
+              ["fb5ll","f18l"],
+
+              ["fb1rr","f13rr"],
+              ["fb1ll","f13ll"],
+              ["fb1r","f13rr"],
+              ["fb1l","f13ll"],
+              {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        ],
+        "triangles": [
+                ["id1:","id2:","id3:"],
+                //front bumper
+                {"dragCoef":3},
+                {"group":"sunburst_bumper_F"},
+                ["fb1ll","fb2ll","fb4ll"],
+                ["fb2ll","fb3ll","fb5ll"],
+                ["fb2ll","fb5ll","fb4ll"],
+
+                ["fb1l","fb2l","fb2ll"],
+                ["fb1l","fb2ll","fb1ll"],
+                ["fb2l","fb3l","fb3ll"],
+                ["fb2l","fb3ll","fb2ll"],
+
+                ["fb1","fb2","fb2l"],
+                ["fb1","fb2l","fb1l"],
+                ["fb2","fb3","fb3l"],
+                ["fb2","fb3l","fb2l"],
+
+                ["fb2","fb1","fb2r"],
+                ["fb1","fb1r","fb2r"],
+                ["fb3","fb2","fb3r"],
+                ["fb2","fb2r","fb3r"],
+
+                ["fb2r","fb1r","fb2rr"],
+                ["fb1r","fb1rr","fb2rr"],
+                ["fb3r","fb2r","fb3rr"],
+                ["fb2r","fb2rr","fb3rr"],
+
+                ["fb2rr","fb1rr","fb4rr"],
+                ["fb3rr","fb2rr","fb5rr"],
+                ["fb5rr","fb2rr","fb4rr"],
+
+                //bottom
+                ["fb3rr","fb5rr","fb3r"],
+                ["fb3r","fb5rr","fb3"],
+                ["fb5ll","fb3ll","fb3l"],
+                ["fb5ll","fb3l","fb3"],
+                ["fb3","fb5rr","fb6"],
+                ["fb5ll","fb3","fb6"],
+                //bumper to hood and fender
+                {"dragCoef":0},
+                {"optional":true}
+                {"breakGroup":["sunburst_frontbumper_M","sunburst_hoodlatch"]},
+                ["h5", "fb1", "fb1l"],
+                ["h5", "fb1l", "h5l"],
+                ["h4l", "h5l", "h4ll"],
+                ["h5l", "fb1l", "h4ll"],
+                ["fb1l", "fb1ll", "h4ll"],
+                ["h4rr", "h5r", "h4r"],
+                ["h4rr", "fb1r", "h5r"],
+                ["h4rr", "fb1rr", "fb1r"],
+                ["h5r", "fb1r", "h5"],
+                ["h5", "fb1r", "fb1"],
+
+                {"breakGroup":["sunburst_fender_b_L","sunburst_frontbumper_M","sunburst_hoodlatch"]},
+                ["h4ll", "fb1ll", "fe11l"],
+                ["fe11l", "fb1ll", "fe6l"],
+                ["fb1ll", "fb4ll", "fe6l"],
+
+                {"breakGroup":["sunburst_fender_b_R","sunburst_frontbumper_M","sunburst_hoodlatch"]},
+                ["fb1rr", "h4rr", "fe11r"],
+                ["fb1rr","fe11r", "fe6r"],
+                ["fb4rr","fb1rr", "fe6r"],
+                {"optional":false}
+                {"breakGroup":""},
+                {"group":""},
+        ],
+}
+}

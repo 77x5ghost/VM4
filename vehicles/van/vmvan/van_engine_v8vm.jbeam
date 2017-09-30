@@ -1,0 +1,38 @@
+{
+"van_enginetuning_v8_stage1vm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"HD Engine Tuning",
+        "value":800,
+    }
+    "slotType" : "van_enginetuning_v8",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["van_intake_stock", ["van_engine","van_framecab"]],
+    ],
+    "mainEngine":{
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 255],
+        [1000, 330],
+        [2000, 403],
+        [3000, 450],
+        [4000, 420],
+        [5000, 414],
+        [6000, 367],
+        [7000, 230],
+        [8000, 120],
+    ],
+        "idleRPM":850,
+        "shiftDownRPM":2900,
+        "shiftUpRPM":5300,
+        "maxRPM":6000,
+        "inertia":0.17,
+        "clutchTorque":550
+        "dynamicFriction":0.238
+        "burnEfficiency":0.30
+        "throttleSensitivity":1.22
+    },
+}
+}

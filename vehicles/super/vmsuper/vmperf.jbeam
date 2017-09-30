@@ -1,0 +1,11 @@
+{
+"super_skin_vmperf": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Perfettamente Integrato",
+        "value":2500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmperf",
+}
+}

@@ -1,0 +1,33 @@
+{
+"0-120 mph":21.2,
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"100-200 km/h":17.6,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.6,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":15100,
+"0-100 mph":13.5,
+"TorquePeakRPM":"3350 - 5200",
+"0-200 km/h":23.1,
+"Off-Road Score":34,
+"Configuration":"2400ti TTSport (M)",
+"default_color":"Maroon",
+"Transmission":"Manual",
+"60-100 mph":8.2,
+"0-60 mph":5.2,
+"Config Type":"Factory",
+"100-0 km/h":39.9,
+"Top Speed":70.4052,
+"Power":207.036,
+"Torque":296.33,
+"PowerPeakRPM":"4750 - 6150",
+"Description":"Facelifted 2-door sport model, with anti-lock brakes, a turbo, sport suspension, wheels, and a spoiler",
+"Weight/Power":6.83575,
+"60-0 mph":113.1,
+"60-120 mph":15.9,
+"Weight":1415
+}

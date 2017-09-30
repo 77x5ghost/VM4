@@ -1,0 +1,12 @@
+{
+
+"nomi": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI 500R Interior",
+        "value":1500,
+    }
+    "slotType" : "interior_skin",
+    "globalSkin" : "nomi",
+}
+}

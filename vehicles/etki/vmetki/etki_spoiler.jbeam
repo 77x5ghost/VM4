@@ -1,0 +1,199 @@
+{
+"etki_vmspoilerevo": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"TT Spoiler",
+        "value":300,
+    }
+    "slotType" : "etki_spoiler",
+    "slots": [
+        ["type", "default", "description"]
+        ["etki_vmevospoilerlip", "", "Additional Spoiler Lip"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etki_vmspoilerevo", ["etki_spoiler"]],
+    ],
+
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"group":"etki_spoiler"},
+         {"collision":true},
+         {"nodeWeight":0.9},
+         {"selfCollision":true},
+
+         ["sp2rr", -0.7, 2.02, 0.90],
+         ["sp2r", -0.27, 2.02, 0.93],
+         ["sp2l", 0.27, 2.02, 0.93],
+         ["sp2ll", 0.7, 2.02, 0.90],
+
+         ["sp3rr", -0.70, 2.21, 0.91],
+         ["sp3r", -0.36, 2.21, 0.94],
+         ["sp3", 0.0, 2.21, 0.945],
+         ["sp3l", 0.36, 2.21, 0.94],
+         ["sp3ll", 0.70, 2.21, 0.91],
+         {"group":""},
+
+
+    ],
+     "beams": [
+          ["id1:", "id2:"],
+           {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //wing
+          {"beamSpring":350000,"beamDamp":90},
+          {"beamDeform":35000,"beamStrength":"FLT_MAX"},
+          ["sp2ll", "sp2l"],
+          ["sp2ll", "sp3ll"],
+          ["sp2ll", "sp3ll"],
+          ["sp2ll", "sp3l"],
+          ["sp3ll", "sp3l"],
+          ["sp3ll", "sp2l"],
+
+          ["sp2l", "sp3l"],
+          ["sp2l", "sp3"],
+
+          ["sp3l", "sp3"],
+
+          ["sp2rr", "sp2r"],
+          ["sp2rr", "sp3rr"],
+          ["sp2rr", "sp3rr"],
+          ["sp2rr", "sp3r"],
+          ["sp3rr", "sp3r"],
+          ["sp3rr", "sp2r"],
+
+          ["sp2r", "sp3r"],
+          ["sp2r", "sp3"],
+
+          ["sp3r", "sp3"],
+
+          ["sp2l", "sp2r"],
+
+          {"beamDeform":35000,"beamStrength":120000},
+          //wing rigids
+          ["sp3ll", "sp3"],
+          ["sp3ll", "sp3r"],
+          ["sp3ll", "sp3rr"],
+          ["sp3ll", "sp2r"],
+          ["sp3ll", "sp2rr"],
+          ["sp2ll", "sp2r"],
+          ["sp2ll", "sp2rr"],
+          ["sp2ll", "sp3"],
+          ["sp2ll", "sp3r"],
+          ["sp2ll", "sp3rr"],
+
+          ["sp3rr", "sp3"],
+          ["sp3rr", "sp3l"],
+          ["sp3rr", "sp2l"],
+          ["sp2rr", "sp2l"],
+          ["sp2rr", "sp3"],
+          ["sp2rr", "sp3l"],
+
+          //attachment left
+          {"beamSpring":350000,"beamDamp":90},
+          {"beamDeform":2475,"beamStrength":3620},
+          {"breakGroup":"etki_spoiler_attach_L"},
+          ["sp3ll", "t3ll"],
+          ["sp2ll", "t3ll"],
+
+          ["sp3ll", "t2ll"],
+          ["sp2ll", "t2ll"],
+
+          ["sp3l", "t3ll"],
+          ["sp2l", "t3ll"],
+
+          ["sp3l", "t2ll"],
+          ["sp2l", "t2ll"],
+
+          ["sp3", "t2ll"],
+          ["sp3", "t3ll"],
+
+          //attachment right
+          {"beamSpring":350000,"beamDamp":90},
+          {"beamDeform":2475,"beamStrength":3620},
+          {"breakGroup":"etki_spoiler_attach_R"},
+          ["sp3rr", "t3rr"],
+          ["sp2rr", "t3rr"],
+
+          ["sp3rr", "t2rr"],
+          ["sp2rr", "t2rr"],
+
+
+          ["sp3r", "t3rr"],
+          ["sp2r", "t3rr"],
+
+          ["sp3r", "t2rr"],
+          ["sp2r", "t2rr"],
+
+          ["sp3", "t2rr"],
+          ["sp3", "t3rr"],
+
+
+          //attachment middle
+          {"beamSpring":350000,"beamDamp":90},
+          {"beamDeform":2475,"beamStrength":3620},
+          {"breakGroup":"etki_spoiler_attach_M"},
+
+          ["sp3r","t3"],
+          ["sp3","t3"],
+
+          ["sp3l","t3"],
+          ["sp2r","t3"],
+          ["sp2l","t3"],
+
+          {"breakGroup":""},
+
+    ],
+
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":15}
+        ["sp2ll","sp3ll","sp3l",{"liftCoef":50}],
+        ["sp2ll","sp3l","sp2l",{"liftCoef":50}],
+        ["sp2l","sp3l","sp3",{"liftCoef":50}],
+        ["sp2l","sp3","sp2r",{"liftCoef":50}],
+        ["sp2r","sp3","sp3r",{"liftCoef":50}],
+        ["sp2r","sp3r","sp2rr",{"liftCoef":50}],
+        ["sp2rr","sp3r","sp3rr",{"liftCoef":50}],
+    ],
+
+    }
+    "etki_vmspolerlipplastic": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Plastic Evo Lip",
+            "value":90,
+        }
+        "slotType" : "etki_vmevospoilerlip",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+           ["etki_vmspoilerevolip_plastic", ["etki_spoiler"]],
+        ],
+
+     }
+      "etki_vmspolerlipbc": {
+          "information":{
+                "authors":"Ninetynine",
+                "name":"Body Colored Evo Lip",
+                "value":130,
+            }
+            "slotType" : "etki_vmevospoilerlip",
+            "flexbodies": [
+                 ["mesh", "[group]:", "nonFlexMaterials"],
+               ["etki_vmspoilerevolip_col", ["etki_spoiler"]],
+          ],
+          }
+          "etki_vmspolerlipcarbon": {
+              "information":{
+                  "authors":"Ninetynine",
+                  "name":"Carbon Evo Lip",
+                  "value":200,
+              }
+              "slotType" : "etki_vmevospoilerlip",
+              "flexbodies": [
+                   ["mesh", "[group]:", "nonFlexMaterials"],
+                 ["etki_vmspoilerevolip_carbon", ["etki_spoiler"]],
+              ],
+}
+}

@@ -1,0 +1,33 @@
+{
+"0-120 mph":13.6,
+"Performance Class":"7",
+"Drivetrain":"RWD",
+"100-200 km/h":15.3,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.1,
+"Years":{
+  "min":1985,
+  "max":1987
+},
+"Value":54000,
+"0-100 mph":11.3,
+"TorquePeakRPM":"3700 - 5250",
+"0-200 km/h":20.4,
+"Off-Road Score":34,
+"Configuration":"Rally #17 (M)",
+"default_color":"Pearl White",
+"Transmission":"Manual",
+"60-100 mph":6.4,
+"0-60 mph":4.9,
+"Config Type":"Custom",
+"100-0 km/h":40.7,
+"Top Speed":56.7996,
+"Power":319.98,
+"Torque":459.343,
+"PowerPeakRPM":"4750 - 5900",
+"Description":"i-Series rear-wheel drive Rally car equipped with a turbocharged 3.0L i6 engine and a special rally suspension. This car had it's most successful time in 1985 , when ETK had it's comeback to rallying.",
+"Weight/Power":4.59248,
+"60-0 mph":117.6,
+"60-120 mph":9,
+"Weight":1465
+}

@@ -1,0 +1,56 @@
+{
+"etkivmrally": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Rally #17",
+        "value":500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "etkivmrally",
+  }
+  "etki_vmrace": {
+      "information":{
+          "authors":"Ninetynine",
+          "name":"Race #23",
+          "value":700,
+      }
+      "slotType" : "paint_design",
+      "globalSkin" : "vmrace",
+    }
+    "etki_vmdrift": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Abuchi Drift",
+            "value":400,
+        }
+        "slotType" : "paint_design",
+        "globalSkin" : "vmdrift",
+      }
+      "etki_vmbe": {
+          "information":{
+              "authors":"Ninetynine",
+              "name":"Bernd Edition",
+              "value":150,
+          }
+          "slotType" : "paint_design",
+          "globalSkin" : "vmbe",
+        }
+        "etki_skin_lights_vmblk": {
+            "information":{
+                "authors":"BeamNG",
+                "name":"Black Taillights",
+                "value":150,
+            },
+            "slotType" : "skin_lights",
+            "globalSkin" : "lights_vmblk",
+          },
+          "etki_vmpoliceusa": {
+              "information":{
+                  "authors":"Ninetynine",
+                  "name":"USA Police",
+                  "value":120,
+              }
+              "slotType" : "paint_design",
+              "globalSkin" : "etkivmpoliceusa",
+            }
+  }

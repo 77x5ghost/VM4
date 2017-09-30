@@ -1,0 +1,51 @@
+{
+"sunburst_lettering_vmelectric": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Electric Trunk Lettering",
+        "value":10,
+    }
+    "slotType" : "sunburst_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_lettering_trunkvmel", ["sunburst_trunk"]],
+    ],
+    }
+    "sunburst_lettering_vmaehood_a": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Hirochi Logo",
+            "value":10,
+        }
+        "slotType" : "sunburst_vmaelogo_F",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+                 ["sunburst_logo_hoodaevm", ["sunburst_hood"]],
+        ],
+        }
+        "sunburst_lettering_vmelectricawd": {
+            "information":{
+                "authors":"BeamNG",
+                "name":"Electric AWD Trunk Lettering",
+                "value":15,
+            }
+            "slotType" : "sunburst_lettering_trunk",
+            "flexbodies": [
+                 ["mesh", "[group]:", "nonFlexMaterials"],
+                 ["sunburst_lettering_trunkvmel", ["sunburst_trunk"]],
+             ["sunburst_lettering_AW", ["sunburst_trunk"]],
+            ],
+            }
+            "sunburst_lettering_vmaehood_b": {
+                "information":{
+                    "authors":"BeamNG",
+                    "name":"Hirochi Electric Logo",
+                    "value":20,
+                }
+                "slotType" : "sunburst_vmaelogo_F",
+                "flexbodies": [
+                     ["mesh", "[group]:", "nonFlexMaterials"],
+                         ["sunburst_logo_hoodaevmg", ["sunburst_hood"]],
+                ],
+}
+}

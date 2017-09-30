@@ -1,0 +1,33 @@
+{
+"0-120 mph":69.2,
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"100-200 km/h":73.4,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":10.8,
+"Years":{
+  "min":1990,
+  "max":1993
+},
+"Value":5200,
+"0-100 mph":32,
+"TorquePeakRPM":"2550 - 4950",
+"0-200 km/h":84.2,
+"Off-Road Score":34,
+"Configuration":"2400 (A)",
+"default_color":"Light Brown",
+"Transmission":"Automatic",
+"60-100 mph":22,
+"0-60 mph":10,
+"Config Type":"Factory",
+"100-0 km/h":45.5,
+"Top Speed":58.3092,
+"Power":129.846,
+"Torque":184.73,
+"PowerPeakRPM":5100,
+"Description":"Facelifted 2-door base model with anti-lock brakes, equipped with a 2.4 liter engine",
+"Weight/Power":10.6977,
+"60-0 mph":131.6,
+"60-120 mph":58.9,
+"Weight":1380
+}

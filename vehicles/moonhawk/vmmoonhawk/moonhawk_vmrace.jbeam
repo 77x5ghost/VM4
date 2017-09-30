@@ -1,0 +1,11 @@
+{
+"moonhawk_skin_vmrace": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Race Car #73",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmrace",
+}
+}

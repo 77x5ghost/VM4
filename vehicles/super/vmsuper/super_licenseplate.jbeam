@@ -1,0 +1,14 @@
+{
+"super_licenseplate_Fvm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front License Plate (Right)",
+        "value":0,
+    }
+    "slotType" : "super_licenseplate_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+      ["licenseplate", ["super_nosecone"],[],{"pos":{"x":-0.289, "y":-2.184, "z":0.317}, "rot":{"x":18.512, "y":0, "z":-2.941}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
+}

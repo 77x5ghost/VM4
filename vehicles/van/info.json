@@ -1,0 +1,18 @@
+{
+	"Name":"H-Series",
+	"Brand":"Gavril",
+  "Country":"United States",
+  "Author":"BeamNG",
+	"Type":"Truck",
+  "Body Style":"Van",
+	"Years":{"min":1995, "max":2001},
+	"Derby Class":"Medium Truck",
+	"default_pc":"stock",
+	"default_color":"Pearl White",
+	"colors":{
+		"Pearl White": "1 1 1 1.2",
+		"Jet Black": "0 0 0 1.3",
+		"Flame Orange": "1 0.45 0.0 1.5"
+	        "Old Gray": "0.427 0.427 0.427 2"
+	}
+}

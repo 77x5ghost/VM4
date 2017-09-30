@@ -1,0 +1,11 @@
+{
+"sunburst_skin_rallyvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Rally R4 Livery",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rallyvm",
+}
+}

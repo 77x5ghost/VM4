@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmkyus": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) Kyusokuna",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmkyus",
+}
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmtaxi": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Rapid Taxi",
+        "value":230,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmtaxi",
+}
+}

@@ -1,0 +1,312 @@
+{
+"burnside_engine_v8vmrace": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"313 CUI V8 Race Engine [VM]",
+        "value":5700,
+    }
+    "slotType" : "burnside_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["burnside_exhaust_R","burnside_exhaust_R", "Right Exhaust"],
+        ["burnside_exhaust_L","burnside_exhaust_L", "Left Exhaust"],
+        ["burnside_transmission","burnside_transmission_3A", "Transmission"],
+        //["burnside_intake_v8","burnside_intake_v8", "Intake",{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine":{
+        "torque":[
+            ["rpm", "torque"]
+                    [0, 0],
+        [500, 235],
+        [1200, 404],
+        [2300, 434],
+        [3000, 402],
+        [3800, 351],
+        [4400, 308],
+        [5200, 217],
+        [6000, 120],
+    ],
+
+        "idleRPM":690,
+        "maxRPM":4750,
+		"shiftDownRPM":2150,
+        "shiftUpRPM":4250,
+        "revLimiterRPMDrop":0,
+        "inertia":0.35,
+        "friction":24
+        "dynamicFriction":0.03
+        "burnEfficiency":0.19
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.084
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":8
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":160
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]}
+        "radiator": {"[engineGroup]:":["radiator"]}
+        "engineBlock": {"[engineGroup]:":["engine_block"]}
+        "breakTriggerBeam":"engine",
+    	"soundConfig": "soundConfig",
+      },
+		"soundConfig": {
+        "sampleName": "V8_2",
+        "mainGain": -18,
+        "maxLoadMix": 0.6,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.65,
+        "eqLowGain": -5,
+        "eqLowFreq": 150,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0,
+        "lowCutFreq":90,
+        //"eqFundamentalGain": -15,
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1500,
+        "clutchLaunchTargetRPM":2000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,1600,2200,2400,2400,2400]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4400
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["burnside_engine_v8", ["burnside_engine"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["radiatorFanSpin"  , "burnside_coolingfan_v8", "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //V8 Engine
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true}
+         {"group":"burnside_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":46.28},
+         {"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.1},
+         ["e1r", -0.13, -1.07, 0.30],
+         ["e1l", 0.13, -1.07, 0.30],
+         {"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2},
+         ["e2r", -0.13, -1.64, 0.30],
+         ["e2l", 0.13, -1.64, 0.30],
+         {"selfCollision":true},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.32, -1.07, 0.76],
+         ["e3l", 0.32, -1.07, 0.76],
+         ["e4r", -0.32, -1.64, 0.76{"isExhaust":true}],
+         ["e4l", 0.32, -1.64, 0.76],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":9130830,"beamDamp":168},
+          {"beamDeform":450000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"{"isExhaust":true}],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"burnside_engine_v8vmold": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Old 313 CUI V8 Engine [VM]",
+        "value":1350,
+    }
+    "slotType" : "burnside_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["burnside_exhaust_R","burnside_exhaust_R", "Right Exhaust"],
+        ["burnside_exhaust_L","burnside_exhaust_L", "Left Exhaust"],
+        ["burnside_transmission","burnside_transmission_4M", "Transmission"],
+        //["burnside_intake_v8","burnside_intake_v8", "Intake",{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine":{
+        "torque":[
+            ["rpm", "torque"]
+                        [0, 0],
+            [500, 215],
+            [1200, 354],
+            [2300, 371],
+            [3000, 354],
+            [3800, 320],
+            [4400, 278],
+            [5200, 194],
+            [6000, 101],
+        ],
+        "idleRPM":690,
+        "maxRPM":4750,
+        "revLimiterRPMDrop":0,
+        "inertia":1.8,
+        "friction":24
+        "dynamicFriction":0.029
+        "burnEfficiency":0.26
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.062
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":10
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":140
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]}
+        "radiator": {"[engineGroup]:":["radiator"]}
+        "engineBlock": {"[engineGroup]:":["engine_block"]}
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1500,
+        "clutchLaunchTargetRPM":2000,
+        //**highShiftDown overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,1700,2200,2400,2400,2400]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4600
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["burnside_engine_v8", ["burnside_engine"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["radiatorFanSpin"  , "burnside_coolingfan_v8", "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //V8 Engine
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true}
+         {"group":"burnside_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":47},
+         {"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.1},
+         ["e1r", -0.13, -1.07, 0.30],
+         ["e1l", 0.13, -1.07, 0.30],
+         {"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2},
+         ["e2r", -0.13, -1.64, 0.30],
+         ["e2l", 0.13, -1.64, 0.30],
+         {"selfCollision":true},
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.32, -1.07, 0.76],
+         ["e3l", 0.32, -1.07, 0.76],
+         ["e4r", -0.32, -1.64, 0.76{"isExhaust":true}],
+         ["e4l", 0.32, -1.64, 0.76],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":9130830,"beamDamp":168},
+          {"beamDeform":450000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"{"isExhaust":true}],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

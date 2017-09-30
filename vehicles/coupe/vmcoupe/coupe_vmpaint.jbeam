@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmpaint": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Clean painted rear panel",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmpaint",
+}
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmelrally": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Electric Rally Car #44",
+        "value":950,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmelrally",
+}
+}

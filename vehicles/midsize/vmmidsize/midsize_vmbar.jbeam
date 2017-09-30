@@ -1,0 +1,472 @@
+{
+"midsize_lightbarvm": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Light Bar (Red)",
+    }
+    "slotType" : "midsize_mod",
+
+    "glowMap":{
+            "lightbarglassR":                   {"simpleFunction":"lightbar", "off":"lightbarglassR", "on":"lightbarglassR_on"},
+            "lightbarglassR2":                   {"simpleFunction":"lightbar", "off":"lightbarglassR2", "on":"lightbarglassR2_on"},
+        },
+
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lightbar_base", ["coupe_lightbar"], [], {"pos":{"x": 0.0, "y":0.182, "z":1.37}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.15, "y":1.15, "z":1.15}}],
+        //glass
+        {"deformGroup":"lightbar_R", "deformMaterialBase":"lightbarglassB", "deformMaterialDamaged":"lightbarglassB_dmg"}
+        ["lightbar_R_red", ["coupe_lightbar"], [], {"pos":{"x": 0.0, "y":0.182, "z":1.37}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.15, "y":1.15, "z":1.15},"deformSound":"GlassBreakSound3", "deformVolume":0.5}],
+        {"deformGroup":"lightbar_L", "deformMaterialBase":"lightbarglassR", "deformMaterialDamaged":"lightbarglassR_dmg"}
+        ["lightbar_L_red", ["coupe_lightbar"], [], {"pos":{"x": 0.0, "y":0.182, "z":1.37}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.15, "y":1.15, "z":1.15},"deformSound":"GlassBreakSound4", "deformVolume":0.5}],
+        {"deformGroup":""}
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"coupe_lightbar"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":0.76},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         ["coupe_lightbar_1", 0.00000, 0.06985, 1.49504],
+         ["coupe_lightbar_2", 0.00000, 0.06985, 1.42504],
+         ["coupe_lightbar_3", 0.00000, 0.26985, 1.49504],
+         ["coupe_lightbar_4", 0.00000, 0.26985, 1.42504],
+
+         ["coupe_lightbar_1l", 0.52000, 0.06985, 1.49504],
+         ["coupe_lightbar_2l", 0.55000, 0.06985, 1.39504],
+         ["coupe_lightbar_3l", 0.52000, 0.26985, 1.49504],
+         ["coupe_lightbar_4l", 0.55000, 0.26985, 1.39504],
+
+         ["coupe_lightbar_1r", -0.52000, 0.06985, 1.49504],
+         ["coupe_lightbar_2r", -0.55000, 0.06985, 1.39504],
+         ["coupe_lightbar_3r", -0.52000, 0.26985, 1.49504],
+         ["coupe_lightbar_4r", -0.55000, 0.26985, 1.39504],
+         {"group":""},
+         ],
+
+         "beams": [
+               ["id1:", "id2:"],
+               {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+               {"beamSpring":275000,"beamDamp":50},
+               {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+     		  //Main shape
+               {"deformationTriggerRatio":0.1},
+               {"deformGroup":"lightbar_L"}
+
+               ["coupe_lightbar_1l","coupe_lightbar_2l"],
+               ["coupe_lightbar_2l","coupe_lightbar_3l"],
+               ["coupe_lightbar_3l","coupe_lightbar_4l"],
+               ["coupe_lightbar_4l","coupe_lightbar_1l"],
+               ["coupe_lightbar_1l","coupe_lightbar_3l"],
+               ["coupe_lightbar_2l","coupe_lightbar_4l"],
+
+               ["coupe_lightbar_1l","coupe_lightbar_1"],
+               ["coupe_lightbar_2l","coupe_lightbar_2"],
+               ["coupe_lightbar_3l","coupe_lightbar_3"],
+               ["coupe_lightbar_4l","coupe_lightbar_4"],
+               {"deformGroup":"lightbar_R"}
+
+               ["coupe_lightbar_1r","coupe_lightbar_2r"],
+               ["coupe_lightbar_2r","coupe_lightbar_3r"],
+               ["coupe_lightbar_3r","coupe_lightbar_4r"],
+               ["coupe_lightbar_4r","coupe_lightbar_1r"],
+               ["coupe_lightbar_1r","coupe_lightbar_3r"],
+               ["coupe_lightbar_2r","coupe_lightbar_4r"],
+               ["coupe_lightbar_1r","coupe_lightbar_1"],
+               ["coupe_lightbar_2r","coupe_lightbar_2"],
+               ["coupe_lightbar_3r","coupe_lightbar_3"],
+               ["coupe_lightbar_4r","coupe_lightbar_4"],
+               {"deformGroup":""}
+               ["coupe_lightbar_1","coupe_lightbar_2"],
+               ["coupe_lightbar_2","coupe_lightbar_3"],
+               ["coupe_lightbar_3","coupe_lightbar_4"],
+               ["coupe_lightbar_4","coupe_lightbar_1"],
+               ["coupe_lightbar_1","coupe_lightbar_3"],
+               ["coupe_lightbar_2","coupe_lightbar_4"],
+
+
+     		  //Center to left cross-beams
+               {"deformGroup":"lightbar_L"}
+               ["coupe_lightbar_4l","coupe_lightbar_3"],
+               ["coupe_lightbar_3l","coupe_lightbar_4"],
+               ["coupe_lightbar_3","coupe_lightbar_1l"],
+               ["coupe_lightbar_3l","coupe_lightbar_1"],
+               ["coupe_lightbar_1","coupe_lightbar_2l"],
+               ["coupe_lightbar_2","coupe_lightbar_1l"],
+               ["coupe_lightbar_2l","coupe_lightbar_4"],
+               ["coupe_lightbar_4l","coupe_lightbar_2"],
+
+               ["coupe_lightbar_4l","coupe_lightbar_1"],
+               ["coupe_lightbar_2l","coupe_lightbar_3"],
+               ["coupe_lightbar_4","coupe_lightbar_1l"],
+               ["coupe_lightbar_2","coupe_lightbar_3l"],
+
+     		  //Center to right cross-beams
+               {"deformGroup":"lightbar_R"}
+               ["coupe_lightbar_4r","coupe_lightbar_3"],
+               ["coupe_lightbar_3r","coupe_lightbar_4"],
+               ["coupe_lightbar_3","coupe_lightbar_1r"],
+               ["coupe_lightbar_3r","coupe_lightbar_1"],
+               ["coupe_lightbar_1","coupe_lightbar_2r"],
+               ["coupe_lightbar_2","coupe_lightbar_1r"],
+               ["coupe_lightbar_2r","coupe_lightbar_4"],
+               ["coupe_lightbar_4r","coupe_lightbar_2"],
+
+               ["coupe_lightbar_4r","coupe_lightbar_1"],
+               ["coupe_lightbar_2r","coupe_lightbar_3"],
+               ["coupe_lightbar_4","coupe_lightbar_1r"],
+               ["coupe_lightbar_2","coupe_lightbar_3r"],
+               {"deformGroup":""}
+
+               {"beamSpring":275000,"beamDamp":50},
+               {"beamDeform":2000,"beamStrength":4000},
+     		  //To body
+               {"breakGroup":"coupe_lightbar_breakl"},
+               {"deformGroup":"lightbar_L"}
+               ["coupe_lightbar_3","rf3"],
+               ["coupe_lightbar_4","rf3"],
+               ["coupe_lightbar_3","rf2"],
+               ["coupe_lightbar_4","rf2"],
+
+               ["coupe_lightbar_3","rf3l"],
+               ["coupe_lightbar_4","rf3l"],
+               ["coupe_lightbar_3","rf2l"],
+               ["coupe_lightbar_4","rf2l"],
+
+               ["coupe_lightbar_3l","rf3"],
+               ["coupe_lightbar_4l","rf3"],
+               ["coupe_lightbar_3l","rf2"],
+               ["coupe_lightbar_4l","rf2"],
+
+               ["coupe_lightbar_3l","rf3l"],
+               ["coupe_lightbar_4l","rf3l"],
+               ["coupe_lightbar_3l","rf2l"],
+               ["coupe_lightbar_4l","rf2l"],
+     		  //
+               ["coupe_lightbar_1","rf1"],
+               ["coupe_lightbar_2","rf1"],
+               ["coupe_lightbar_1","rf2"],
+               ["coupe_lightbar_2","rf2"],
+
+               ["coupe_lightbar_1","rf1l"],
+               ["coupe_lightbar_2","rf1l"],
+               ["coupe_lightbar_1","rf2l"],
+               ["coupe_lightbar_2","rf2l"],
+
+               ["coupe_lightbar_1l","rf1"],
+               ["coupe_lightbar_2l","rf1"],
+               ["coupe_lightbar_1l","rf2"],
+               ["coupe_lightbar_2l","rf2"],
+
+               ["coupe_lightbar_1l","rf1l"],
+               ["coupe_lightbar_2l","rf1l"],
+               ["coupe_lightbar_1l","rf2l"],
+               ["coupe_lightbar_2l","rf2l"],
+
+
+               {"deformGroup":"lightbar_R"}
+               {"breakGroup":"coupe_lightbar_breakr"},
+               ["coupe_lightbar_3","rf3"],
+               ["coupe_lightbar_4","rf3"],
+               ["coupe_lightbar_3","rf2"],
+               ["coupe_lightbar_4","rf2"],
+
+               ["coupe_lightbar_3","rf3r"],
+               ["coupe_lightbar_4","rf3r"],
+               ["coupe_lightbar_3","rf2r"],
+               ["coupe_lightbar_4","rf2r"],
+
+               ["coupe_lightbar_3r","rf3"],
+               ["coupe_lightbar_4r","rf3"],
+               ["coupe_lightbar_3r","rf2"],
+               ["coupe_lightbar_4r","rf2"],
+
+               ["coupe_lightbar_3r","rf3r"],
+               ["coupe_lightbar_4r","rf3r"],
+               ["coupe_lightbar_3r","rf2r"],
+               ["coupe_lightbar_4r","rf2r"],
+     		  //
+               ["coupe_lightbar_1","rf1"],
+               ["coupe_lightbar_2","rf1"],
+               ["coupe_lightbar_1","rf2"],
+               ["coupe_lightbar_2","rf2"],
+
+               ["coupe_lightbar_1","rf1r"],
+               ["coupe_lightbar_2","rf1r"],
+               ["coupe_lightbar_1","rf2r"],
+               ["coupe_lightbar_2","rf2r"],
+
+               ["coupe_lightbar_1r","rf1"],
+               ["coupe_lightbar_2r","rf1"],
+               ["coupe_lightbar_1r","rf2"],
+               ["coupe_lightbar_2r","rf2"],
+
+               ["coupe_lightbar_1r","rf1r"],
+               ["coupe_lightbar_2r","rf1r"],
+               ["coupe_lightbar_1r","rf2r"],
+               ["coupe_lightbar_2r","rf2r"],
+
+               {"deformGroup":""}
+
+               {"breakGroup":""},
+
+               {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+         ],
+         "quads": [
+                 ["id1:","id2:","id3:","id4:"],
+                 {"group":"coupe_lightbar"},
+                 {"dragCoef":14},
+                 ["coupe_lightbar_3l","coupe_lightbar_4l","coupe_lightbar_4","coupe_lightbar_3"],
+                 ["coupe_lightbar_1l","coupe_lightbar_3l","coupe_lightbar_3","coupe_lightbar_1"],
+                 ["coupe_lightbar_1l","coupe_lightbar_2l","coupe_lightbar_4l","coupe_lightbar_3l"],
+                 ["coupe_lightbar_1","coupe_lightbar_2","coupe_lightbar_2l","coupe_lightbar_1l"],
+                 ["coupe_lightbar_4l","coupe_lightbar_2l","coupe_lightbar_2","coupe_lightbar_4"],
+
+                 ["coupe_lightbar_3","coupe_lightbar_4","coupe_lightbar_4r","coupe_lightbar_3r"],
+                 ["coupe_lightbar_1","coupe_lightbar_3","coupe_lightbar_3r","coupe_lightbar_1r"],
+                 ["coupe_lightbar_3r","coupe_lightbar_4r","coupe_lightbar_2r","coupe_lightbar_1r"],
+                 ["coupe_lightbar_1r","coupe_lightbar_2r","coupe_lightbar_2","coupe_lightbar_1"],
+                 ["coupe_lightbar_4","coupe_lightbar_2","coupe_lightbar_2r","coupe_lightbar_4r"],
+
+
+                 {"group":""},
+         ],
+}
+"midsize_lightbarvm2": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Light Bar",
+    }
+    "slotType" : "midsize_mod",
+
+    "glowMap":{
+            "lightbarglassR":                   {"simpleFunction":"lightbar", "off":"lightbarglassR", "on":"lightbarglassR_on"},
+            "lightbarglassB":                   {"simpleFunction":"lightbar", "off":"lightbarglassB", "on":"lightbarglassB_on"},
+        },
+
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lightbar_base", ["coupe_lightbar"], [], {"pos":{"x": 0.0, "y":0.182, "z":1.37}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.15, "y":1.15, "z":1.15}}],
+        //glass
+        {"deformGroup":"lightbar_R", "deformMaterialBase":"lightbarglassB", "deformMaterialDamaged":"lightbarglassB_dmg"}
+        ["lightbar_R_red", ["coupe_lightbar"], [], {"pos":{"x": 0.0, "y":0.182, "z":1.37}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.15, "y":1.15, "z":1.15},"deformSound":"GlassBreakSound3", "deformVolume":0.5}],
+        {"deformGroup":"lightbar_L", "deformMaterialBase":"lightbarglassR", "deformMaterialDamaged":"lightbarglassR_dmg"}
+        ["lightbar_L_blue", ["coupe_lightbar"], [], {"pos":{"x": 0.0, "y":0.182, "z":1.37}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.15, "y":1.15, "z":1.15},"deformSound":"GlassBreakSound4", "deformVolume":0.5}],
+        {"deformGroup":""}
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"coupe_lightbar"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":0.76},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         ["coupe_lightbar_1", 0.00000, 0.06985, 1.49504],
+         ["coupe_lightbar_2", 0.00000, 0.06985, 1.42504],
+         ["coupe_lightbar_3", 0.00000, 0.26985, 1.49504],
+         ["coupe_lightbar_4", 0.00000, 0.26985, 1.42504],
+
+         ["coupe_lightbar_1l", 0.52000, 0.06985, 1.49504],
+         ["coupe_lightbar_2l", 0.55000, 0.06985, 1.39504],
+         ["coupe_lightbar_3l", 0.52000, 0.26985, 1.49504],
+         ["coupe_lightbar_4l", 0.55000, 0.26985, 1.39504],
+
+         ["coupe_lightbar_1r", -0.52000, 0.06985, 1.49504],
+         ["coupe_lightbar_2r", -0.55000, 0.06985, 1.39504],
+         ["coupe_lightbar_3r", -0.52000, 0.26985, 1.49504],
+         ["coupe_lightbar_4r", -0.55000, 0.26985, 1.39504],
+         {"group":""},
+         ],
+
+         "beams": [
+               ["id1:", "id2:"],
+               {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+               {"beamSpring":275000,"beamDamp":50},
+               {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+     		  //Main shape
+               {"deformationTriggerRatio":0.1},
+               {"deformGroup":"lightbar_L"}
+
+               ["coupe_lightbar_1l","coupe_lightbar_2l"],
+               ["coupe_lightbar_2l","coupe_lightbar_3l"],
+               ["coupe_lightbar_3l","coupe_lightbar_4l"],
+               ["coupe_lightbar_4l","coupe_lightbar_1l"],
+               ["coupe_lightbar_1l","coupe_lightbar_3l"],
+               ["coupe_lightbar_2l","coupe_lightbar_4l"],
+
+               ["coupe_lightbar_1l","coupe_lightbar_1"],
+               ["coupe_lightbar_2l","coupe_lightbar_2"],
+               ["coupe_lightbar_3l","coupe_lightbar_3"],
+               ["coupe_lightbar_4l","coupe_lightbar_4"],
+               {"deformGroup":"lightbar_R"}
+
+               ["coupe_lightbar_1r","coupe_lightbar_2r"],
+               ["coupe_lightbar_2r","coupe_lightbar_3r"],
+               ["coupe_lightbar_3r","coupe_lightbar_4r"],
+               ["coupe_lightbar_4r","coupe_lightbar_1r"],
+               ["coupe_lightbar_1r","coupe_lightbar_3r"],
+               ["coupe_lightbar_2r","coupe_lightbar_4r"],
+               ["coupe_lightbar_1r","coupe_lightbar_1"],
+               ["coupe_lightbar_2r","coupe_lightbar_2"],
+               ["coupe_lightbar_3r","coupe_lightbar_3"],
+               ["coupe_lightbar_4r","coupe_lightbar_4"],
+               {"deformGroup":""}
+               ["coupe_lightbar_1","coupe_lightbar_2"],
+               ["coupe_lightbar_2","coupe_lightbar_3"],
+               ["coupe_lightbar_3","coupe_lightbar_4"],
+               ["coupe_lightbar_4","coupe_lightbar_1"],
+               ["coupe_lightbar_1","coupe_lightbar_3"],
+               ["coupe_lightbar_2","coupe_lightbar_4"],
+
+
+     		  //Center to left cross-beams
+               {"deformGroup":"lightbar_L"}
+               ["coupe_lightbar_4l","coupe_lightbar_3"],
+               ["coupe_lightbar_3l","coupe_lightbar_4"],
+               ["coupe_lightbar_3","coupe_lightbar_1l"],
+               ["coupe_lightbar_3l","coupe_lightbar_1"],
+               ["coupe_lightbar_1","coupe_lightbar_2l"],
+               ["coupe_lightbar_2","coupe_lightbar_1l"],
+               ["coupe_lightbar_2l","coupe_lightbar_4"],
+               ["coupe_lightbar_4l","coupe_lightbar_2"],
+
+               ["coupe_lightbar_4l","coupe_lightbar_1"],
+               ["coupe_lightbar_2l","coupe_lightbar_3"],
+               ["coupe_lightbar_4","coupe_lightbar_1l"],
+               ["coupe_lightbar_2","coupe_lightbar_3l"],
+
+     		  //Center to right cross-beams
+               {"deformGroup":"lightbar_R"}
+               ["coupe_lightbar_4r","coupe_lightbar_3"],
+               ["coupe_lightbar_3r","coupe_lightbar_4"],
+               ["coupe_lightbar_3","coupe_lightbar_1r"],
+               ["coupe_lightbar_3r","coupe_lightbar_1"],
+               ["coupe_lightbar_1","coupe_lightbar_2r"],
+               ["coupe_lightbar_2","coupe_lightbar_1r"],
+               ["coupe_lightbar_2r","coupe_lightbar_4"],
+               ["coupe_lightbar_4r","coupe_lightbar_2"],
+
+               ["coupe_lightbar_4r","coupe_lightbar_1"],
+               ["coupe_lightbar_2r","coupe_lightbar_3"],
+               ["coupe_lightbar_4","coupe_lightbar_1r"],
+               ["coupe_lightbar_2","coupe_lightbar_3r"],
+               {"deformGroup":""}
+
+               {"beamSpring":275000,"beamDamp":50},
+               {"beamDeform":2000,"beamStrength":4000},
+     		  //To body
+               {"breakGroup":"coupe_lightbar_breakl"},
+               {"deformGroup":"lightbar_L"}
+               ["coupe_lightbar_3","rf3"],
+               ["coupe_lightbar_4","rf3"],
+               ["coupe_lightbar_3","rf2"],
+               ["coupe_lightbar_4","rf2"],
+
+               ["coupe_lightbar_3","rf3l"],
+               ["coupe_lightbar_4","rf3l"],
+               ["coupe_lightbar_3","rf2l"],
+               ["coupe_lightbar_4","rf2l"],
+
+               ["coupe_lightbar_3l","rf3"],
+               ["coupe_lightbar_4l","rf3"],
+               ["coupe_lightbar_3l","rf2"],
+               ["coupe_lightbar_4l","rf2"],
+
+               ["coupe_lightbar_3l","rf3l"],
+               ["coupe_lightbar_4l","rf3l"],
+               ["coupe_lightbar_3l","rf2l"],
+               ["coupe_lightbar_4l","rf2l"],
+     		  //
+               ["coupe_lightbar_1","rf1"],
+               ["coupe_lightbar_2","rf1"],
+               ["coupe_lightbar_1","rf2"],
+               ["coupe_lightbar_2","rf2"],
+
+               ["coupe_lightbar_1","rf1l"],
+               ["coupe_lightbar_2","rf1l"],
+               ["coupe_lightbar_1","rf2l"],
+               ["coupe_lightbar_2","rf2l"],
+
+               ["coupe_lightbar_1l","rf1"],
+               ["coupe_lightbar_2l","rf1"],
+               ["coupe_lightbar_1l","rf2"],
+               ["coupe_lightbar_2l","rf2"],
+
+               ["coupe_lightbar_1l","rf1l"],
+               ["coupe_lightbar_2l","rf1l"],
+               ["coupe_lightbar_1l","rf2l"],
+               ["coupe_lightbar_2l","rf2l"],
+
+
+               {"deformGroup":"lightbar_R"}
+               {"breakGroup":"coupe_lightbar_breakr"},
+               ["coupe_lightbar_3","rf3"],
+               ["coupe_lightbar_4","rf3"],
+               ["coupe_lightbar_3","rf2"],
+               ["coupe_lightbar_4","rf2"],
+
+               ["coupe_lightbar_3","rf3r"],
+               ["coupe_lightbar_4","rf3r"],
+               ["coupe_lightbar_3","rf2r"],
+               ["coupe_lightbar_4","rf2r"],
+
+               ["coupe_lightbar_3r","rf3"],
+               ["coupe_lightbar_4r","rf3"],
+               ["coupe_lightbar_3r","rf2"],
+               ["coupe_lightbar_4r","rf2"],
+
+               ["coupe_lightbar_3r","rf3r"],
+               ["coupe_lightbar_4r","rf3r"],
+               ["coupe_lightbar_3r","rf2r"],
+               ["coupe_lightbar_4r","rf2r"],
+     		  //
+               ["coupe_lightbar_1","rf1"],
+               ["coupe_lightbar_2","rf1"],
+               ["coupe_lightbar_1","rf2"],
+               ["coupe_lightbar_2","rf2"],
+
+               ["coupe_lightbar_1","rf1r"],
+               ["coupe_lightbar_2","rf1r"],
+               ["coupe_lightbar_1","rf2r"],
+               ["coupe_lightbar_2","rf2r"],
+
+               ["coupe_lightbar_1r","rf1"],
+               ["coupe_lightbar_2r","rf1"],
+               ["coupe_lightbar_1r","rf2"],
+               ["coupe_lightbar_2r","rf2"],
+
+               ["coupe_lightbar_1r","rf1r"],
+               ["coupe_lightbar_2r","rf1r"],
+               ["coupe_lightbar_1r","rf2r"],
+               ["coupe_lightbar_2r","rf2r"],
+
+               {"deformGroup":""}
+
+               {"breakGroup":""},
+
+               {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+         ],
+         "quads": [
+                 ["id1:","id2:","id3:","id4:"],
+                 {"group":"coupe_lightbar"},
+                 {"dragCoef":14},
+                 ["coupe_lightbar_3l","coupe_lightbar_4l","coupe_lightbar_4","coupe_lightbar_3"],
+                 ["coupe_lightbar_1l","coupe_lightbar_3l","coupe_lightbar_3","coupe_lightbar_1"],
+                 ["coupe_lightbar_1l","coupe_lightbar_2l","coupe_lightbar_4l","coupe_lightbar_3l"],
+                 ["coupe_lightbar_1","coupe_lightbar_2","coupe_lightbar_2l","coupe_lightbar_1l"],
+                 ["coupe_lightbar_4l","coupe_lightbar_2l","coupe_lightbar_2","coupe_lightbar_4"],
+
+                 ["coupe_lightbar_3","coupe_lightbar_4","coupe_lightbar_4r","coupe_lightbar_3r"],
+                 ["coupe_lightbar_1","coupe_lightbar_3","coupe_lightbar_3r","coupe_lightbar_1r"],
+                 ["coupe_lightbar_3r","coupe_lightbar_4r","coupe_lightbar_2r","coupe_lightbar_1r"],
+                 ["coupe_lightbar_1r","coupe_lightbar_2r","coupe_lightbar_2","coupe_lightbar_1"],
+                 ["coupe_lightbar_4","coupe_lightbar_2","coupe_lightbar_2r","coupe_lightbar_4r"],
+
+
+                 {"group":""},
+         ],
+}
+}

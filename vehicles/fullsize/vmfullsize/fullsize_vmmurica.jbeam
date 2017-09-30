@@ -1,0 +1,11 @@
+{
+"fullsize_skin_vmmurica": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Grandpa's Ship",
+        "value":50,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmmurica",
+}
+}

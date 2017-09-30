@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmfwddrag": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Pro-FWD Drag",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmfwddrag",
+}
+}

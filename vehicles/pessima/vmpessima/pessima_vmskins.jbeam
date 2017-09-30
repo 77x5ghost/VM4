@@ -1,0 +1,40 @@
+{
+"pessima_skin_vmzz": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"ZZ Special",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmzz",
+}
+"pessima_skin_vmnomi370": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI 370R",
+        "value":370,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmnomi370",
+    }
+    "pessima_skin_vmrally86": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"DREID Rally #1",
+            "value":420,
+        }
+        "slotType" : "paint_design",
+        "globalSkin" : "vmrally86",
+    }
+    "pessima_skin_vmtaxi": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Rapid Taxi",
+            "value":50,
+        }
+        "slotType" : "paint_design",
+        "globalSkin" : "vmtaxi",
+    }
+
+}
+}

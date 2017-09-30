@@ -1,0 +1,174 @@
+{
+"sbr_vmlightbar": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Light Bar With LED Sign",
+        "value":800,
+    }
+    "slotType" : "sbr_mod",
+    "glowMap":{
+            "modlightbarB":                   {"simpleFunction":"lightbar", "off":"modlightbarB", "on":"modlightbarB_on"},
+            "modlightbarR":                   {"simpleFunction":"lightbar", "off":"modlightbarR", "on":"modlightbarR_on"},
+            "modlightbarW":                   {"simpleFunction":"lightbar", "off":"modlightbarW", "on":"modlightbarW_on"},
+            "modlightbar_sign":                   {"simpleFunction":"lightbar", "off":"modlightbar_sign", "on":"modlightbar_sign_on"},
+        },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+        ["modlightbar_basebar", ["sbr_body"], [], {"pos":{"x": 0.0, "y":0.63, "z":1.17}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.18, "y":1.18, "z":1.18}}],
+        ["modlightbar_base", ["sunburst_lightbar"], [], {"pos":{"x": 0.0, "y":0.63, "z":1.17}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.18, "y":1.18, "z":1.18}}],
+        ["modlightbar_police_ON", ["sunburst_lightbar"], [], {"pos":{"x": 0.0, "y":0.63, "z":1.17}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.18, "y":1.18, "z":1.18}}],
+        ["modlightbar_mini", ["sunburst_lightbar"], [], {"pos":{"x": 0.0, "y":0.63, "z":1.17}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.18, "y":1.18, "z":1.18}}],
+
+        ["modLED_red_police_ON", ["sbr_bumper_F"], [], {"pos":{"x": 0.568, "y":-1.808, "z":0.305}, "rot":{"x":-1.211, "y":-3.048, "z":21.683}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["modLED_blue_police_ON", ["sbr_bumper_F"], [], {"pos":{"x": -0.568, "y":-1.808, "z":0.305}, "rot":{"x":1.211, "y":3.048, "z":-21.683}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+
+        ["modLED_blue_police_ON", ["sbr_bumper_R"], [], {"pos":{"x": 0.423, "y":2.066, "z":0.593}, "rot":{"x":8.316, "y":-0.879, "z":-197}, "scale":{"x":0.748, "y":0.748, "z":0.748}}],
+        ["modLED_red_police_ON", ["sbr_bumper_R"], [], {"pos":{"x": -0.423, "y":2.066, "z":0.593}, "rot":{"x":8.316, "y":0.879, "z":197}, "scale":{"x":0.748, "y":0.748, "z":0.748}}],
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"sunburst_lightbar"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":0.76},
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         ["sunburst_lightbar_1", 0.00000, 0.46854, 1.27489],
+         ["sunburst_lightbar_2", 0.00000, 0.46854, 1.22489],
+         ["sunburst_lightbar_3", 0.00000, 0.74854, 1.27489],
+         ["sunburst_lightbar_4", 0.00000, 0.74854, 1.22489],
+
+         ["sunburst_lightbar_1l", 0.57000, 0.46854, 1.27489],
+         ["sunburst_lightbar_2l", 0.57000, 0.46854, 1.20489],
+         ["sunburst_lightbar_3l", 0.57000, 0.74854, 1.27489],
+         ["sunburst_lightbar_4l", 0.57000, 0.74854, 1.20489],
+
+         ["sunburst_lightbar_1r", -0.57000, 0.46854, 1.27489],
+         ["sunburst_lightbar_2r", -0.57000, 0.46854, 1.20489],
+         ["sunburst_lightbar_3r", -0.57000, 0.74854, 1.27489],
+         ["sunburst_lightbar_4r", -0.57000, 0.74854, 1.20489],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+		  //Main shape
+          ["sunburst_lightbar_1","sunburst_lightbar_2"],
+          ["sunburst_lightbar_2","sunburst_lightbar_3"],
+          ["sunburst_lightbar_3","sunburst_lightbar_4"],
+          ["sunburst_lightbar_4","sunburst_lightbar_1"],
+          ["sunburst_lightbar_1","sunburst_lightbar_3"],
+          ["sunburst_lightbar_2","sunburst_lightbar_4"],
+
+          ["sunburst_lightbar_1l","sunburst_lightbar_2l"],
+          ["sunburst_lightbar_2l","sunburst_lightbar_3l"],
+          ["sunburst_lightbar_3l","sunburst_lightbar_4l"],
+          ["sunburst_lightbar_4l","sunburst_lightbar_1l"],
+          ["sunburst_lightbar_1l","sunburst_lightbar_3l"],
+          ["sunburst_lightbar_2l","sunburst_lightbar_4l"],
+
+          ["sunburst_lightbar_1r","sunburst_lightbar_2r"],
+          ["sunburst_lightbar_2r","sunburst_lightbar_3r"],
+          ["sunburst_lightbar_3r","sunburst_lightbar_4r"],
+          ["sunburst_lightbar_4r","sunburst_lightbar_1r"],
+          ["sunburst_lightbar_1r","sunburst_lightbar_3r"],
+          ["sunburst_lightbar_2r","sunburst_lightbar_4r"],
+
+          ["sunburst_lightbar_1r","sunburst_lightbar_1"],
+          ["sunburst_lightbar_2r","sunburst_lightbar_2"],
+          ["sunburst_lightbar_3r","sunburst_lightbar_3"],
+          ["sunburst_lightbar_4r","sunburst_lightbar_4"],
+
+          ["sunburst_lightbar_1l","sunburst_lightbar_1"],
+          ["sunburst_lightbar_2l","sunburst_lightbar_2"],
+          ["sunburst_lightbar_3l","sunburst_lightbar_3"],
+          ["sunburst_lightbar_4l","sunburst_lightbar_4"],
+
+		  //Center to left cross-beams
+          ["sunburst_lightbar_4l","sunburst_lightbar_3"],
+          ["sunburst_lightbar_3l","sunburst_lightbar_4"],
+          ["sunburst_lightbar_3","sunburst_lightbar_1l"],
+          ["sunburst_lightbar_3l","sunburst_lightbar_1"],
+          ["sunburst_lightbar_1","sunburst_lightbar_2l"],
+          ["sunburst_lightbar_2","sunburst_lightbar_1l"],
+          ["sunburst_lightbar_2l","sunburst_lightbar_4"],
+          ["sunburst_lightbar_4l","sunburst_lightbar_2"],
+
+          ["sunburst_lightbar_4l","sunburst_lightbar_1"],
+          ["sunburst_lightbar_2l","sunburst_lightbar_3"],
+          ["sunburst_lightbar_4","sunburst_lightbar_1l"],
+          ["sunburst_lightbar_2","sunburst_lightbar_3l"],
+
+		  //Center to right cross-beams
+          ["sunburst_lightbar_4r","sunburst_lightbar_3"],
+          ["sunburst_lightbar_3r","sunburst_lightbar_4"],
+          ["sunburst_lightbar_3","sunburst_lightbar_1r"],
+          ["sunburst_lightbar_3r","sunburst_lightbar_1"],
+          ["sunburst_lightbar_1","sunburst_lightbar_2r"],
+          ["sunburst_lightbar_2","sunburst_lightbar_1r"],
+          ["sunburst_lightbar_2r","sunburst_lightbar_4"],
+          ["sunburst_lightbar_4r","sunburst_lightbar_2"],
+
+          ["sunburst_lightbar_4r","sunburst_lightbar_1"],
+          ["sunburst_lightbar_2r","sunburst_lightbar_3"],
+          ["sunburst_lightbar_4","sunburst_lightbar_1r"],
+          ["sunburst_lightbar_2","sunburst_lightbar_3r"],
+
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":30000,"beamStrength":5000},
+		  //To body
+          {"breakGroup":"sunburst_lightbar_breakl"},
+          ["sunburst_lightbar_2l","rf3l"],
+          ["sunburst_lightbar_2l","rf4l"],
+          ["sunburst_lightbar_2l","rf3"],
+          ["sunburst_lightbar_2l","rf3"],
+          ["sunburst_lightbar_4l","rf3r"],
+          ["sunburst_lightbar_4l","rf4l"],
+          ["sunburst_lightbar_4l","rf3"],
+          ["sunburst_lightbar_4l","rf3"],
+
+         
+
+          {"breakGroup":"sunburst_lightbar_breakr"},
+          ["sunburst_lightbar_2r","rf3r"],
+          ["sunburst_lightbar_2r","rf4r"],
+          ["sunburst_lightbar_2r","rf3"],
+          ["sunburst_lightbar_2r","rf3"],
+          ["sunburst_lightbar_4r","rf3r"],
+          ["sunburst_lightbar_4r","rf4r"],
+          ["sunburst_lightbar_4r","rf3"],
+          ["sunburst_lightbar_4r","rf3"],
+
+        ["sunburst_lightbar_4","rf4l"],
+		    ["sunburst_lightbar_4","rf4r"],
+			 ["sunburst_lightbar_2","rf4l"],
+		    ["sunburst_lightbar_2","rf4r"],
+
+          {"breakGroup":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "quads": [
+            ["id1:","id2:","id3:","id4:"],
+            {"group":"sunburst_lightbar"},
+            {"dragCoef":10},
+            ["sunburst_lightbar_3l","sunburst_lightbar_4l","sunburst_lightbar_4","sunburst_lightbar_3"],
+            ["sunburst_lightbar_1l","sunburst_lightbar_3l","sunburst_lightbar_3","sunburst_lightbar_1"],
+            ["sunburst_lightbar_1l","sunburst_lightbar_2l","sunburst_lightbar_4l","sunburst_lightbar_3l"],
+            ["sunburst_lightbar_1","sunburst_lightbar_2","sunburst_lightbar_2l","sunburst_lightbar_1l"],
+            ["sunburst_lightbar_4l","sunburst_lightbar_2l","sunburst_lightbar_2","sunburst_lightbar_4"],
+
+            ["sunburst_lightbar_3","sunburst_lightbar_4","sunburst_lightbar_4r","sunburst_lightbar_3r"],
+            ["sunburst_lightbar_1","sunburst_lightbar_3","sunburst_lightbar_3r","sunburst_lightbar_1r"],
+            ["sunburst_lightbar_3r","sunburst_lightbar_4r","sunburst_lightbar_2r","sunburst_lightbar_1r"],
+            ["sunburst_lightbar_1r","sunburst_lightbar_2r","sunburst_lightbar_2","sunburst_lightbar_1"],
+            ["sunburst_lightbar_4","sunburst_lightbar_2","sunburst_lightbar_2r","sunburst_lightbar_4r"],
+
+
+            {"group":""},
+    ],
+}
+}

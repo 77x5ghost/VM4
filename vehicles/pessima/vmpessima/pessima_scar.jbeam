@@ -1,0 +1,11 @@
+{
+"pessima_skin_scar": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Pessima Stockcar",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "scar",
+}
+}

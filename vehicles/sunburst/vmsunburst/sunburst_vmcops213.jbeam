@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmcops213": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"S213/RS Police",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmcops213",
+}
+}

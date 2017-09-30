@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmdrag": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI Drag Race Car",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmdrag",
+}
+}

@@ -1,0 +1,28 @@
+{
+"etkc_lightbarucvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Unmarked Poilce LED",
+        "value":800,
+    }
+    "slotType" : "etkc_mod",
+    "glowMap":{
+            "eurlightbarB":                   {"simpleFunction":"lightbar", "off":"eurlightbarB", "on":"eurlightbarB_on"},
+            "eurlightbarB2":                   {"simpleFunction":"lightbar", "off":"eurlightbarB2", "on":"eurlightbarB2_on"},
+            "eurlightbar_sign":                   {"simpleFunction":"lightbar", "off":"eurlightbar_sign", "on":"eurlightbar_sign_on"},
+            "modlightbarB":                   {"simpleFunction":"lightbar", "off":"modlightbarB", "on":"modlightbarB_on"},
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+
+        ["eurled_a", ["etkc_bumper_F"], [], {"pos":{"x": -0.734, "y":-1.867, "z":0.296}, "rot":{"x":0, "y":0, "z":-40}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_b", ["etkc_bumper_F"], [], {"pos":{"x": 0.734, "y":-1.867, "z":0.296}, "rot":{"x":0, "y":0, "z":40}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_a", ["etkc_bumper_F"], [], {"pos":{"x": 0.725, "y":-1.880, "z":0.34}, "rot":{"x":0, "y":0, "z":40}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_b", ["etkc_bumper_F"], [], {"pos":{"x": -0.725, "y":-1.880, "z":0.34}, "rot":{"x":0, "y":0, "z":-40}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_a", ["etkc_bumper_F"], [], {"pos":{"x": -0.251, "y":-2.107, "z":0.395}, "rot":{"x":0, "y":0, "z":-6.73}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_b", ["etkc_bumper_F"], [], {"pos":{"x": 0.251, "y":-2.107, "z":0.395}, "rot":{"x":0, "y":0, "z":6.73}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_a", ["etkc_bumper_R"], [], {"pos":{"x": -0.305, "y":2.186, "z":0.412}, "rot":{"x":-10.504, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+        ["eurled_b", ["etkc_bumper_R"], [], {"pos":{"x": 0.305, "y":2.186, "z":0.412}, "rot":{"x":-10.504, "y":0, "z":180}, "scale":{"x":1.0, "y":1.0, "z":1.0}}],
+    ],
+}
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmcustom1": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Custom (Yellow)",
+        "value":180,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmcustom1",
+}
+}

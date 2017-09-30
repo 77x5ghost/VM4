@@ -1,0 +1,27 @@
+{
+"sbr_lettering_vmdiesel": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Diesel Tailgate Lettering",
+        "value":30,
+    }
+    "slotType" : "sbr_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_lettering_vmdiesel", ["sbr_tailgate"]],
+    ],
+}
+"sbr_lettering_AWD_Svmd": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Diesel S Tailgate Lettering",
+        "value":35,
+    }
+    "slotType" : "sbr_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sbr_lettering_vmdiesel", ["sbr_tailgate"]],
+         ["sbr_lettering_S", ["sbr_tailgate"]],
+    ],
+}
+}

@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmzs": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC ZS",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmzs",
+}
+}

@@ -1,0 +1,41 @@
+{
+"coupe_strut_F_rallyvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VM Rally Front Coilovers",
+        "value":900,
+    },
+    "slotType" : "coupe_strut_F",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["coupe_strut_F", ["coupe_shocktop_F","coupe_shockbottom_F","coupe_strut_F"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$rideheight_F", "range", "", "Alignment", 1.47, 0.95, 2.5, "Front Ride Height", "Percentage of adjustment range"]
+        ["$spring_F", "range", "N/m", "Suspension", 30000, 10000, 70000, "Front Spring Rate", "Spring stiffness"{"stepDis":500}]
+        ["$damp_bump_F", "range", "N/m/s", "Suspension", 4500, 500, 10000, "Front Bump Damping", "Shock stiffness in slow compression"{"stepDis":100}]
+        ["$damp_bump_F_fast", "range", "N/m/s", "Suspension", 2500, 500, 5000, "Front Fast Bump Damping", "Shock stiffness in fast compression"{"stepDis":100}]
+        ["$damp_rebound_F", "range", "N/m/s", "Suspension", 8000, 500, 20000, "Front Rebound Damping", "Shock stiffness in slow extension"{"stepDis":100}]
+        ["$damp_rebound_F_fast", "range", "N/m/s", "Suspension", 4000, 500, 10000, "Front Fast Rebound Damping", "Shock stiffness in fast extension"{"stepDis":100}]
+        ["$damp_knee_F", "range", "m/s", "Suspension", 0.12, 0.0, 0.25, "Front Damping Knee", "Threshold at which shock transitions between slow and fast damping"]
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //front springs - no soft bumpstop - advanced dampers
+          {"beamPrecompression":"$rideheight_F", "beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1},
+          {"beamDeform":127500,"beamStrength":167500},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamSpring":"$spring_F","beamDamp":"$damp_bump_F"},
+          ["fh4r","fs1r",{"beamDampRebound":"$damp_rebound_F","beamDampVelocitySplit":"$damp_knee_F","beamDampFast":"$damp_bump_F_fast","beamDampReboundFast":"$damp_rebound_F_fast","soundFile":"art/sound/spring_creak.ogg","volumeFactor":4,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":10000}],
+          ["fh4l","fs1l",{"beamDampRebound":"$damp_rebound_F","beamDampVelocitySplit":"$damp_knee_F","beamDampFast":"$damp_bump_F_fast","beamDampReboundFast":"$damp_rebound_F_fast","soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.8,"decayMode":1,"decayFactor":5,"pitchFactor":4,"maxStress":11000}],
+          //hard bump stop
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.16},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":1501000,"beamLimitDamp":20000},
+          ["fh4r","fs1r"{"beamLimitDampRebound":0}],
+          ["fh4l","fs1l"{"beamLimitDampRebound":0}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

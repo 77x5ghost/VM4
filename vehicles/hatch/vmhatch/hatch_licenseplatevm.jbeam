@@ -1,0 +1,26 @@
+{
+"hatch_licenseplate_Fvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Side Mounted Front License Plate",
+        "value":0,
+    }
+    "slotType" : "hatch_licenseplate_F",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["hatch_bumper_F"],[],{"pos":{"x":-0.38476, "y":-1.988, "z":0.38339}, "rot":{"x":0, "y":0, "z":-7.917}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
+"hatch_licenseplate_Rivm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Rear Panel License Plate",
+        "value":0,
+    }
+    "slotType" : "hatch_licenseplate_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["hatch_rearpanel"],[],{"pos":{"x":0, "y":1.8, "z":0.62170}, "rot":{"x":9.448, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
+}

@@ -1,0 +1,11 @@
+{
+"van_skin_service": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"City Service",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "service",
+}
+}

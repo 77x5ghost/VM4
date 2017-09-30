@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmnomi": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Nomi 280S",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmnomi",
+}
+}

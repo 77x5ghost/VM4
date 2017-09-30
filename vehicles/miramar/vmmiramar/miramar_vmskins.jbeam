@@ -1,0 +1,29 @@
+{
+"miramar_skin_vm20": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"GTz 2000S",
+        "value":150,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vm20",
+    }
+    "miramar_skin_vmpolice": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Japanese Police",
+            "value":100,
+        }
+        "slotType" : "paint_design",
+        "globalSkin" : "vmpolice",
+        }
+        "miramar_skin_vmrally1": {
+            "information":{
+                "authors":"Ninetynine",
+                "name":"Rally #4",
+                "value":200,
+            }
+            "slotType" : "paint_design",
+            "globalSkin" : "vmrally1",
+}
+}

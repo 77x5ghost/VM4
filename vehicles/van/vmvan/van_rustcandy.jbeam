@@ -1,0 +1,11 @@
+{
+"van_skin_rustcandy": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Free Candy (beater)",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rustcandy",
+}
+}

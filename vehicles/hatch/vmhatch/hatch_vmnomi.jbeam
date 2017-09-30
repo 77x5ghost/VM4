@@ -1,0 +1,11 @@
+{
+"hatch_skin_vmnomi": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"NOMI 200S",
+        "value":400,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmnomi",
+}
+}

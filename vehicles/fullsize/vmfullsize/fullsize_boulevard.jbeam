@@ -1,0 +1,11 @@
+{
+"fullsize_skin_boulevard": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Boulevard",
+        "value":500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "boulevard",
+}
+}

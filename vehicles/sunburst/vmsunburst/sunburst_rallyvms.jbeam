@@ -1,0 +1,11 @@
+{
+"sunburst_skin_rallyvms": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"R4 Edition",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rallyvms",
+}
+}

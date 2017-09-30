@@ -1,0 +1,728 @@
+singleton Material("hatch.skin.okudai")
+{
+    mapTo = "hatch.skin.okudai";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_okudai.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmtouring")
+{
+    mapTo = "hatch.skin.vmtouring";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmtouring.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.facelift")
+{
+    mapTo = "hatch.skin.facelift";
+    diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_vm.dds";
+    specularMap[2] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_vm.dds";
+    specularMap[1] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.sportv")
+{
+    mapTo = "hatch.skin.sportv";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_sportv.dds";
+    diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_vm.dds";
+    specularMap[2] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_vm.dds";
+    specularMap[1] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmpizza")
+{
+    mapTo = "hatch.skin.vmpizza";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmpizza.dds";
+    diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_vm.dds";
+    specularMap[2] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_vm.dds";
+    specularMap[1] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmretro")
+{
+    mapTo = "hatch.skin.vmretro";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmretro.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material(pessima_i4)
+{
+    mapTo = "pessima_i4";
+    normalMap[0] = "pessima_engine_n.dds";
+    diffuseMap[0] = "pessima_engine_d.dds";
+    specularMap[0] = "pessima_engine_s.dds";
+    diffuseColor[0] = "1 1 1 1";
+    specularPower[0] = "32";
+    useAnisotropic[0] = "1";
+    castShadows = "1";
+    translucent = "0";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true; //cubemap = "global_cubemap_metalblurred";
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.black2tvm")
+{
+    mapTo = "hatch.skin.black2tvm";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vm4x4.dds";
+    diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_vm2.dds";
+    specularMap[2] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_vm2.dds";
+    specularMap[1] = "vehicles/hatch/vmhatch/hatch_s_vm.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmgym")
+{
+    mapTo = "hatch.skin.vmgym";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmgym.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch_glass.skin.vmgym")
+{
+    mapTo = "hatch_glass.skin.vmgym";
+    reflectivityMap[0] = "vehicles/common/glass_base.dds";
+    diffuseMap[0] = "vehicles/hatch/vmhatch/hatch_glass_dcvm.dds";
+    opacityMap[0] = "vehicles/hatch/vmhatch/hatch_glass_dcvm.dds";
+    diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_glass_dacvm.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    diffuseColor[1] = "0.5 0.5 0.5 0.75";
+    normalMap[0] = "vehicles/common/null_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    diffuseColor[0] = "0.80 0.80 0.80 0.80";
+    useAnisotropic[0] = "1";
+    castShadows = "0";
+    translucent = "1";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmpolice")
+{
+    mapTo = "hatch.skin.vmpolice";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmpolice.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmpoliceuk")
+{
+    mapTo = "hatch.skin.vmpoliceuk";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmpoliceuk.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmck")
+{
+    mapTo = "hatch.skin.vmck";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmck.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material(hatch_letteringvmk)
+{
+    mapTo = "hatch_letteringvmk";
+    specularMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_svmk.dds";
+    normalMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_nvmk.dds";
+    diffuseMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_dvmk.dds";
+    reflectivityMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_svmk.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    castShadows = "0";
+    translucent = "1";
+    //translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle"; materialTag2 = "decal";
+    //translucentZWrite = "1";
+};
+
+singleton Material("hatch.skin.vmkyus")
+{
+    mapTo = "hatch.skin.vmkyus";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmkyus.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.brvm")
+{
+    mapTo = "hatch.skin.brvm";
+    diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_altvm.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_altvm.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material(hatch_letteringvmi)
+{
+    mapTo = "hatch_letteringvmi";
+    specularMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_svmi.dds";
+    normalMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_nvmi.dds";
+    diffuseMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_dvmi.dds";
+    reflectivityMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_svmi.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    castShadows = "0";
+    translucent = "1";
+    //translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle"; materialTag2 = "decal";
+    //translucentZWrite = "1";
+};
+
+singleton Material(coupe_enginevmi)
+{
+    mapTo = "coupe_enginevmi";
+    diffuseMap[0] = "vehicles/hatch/vmhatch/coupe_engine_dvmi.dds";
+    specularMap[0] = "vehicles/coupe/coupe_engine_s.dds";
+    normalMap[0] = "vehicles/hatch/vmhatch/coupe_engine_nvmi.dds";
+    specularPower[0] = "32";
+    pixelSpecular[0] = "1";
+    useAnisotropic[0] = "1";
+    castShadows = "1";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material("hatch.skin.vmfwddrag")
+{
+    mapTo = "hatch.skin.vmfwddrag";
+    overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmfwddrag.dds";
+    diffuseMap[2] = "vehicles/hatch/hatch_c_alt.dds";
+    specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/hatch_d_alt.dds";
+    specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
+
+singleton Material(hatch_letteringvmt)
+{
+    mapTo = "hatch_letteringvmt";
+    specularMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_svmt.dds";
+    normalMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_nvmt.dds";
+    diffuseMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_dvmt.dds";
+    reflectivityMap[0] = "vehicles/hatch/vmhatch/hatch_lettering_svmt.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    castShadows = "0";
+    translucent = "1";
+    //translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle"; materialTag2 = "decal";
+    //translucentZWrite = "1";
+
+    singleton Material(hatch_vmnomilip1)
+    {
+        mapTo = "hatch_vmnomilip1";
+        diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_vmnomilip1_d.png";
+        specularMap[1] = "vehicles/common/null.dds";
+        diffuseMap[0] = "vehicles/common/null.dds";
+        specularMap[0] = "vehicles/common/null.dds";
+        specularPower[0] = "128";
+        pixelSpecular[0] = "1";
+        specularPower[1] = "32";
+        pixelSpecular[1] = "1";
+        diffuseColor[0] = "1 1 1 1";
+        diffuseColor[1] = "1 1 1 1";
+        useAnisotropic[0] = "1";
+        useAnisotropic[1] = "1";
+        castShadows = "1";
+        translucent = "1";
+        translucentBlendOp = "None";
+        alphaTest = "0";
+        alphaRef = "0";
+        dynamicCubemap = true;
+        instanceDiffuse[1] = true;
+        materialTag0 = "beamng"; materialTag1 = "vehicle";
+    };
+
+    singleton Material(hatch_vmnomilip1_r)
+    {
+        mapTo = "hatch_vmnomilip1_r";
+        diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_vmnomilip1_r_d.png";
+        diffuseMap[0] = "vehicles/common/null.dds";
+        specularMap[0] = "vehicles/common/null.dds";
+        specular[0] = "0 0 0 0";
+        specular[1] = "0 0 0 0";
+        specularPower[0] = "128";
+        pixelSpecular[0] = "1";
+        specularPower[1] = "32";
+        pixelSpecular[1] = "1";
+        diffuseColor[0] = "1 1 1 1";
+        diffuseColor[1] = "1 1 1 0.5";
+        useAnisotropic[0] = "1";
+        useAnisotropic[1] = "1";
+        instanceDiffuse[1] = true;
+        castShadows = "1";
+        translucent = "1";
+        translucentBlendOp = "None";
+        alphaTest = "0";
+        alphaRef = "0";
+        dynamicCubemap = true;
+        beamngDiffuseColorSlot = 1;
+        materialTag0 = "beamng"; materialTag1 = "vehicle";
+    };
+
+    singleton Material("hatch.skin.vmnomi")
+    {
+        mapTo = "hatch.skin.vmnomi";
+        overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmnomi.dds";
+        diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_altvm.dds";
+        specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+        normalMap[2] = "vehicles/hatch/hatch_n.dds";
+        diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_altvm.dds";
+        specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+        normalMap[1] = "vehicles/hatch/hatch_n.dds";
+        diffuseMap[0] = "vehicles/common/null.dds";
+        specularMap[0] = "vehicles/common/null.dds";
+        normalMap[0] = "vehicles/hatch/hatch_n.dds";
+        specularPower[0] = "128";
+        pixelSpecular[0] = "1";
+        specularPower[1] = "32";
+        pixelSpecular[1] = "1";
+        specularPower[2] = "128";
+        pixelSpecular[2] = "1";
+        diffuseColor[0] = "1 1 1 1";
+        diffuseColor[1] = "1 1 1 1";
+        diffuseColor[2] = "1 1 1 1";
+        useAnisotropic[0] = "1";
+        useAnisotropic[1] = "1";
+        useAnisotropic[2] = "1";
+        castShadows = "1";
+        translucent = "1";
+        translucentBlendOp = "None";
+        alphaTest = "0";
+        alphaRef = "0";
+        dynamicCubemap = true;
+        instanceDiffuse[2] = true;
+        materialTag0 = "beamng"; materialTag1 = "vehicle";
+    };
+
+    singleton Material("hatch.skin.vmrolly")
+    {
+        mapTo = "hatch.skin.vmrolly";
+        overlayMap[2] = "vehicles/hatch/vmhatch/hatch_skin_vmrolly.dds";
+        diffuseMap[2] = "vehicles/hatch/vmhatch/hatch_c_altvm.dds";
+        specularMap[2] = "vehicles/hatch/hatch_s_alt.dds";
+        normalMap[2] = "vehicles/hatch/hatch_n.dds";
+        diffuseMap[1] = "vehicles/hatch/vmhatch/hatch_d_altvm.dds";
+        specularMap[1] = "vehicles/hatch/hatch_s_alt.dds";
+        normalMap[1] = "vehicles/hatch/hatch_n.dds";
+        diffuseMap[0] = "vehicles/common/null.dds";
+        specularMap[0] = "vehicles/common/null.dds";
+        normalMap[0] = "vehicles/hatch/hatch_n.dds";
+        specularPower[0] = "128";
+        pixelSpecular[0] = "1";
+        specularPower[1] = "32";
+        pixelSpecular[1] = "1";
+        specularPower[2] = "128";
+        pixelSpecular[2] = "1";
+        diffuseColor[0] = "1 1 1 1";
+        diffuseColor[1] = "1 1 1 1";
+        diffuseColor[2] = "1 1 1 1";
+        useAnisotropic[0] = "1";
+        useAnisotropic[1] = "1";
+        useAnisotropic[2] = "1";
+        castShadows = "1";
+        translucent = "1";
+        translucentBlendOp = "None";
+        alphaTest = "0";
+        alphaRef = "0";
+        dynamicCubemap = true;
+        instanceDiffuse[2] = true;
+        materialTag0 = "beamng"; materialTag1 = "vehicle";
+    };
+};

@@ -1,0 +1,11 @@
+{
+"hatch_skin_facelift": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Painted rear panel",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "facelift",
+}
+}

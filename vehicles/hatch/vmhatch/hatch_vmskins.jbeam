@@ -1,0 +1,38 @@
+{
+"hatch_skin_vmretro": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Retro Package",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmretro",
+}
+"hatch_skin_sportv": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"(VM) Sport",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "sportv",
+}
+"hatch_skin_brvm": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Bodycolored , Painted Rearpanel",
+        "value":500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "brvm",
+    }
+    "hatch_skin_vmrolly": {
+        "information":{
+            "authors":"Ninetynine",
+            "name":"Rolly Skin",
+            "value":500,
+        }
+        "slotType" : "paint_design",
+        "globalSkin" : "vmrolly",
+}
+}

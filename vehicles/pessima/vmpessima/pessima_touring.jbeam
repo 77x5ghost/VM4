@@ -1,0 +1,11 @@
+{
+"pessima_skin_vmtouring": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Pessima Touring Car #04",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmtouring",
+}
+}

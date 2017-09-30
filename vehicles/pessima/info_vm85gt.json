@@ -1,0 +1,30 @@
+{
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"100-200 km/h":28,
+"0-100 km/h":7.5,
+"Value":4200,
+"0-200 km/h":35.5,
+"TorquePeakRPM":"4350 - 6300",
+"default_color":"Royal Blue",
+"Description":"The GT is a turbocharged , rear-wheel driven Pessima. What makes this car unique is the combination of a transverse engine and rear-wheel drive. Unfortunately this was the first and the last RWD Pessima in the 80's. The production costs only to make this car RWD, were simply too high and weren't worth it.",
+"Configuration":"2.0 GT (M)",
+"0-100 mph":18.4,
+"Weight":1365,
+"60-100 mph":11.3,
+"0-60 mph":7.1,
+"Config Type":"Factory",
+"100-0 km/h":42.1,
+"PowerPeakRPM":5700,
+"Power":172.296,
+"Torque":206.161,
+"Transmission":"Manual",
+"Off-Road Score":34,
+"Weight/Power":7.93605,
+"60-0 mph":120.3,
+"Years":{
+  "min":1986,
+  "max":1988
+},
+"Top Speed":64.4538
+}

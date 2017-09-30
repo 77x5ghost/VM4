@@ -1,0 +1,22 @@
+{
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"Value":33000,
+"TorquePeakRPM":"2300 - 3450",
+"Off-Road Score":34,
+"Configuration":"GTz 2000S (M)",
+"PowerPeakRPM":"4050 - 5300",
+"0-100 km/h":9.8,
+"0-60 mph":9.1,
+"Config Type":"Factory",
+"100-0 km/h":42.1,
+"Top Speed":43.2025,
+"Transmission":"Manual",
+"Torque":169.432,
+"Weight":1110,
+"Description":"The rarest Miramar to be produced, the 2000S was a street-legal version of the Miramar race car. Only 2000 of the 2000S were produced, all in flame orange, all with manual transmissions, an unknown number still exist today.",
+"Weight/Power":12.907,
+"60-0 mph":120.3,
+"Power":86.9899,
+"default_color":"Flame Orange"
+}

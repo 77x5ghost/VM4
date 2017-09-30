@@ -1,0 +1,11 @@
+{
+"roamer_skin_vmh": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Unpainted trim",
+        "value":10,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmh",
+}
+}

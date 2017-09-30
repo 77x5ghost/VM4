@@ -1,0 +1,33 @@
+{
+"0-120 mph":50.9,
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"100-200 km/h":46.8,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":9.7,
+"Years":{
+  "min":1985,
+  "max":1989
+},
+"Value":5900,
+"0-100 mph":27.2,
+"TorquePeakRPM":"2800 - 5100",
+"0-200 km/h":56.5,
+"Off-Road Score":28,
+"Configuration":"2400i (A)",
+"default_color":"Chartreuse",
+"Transmission":"Automatic",
+"60-100 mph":18.2,
+"0-60 mph":9,
+"Config Type":"Factory",
+"100-0 km/h":46.8,
+"Top Speed":61.254,
+"Power":145.749,
+"Torque":211.607,
+"PowerPeakRPM":4700,
+"Description":"Mid-trim 2-door model, equipped with a 2.4 liter engine",
+"Weight/Power":9.55172,
+"60-0 mph":135.4,
+"60-120 mph":41.6,
+"Weight":1385
+}

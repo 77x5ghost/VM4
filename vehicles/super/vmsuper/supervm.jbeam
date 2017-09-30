@@ -1,0 +1,11 @@
+{
+"super_skin_civettavm1bol": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Painted Front lip",
+        "value":2500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "civettavm1bol",
+}
+}

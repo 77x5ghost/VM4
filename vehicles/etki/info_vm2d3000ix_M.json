@@ -1,0 +1,33 @@
+{
+"0-120 mph":24,
+"Performance Class":"5",
+"Drivetrain":"AWD",
+"100-200 km/h":20.7,
+"Body Style":"2-Door Sedan",
+"0-100 km/h":5.8,
+"Years":{
+  "min":1987,
+  "max":1989
+},
+"Value":8100,
+"0-100 mph":15.1,
+"TorquePeakRPM":"3100 - 5000",
+"0-200 km/h":26.5,
+"Off-Road Score":34,
+"Configuration":"3000ix (M)",
+"default_color":"Sea Blue",
+"Transmission":"Manual",
+"60-100 mph":9.7,
+"0-60 mph":5.4,
+"Config Type":"Factory",
+"100-0 km/h":43.7,
+"Top Speed":67.8006,
+"Power":207.399,
+"Torque":311.795,
+"PowerPeakRPM":"4600 - 5800",
+"Description":"All-wheel drive 2-door model with anti-lock brakes, equipped with a 3.0 liter engine",
+"Weight/Power":7.07729,
+"60-0 mph":125.7,
+"60-120 mph":18.5,
+"Weight":1465
+}

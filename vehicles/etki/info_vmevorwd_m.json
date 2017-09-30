@@ -1,0 +1,32 @@
+{
+"0-120 mph":13.7,
+"Performance Class":"8",
+"Drivetrain":"RWD",
+"100-200 km/h":10,
+"default_color":"Jet Black",
+"Years":{
+  "min":1985,
+  "max":1987
+},
+"Value":41000,
+"0-200 km/h":15.2,
+"TorquePeakRPM":"4150 - 5350",
+"0-100 km/h":5.2,
+"Off-Road Score":25,
+"0-100 mph":10.4,
+"Configuration":"2400ti TTSport Evolution I (M)",
+"Transmission":"Manual",
+"60-100 mph":5.3,
+"0-60 mph":5,
+"Config Type":"Factory",
+"100-0 km/h":43.5,
+"Top Speed":75.7521,
+"Power":356.198,
+"Torque":499.431,
+"PowerPeakRPM":"4850 - 6250",
+"Description":"First generation of the factory homologation model, which was equipped with a 2.4 turbocharged inline 6 engine and a race-ready suspension. What you got here , is the street version of the most successful touring car ever.",
+"Weight/Power":4.10112,
+"60-0 mph":125.1,
+"60-120 mph":8.9,
+"Weight":1460
+}

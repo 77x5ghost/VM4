@@ -1,0 +1,11 @@
+{
+"sunburst_skin_vmdtx": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"VMVIP D-Troxx",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "vmdtx",
+}
+}

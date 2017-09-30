@@ -1,0 +1,717 @@
+{
+"pessima_engine_vm21": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"2.1L DOHC i-TEC",
+        "value":1300,
+    }
+    "slotType" : "pessima_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["pessima_exhaust","pessima_exhaust", "Exhaust"],
+        ["pessima_transmissionitec","pessima_transmission_5Mitec", "Transmission"],
+        ["pessima_intake_itec","pessima_intake_itec", "Intake & Exhaust"],
+        ["pessima_radiator","pessima_radiator", "Radiator"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine":{
+        "torque":[
+            ["rpm", "torque"]
+            [0, 0],
+        [500, 124.74],
+        [1000, 145.39],
+        [1500, 158.06],
+        [2000, 161.86],
+        [2500, 163.52],
+        [3000, 167.74],
+        [3500, 172.07],
+        [4000, 181.15],
+        [4500, 190.07],
+        [5000, 200.69],
+        [5500, 207.82],
+        [6000, 213.77],
+        [6500, 221.81],
+        [7000, 225.75],
+        [7500, 221.91],
+        [8000, 211.26],
+        ],
+
+        "idleRPM":850,
+        "maxRPM":8000,
+        "inertia":0.11,
+        "friction":14
+        "dynamicFriction":0.018
+        "burnEfficiency":0.35
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.022
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":4
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":120
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+         
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1900,
+        "clutchLaunchTargetRPM":2400,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2800,3300,3600,3800,3800]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6100
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_engine_sohc", ["pessima_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--1.8L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_engine"}
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":17},
+         ["e1r", 0.18, -1.62, 0.24,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e1l", 0.18, -1.38, 0.24],
+         ["e2r", -0.29, -1.62, 0.24,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e2l", -0.29, -1.38, 0.24],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", 0.18, -1.66, 0.75,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e3l", 0.18, -1.28, 0.75],
+         ["e4r", -0.29, -1.66, 0.75,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.12}],
+         ["e4l", -0.29, -1.28, 0.75],
+         ["tc1", 0, -1.65, 0.42],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"{"isExhaust":true}],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          ["tc1","e2l"],
+          ["tc1","e2r"],
+          {"beamSpring":60600,"beamDamp":50},
+          {"beamDeform":1000,"beamStrength":2000},
+          //rad tube beams
+          {"breakGroup":"radtube"},
+          ["e3r","f15l"],
+          ["e3r","f15"],
+          ["e3r","f15l"],
+          ["e3r","f15"],
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"pessima_intake_sportvmitec": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC Sport Intake & Exhaust",
+        "value":450,
+    }
+    "slotType" : "pessima_intake_itec",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_airbox", ["pessima_engine","pessima_airbox"]],
+         ["pessima_header", ["pessima_engine"]],
+    ],
+    "enginetorque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 127.74],
+        [1000, 149.39],
+        [1500, 162.06],
+        [2000, 165.86],
+        [2500, 170.52],
+        [3000, 175.74],
+        [3500, 182.07],
+        [4000, 187.15],
+        [4500, 197.07],
+        [5000, 208.69],
+        [5500, 220.82],
+        [6000, 228.77],
+        [6500, 235.81],
+        [7000, 240.75],
+        [7500, 238.91],
+        [8000, 232.26],
+    ],
+    "engine":{
+        "shiftDownRPM":4000,
+        "shiftUpRPM":7500,
+        "maxRPM":8500,
+        "inertia":0.10,
+        "burnEfficiency":0.34
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_airbox"},
+         {"nodeWeight":1},
+         {"engineGroup":"engine_intake"},
+         ["airb", 0.57, -1.55, 0.75],
+         {"engineGroup":""},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":50600,"beamDamp":120},
+          {"beamDeform":11000,"beamStrength":26000},
+          ["airb","e1r"],
+          ["airb","e2r"],
+          ["airb","e3r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e3l"],
+          ["airb","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+
+}
+"pessima_intake_itec": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC Stock Intake & Exhaust",
+        "value":190,
+    }
+    "slotType" : "pessima_intake_itec",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_airbox", ["pessima_engine","pessima_airbox"]],
+         ["pessima_header", ["pessima_engine"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_airbox"},
+         {"nodeWeight":1},
+         {"engineGroup":"engine_intake"},
+         ["airb", 0.57, -1.55, 0.75],
+         {"engineGroup":""},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":50600,"beamDamp":120},
+          {"beamDeform":11000,"beamStrength":26000},
+          ["airb","e1r"],
+          ["airb","e2r"],
+          ["airb","e3r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e3l"],
+          ["airb","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+
+}
+"pessima_transmission_5Mitec": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC 5-Speed Manual Transmission",
+        "value":300,
+    }
+    "slotType" : "pessima_transmissionitec",
+    "slots": [
+        ["type", "default", "description"],
+        ["pessima_transfer_case","pessima_transfer_case_AWD", "Transfer Case"{"coreSlot":true}],
+        ["pessima_differential_F","pessima_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.8, 0, 3.285, 1.956, 1.344, 1.034, 0.812],
+        "friction": 1,
+    },
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2800,3300,3600,3800,3800]
+        "lowShiftUpRPM":5000,
+        "wheelSlipUpThreshold":120,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_transmission", ["pessima_engine","pessima_transmission"]],
+         ["pessima_shifter_M", ["pessima_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"pessima_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch", "pessima_clutchpedal", "f1l","f1r","f6l", {"x":5, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.29, 0.31],
+         ["tra1l", 0.27, -1.29, 0.31],
+         ["ta1", 0, -1.29, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"pessima_transmission_4Aitec": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"i-TEC 4-Speed Automatic Transmission",
+        "value":430,
+    }
+    "slotType" : "pessima_transmissionitec",
+    "slots": [
+        ["type", "default", "description"],
+        ["pessima_transfer_case","pessima_transfer_case_FWD", "Transfer Case"{"coreSlot":true}],
+        ["pessima_differential_F","pessima_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.45, 0, 3.31, 1.95, 1.21, 0.82],
+        "parkLockTorque":1800,
+        "oneWayViscousCoef":10,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter": 0.245,
+        "converterStiffness":9,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":250,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":2
+        "lowShiftDownRPM":950,
+        "lowShiftUpRPM":3400,
+        "highShiftDownRPM":3950,
+		"highShiftUpRPM":7300,
+        "torqueConverterLockupRPM":2000
+        "torqueConverterLockupMinGear":3
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_transmission", ["pessima_engine","pessima_transmission"]],
+         ["pessima_shifterbase_A", ["pessima_body"]],
+         ["pessima_gearindicator_A", ["pessima_dash"]],
+    ],
+    "glowMap":{
+            "auto_P":{"simpleFunction":"auto_p", "off":"pessima_gauges", "on":"pessima_gauges_on"},
+            "auto_R":{"simpleFunction":"auto_r", "off":"pessima_gauges", "on":"pessima_gauges_on"},
+            "auto_N":{"simpleFunction":"auto_n", "off":"pessima_gauges", "on":"pessima_gauges_on"},
+            "auto_D":{"simpleFunction":"auto_d", "off":"pessima_gauges", "on":"pessima_gauges_on"},
+            "auto_2":{"simpleFunction":"auto_2", "off":"pessima_gauges", "on":"pessima_gauges_on"},
+            "auto_1":{"simpleFunction":"auto_1", "off":"pessima_gauges", "on":"pessima_gauges_on"},
+    },
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //automatic transmission
+        ["gear_A"   ,"pessima_shifter_A", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":1, "y":0, "z":0}     , {"x":0, "y":0.2, "z":0.0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--4 Speed Auto--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.29, 0.31],
+         ["tra1l", 0.27, -1.29, 0.31],
+         ["ta1", 0, -1.29, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"pessima_transmission_6M_raceitec": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TEC Race 6-Speed Manual Transmission",
+        "value":1200,
+    }
+    "slotType" : "pessima_transmissionitec",
+    "slots": [
+        ["type", "default", "description"],
+        ["pessima_transfer_case","pessima_transfer_case_AWD_race", "Transfer Case"{"coreSlot":true}],
+        ["pessima_differential_F","pessima_differential_F", "Front Differential"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$gear_R", "range", ":1", "Transmission", -2.95, -6.0, -0.5, "Reverse Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_1", "range", ":1", "Transmission", 3.133, 0.5, 6.0, "1st Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_2", "range", ":1", "Transmission", 2.045, 0.5, 6.0, "2nd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_3", "range", ":1", "Transmission", 1.481, 0.5, 6.0, "3rd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_4", "range", ":1", "Transmission", 1.161, 0.5, 6.0, "4th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_5", "range", ":1", "Transmission", 0.970, 0.5, 6.0, "5th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_6", "range", ":1", "Transmission", 0.810, 0.5, 6.0, "6th Gear Ratio", "Torque multiplication ratio"]
+        ["$finaldrive", "range", ":1", "Transmission", 4.10, 2.0, 6.0, "Final Drive Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":["$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6"],
+        "friction": 1,
+    },
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,3200,3500,4000,4200,4200]
+        "lowShiftUpRPM":5400,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_transmission", ["pessima_engine","pessima_transmission"]],
+         ["pessima_shifter_M", ["pessima_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"pessima_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch", "pessima_clutchpedal", "f1l","f1r","f6l", {"x":5, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.29, 0.31],
+         ["tra1l", 0.27, -1.29, 0.31],
+         ["ta1", 0, -1.29, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"pessima_transmission_5Mitecitr": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"i-TR 5-Speed Manual Transmission",
+        "value":500,
+    }
+    "slotType" : "pessima_transmissionitec",
+    "slots": [
+        ["type", "default", "description"],
+        ["pessima_transfer_case","pessima_transfer_case_AWD", "Transfer Case"{"coreSlot":true}],
+        ["pessima_differential_F","pessima_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.00, 0, 3.23, 2.1, 1.45, 1.034, 0.787],
+        "friction": 1,
+    },
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2800,3300,3600,3800,3800]
+        "lowShiftUpRPM":5000,
+        "wheelSlipUpThreshold":120,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_transmission", ["pessima_engine","pessima_transmission"]],
+         ["pessima_shifter_M", ["pessima_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"pessima_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch", "pessima_clutchpedal", "f1l","f1r","f6l", {"x":5, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"pessima_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.29, 0.31],
+         ["tra1l", 0.27, -1.29, 0.31],
+         ["ta1", 0, -1.29, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+    "pessima_turbo_stage3vmitec": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Variable Boost Turbocharger",
+            "value":4000,
+        }
+        "slotType" : "pessima_intake_itec",
+        "flexbodies": [
+             ["mesh", "[group]:", "nonFlexMaterials"],
+             ["pessima_icpipe_intake", ["pessima_engine","pessima_intercooler","pessima_rad"]],
+             ["pessima_icpipe_turbo", ["pessima_engine","pessima_intercooler","pessima_rad"]],
+             ["pessima_turbo", ["pessima_engine"]],
+             ["pessima_intercooler", ["pessima_intercooler","pessima_rad"]],
+        ],
+        "variables": [
+            ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+            ["$wastegateStart", "range", "psi", "Turbocharger", 8, 6, 36, "Wastegate Start", "Pressure at which the wastegate begins to open"{"stepDis":0.5}]
+            ["$wastegateLimit", "range", "psi", "Turbocharger", 10, 8, 38, "Wastegate Limit", "Pressure at which the wastegate is fully opened"{"stepDis":0.5}]
+        ],
+        "engine":{
+            "idleRPM":1100,
+            "shiftDownRPM":4500,
+            "shiftUpRPM":7500,
+            "maxRPM":8000,
+            "burnEfficiency":0.24,
+            "inertia":0.10,
+            "cylinderWallTemperatureDamageThreshold":180
+        },
+        "turbocharger": {
+            "wastegateStart":"$wastegateStart",
+            "wastegateLimit":"$wastegateLimit",
+            "maxExhaustPower": 180000,
+            "backPressureCoef": 0.000040,
+            "frictionCoef": 20.3,
+            "inertia":20.4,
+            "pressureRatePSI": 95,
+            "damageThresholdTemperature": 870,
+            "pressurePSI":[
+                //turbineRPM, pressure(PSI)
+                [0,         -1],
+                [30000,     -0.5],
+                [60000,     5],
+                [90000,     18],
+                [150000,    30],
+                [200000,    36],
+                [250000,    40],
+            ],
+            "engineDef":[
+                //engineRPM, efficiency, exhaustFactor
+                [0,     0.0,    0.0],
+                [650,   0.23,   0.15],
+                [1400,  0.33,   0.23],
+                [2000,  0.41,    0.29],
+                [2500,  0.54,    0.41],
+                [3000,  0.72,    0.61],
+                [4000,  0.98,    0.77],
+                [5000,  1.13,    0.87],
+                [6000,  1.18,    1.0],
+                [7000,  1.11,    1.00],
+                [8000,  1.2,    1.0],
+                [9000,  1.25,    1.0],
+            ],
+        },
+        "nodes": [
+             ["id", "posX", "posY", "posZ"],
+             {"selfCollision":false},
+             {"collision":true}
+             {"nodeMaterial":"|NM_METAL"},
+             {"frictionCoef":0.5},
+             {"group":"pessima_intercooler"},
+             {"nodeWeight":6},
+             ["interc", 0.0, -2.00, 0.35],
+             {"group":""},
+        ],
+        "beams": [
+              ["id1:", "id2:"],
+              {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+              {"beamSpring":350600,"beamDamp":60},
+              {"beamDeform":3000,"beamStrength":6000},
+              ["interc","f13rr"],
+              ["interc","f13"],
+              ["interc","f13ll"],
+              ["interc","f18"],
+              ["interc","f18r"],
+              ["interc","f18l"],
+
+              ["interc","f11rr"],
+              ["interc","f11"],
+              ["interc","f11ll"],
+              {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        ],
+
+}
+}

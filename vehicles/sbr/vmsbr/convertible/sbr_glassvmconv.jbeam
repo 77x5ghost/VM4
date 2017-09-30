@@ -1,0 +1,84 @@
+{
+"sbr_glassvmc": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Glass",
+        "value":1600,
+    }
+    "slotType" : "sbr_glassvmc",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //glass
+         {"deformGroup":"sbr_windshield_break", "deformMaterialBase":"sbr_glass", "deformMaterialDamaged":"sbr_windshield_dmg"}
+         ["sbr_windshield", ["sbr_windshield"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+         {"deformGroup":"sbr_windshield_break", "deformMaterialBase":"sbr_glass_int", "deformMaterialDamaged":"sbr_glass_int"}
+         ["sbr_windshield_int", ["sbr_windshield"]],
+
+         {"deformGroup":"sbr_windshield_break", "deformMaterialBase":"glass_invisible", "deformMaterialDamaged":"glass_mirror"}
+         ["sbr_windshield_dmg", ["sbr_windshield"]],
+
+             {"deformGroup":""}
+
+
+         {"deformGroup":"sbr_enginelid_break", "deformMaterialBase":"sbr_glass", "deformMaterialDamaged":"sbr_glass_dmg"}
+		 ["sbr_enginelid", ["sbr_rearint"]],
+
+         {"deformGroup":""}
+         ["sbr_wipers", ["sbr_body","sbr_roof","sbr_engine_bay"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_GLASS"},
+         {"nodeWeight":2.66},
+         {"group":"sbr_windshield"},
+         //windshield node
+         ["wi1", 0, -0.68, 0.99{"group":["sbr_windshield","gps"]}],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //windshield node
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"beamSpring":1348050,"beamDamp":50},
+          {"beamDeform":6750,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"sbr_windshield_break", "deformationTriggerRatio":0.08},
+
+          ["wi1","rf1r"],
+          ["wi1","rf1"],
+          ["wi1","rf1l"],
+
+          ["wi1","p1r"],
+          ["wi1","p1l"],
+          ["wi1","p2r"],
+          ["wi1","p2l"],
+          ["wi1","p2rr"],
+          ["wi1","p2ll"],
+
+          ["wi1","f6r"],
+          ["wi1","f6l"],
+
+          ["wi1","f6rr"],
+          ["wi1","f6ll"],
+
+          {"beamDeform":6750,"beamStrength":11250},
+          ["f6r","rf1"],
+          ["f6l","rf1"],
+
+          ["p1r","p1l"],
+
+          //brittle glass beams
+          {"beamSpring":1238050,"beamDamp":50},
+
+          {"breakGroup":""},
+          {"deformGroup":""},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+    ],
+}
+}

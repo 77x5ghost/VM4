@@ -1,0 +1,11 @@
+{
+"sunburst_skin_plastic": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Plastic Bumpers (VM)",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "plastic",
+}
+}

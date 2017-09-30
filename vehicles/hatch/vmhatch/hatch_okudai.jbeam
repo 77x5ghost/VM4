@@ -1,0 +1,11 @@
+{
+"hatch_skin_okudai": {
+    "information":{
+        "authors":"Ninetynine",
+        "name":"Okudai Turbo II",
+        "value":1300,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "okudai",
+}
+}
