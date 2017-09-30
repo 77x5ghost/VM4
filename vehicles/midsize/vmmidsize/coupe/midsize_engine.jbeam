@@ -400,19 +400,20 @@
     },
     "soundConfig": {
         "sampleName": "V6",
-        "mainGain": -18,
+        "mainGain": -8,
         "maxLoadMix": 0.65,
         "minLoadMix": 0,
         "onLoadGain":1,
         "offLoadGain":0.7,
         "eqLowGain": 10,
-        "eqLowFreq": 400,
+        "eqLowFreq": 500,
         //"eqLowWidth": 0,
         "eqHighGain": -5,
-        "eqHighFreq": 6000,
+        "eqHighFreq": 2000,
         //"eqHighWidth": 0.5,
-        "lowCutFreq":80,
-        "fundamentalFrequencyCylinderCount":4
+        "lowCutFreq": 20,
+        "highCutFreq": 10000,
+        "fundamentalFrequencyCylinderCount":6
         "eqFundamentalGain": 10
     },
     "vehicleController": {
