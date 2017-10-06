@@ -1,0 +1,219 @@
+{
+"hatch_engine_dpmpHr": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"2.0 HR-Tec Engine DPMP",
+        "value":500,
+    },
+
+    "slotType" : "hatch_engine",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_exhaust","hatch_exhaust", "Exhaust"],
+        ["hatch_transmission","hatch_transmission_6M", "Transmission"],
+        ["hatch_intake_dpmpHR","hatch_intake_dpmpHR", "Intake & Exhaust",{"coreSlot":true}],
+        ["hatch_radiator","hatch_radiator", "Radiator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_engine_dpmpHR", ["hatch_engine"]],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, "0"],
+        [1000, 90],
+        [1750, 150],
+        [2250, 170],
+        [3000, 180],
+        [3750, 190],
+        [5000, 200],
+        [6000, 205],
+        [6750, 215],
+        [7500, 205],
+        [8500, 190],
+    ],
+ 
+        "idleRPM":800,
+        "maxRPM":8500,
+        "inertia":0.10,
+        "friction":10,
+        "brakingCoefRPS":0.25
+        "burnEfficiency":0.28
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.03
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":3
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":120
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2300,
+        "clutchLaunchTargetRPM":3000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":7400
+    },
+    "nodes": [
+["id", "posX", "posY", "posZ"],
+         //--2.0L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"hatch_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":17},
+         ["e1r", 0.18, -1.62, 0.24,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.12}],
+         ["e1l", 0.18, -1.38, 0.24],
+         ["e2r", -0.29, -1.62, 0.24,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.12}],
+         ["e2l", -0.29, -1.38, 0.24],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", 0.18, -1.66, 0.75,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.12}],
+         ["e3l", 0.18, -1.28, 0.75],
+         ["e4r", -0.29, -1.66, 0.75,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.12}],
+         ["e4l", -0.29, -1.28, 0.75],
+         ["tc1", 0, -1.65, 0.42],
+         {"engineGroup":""}
+         {"group":""},
+        ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"{"isExhaust":true}],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamSpring":60600,"beamDamp":50},
+          {"beamDeform":1000,"beamStrength":2000},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_intake_dpmpHR": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Stock Intake & Exhaust DPMP",
+        "value":100,
+    }
+    "slotType" : "hatch_intake_dpmpHR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_airbox_dpmpHR", ["hatch_engine","hatch_airbox"]],
+         ["hatch_header_dpmpHR", ["hatch_engine"]],
+    ],
+        "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"hatch_airbox"},
+         {"nodeWeight":1},
+         {"engineGroup":"engine_intake"},
+         ["airb", 0.57, -1.55, 0.75],
+         {"engineGroup":""},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":50600,"beamDamp":120},
+          {"beamDeform":11000,"beamStrength":26000},
+          ["airb","e1r"],
+          ["airb","e2r"],
+          ["airb","e3r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e3l"],
+          ["airb","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

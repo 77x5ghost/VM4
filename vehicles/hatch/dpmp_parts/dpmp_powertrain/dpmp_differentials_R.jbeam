@@ -1,0 +1,323 @@
+{
+"hatch_differential_R_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Rear Differential DPMP",
+        "value":4500,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft_R","hatch_driveshaft_R", "Rear Driveshaft"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_driveshaft_2_dpmp", ["hatch_body"]],
+         ["hatch_diff_R_2_dpmp", ["hatch_body"]],
+         ["hatch_halfshaft_R_2_dpmp", ["hatch_lowermounts_a_R","hatch_lowerarm_a_R","hatch_lowermounts_b_R","hatch_lowerarm_b_R","hatch_upperarm_R"]],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"open", "gearRatio": 4.266, "diffTorqueSplit":0.5, "friction":8}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0, 1.25502, 0.29],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":5000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1rr","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1ll","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_R_LSD_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Limited Slip Rear Differential DPMP",
+        "value":4500,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft_R","hatch_driveshaft_R", "Rear Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio": 4.266, "lsdPreload":100, "lsdLockCoef":0.1, "lsdRevLockCoef":0.01, "friction":8}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_driveshaft_2_dpmp", ["hatch_body"]],
+         ["hatch_diff_R_2_dpmp", ["hatch_body"]],
+         ["hatch_halfshaft_R_2_dpmp", ["hatch_lowermounts_a_R","hatch_lowerarm_a_R","hatch_lowermounts_b_R","hatch_lowerarm_b_R","hatch_upperarm_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0, 1.25502, 0.29],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":5000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1rr","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1ll","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_R_race_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Race Limited Slip Rear Differential DPMP",
+        "value":4500,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft_R","hatch_driveshaft_R", "Rear Driveshaft"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$lsdpreload_R", "range", "N/m", "Differentials", 100, 0, 500, "Rear LSD Preload", "Initial cross torque between left and right wheels"]
+        ["$lsdlockcoef_R", "range", "", "Differentials", 0.20, 0, 0.5, "Rear LSD Forward Locking", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}]
+        ["$lsdlockcoefrev_R", "range", "", "Differentials", 0.10, 0, 0.5, "Rear LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"lsd", "gearRatio":4.266, "lsdPreload":"$lsdpreload_R", "lsdLockCoef":"$lsdlockcoef_R", "lsdRevLockCoef":"$lsdlockcoefrev_R", "friction":8}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_driveshaft_2_dpmp", ["hatch_body"]],
+         ["hatch_diff_R_2_dpmp", ["hatch_body"]],
+         ["hatch_halfshaft_R_2_dpmp", ["hatch_lowermounts_a_R","hatch_lowerarm_a_R","hatch_lowermounts_b_R","hatch_lowerarm_b_R","hatch_upperarm_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0, 1.25502, 0.29],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":5000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1rr","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1ll","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_differential_R_locking": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Locking Rear Differential DPMP",
+        "value":750,
+    },
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft_R","hatch_driveshaft_R","Rear Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        //rear diff
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":["open","locked"], "gearRatio":4.10, "lockTorque":20000, "friction":5}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_driveshaft_2_dpmp", ["hatch_body"]],
+         ["hatch_diff_R_2_dpmp", ["hatch_body"]],
+         ["hatch_halfshaft_R_2_dpmp", ["hatch_lowermounts_a_R","hatch_lowerarm_a_R","hatch_lowermounts_b_R","hatch_lowerarm_b_R","hatch_upperarm_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0, 1.25502, 0.29],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":5000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1rr","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1ll","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+},
+"hatch_differential_R_welded_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Welded Rear Differential DPMP",
+        "value":4500,
+    }
+    "slotType" : "hatch_differential_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_driveshaft_R","hatch_driveshaft_R", "Rear Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft", 1, {"diffType":"locked", "gearRatio": 4.266, "lockTorque":8000, "friction":8}]
+        ["shaft", "wheelaxleRL", "differential_R", 1, {"connectedWheel":"RL", "breakTriggerBeam":"axle_RL", "friction":2}]
+        ["shaft", "wheelaxleRR", "differential_R", 2, {"connectedWheel":"RR", "breakTriggerBeam":"axle_RR", "friction":2}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_driveshaft_2_dpmp", ["hatch_body"]],
+         ["hatch_diff_R_2_dpmp", ["hatch_body"]],
+         ["hatch_halfshaft_R_2_dpmp", ["hatch_lowermounts_a_R","hatch_lowerarm_a_R","hatch_lowermounts_b_R","hatch_lowerarm_b_R","hatch_upperarm_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":20},
+         ["rdiff", 0, 1.25502, 0.29],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","f4r"],
+          ["rdiff","f4l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3000,"beamStrength":5000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1rr","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1ll","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

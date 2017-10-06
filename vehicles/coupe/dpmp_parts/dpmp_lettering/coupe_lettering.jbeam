@@ -1,0 +1,160 @@
+{
+"coupe_lettering_dpmpk": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Type-K Trunk Lettering DPMP DPMP",
+        "value":5,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_ibishu", ["coupe_trunk"]],
+         ["coupe_lettering_dpmpk", ["coupe_trunk"]],
+         ["coupe_lettering_type", ["coupe_trunk"]],
+    ],
+}
+"coupe_lettering_dpmp50": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Type-LS 50th Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmp50", ["coupe_trunk"]],
+          ["coupe_lettering_type", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmpbeta": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Beta Special Trunk Lettering DPMP",
+        "value":12,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+          ["coupe_lettering_dpmpbeta", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmphr": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HR-Tec Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmphr", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmpm": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Type-M Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmpm", ["coupe_trunk"]],
+          ["coupe_lettering_type", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmpnomi1": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Nomi's N250 Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmpnomi1", ["coupe_trunk"]],
+          ["coupe_lettering_dpmpnomi2", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmpnomi2": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Nomi's N430 Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmpnomi1", ["coupe_trunk"]],
+          ["coupe_lettering_dpmpnomi3", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmptd": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Turbo Diesel Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+          ["coupe_lettering_dpmptd", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+    ],
+}
+"coupe_lettering_dpmpx": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Type-X Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmpx", ["coupe_trunk"]],
+          ["coupe_lettering_type", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmpxs": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Type-XS Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmpxs", ["coupe_trunk"]],
+          ["coupe_lettering_type", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+"coupe_lettering_dpmpz": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Type-Z Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "coupe_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_lettering_dpmpz", ["coupe_trunk"]],
+          ["coupe_lettering_type", ["coupe_trunk"]],
+          ["coupe_lettering_ibishu", ["coupe_trunk"]],
+
+    ],
+}
+}

@@ -1,0 +1,398 @@
+{
+"midsize_skidplate_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Skidplate DPMP",
+        "value":350,
+    },
+    "slotType" : "midsize_rollcage",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["midsize_skidplate_dpmp", ["midsize_skidplate"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.7},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":1.0},
+         {"selfCollision":true}
+         {"collision":true}
+         {"group":"midsize_skidplate"},
+         ["skid1l", 0.5, -1.94, 0.25],
+         ["skid1", 0.0, -1.97, 0.25],
+         ["skid1r", -0.5, -1.94, 0.25],
+
+         ["skid2l", 0.35, -1.78, 0.2],
+         ["skid2", 0.0, -1.78, 0.2],
+         ["skid2r", -0.35, -1.78, 0.2],
+
+         ["skid3l", 0.35, -1.31, 0.2],
+         ["skid3", 0.0, -1.31, 0.2],
+         ["skid3r", -0.35, -1.31, 0.2],
+
+         ["skid4l", 0.35, -0.7, 0.2],
+         ["skid4", 0.0, -0.7, 0.2],
+         ["skid4r", -0.35, -0.7, 0.2],
+
+         //rigidifier
+         {"collision":false}
+         ["skidrig", 0.0, -1.25, 0.25],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":850000,"beamDamp":95},
+          {"beamDeform":23450,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["skid1","skid1l"],
+          ["skid1","skid1r"],
+          ["skid2","skid2l"],
+          ["skid2","skid2r"],
+          ["skid3","skid3l"],
+          ["skid3","skid3r"],
+          ["skid4","skid4l"],
+          ["skid4","skid4r"],
+          //
+          ["skid1r","skid2r"],
+          ["skid1","skid2"],
+          ["skid1l","skid2l"],
+          ["skid2r","skid3r"],
+          ["skid2","skid3"],
+          ["skid2l","skid3l"],
+          ["skid2r","skid3r"],
+          ["skid2","skid3"],
+          ["skid2l","skid3l"],
+          ["skid3r","skid4r"],
+          ["skid3","skid4"],
+          ["skid3l","skid4l"],
+
+          //crossing
+          {"beamDeform":11450,"beamStrength":"FLT_MAX"},
+          ["skid1r","skid2"],
+          ["skid1l","skid2"],
+          ["skid2r","skid1"],
+          ["skid2l","skid1"],
+          ["skid2r","skid3"],
+          ["skid2l","skid3"],
+          ["skid3r","skid2"],
+          ["skid3l","skid2"],
+          ["skid3r","skid4"],
+          ["skid3l","skid4"],
+          ["skid4r","skid3"],
+          ["skid4l","skid3"],
+
+          //rigidifier
+          {"beamDeform":4500,"beamStrength":"FLT_MAX"},
+          ["skidrig","skid3"],
+          ["skidrig","skid3l"],
+          ["skidrig","skid3r"],
+          ["skidrig","skid4"],
+          ["skidrig","skid4l"],
+          ["skidrig","skid4r"],
+          ["skidrig","skid2"],
+          ["skidrig","skid2l"],
+          ["skidrig","skid2r"],
+          ["skidrig","skid1"],
+          ["skidrig","skid1l"],
+          ["skidrig","skid1r"],
+
+          //attach
+          {"beamSpring":850000,"beamDamp":95},
+          {"beamDeform":11500,"beamStrength":39600},
+          {"breakGroup":"midsize_skidplate_FL"},
+          ["skid1l","f18l"],
+          ["skid1l","f18"],
+          ["skid1","f18l"],
+          ["skid2l","f18l"],
+          {"breakGroup":"midsize_skidplate_FR"},
+          ["skid1r","f18r"],
+          ["skid1r","f18"],
+          ["skid1","f18r"],
+          ["skid2r","f18r"],
+          {"breakGroup":"midsize_skidplate_F"},
+          ["skid2","f18"],
+          ["skid2r","f18"],
+          ["skid2l","f18"],
+          ["skid1","f18"],
+          ["skid1","f11"],
+          {"breakGroup":"midsize_skidplate_RR"},
+          ["skid4l","f1r"],
+          ["skid4l","f1l"],
+          ["skid4l","fx2r"],
+          ["skid4l","fx2l"],
+          ["skid3l","f1r"],
+          ["skid3l","f1l"],
+          ["skid4","f1r"],
+          ["skid4","f1l"],
+          ["skid3","f1r"],
+          ["skid3","f1l"],
+          {"breakGroup":"midsize_skidplate_RL"},
+          ["skid4r","f1r"],
+          ["skid4r","f1l"],
+          ["skid4r","fx2r"],
+          ["skid4r","fx2l"],
+          ["skid3r","f1r"],
+          ["skid3r","f1l"],
+          ["skid4","f1r"],
+          ["skid4","f1l"],
+          ["skid3","fx2r"],
+          ["skid3r","fx2r"],
+          {"beamSpring":450000,"beamDamp":65},
+          {"breakGroup":"midsize_skidplate_bumper_F"},
+          {"optional":true},
+          ["skid1","fb6"],
+          ["skid1","fb3"],
+          ["skid1r","fb3r"],
+          ["skid1l","fb3l"],
+          ["skid1r","fb3"],
+          ["skid1l","fb3"],
+          ["skid1r","fb6"],
+          ["skid1l","fb6"],
+          {"optional":false},
+          {"breakGroup":""},
+
+          //support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":2751000,"beamDamp":50},
+          {"beamDeform":66765,"beamStrength":1125000},
+          {"optional":true}
+          {"beamPrecompression":0.95}
+          ["skid3r","e1l"],
+          ["skid3l","e2l"],
+          ["skid3","e2l"],
+          {"beamPrecompression":0.9}
+          ["skid2r","e1r"],
+          ["skid2","e2r"],
+          ["skid2l","e2r"],
+          ["skid3r","e1r"],
+          ["skid3","e2r"],
+          ["skid3l","e2r"],
+          {"beamPrecompression":0.8}
+          ["skid3r","e3l"],
+          ["skid3","e4l"],
+          ["skid3l","e4l"],
+          ["skid2r","e3r"],
+          ["skid2","e4r"],
+          ["skid2l","e4r"],
+          {"optional":false}
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "quads": [
+        ["id1:","id2:","id3:","id4:"],
+        {"group":"midsize_skidplate"},
+        {"dragCoef":3},
+        ["skid1r","skid2r","skid2","skid1"],
+        ["skid1","skid2","skid2l","skid1l"],
+        ["skid2r","skid3r","skid3","skid2"],
+        ["skid2","skid3","skid3l","skid2l"],
+        ["skid3r","skid4r","skid4","skid3"],
+        ["skid3","skid4","skid4l","skid3l"],
+        {"group":""},
+    ],
+}
+"midsize_rallylights_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Rally Lights DPMP",
+        "value":250,
+    }
+    "slotType" : "midsize_rallylights",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_rallylights_R_dpmp", ["midsize_rallylights_R"]],
+         ["midsize_rallylights_L_dpmp", ["midsize_rallylights_L"]],
+         {"deformGroup":"midsize_rallylight_R_break", "deformMaterialBase":"light_generic", "deformMaterialDamaged":"light_generic_dmg"}
+         ["rallylight_inner", ["midsize_rallylights_R"],[],{"pos":{"x":-0.3445,"y":-2.113,"z":0.7926}"scale":{"x":1.25,"y":1.1,"z":1.25}}],
+         ["rallylight_inner", ["midsize_rallylights_R"],[],{"pos":{"x":-0.1319,"y":-2.149,"z":0.8332}"scale":{"x":1.25,"y":1.1,"z":1.25}}],
+         {"deformGroup":"midsize_rallylight_L_break", "deformMaterialBase":"light_generic", "deformMaterialDamaged":"light_generic_dmg"}
+         ["rallylight_inner", ["midsize_rallylights_L"],[],{"pos":{"x": 0.3445,"y":-2.113,"z":0.7926}"scale":{"x":1.25,"y":1.1,"z":1.25}}],
+         ["rallylight_inner", ["midsize_rallylights_L"],[],{"pos":{"x": 0.1319,"y":-2.149,"z":0.8332}"scale":{"x":1.25,"y":1.1,"z":1.25}}],
+         {"deformGroup":"midsize_rallylight_R_break", "deformMaterialBase":"midsize_glass", "deformMaterialDamaged":"midsize_glass_dmg"}
+         ["midsize_rallylights_glass_R_dpmp", ["midsize_rallylights_R"],[]{"deformSound":"GlassBreakSound4", "deformVolume":0.5}],
+         {"deformGroup":"midsize_rallylight_L_break", "deformMaterialBase":"midsize_glass", "deformMaterialDamaged":"midsize_glass_dmg"}
+         ["midsize_rallylights_glass_L_dpmp", ["midsize_rallylights_L"],[]{"deformSound":"GlassBreakSound3", "deformVolume":0.5}],
+         {"deformGroup":""}
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":120
+            "lightBrightness":0.35
+            "lightRange":150
+            "lightColor":{"r":255, "g":255, "b":200, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":true
+            "flareName":"vehicleHeadLightFlare"
+            "flareScale":0.5
+            "cookieName":"art/special/BNG_light_cookie_headlight.png"
+            "texSize":512
+            "shadowSoftness":0.5
+        }
+        ["highbeam"    , "SPOTLIGHT"        , "ra1r", "ra1rr", "ra2r", {"x":0, "y":0, "z":0} , {"x":0, "y":-0.08, "z":0.07}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.2, "y":0.5, "z":0.0},"deformGroup":"midsize_rallylight_R_break"}],
+        ["highbeam"    , "SPOTLIGHT"        , "ra1r", "ra1rr", "ra2r", {"x":0, "y":0, "z":0} , {"x":0, "y":-0.08, "z":0.07}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.8, "y":0.5, "z":0.0},"deformGroup":"midsize_rallylight_R_break",
+            "lightCastShadows":false}],
+
+        ["highbeam"    , "SPOTLIGHT"        , "ra1l", "ra1ll", "ra2l", {"x":180, "y":0, "z":0} , {"x":0, "y":-0.08, "z":0.07}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.2, "y":0.5, "z":-0.0},"deformGroup":"midsize_rallylight_L_break"}],
+        ["highbeam"    , "SPOTLIGHT"        , "ra1l", "ra1ll", "ra2l", {"x":180, "y":0, "z":0} , {"x":0, "y":-0.08, "z":0.07}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.8, "y":0.5, "z":-0.0},"deformGroup":"midsize_rallylight_L_break","lightCastShadows":false}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--HEADLIGHT--
+         //left
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"nodeWeight":0.95},
+         {"group":"midsize_rallylights_R"},
+         ["ra1r", -0.025, -2.093, 0.684],
+         ["ra1rr", -0.442, -2.054, 0.622],
+         ["ra2r", -0.053, -2.088, 0.869],
+         ["ra2rr", -0.423, -2.055, 0.814],
+         ["ra3r", -0.058, -1.862, 0.781],
+         ["ra3rr", -0.383, -1.834, 0.776],
+         {"group":""},
+
+         {"group":"midsize_rallylights_L"},
+         ["ra1l", 0.025, -2.093, 0.684],
+         ["ra1ll", 0.442, -2.054, 0.622],
+         ["ra2l", 0.053, -2.088, 0.869],
+         ["ra2ll", 0.423, -2.055, 0.814],
+         ["ra3l", 0.058, -1.862, 0.781],
+         ["ra3ll", 0.383, -1.834, 0.776],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--RALLY LIGHT--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":600000,"beamDamp":30},
+          {"beamDeform":13350,"beamStrength":128000},
+          //right rallylight main shape
+          {"deformGroup":"midsize_rallylight_R_break","deformationTriggerRatio":0.05}
+          ["ra1r","ra1rr"],
+          ["ra1r","ra2r"],
+          ["ra1r","ra2rr"],
+          ["ra1r","ra3r"],
+          ["ra1r","ra3rr"],
+          ["ra1rr","ra2r"],
+          ["ra1rr","ra2rr"],
+          ["ra1rr","ra3r"],
+          ["ra1rr","ra3rr"],
+          ["ra2r","ra2rr"],
+          ["ra2r","ra3r"],
+          ["ra2r","ra3rr"],
+          ["ra2rr","ra3r"],
+          ["ra2rr","ra3rr"],
+          ["ra3r","ra3rr"],
+
+          //left rallylight main shape
+          {"deformGroup":"midsize_rallylight_L_break"}
+          ["ra1l","ra1ll"],
+          ["ra1l","ra2l"],
+          ["ra1l","ra2ll"],
+          ["ra1l","ra3l"],
+          ["ra1l","ra3ll"],
+          ["ra1ll","ra2l"],
+          ["ra1ll","ra2ll"],
+          ["ra1ll","ra3l"],
+          ["ra1ll","ra3ll"],
+          ["ra2l","ra2ll"],
+          ["ra2l","ra3l"],
+          ["ra2l","ra3ll"],
+          ["ra2ll","ra3l"],
+          ["ra2ll","ra3ll"],
+          ["ra3l","ra3ll"],
+
+          //right attachment
+          {"beamDeform":6150,"beamStrength":11000},
+          {"breakGroup":"rallylights_R"},
+          {"deformGroup":"midsize_rallylight_R_break"}
+          ["ra3rr","h3r"],
+          ["ra3rr","h3"],
+          ["ra3rr","h4r"],
+          ["ra3r","h3r"],
+          ["ra3r","h3"],
+          ["ra3r","h4"],
+          ["ra1rr","h5r"],
+          ["ra1rr","h4"],
+          ["ra1rr","h4r"],
+          ["ra1r","h5"],
+          ["ra1r","h4"],
+          ["ra1r","h5r"],
+
+          //left attachment
+          {"breakGroup":"rallylights_L"},
+          {"deformGroup":"midsize_rallylight_L_break"}
+          ["ra3ll","h3l"],
+          ["ra3ll","h3"],
+          ["ra3ll","h4l"],
+          ["ra3l","h3l"],
+          ["ra3l","h3"],
+          ["ra3l","h4"],
+          ["ra1ll","h5l"],
+          ["ra1ll","h4"],
+          ["ra1ll","h4l"],
+          ["ra1l","h5"],
+          ["ra1l","h4"],
+          ["ra1l","h5l"],
+          {"deformGroup":""},
+          {"breakGroup":""},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right rallylights
+            {"group":"midsize_rallylight_R"},
+            {"dragCoef":6},
+            //["ra3rr","ra2rr","ra2r"],
+            //["ra3rr","ra2r","ra3r"],
+            //["ra2rr","ra1rr","ra1r"],
+            //["ra2rr","ra1r","ra2r"],
+            //["ra3rr","ra3r","ra1r"],
+            //["ra3rr","ra1r","ra1rr"],
+            //["ra3rr","ra1rr","ra2rr"],
+            //["ra2r","ra1r","ra3r"],
+            {"group":""},
+    ],
+}
+"midsize_mudflap_FR_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Front Right Mudflap DPMP",
+        "value":50,
+    }
+    "slotType" : "midsize_mudflap_FR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_mudflap_FR_dpmp", ["midsize_fender_R"],[],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+}
+"midsize_mudflap_FL_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Front Left Mudflap DPMP",
+        "value":50,
+    }
+    "slotType" : "midsize_mudflap_FL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_mudflap_FL_dpmp", ["midsize_fender_L"],[],{"pos":{"x":0,"y":0,"z":0}}],
+    ],
+}
+"midsize_mudflap_R_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Rear Mudflaps DPMP",
+        "value":100,
+    }
+    "slotType" : "midsize_mudflap_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+		["midsize_mudflap_R_dpmp", ["midsize_bumper_R"],[],{"pos":{"x":0,"y":0,"z":0}}],
+
+    ],
+}
+}

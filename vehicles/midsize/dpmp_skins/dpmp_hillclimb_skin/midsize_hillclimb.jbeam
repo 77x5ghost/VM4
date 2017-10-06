@@ -1,0 +1,12 @@
+{
+
+"midsize_skin_hillclimb": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Hillclimb Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "hillclimb",
+}
+}

@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_polizei": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Polizei Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "polizei",
+  }}

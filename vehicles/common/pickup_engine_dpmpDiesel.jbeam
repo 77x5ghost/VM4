@@ -1,0 +1,213 @@
+{
+"pickup_engine_dpmpDiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"5.9L I6 Diesel Engine DPMP",
+        "value":2000,
+    },
+    "slotType" : "pickup_engine",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_engine_i6", ["pickup_engine"]],
+         ["pickup_header_i6", ["pickup_engine","pickup_framecab"]],
+         ["pickup_radtube_i6", ["pickup_engine","pickup_framefront", "pickup_cab", "pickup_frontmeat"]],
+         ["pickup_engbaycrap", ["pickup_cab", "pickup_firewall", "pickup_frontmeat","pickup_engine_intake"]],
+    ],
+    "slots": [
+        ["type", "default", "description"]
+        ["pickup_transmission","pickup_transmission_4Adpmp","Transmission"],
+        ["pickup_exhaust_i6","pickup_exhaust_i6","I6 Exhaust"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [800, 600],
+        [1400, 624],
+        [1600, 624],
+        [1800, 624],
+        [2000, 624],
+        [2300, 624],
+        [2600, 624],
+        [2700, 620],
+        [2800, 563],
+        [3200, 500],
+    ],
+        //engine performance
+        "idleRPM":700,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
+        "maxRPM":3200,
+        "inertia":0.16,
+        "friction":17
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.33
+        "throttleSensitivity":1.1
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.3
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":6
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":150
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":1500000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1600,
+        "clutchLaunchTargetRPM":2200,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2600,2850,3050,3150,3150]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":5300
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false}
+         {"collision":true}
+         //--4.1L I6 Engine-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":23},
+         {"group":"pickup_engine"},
+         {"engineGroup":"engine_block"}
+         ["e1r", -0.14, -1.07, 0.43,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.2}],
+         ["e1l", 0.14, -1.07, 0.43],
+         ["e2r", -0.14, -1.72, 0.43,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.2}],
+         ["e2l", 0.14, -1.72, 0.43],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.15, -1.07, 0.88,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.2}],
+         ["e3l", 0.15, -1.07, 0.88],
+         ["e4r", -0.15, -1.72, 0.88,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.2}],
+         ["e4l", 0.15, -1.72, 0.88],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--ENGINE CUBE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["e1r","e1l"],
+          ["e1r","e2r"],
+          ["e1r","e2l"],
+          ["e1r","e3r"],
+          ["e1r","e3l"],
+          ["e1r","e4r"{"isExhaust":true}],
+          ["e1r","e4l"],
+          ["e1l","e2r"],
+          ["e1l","e2l"],
+          ["e1l","e3r"],
+          ["e1l","e3l"],
+          ["e1l","e4r"],
+          ["e1l","e4l"],
+          ["e2r","e2l"],
+          ["e2r","e3r"],
+          ["e2r","e3l"],
+          ["e2r","e4r"],
+          ["e2r","e4l"],
+          ["e2l","e3r"],
+          ["e2l","e3l"],
+          ["e2l","e4r"],
+          ["e2l","e4l"],
+          ["e3r","e3l"],
+          ["e3r","e4r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+          ["e3l","e4l"],
+          ["e4r","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //engine
+    ],
+},
+"pickup_transmission_4Adpmp": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"4-Speed Diesel Automatic Transmission DPMP",
+        "value":350,
+        },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "slots": [
+        ["type", "default", "description"]
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.26, 0, 2.45, 1.45, 1.00, 0.69]
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":17,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter":0.28,
+        "converterStiffness":8,
+        "couplingAVRatio":0.85,
+        "stallTorqueRatio":2.05,
+        "lockupClutchTorque":300,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":2
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":1
+        "lowShiftDownRPM":750,
+        "lowShiftUpRPM":1400,
+        "highShiftDownRPM":1100,
+        "torqueConverterLockupRPM":1800
+        "torqueConverterLockupMinGear":3
+    },
+    "slotType" : "pickup_transmission",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         //--4 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":35},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.68, 0.48],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+    ],
+}
+}

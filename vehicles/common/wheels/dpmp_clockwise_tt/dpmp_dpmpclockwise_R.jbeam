@@ -1,0 +1,134 @@
+{
+"wheel_07adpmp_17x9_R": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Clockwise 533 17x9 Rear Wheels (Two-Tone) DPMP",
+        "value":500,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x9","tire_R_255_35_17_race", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["wheel_07adpmp_17x9", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_07adpmp_17x9", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.50, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+"wheel_07adpmp_17x12_R": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Clockwise 533 17x12 Rear Wheels (Two-Tone) DPMP",
+        "value":650,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x12","tire_R_285_35_17_race", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_07adpmp_17x9", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.22, "y":1, "z":1}}],
+        ["wheel_07adpmp_17x9", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.22, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //rear wheel
+        {"nodeWeight":5.0},
+        {"selfCollision":true},
+        {"collision":true}
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_RR"},
+        ["rw1r",-0.33,0.0,0.0],
+        ["rw1rr",-0.60,0.0,0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l",0.33,0.0,0.0],
+        ["rw1ll",0.60,0.0,0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":896800,"beamDamp":6.02,"beamDeform":56000,"beamStrength":434000},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.305},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1151000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1151000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.50},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+},
+}

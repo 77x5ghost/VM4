@@ -1,0 +1,12 @@
+{
+
+"moonhawk_skin_civetta": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Civetta Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "civetta",
+}
+}

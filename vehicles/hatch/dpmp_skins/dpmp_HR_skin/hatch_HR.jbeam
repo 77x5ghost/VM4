@@ -1,0 +1,12 @@
+{
+
+"hatch_skin_HR": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"HR-Type Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "HR",
+}
+}

@@ -1,0 +1,86 @@
+{
+"legran_exhaust_drag_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Front Drag Exhaust DPMP",
+        "value":300,
+    }
+    "slotType" : "legran_exhaust",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["legran_exhaust_drag_dpmp", ["legran_exhaust"]],
+         ["legran_header_v6_drag_dpmp", ["legran_engine"]],
+
+    ],
+    "mainEngine":{
+        "particulates":0.2
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true}
+        {"collision":true}
+        //--exhaust
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"nodeWeight":1.9},
+        {"group":"legran_exhaust"},
+        {"selfCollision":false}
+        ["exh0",-0.03,-1.80,0.45],
+        ["exh1",0.7,-1.75,0.17],
+        ["exh2",0.2,-2.05,0.2],
+        {"group":""},
+    ],
+
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamSpring":1501000,"beamDamp":30},
+        {"beamDeform":9450,"beamStrength":"FLT_MAX"},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        ["exh1","exh0"{"isExhaust":true}],
+        ["exh2","exh1"{"isExhaust":false}],
+        ["exh2","exh0"{"isExhaust":false}],
+        //connecting beams
+        //front
+        {"breakGroup":"exhaust_a"},
+        {"beamSpring":300000,"beamDamp":30},
+        {"beamDeform":2960,"beamStrength":76500},
+        ["exh0","e1r"],
+        ["exh0","e2r"{"isExhaust":true}],
+        ["exh0","e3r"],
+        ["exh0","e4r"],
+        ["exh0","tra1l"],
+        ["exh0","tra1r"],
+
+        ["exh2","tra1r"],
+        ["exh2","tra1l"],
+        ["exh2","f18l"],
+
+        ["exh1","tra1r"],
+        ["exh1","tra1l"],
+        ["exh1","f18l"],
+
+
+        {"beamDeform":1620,"beamStrength":36700},
+        {"beamSpring":300000,"beamDamp":30},
+
+
+        //support beams
+        {"beamPrecompression":1, "beamType":"|SUPPORT", "beamLongBound":4, "beamShortBound":0},
+        {"beamDeform":9720,"beamStrength":45900},
+        {"beamSpring":3001000,"beamDamp":30},
+        {"beamPrecompression":0.85},
+
+        ["exh0","fx1l"],
+        ["exh0","fx1r"],
+        ["exh0","e3r"],
+        ["exh0","e3l"],
+
+        ["exh0","f13rr"],
+        ["exh0","f13ll"],
+
+
+        {"optional":false},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+}
+}

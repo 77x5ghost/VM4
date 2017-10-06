@@ -1,0 +1,23 @@
+{
+"Performance Class":"6",
+"Drivetrain":"4WD",
+"Body Style":"SUV",
+"Value":16500,
+"TorquePeakRPM":"3000 - 4850",
+"Off-Road Score":64,
+"Configuration":"Kodiak (M)",
+"Description":"This Roamer is tuned by Agate Customs. This Off-Road SUV has lifted suspension, large off-road tires, fender flares and a bull bar",
+"Transmission":"Manual",
+"0-60 mph":7.3,
+"Config Type":"Custom",
+"100-0 km/h":45.4,
+"Top Speed":44.4329,
+"default_color":"Pearl White",
+"Torque":757.316,
+"Weight":2320,
+"Power":491.672,
+"Weight/Power":4.72505,
+"60-0 mph":132.8,
+"PowerPeakRPM":"4500 - 5550",
+"0-100 km/h":7.5
+}

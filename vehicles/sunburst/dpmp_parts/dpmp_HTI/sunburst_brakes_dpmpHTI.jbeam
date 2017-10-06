@@ -1,0 +1,84 @@
+{
+"sunburst_brake_F_dpmpHTI": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HTI Front Brakes DPMP",
+        "value":650,
+    },
+    "slotType" : "sunburst_brake_F",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_F","brakepad_F_race", "Front Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["sunburst_brake_F_SdpmpHTI", ["sunburst_hub_F"], [], {"scale":{"x":0.995,"y":1,"z":1}}],
+        //brake discs
+        ["sunburst_brakedisc_race_FR", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [],{"pos":{"x":0.01,"y":0,"z":0}}],
+        ["sunburst_brakedisc_race_FL", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [],{"pos":{"x":-0.01,"y":0,"z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$braketorque_F", "range", "", "Brakes", 2000, 0, 4000, "Front Brake Torque", "Strength of the front brakes"{"minDis":0}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":"$braketorque_F"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":45},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.335},
+        {"brakeMass":9.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.2},
+    ],
+},
+"sunburst_brake_R_dpmpHTI": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HTI Rear Brakes DPMP",
+        "value":600,
+    }
+    "slotType" : "sunburst_brake_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_R","brakepad_R_race", "Rear Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["sunburst_brake_R_SdpmpHTI", ["sunburst_hub_R","sunburst_upperarm_R"], [], {"scale":{"x":0.995,"y":1,"z":1}}],
+        //brake discs
+        ["sunburst_brakedisc_race_RR", ["wheel_RR","wheelhub_a_RR","wheelhub_b_RR"], [], {"pos":{"x":0.01,"y":0,"z":0}}],
+        ["sunburst_brakedisc_race_RL", ["wheel_RL","wheelhub_a_RL","wheelhub_b_RL"], [], {"pos":{"x":-0.01,"y":0,"z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$braketorque_R", "range", "", "Brakes", 1200, 0, 3000, "Rear Brake Torque", "Strength of the rear brakes"{"minDis":0}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":"$braketorque_R"},
+        {"brakeInputSplit":0.4},
+        {"brakeSplitCoef":0.25},
+        {"parkingTorque":2200},
+        {"brakeSpring":45}
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.305},
+        {"brakeMass":6.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+    ],
+}
+}

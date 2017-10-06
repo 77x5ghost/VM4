@@ -1,0 +1,22 @@
+{
+"Performance Class":"3",
+"Drivetrain":"RWD",
+"Value":7500,
+"TorquePeakRPM":"2500 - 5150",
+"Off-Road Score":35,
+"Configuration":"CITYmar (M)",
+"PowerPeakRPM":"4700 - 5550",
+"0-100 km/h":7.8,
+"0-60 mph":7.4,
+"Config Type":"Factory",
+"100-0 km/h":49.8,
+"Top Speed":44.6062,
+"Transmission":"Manual",
+"Torque":163.334,
+"Weight":1040,
+"Description":"The CITYmar is the updated version of the Miramar, it's still sold in growing markets like Brazil or India. It features front disc brakes, a 1.6 DOHC engine and modern hubcaps",
+"Weight/Power":9.36937,
+"60-0 mph":145.4,
+"Power":111.436,
+"default_color":"Steel Blue"
+}

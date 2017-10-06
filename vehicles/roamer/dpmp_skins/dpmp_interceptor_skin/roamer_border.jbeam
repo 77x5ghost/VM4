@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_interceptor": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Police Interceptor Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "interceptor",
+}
+}

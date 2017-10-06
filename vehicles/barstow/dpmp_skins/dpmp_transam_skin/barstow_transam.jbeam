@@ -1,0 +1,12 @@
+{
+
+"barstow_skin_transam": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Trans AM Livery",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "transam",
+  }
+  }

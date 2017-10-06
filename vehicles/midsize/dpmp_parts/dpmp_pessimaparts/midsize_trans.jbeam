@@ -1,0 +1,244 @@
+{
+"midsize_transmission_4A_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 4-Speed Automatic Transmission DPMP",
+        "value":330,
+    }
+    "slotType" : "midsize_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_differential_FT","midsize_differential_F_trans_dpmp", "Front Differential"],
+        ["midsize_transfer_case","midsize_transfer_case_FWD", "Transfercase"{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-2.33, 0, 2.8, 1.54, 1.00, 0.7]
+        "parkLockTorque":2000,
+        "oneWayViscousCoef":12,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter": 0.255,
+        "converterStiffness":9,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":300,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":2
+        "lowShiftDownRPM":1500,
+        "lowShiftUpRPM":2500,
+        "highShiftDownRPM":3300,
+        "torqueConverterLockupRPM":1900
+        "torqueConverterLockupMinGear":3
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["midsize_transmission", ["midsize_engine","midsize_transmission"]],
+        ["midsize_shifterbase_A", ["midsize_dash","midsize_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //automatic transmission
+        ["gear_A"   ,"midsize_shifter_A", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":1, "y":0, "z":0}     , {"x":0, "y":0.2, "z":0.01}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--4 Speed Auto--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.34, 0.39],
+         ["tra1l", 0.35, -1.34, 0.39],
+         ["ta1", 0, -1.34, 0.39],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"midsize_transmission_5M_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 5-Speed Manual Transmission DPMP",
+        "value":250,
+    }
+    "slotType" : "midsize_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_differential_FT","midsize_differential_F_trans_dpmp", "Front Differential"],
+        ["midsize_transfer_case","midsize_transfer_case_FWD", "Transfercase"{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.17, 0, 3.31, 1.83, 1.23, 0.97, 0.76],
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,2950,3050,3150,3150]
+        "lowShiftUpRPM":4500,
+        "wheelSlipUpThreshold":120,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["midsize_transmission", ["midsize_engine","midsize_transmission"]],
+        ["midsize_shifter_M", ["midsize_dash","midsize_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"midsize_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch"     ,"midsize_clutchpedal", "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.34, 0.39],
+         ["tra1l", 0.35, -1.34, 0.39],
+         ["ta1", 0, -1.34, 0.39],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"midsize_transmission_5M_V6_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy V6 5-Speed Manual Transmission DPMP",
+        "value":270,
+    }
+    "slotType" : "midsize_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_differential_FT","midsize_differential_F_trans_dpmp", "Front Differential"],
+        ["midsize_transfer_case","midsize_transfer_case_FWD", "Transfercase"{"coreSlot":true}],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.17, 0, 3.31, 1.83, 1.31, 1.03, 0.84],
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,2950,3050,3150,3150]
+        "lowShiftUpRPM":4500,
+        "wheelSlipUpThreshold":120,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["midsize_transmission", ["midsize_engine","midsize_transmission"]],
+        ["midsize_shifter_M", ["midsize_dash","midsize_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"midsize_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch"     ,"midsize_clutchpedal", "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.34, 0.39],
+         ["tra1l", 0.35, -1.34, 0.39],
+         ["ta1", 0, -1.34, 0.39],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

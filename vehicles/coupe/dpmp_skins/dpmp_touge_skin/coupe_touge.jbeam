@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_touge": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Touge Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "touge",
+  }}

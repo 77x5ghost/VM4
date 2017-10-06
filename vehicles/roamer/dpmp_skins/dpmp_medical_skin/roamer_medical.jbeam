@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_medical": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Medical Car Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "medical",
+}
+}

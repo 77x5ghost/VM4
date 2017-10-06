@@ -1,0 +1,11 @@
+{
+"pickup_skin_behemoth": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Behemoth Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "behemoth",
+}
+}

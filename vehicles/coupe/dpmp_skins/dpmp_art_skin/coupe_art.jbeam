@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_art": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Art Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "art",
+  }}

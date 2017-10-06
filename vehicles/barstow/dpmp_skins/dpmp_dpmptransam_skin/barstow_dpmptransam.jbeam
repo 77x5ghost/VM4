@@ -1,0 +1,12 @@
+{
+
+"barstow_skin_dpmptransam": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Trans AM Livery DPMP",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "dpmptransam",
+  }
+  }

@@ -1,0 +1,11 @@
+{
+"miramar_skin_touge": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Touge Livery",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "touge",
+  }
+  }

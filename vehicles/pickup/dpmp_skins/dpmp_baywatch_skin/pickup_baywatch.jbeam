@@ -1,0 +1,11 @@
+{
+"pickup_skin_baywatch": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Life Guard Livery",
+        "value":50,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "baywatch",
+}
+}

@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_privatetaxi": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Private Taxi Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "privatetaxi",
+}
+}

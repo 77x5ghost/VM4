@@ -1,0 +1,22 @@
+{
+"Configuration":"600 with Stabilizers (M)",
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Off-Road Score":39,
+"PowerPeakRPM":8450,
+"TorquePeakRPM":"8200 - 9200",
+"0-100 km/h":11.1,
+"0-60 mph":9.9,
+"100-0 km/h":46.3,
+"Top Speed":44.5697,
+"Torque":57.0514,
+"Weight":575,
+"60-0 mph":140,
+"Power":70.1883,
+"Config Type":"Factory",
+"default_color":"Burgundy",
+"Transmission":"Manual",
+"Value":1450,
+"Weight/Power":8.21429,
+"Description":"600cc model with stabilizers"
+}

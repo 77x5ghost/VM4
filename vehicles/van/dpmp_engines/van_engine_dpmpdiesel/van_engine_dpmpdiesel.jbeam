@@ -1,0 +1,214 @@
+{
+"van_engine_i6dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"5.9L Diesel I6 Engine DPMP",
+        "value":900,
+    }
+    "slotType" : "van_engine",
+    "scalenodeWeight":1,
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["van_engine_i6", ["van_engine"]],
+         ["van_header_i6", ["van_engine","van_framecab"]],
+    ],
+    "slots": [
+        ["type", "default", "description"]
+        ["van_exhaust_i6","van_exhaust_i6", "I6 Exhaust"],
+        ["van_transmission","van_transmission_4A", "Transmission"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [800, 600],
+        [1400, 624],
+        [1600, 624],
+        [1800, 624],
+        [2000, 624],
+        [2300, 624],
+        [2600, 624],
+        [2700, 620],
+        [2800, 563],
+        [3200, 500],
+    ],
+ 
+        //engine performance
+        "idleRPM":700,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
+        "maxRPM":3200,
+        "inertia":0.16,
+        "friction":17
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.33
+        "throttleSensitivity":1.1
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.3
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":6
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":150
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":1500000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1600,
+        "clutchLaunchTargetRPM":2200,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2600,2850,3050,3150,3150]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":5300
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false}
+         {"collision":true}
+         //--4.1L I6 Engine-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":23},
+         {"group":"van_engine"},
+         {"engineGroup":"engine_block"}
+         ["e1r", -0.14, -1.07, 0.43,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2}],
+         ["e1l", 0.14, -1.07, 0.43],
+         ["e2r", -0.14, -1.72, 0.43,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2}],
+         ["e2l", 0.14, -1.72, 0.43],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.15, -1.07, 0.88,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2}],
+         ["e3l", 0.15, -1.07, 0.88],
+         ["e4r", -0.15, -1.72, 0.88,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2}],
+         ["e4l", 0.15, -1.72, 0.88],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--ENGINE CUBE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["e1r","e1l"],
+          ["e1r","e2r"],
+          ["e1r","e2l"],
+          ["e1r","e3r"],
+          ["e1r","e3l"],
+          ["e1r","e4r"{"isExhaust":true}],
+          ["e1r","e4l"],
+          ["e1l","e2r"],
+          ["e1l","e2l"],
+          ["e1l","e3r"],
+          ["e1l","e3l"],
+          ["e1l","e4r"],
+          ["e1l","e4l"],
+          ["e2r","e2l"],
+          ["e2r","e3r"],
+          ["e2r","e3l"],
+          ["e2r","e4r"],
+          ["e2r","e4l"],
+          ["e2l","e3r"],
+          ["e2l","e3l"],
+          ["e2l","e4r"],
+          ["e2l","e4l"],
+          ["e3r","e3l"],
+          ["e3r","e4r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+          ["e3l","e4l"],
+          ["e4r","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //engine
+    ],
+},
+"van_transmission_5Adpmp": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"5-Speed Diesel Automatic Transmission DPMP",
+        "value":350,
+        },
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        //premultiplied to account for 3.55 differential ratio instead of 3.15
+        //source ratios: [-3.4, 0, 4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+        "gearRatios":[-3.26, 0, 2.35, 1.35, 0.90, 0.59, 0.45]
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":17,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter":0.285,
+        "converterStiffness":10,
+        "couplingAVRatio":0.88,
+        "stallTorqueRatio":1.9,
+        "lockupClutchTorque":350,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5
+        "gearboxDecisionSmoothingDown":1.5
+        "gearboxDecisionSmoothingUp":1.5
+        "lowShiftDownRPM":1300,
+        "lowShiftUpRPM":2300,
+        "torqueConverterLockupRPM":1800
+        "torqueConverterLockupMinGear":3
+    }, 
+    "slotType" : "van_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["van_transfer_case","van_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["van_transmission", ["van_engine","van_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         //--4 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":35},
+         {"group":"van_transmission"},
+         ["tra1", 0.0, -0.68, 0.48],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+    ],
+},
+}

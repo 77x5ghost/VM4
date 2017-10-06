@@ -1,0 +1,12 @@
+{
+
+"hatch_skin_itsuki": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Okudai Speed Suns Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "itsuki",
+}
+}

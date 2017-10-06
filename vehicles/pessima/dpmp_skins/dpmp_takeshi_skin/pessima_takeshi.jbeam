@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_takeshi": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"NightOwls Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "takeshi",
+}
+}

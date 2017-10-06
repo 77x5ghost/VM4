@@ -1,0 +1,11 @@
+{
+"sunburst_skin_carsharing": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Car Sharing Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "carsharing",
+}
+}

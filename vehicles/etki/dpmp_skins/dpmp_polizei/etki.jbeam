@@ -1,0 +1,12 @@
+{
+
+"etki_skin_polizei": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Polizei Livery",
+        "value":100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "polizei",
+},
+}

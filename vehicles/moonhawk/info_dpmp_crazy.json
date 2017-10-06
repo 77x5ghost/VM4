@@ -1,0 +1,30 @@
+{
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"100-200 km/h":9.5,
+"0-100 km/h":5.3,
+"Value":19000,
+"0-200 km/h":14.8,
+"TorquePeakRPM":"3150 - 4650",
+"default_color":"Fire Red",
+"Description":"This custom Moonhawk features sport wheels, race suspensions and a supercharged drag engine mated with a 4 Speed Automatic transmission, there is a reason to call this car 'Crazy'",
+"Configuration":"Crazy (A)",
+"0-100 mph":8.8,
+"Weight":1835,
+"60-100 mph":3.7,
+"0-60 mph":5.1,
+"Config Type":"Custom",
+"100-0 km/h":42,
+"PowerPeakRPM":"4400 - 5950",
+"Power":823.241,
+"Torque":1305.14,
+"Transmission":"Automatic",
+"Off-Road Score":34,
+"Weight/Power":2.22965,
+"60-0 mph":121.6,
+"Years":{
+  "min":1973,
+  "max":1975
+},
+"Top Speed":78.3221
+}

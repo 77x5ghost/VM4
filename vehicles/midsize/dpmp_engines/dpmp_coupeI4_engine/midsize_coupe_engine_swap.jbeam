@@ -1,0 +1,605 @@
+{
+"midsize_engine_I4_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"2.0L Rotated I4 Engine DPMP",
+        "value":980,
+    }
+    "slotType" : "midsize_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_exhaust","midsize_exhaust", "I4 Exhaust"],
+        ["midsize_transmission","midsize_transmission_5M", "Transmission"],
+        ["midsize_enginetuning","midsize_I4_stock_coupe_dpmp", "I4 Engine Tuning"],
+        ["midsize_radiator_c","midsize_radiator_i4_coupe_dpmp", "Radiator"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_engine", ["midsize_engine"]],
+
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [500, 110],
+        [1000, 129],
+        [2000, 140],
+        [3000, 179],
+        [3500, 198],
+        [4000, 204],
+        [4500, 205],
+        [5000, 206],
+        [5500, 203],
+        [6000, 194],
+        [6500, 181],
+        [7000, 163],
+        [8000, 110],
+        [9000, 95],
+    ],
+ 
+        "idleRPM":950,
+        "maxRPM":6500,
+        "revLimiterRPMDrop":100,
+        "inertia":0.08,
+        "friction":13
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.3
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.04
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":4
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":130
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1800,
+        "clutchLaunchTargetRPM":2400,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2800,3300,3600,3800,3800]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6100
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--1.8L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":17},
+         ["e1r", 0.18, -1.74, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e1l", 0.18, -1.47, 0.30],
+         ["e2r", -0.29, -1.74, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e2l", -0.29, -1.47, 0.30],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", 0.18, -1.62, 0.7,{"isExhaust":true,"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e3l", 0.18, -1.28, 0.76],
+         ["e4r", -0.29, -1.62, 0.76,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e4l", -0.29, -1.28, 0.76],
+         ["tc1", 0, -1.65, 0.42],
+         {"engineGroup":""}
+         {"group":""},
+
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+
+    ],
+}
+"midsize_I4_stock_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Stock Tuning DPMP",
+        "value":0,
+    }
+    "slotType" : "midsize_enginetuning",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_manifold_stock", ["midsize_engine"]],
+         ["midsize_coupe_intake", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+
+    ],
+}
+
+"midsize_I4_sport_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Sport Tuning DPMP",
+        "value":500,
+    }
+    "slotType" : "midsize_enginetuning",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_manifold_stock", ["midsize_engine"]],
+         ["midsize_coupe_intake", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [500, 110],
+        [1000, 129],
+        [2000, 143],
+        [3000, 193],
+        [3500, 212],
+        [4000, 227],
+        [4500, 229],
+        [5000, 229],
+        [5500, 219],
+        [6000, 206],
+        [6500, 187],
+        [7000, 161],
+        [8000, 107],
+        [9000, 83],
+    ],
+ 
+        "idleRPM":950,
+        "maxRPM":6650,
+        "revLimiterRPMDrop":100,
+        "inertia":0.075,
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.28
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+    },
+}
+"midsize_turbo_stage1_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Stage 1 Turbocharger DPMP",
+        "value":1200,
+    }
+    "slotType" : "midsize_enginetuning",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_turbo", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+         ["midsize_coupe_intercooler", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+         ["midsize_coupe_manifold_turbo", ["midsize_engine"]],
+
+    ],
+    "turbocharger": {
+        "wastegateStart":12,
+        "wastegateLimit":14,
+        "maxExhaustPower": 10000,
+        "backPressureCoef": 0.000035,
+        "frictionCoef": 1.4,
+        "inertia":4.8,
+        "damageThresholdTemperature": 690,
+        "pressureRatePSI": 40,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -1],
+            [30000,     -0.5],
+            [60000,     5],
+            [90000,     10],
+            [150000,    13],
+            [200000,    16],
+            [250000,    19],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.31,    0.25],
+            [650,   0.39,   0.35],
+            [1400,  0.44,   0.43],
+            [2000,  0.49,    0.49],
+            [2500,  0.53,    0.54],
+            [3000,  0.62,    0.65],
+            [4000,  0.78,    0.8],
+            [5000,  0.85,    0.95],
+            [6000,  1.0,    1.0],
+            [7000,  1.0,    1.0],
+            [8000,  0.9,    1.0],
+        ],
+    },
+    "mainEngine":{ 
+        "idleRPM":1300,
+        "maxRPM":7100,
+        "revLimiterRPMDrop":50,
+        "inertia":0.15,
+        "clutchDuration":0.12
+        "burnEfficiency":0.26
+        //"clutchTorque":400
+        "cylinderWallTemperatureDamageThreshold":150
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "highShiftUpRPM":6700
+    },
+}
+"midsize_turbo_stage2_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Stage 2 Turbocharger DPMP",
+        "value":1800,
+    }
+    "slotType" : "midsize_enginetuning",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_turbo", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+         ["midsize_coupe_intercooler", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+         ["midsize_coupe_manifold_turbo", ["midsize_engine"]],
+
+    ],
+    "turbocharger": {
+        "wastegateStart":26,
+        "wastegateLimit":28,
+        "maxExhaustPower": 50000,
+        "backPressureCoef": 0.000035,
+        "frictionCoef": 1.4,
+        "inertia":6,
+        "damageThresholdTemperature": 780,
+        "pressureRatePSI": 70,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -1.5],
+            [30000,     -0.5],
+            [60000,     5],
+            [90000,     13],
+            [150000,    23],
+            [200000,    29],
+            [250000,    35],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.3],
+            [650,   0.2,   0.45],
+            [1400,  0.25,   0.49],
+            [2000,  0.39,    0.59],
+            [2500,  0.49,    0.64],
+            [3000,  0.62,    0.69],
+            [4000,  0.78,    0.8],
+            [5000,  0.85,    0.95],
+            [6000,  0.95,    1.0],
+            [7000,  1.0,    1.0],
+            [8000,  1.0,    1.0],
+        ],
+    },
+    "mainEngine":{ 
+        "idleRPM":1500,
+        "maxRPM":7300,
+        "revLimiterRPMDrop":50,
+        "inertia":0.16,
+        "clutchDuration":0.12
+        "burnEfficiency":0.24
+        //"clutchTorque":600
+        "cylinderWallTemperatureDamageThreshold":150
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "highShiftUpRPM":6700
+    },
+}
+"midsize_turbo_stage3_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Stage 3 Variable Boost Turbocharger DPMP",
+        "value":2800,
+    }
+    "slotType" : "midsize_enginetuning",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_turbo", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+         ["midsize_coupe_intercooler", ["midsize_body", "midsize_engine_bay", "midsize_lowermounts_a_F"]],
+         ["midsize_coupe_manifold_turbo", ["midsize_engine"]],
+
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$wastegateStart", "range", "psi", "Turbocharger", 8, 6, 46, "Wastegate Start", "Pressure at which the wastegate begins to open"{"stepDis":0.5}]
+        ["$wastegateLimit", "range", "psi", "Turbocharger", 10, 8, 48, "Wastegate Limit", "Pressure at which the wastegate is fully opened"{"stepDis":0.5}]
+        //["$clutchTorque", "range", "N/m", "Turbocharger", 350, 300, 700, "Clutch Torque", "How much torque the clutch can effectively transfer. Increase with engine power"{"stepDis":5}]
+    ],
+    "mainEngine":{ 
+        "idleRPM":1100,
+        "maxRPM":8000,
+        "burnEfficiency":0.24,
+        "inertia":0.10,
+        //"clutchTorque":"$clutchTorque"
+        "cylinderWallTemperatureDamageThreshold":180
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "highShiftUpRPM":6700
+    },
+    "turbocharger": {
+        "wastegateStart":"$wastegateStart",
+        "wastegateLimit":"$wastegateLimit",
+        "maxExhaustPower": 50000,
+        "backPressureCoef": 0.000040,
+        "frictionCoef": 1.3,
+        "inertia":7.4,
+        "damageThresholdTemperature": 830,
+        "pressureRatePSI": 70,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -1],
+            [30000,     -0.5],
+            [60000,     9],
+            [90000,     23],
+            [150000,    35],
+            [200000,    43],
+            [250000,    47],
+            [300000,    51],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.0],
+            [650,   0.23,   0.3],
+            [1400,  0.39,   0.37],
+            [2000,  0.51,    0.45],
+            [2500,  0.64,    0.55],
+            [3000,  0.75,    0.61],
+            [4000,  0.91,    0.77],
+            [5000,  1.0,    0.87],
+            [6000,  1.097,    0.93],
+            [7000,  1.148,    1.00],
+            [8000,  1.2,    0.95],
+            [9000,  1.1,    0.91],
+
+        ],
+    },
+}
+"midsize_transmission_6M_race2_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Race 6-Speed Manual Transmission DPMP",
+        "value":250,
+    }
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$gear_R", "range", ":1", "Transmission", -2.95, -5.0, -0.5, "Reverse Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_1", "range", ":1", "Transmission", 2.85, 0.5, 5.0, "1st Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_2", "range", ":1", "Transmission", 2.21, 0.5, 5.0, "2nd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_3", "range", ":1", "Transmission", 1.64, 0.5, 5.0, "3rd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_4", "range", ":1", "Transmission", 1.31, 0.5, 5.0, "4th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_5", "range", ":1", "Transmission", 1.0,  0.5, 5.0, "5th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_6", "range", ":1", "Transmission", 0.82, 0.5, 5.0, "6th Gear Ratio", "Torque multiplication ratio"]
+    ],
+    "slotType" : "midsize_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_differential_FT","midsize_differential_F_trans_dpmp", "Front Differential"],
+        ["midsize_transfer_case","midsize_transfer_case_FWD", "Transfercase"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":["$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6"]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,2950,3050,3150,3150]
+        "lowShiftUpRPM":4500,
+        "wheelSlipUpThreshold":120,
+    }, 
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_transmission", ["midsize_engine","midsize_transmission"]],
+         ["midsize_shifter_M", ["midsize_body"]],
+
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"midsize_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch"     ,"midsize_clutchpedal", "f7r","f7l","f8r",  {"x":90, "y":0, "z":0} , {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+     ],
+
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.34, 0.39],
+         ["tra1l", 0.35, -1.34, 0.39],
+         ["ta1", 0, -1.34, 0.39],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"midsize_radiator_i4_coupe_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Radiator DPMP",
+        "value":100,
+    }
+    "slotType" : "midsize_radiator_c",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_radiator_i4_mod1", ["midsize_body", "midsize_rad", "midsize_engine_bay"]],
+    ],
+    "mainEngine":{ 
+        "radiatorArea":0.33,
+        "radiatorEffectiveness":9500,
+        "coolantVolume":7.5,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":100,
+        "radiatorFanMaxAirSpeed":2,
+        "thermostatTemperature":90
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"midsize_radiator_i4_coupe_race_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"High Performance Radiator DPMP",
+        "value":100,
+    }
+    "slotType" : "midsize_radiator_c",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_radiator_i4_mod1", ["midsize_body", "midsize_rad", "midsize_engine_bay"]],
+    ],
+    "mainEngine":{ 
+        "radiatorArea":0.37,
+        "radiatorEffectiveness":16000,
+        "coolantVolume":7.5,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":100,
+        "radiatorFanMaxAirSpeed":3,
+        "thermostatTemperature":90
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"midsize_radiator_i4_coupe_superrace_dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Ultra High Performance Radiator DPMP",
+        "value":100,
+    }
+    "slotType" : "midsize_radiator_c",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_radiator_i4_mod1", ["midsize_body", "midsize_rad", "midsize_engine_bay"]],
+    ],
+    "mainEngine":{ 
+        "radiatorArea":1.50,
+        "radiatorEffectiveness":160000,
+        "coolantVolume":30.5,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":100,
+        "radiatorFanMaxAirSpeed":10,
+        "thermostatTemperature":90
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

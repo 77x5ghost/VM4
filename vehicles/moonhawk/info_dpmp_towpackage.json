@@ -1,0 +1,28 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Value":3500,
+"0-100 km/h":11.2,
+"TorquePeakRPM":"1700 - 2700",
+"Weight":1645,
+"Off-Road Score":35,
+"Configuration":"I6 Tow Package (A)",
+"default_color":"Mist Blue",
+"0-100 mph":40,
+"60-100 mph":29.4,
+"0-60 mph":10.5,
+"Config Type":"Factory",
+"100-0 km/h":46.9,
+"Top Speed":51.5132,
+"Power":153.14,
+"Torque":320.391,
+"Description":"The Tow Package featured heavy duty suspensions and a tow hitch mounted on the i6 Moonhawk",
+"Transmission":"Automatic",
+"Weight/Power":10.7516,
+"60-0 mph":136.2,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":4250
+}

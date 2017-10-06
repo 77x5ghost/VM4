@@ -1,0 +1,97 @@
+{
+"midsize_rollcage_mod1_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Roll Cage DPMP",
+        "value":2100,
+    }
+    "slotType" : "midsize_seats_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_rollcage_dpmp", ["midsize_body"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //redefine nodes to make them heavier
+         {"selfCollision":true}
+         {"group":"pessima_body"},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.9},
+         ["rf1r", -0.61, -0.07, 1.32{"group":["midsize_body","midsize_windshield"]}]
+         ["rf1", 0, -0.14, 1.36{"nodeWeight":1.7,"group":["midsize_body","midsize_windshield"]}]
+         ["rf1l", 0.61, -0.07, 1.32{"group":["midsize_body","midsize_windshield"]}]
+
+         ["rf2r", -0.60, 0.38, 1.36],
+         ["rf2", 0, 0.38, 1.41{"nodeWeight":1.7}],
+         ["rf2l", 0.60, 0.38, 1.36],
+
+         ["rf3r", -0.60, 0.77, 1.35],
+         ["rf3", 0, 0.80, 1.40{"nodeWeight":1.7}],
+         ["rf3l", 0.60, 0.77, 1.35],
+
+         ["rf4r", -0.59, 1.21, 1.29],
+         ["rf4", 0, 1.24, 1.34{"nodeWeight":1.7}],
+         ["rf4l", 0.59, 1.21, 1.29],
+
+         //pillars
+         {"nodeWeight":3.9},
+         //a pillar
+         ["p1r", -0.63, -0.53, 1.13{"group":["midsize_body","midsize_windshield"]}],
+         ["p1l", 0.63, -0.53, 1.13{"group":["midsize_body","midsize_windshield"]}],
+         ["p2r", -0.72, -0.49, 1.10{"group":""}],
+         ["p2l", 0.72, -0.49, 1.10{"group":""}],
+         ["p2rr", -0.60, -0.41, 1.04{"group":""}]
+         ["p2ll", 0.60, -0.41, 1.04{"group":""}]
+         {"selfCollision":false}
+
+         //b pillar
+         {"nodeWeight":3.9},
+         ["p3r", -0.77, 0.12, 0.58{"group":["midsize_body","midsize_seats"]}],
+         ["p3l", 0.77, 0.12, 0.58{"group":["midsize_body","midsize_seats"]}],
+         ["p4r", -0.77, 0.30, 0.58],
+         ["p4l", 0.77, 0.30, 0.58],
+
+         {"nodeWeight":3.9},
+         ["p5r", -0.75, 0.17, 0.90{"group":["midsize_body","midsize_seats"]}],
+         ["p5l", 0.75, 0.17, 0.90{"group":["midsize_body","midsize_seats"]}],
+         ["p6r", -0.75, 0.32, 0.90],
+         ["p6l", 0.75, 0.32, 0.90],
+
+         ["p7r", -0.69, 0.27, 1.13{"group":"midsize_seats"}],
+         ["p7l", 0.69, 0.27, 1.13{"group":"midsize_seats"}],
+         ["p8r", -0.69, 0.38, 1.13],
+         ["p8l", 0.69, 0.38, 1.13],
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2400600,"beamDamp":60},
+          {"beamDeform":360000,"beamStrength":"FLT_MAX"},
+          //left cage
+          ["rf3l", "q1l"],
+          ["rf3l", "rf1l"],
+          ["rf3l", "f3ll"],
+          ["rf1l", "f1ll"],
+          ["rf1l", "f3ll"],
+          ["f1ll", "q1l"],
+
+           //right cage
+          ["rf3r", "q1r"],
+          ["rf3r", "rf1r"],
+          ["rf3r", "f3rr"],
+          ["rf1r", "f1rr"],
+          ["rf1r", "f3rr"],
+          ["f1rr", "q1r"],
+
+          //crossing bars
+          ["rf3l", "rf3r"],
+          ["rf3l", "f3rr"],
+          ["rf1l", "rf1r"],
+          ["q1l", "q1r"],
+          ["rf3r", "f3ll"],
+    ],
+}
+}

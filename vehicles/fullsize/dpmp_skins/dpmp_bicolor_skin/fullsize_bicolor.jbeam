@@ -1,0 +1,12 @@
+{
+
+"fullsize_skin_bicolor": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Bicolor Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "bicolor",
+}
+}

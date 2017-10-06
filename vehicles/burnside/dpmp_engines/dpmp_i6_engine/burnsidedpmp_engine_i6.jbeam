@@ -1,0 +1,179 @@
+{
+"burnsidedpmp_engine_i6": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"232 CUI I6 Engine DPMP",
+        "value":720,
+    }
+    "slotType" : "burnside_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["burnside_exhaust_R","burnside_exhaust_R", "Right Exhaust"],
+        ["burnside_transmission","burnside_transmission_3A", "Transmission"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["burnsidedpmp_engine_i6", ["burnside_engine"]],
+         ["burnsidedpmp_header_i6", ["burnside_engine"]],
+         ["burnsidedpmp_radtube_i6", ["burnside_radtube","burnside_engine"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["rpmspin"  , "burnsidedpmp_coolingfan_i6", "e2r","e2l","e4r",  {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1],
+     ],
+    "mainEngine":{
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 165],
+        [1000, 235],
+        [1500, 275],
+        [2000, 280],
+        [2500, 281],
+        [3000, 280],
+        [3500, 260],
+        [4000, 235],
+        [5000, 165],
+    ],
+        "idleRPM":700,
+        "revLimiterRPMDrop":0,
+        "maxRPM":4750,
+        "inertia":0.23,
+        "friction":18
+        "brakingCoefRPS":0.14
+        "burnEfficiency":0.28
+        "throttleSensitivity":1.3
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.065
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":6
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":140
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]}
+        "radiator": {"[engineGroup]:":["radiator"]}
+        "engineBlock": {"[engineGroup]:":["engine_block"]}
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "V6",
+        "mainGain": 5,
+        "maxLoadMix": 0.75,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.8,
+        "eqLowGain": -3,
+        "eqLowFreq": 125,
+        "eqLowWidth": 0.25,
+        "eqHighGain": -15,
+        "eqHighFreq": 4000,
+        "eqHighWidth": 0.1
+        "lowCutFreq":90,
+        "eqFundamentalGain": -22,
+    }
+    "vehicleController": {
+        "clutchLaunchStartRPM":1500,
+        "clutchLaunchTargetRPM":2000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,1600,2200,2400,2400,2400]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4400
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true}
+         {"group":"burnside_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":24.92},
+		 {"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.3},
+         ["e1r", -0.12, -0.94, 0.20],
+         ["e1l", 0.12, -0.94, 0.20],
+         ["e2r", -0.12, -1.50, 0.30],
+         ["e2l", 0.12, -1.50, 0.30],
+         {"selfCollision":true},
+		 {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false}
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.17, -0.94, 0.79{"isExhaust":true}],
+         ["e3l", 0.17, -0.94, 0.79],
+         ["e4r", -0.17, -1.50, 0.79],
+         ["e4l", 0.17, -1.50, 0.79],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":9130830,"beamDamp":168},
+          {"beamDeform":364500,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"{"isExhaust":true}],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          //radtube
+          {"beamSpring":166830,"beamDamp":84},
+          {"beamDeform":2025,"beamStrength":7000},
+          ["e2r","ra1r"],
+          ["e2l","ra1r"],
+          ["e4r","ra1r"],
+          ["e4l","ra1r"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+
+
+    ],
+}
+}

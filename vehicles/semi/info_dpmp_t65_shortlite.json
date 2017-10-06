@@ -1,0 +1,23 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Body Style":"Semi Truck",
+"Value":17500,
+"TorquePeakRPM":1250,
+"Off-Road Score":34,
+"Configuration":"T65 Lite Fifth Wheel Upfit (M)",
+"Description":"Basic T65, an excellent truck with only the basic equipment and a good hauling capacity",
+"default_color":"Seafoam Green",
+"0-60 mph":17.4,
+"Config Type":"Factory",
+"100-0 km/h":50.9,
+"Top Speed":43.2695,
+"Transmission":"Manual",
+"Torque":1355.66,
+"Weight":5830,
+"Power":303.51,
+"Weight/Power":19.2409,
+"60-0 mph":144.6,
+"PowerPeakRPM":1550,
+"0-100 km/h":18.5
+}

@@ -1,0 +1,23 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Body Style":"Semi Truck",
+"Value":27500,
+"TorquePeakRPM":"1050 - 1600",
+"Off-Road Score":27,
+"Configuration":"T75 'Goliath' (M)",
+"Description":"If you have a problem this truck could probably solve it, smash all is in front of you with the ram plow",
+"default_color":"Jet Black",
+"0-60 mph":15.3,
+"Config Type":"Custom",
+"100-0 km/h":51.1,
+"Top Speed":44.3005,
+"Transmission":"Manual",
+"Torque":1863.11,
+"Weight":6710,
+"Power":399.269,
+"Weight/Power":16.817,
+"60-0 mph":145.4,
+"PowerPeakRPM":1500,
+"0-100 km/h":16.3
+}

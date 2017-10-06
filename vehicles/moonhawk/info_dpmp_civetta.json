@@ -1,0 +1,28 @@
+{
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"Value":14500,
+"0-100 km/h":7.5,
+"TorquePeakRPM":"1950 - 3500",
+"Weight":1750,
+"Off-Road Score":35,
+"Configuration":"Civetta Special (M)",
+"default_color":"Brilliant Blue",
+"0-100 mph":20.5,
+"60-100 mph":13.5,
+"0-60 mph":7.1,
+"Config Type":"Factory",
+"100-0 km/h":42.2,
+"Top Speed":51.3352,
+"Power":197.225,
+"Torque":385.206,
+"Description":"Bruckell decided to partner with Civetta in order to build a special Moonhawk, this model fused American power with Italian handling, the result was the best NA Moonhawk and the most exclusive, built in only 400 units",
+"Transmission":"Manual",
+"Weight/Power":8.88325,
+"60-0 mph":125.1,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":3750
+}

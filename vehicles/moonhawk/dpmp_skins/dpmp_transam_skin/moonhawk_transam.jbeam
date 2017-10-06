@@ -1,0 +1,12 @@
+{
+
+"moonhawk_skin_transam": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Trans AM Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "transam",
+}
+}

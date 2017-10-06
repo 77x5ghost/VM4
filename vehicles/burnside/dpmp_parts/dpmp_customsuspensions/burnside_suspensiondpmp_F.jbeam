@@ -1,0 +1,31 @@
+{
+"burnside_springdpmp_F": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Customizable Front Springs DPMP",
+        "value":300,
+    },
+
+    "slotType" : "burnside_spring_F",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["burnside_spring_F", ["burnside_shock_F"]],
+],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$rideheight_F", "range", "", "Alignment", 1.18, 0.95, 1.5, "Front Ride Height", "Percentage of adjustment range"]
+        ["$spring_F", "range", "N/m", "Suspension", 151000, 60000, 180000, "Front Spring Rate", "Spring stiffness"{"stepDis":500}]
+    ],
+     "beams": [
+          ["id1:", "id2:"],
+          //front springs
+          {"beamPrecompression":"$rideheight_F", "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamDeform":128000,"beamStrength":160000,"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamSpring":"$spring_F","beamDamp":10},
+          ["fh4r","fs1r",{"soundFile":"art/sound/spring_creak.ogg","volumeFactor":3,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":12000}],//acting at wishbone
+          ["fh4l","fs1l",{"soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.7,"decayMode":1,"decayFactor":4,"pitchFactor":4,"maxStress":1800}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          ],
+},
+}

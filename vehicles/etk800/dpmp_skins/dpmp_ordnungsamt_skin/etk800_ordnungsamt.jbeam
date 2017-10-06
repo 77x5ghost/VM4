@@ -1,0 +1,12 @@
+{
+
+"etk800_skin_ordnungsamt": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Ordnungsamt Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "ordnungsamt",
+}
+}

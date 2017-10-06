@@ -1,0 +1,69 @@
+{
+"wheel_09a_15x4_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Alder Dragger 15x4 Rear Wheels",
+        "value":180,
+    },
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_15x4","tire_R_115_100_15_drag", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_09a_15x4", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_09a_15x4", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x":0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"collision":true}
+        {"selfCollision":true}
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.36, 0.0, 0.0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.63, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.36, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.63, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.20},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.125},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+},
+}

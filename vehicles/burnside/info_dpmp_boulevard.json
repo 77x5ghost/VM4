@@ -1,0 +1,22 @@
+{
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"Value":27000,
+"TorquePeakRPM":"1550 - 3500",
+"Off-Road Score":34,
+"Configuration":"Boulevard (A)",
+"PowerPeakRPM":"3550 - 4750",
+"0-100 km/h":7,
+"0-60 mph":6.6,
+"Config Type":"Custom",
+"100-0 km/h":48.3,
+"Top Speed":44.0482,
+"Transmission":"Automatic",
+"Torque":541.553,
+"Weight":1770,
+"Description":"The 'Boulevard' was created in 2011 in California, it was a custom Burnside Special with a bigger engine, chopped body and custom wheels",
+"Weight/Power":6.65414,
+"60-0 mph":139.1,
+"Power":266.723,
+"default_color":"Charcoal"
+}

@@ -1,0 +1,1034 @@
+{
+"Wheels_01_17x7_R": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x7 Rear Wheels D&S",
+        "value":600,
+    },
+
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x7","tire_F_205_55_17_sport", "Rear Tires"],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01",   ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+        ["Wheels_Me_01",   ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+		{"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.31, 0.0, 0.0],
+        ["rw1rr", -0.57, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.31, 0.0, 0.0],
+        ["rw1ll", 0.57, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"breakGroup":""},
+          {"beamDeform":97500,"beamStrength":408000},
+          {"beamSpring":506460,"beamDamp":2.32},
+          //rear wheel
+          ["rw1r","rw1rr"],
+          ["rw1l","rw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"disableMeshBreaking":true,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.23},
+            {"wheelOffset":-0.06},
+            {"hubWidth":0.205},
+            {"numRays":16},
+
+            //hub options
+            {"hubTreadBeamSpring":782460, "hubTreadBeamDamp":5.8},
+            {"hubPeripheryBeamSpring":782460, "hubPeripheryBeamDamp":5.8},
+            {"hubSideBeamSpring":1012460, "hubSideBeamDamp":5.8},
+            {"hubNodeWeight":0.38},
+            {"hubNodeMaterial":"|NM_METAL"},
+            {"hubFrictionCoef":0.5,"hasTire":false},
+
+            {"hubBeamDeform":68600, "hubBeamStrength":76000},
+
+
+    ],
+
+},
+
+"Wheels_01_19x8_R": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 19x8 Rear Wheels D&S",
+        "value":900,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_19x8","tire_R_225_45_19_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1.05, "z":1.05}}],
+        ["Wheels_Me_01", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":1001000,"beamDamp":10},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false},
+
+        //general settings
+        {"hubRadius":0.260},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.235},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1051000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1051000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.41},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5,"hasTire":false},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+        {"enableHubcaps":false}
+    ],
+},
+
+"Wheels_01_19x10_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi EVOtarmac 19x10 Rear Wheels D&S",
+        "value":2100,
+    },
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_19x10","tire_R_255_35_19_Custom_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheels_Me_01", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_01_17x9_R": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x9 Rear Wheels D&S",
+        "value":500,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x9","tire_R_255_35_17_Custom_drift", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+        ["Wheels_Me_01", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+
+
+
+
+
+
+
+
+//Black Wheels
+
+
+
+
+
+
+
+"Wheels_01_17x7_R_Black": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x7 Rear Wheels (Black) D&S",
+        "value":600,
+    },
+
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x7","tire_F_205_55_17_sport", "Rear Tires"],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01_Black",   ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+        ["Wheels_Me_01_Black",   ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+		{"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.31, 0.0, 0.0],
+        ["rw1rr", -0.57, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.31, 0.0, 0.0],
+        ["rw1ll", 0.57, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"breakGroup":""},
+          {"beamDeform":97500,"beamStrength":408000},
+          {"beamSpring":506460,"beamDamp":2.32},
+          //rear wheel
+          ["rw1r","rw1rr"],
+          ["rw1l","rw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"disableMeshBreaking":true,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.23},
+            {"wheelOffset":-0.06},
+            {"hubWidth":0.205},
+            {"numRays":16},
+
+            //hub options
+            {"hubTreadBeamSpring":782460, "hubTreadBeamDamp":5.8},
+            {"hubPeripheryBeamSpring":782460, "hubPeripheryBeamDamp":5.8},
+            {"hubSideBeamSpring":1012460, "hubSideBeamDamp":5.8},
+            {"hubNodeWeight":0.38},
+            {"hubNodeMaterial":"|NM_METAL"},
+            {"hubFrictionCoef":0.5,"hasTire":false},
+
+            {"hubBeamDeform":68600, "hubBeamStrength":76000},
+
+
+    ],
+
+},
+
+"Wheels_01_19x8_R_Black": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 19x8 Rear Wheels (Black) D&S",
+        "value":900,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_19x8","tire_R_225_45_19_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01_Black", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1.05, "z":1.05}}],
+        ["Wheels_Me_01_Black", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":1001000,"beamDamp":10},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false},
+
+        //general settings
+        {"hubRadius":0.260},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.235},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1051000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1051000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.41},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5,"hasTire":false},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+        {"enableHubcaps":false}
+    ],
+},
+
+"Wheels_01_19x10_R_Black": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi EVOtarmac 19x10 Rear Wheels (Black) D&S",
+        "value":2100,
+    },
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_19x10","tire_R_255_35_19_Custom_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01_Black", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheels_Me_01_Black", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_01_17x9_R_Black": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x9 Rear Wheels (Black) D&S",
+        "value":500,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x9","tire_R_255_35_17_Custom_drift", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01_Black", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+        ["Wheels_Me_01_Black", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+
+
+
+
+
+
+
+//White Wheels
+
+
+
+
+
+
+
+
+
+
+"Wheels_01_17x7_R_White": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x7 Rear Wheels (White) D&S",
+        "value":600,
+    },
+
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x7","tire_F_205_55_17_sport", "Rear Tires"],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01_White",   ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+        ["Wheels_Me_01_White",   ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+		{"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"selfCollision":true},
+        {"collision":true},
+        {"nodeWeight":4.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.31, 0.0, 0.0],
+        ["rw1rr", -0.57, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.31, 0.0, 0.0],
+        ["rw1ll", 0.57, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"breakGroup":""},
+          {"beamDeform":97500,"beamStrength":408000},
+          {"beamSpring":506460,"beamDamp":2.32},
+          //rear wheel
+          ["rw1r","rw1rr"],
+          ["rw1l","rw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"disableMeshBreaking":true,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.23},
+            {"wheelOffset":-0.06},
+            {"hubWidth":0.205},
+            {"numRays":16},
+
+            //hub options
+            {"hubTreadBeamSpring":782460, "hubTreadBeamDamp":5.8},
+            {"hubPeripheryBeamSpring":782460, "hubPeripheryBeamDamp":5.8},
+            {"hubSideBeamSpring":1012460, "hubSideBeamDamp":5.8},
+            {"hubNodeWeight":0.38},
+            {"hubNodeMaterial":"|NM_METAL"},
+            {"hubFrictionCoef":0.5,"hasTire":false},
+
+            {"hubBeamDeform":68600, "hubBeamStrength":76000},
+
+
+    ],
+
+},
+
+"Wheels_01_19x8_R_White": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 19x8 Rear Wheels (White) D&S",
+        "value":900,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_19x8","tire_R_225_45_19_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01_White", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":1.05, "z":1.05}}],
+        ["Wheels_Me_01_White", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":1001000,"beamDamp":10},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false},
+
+        //general settings
+        {"hubRadius":0.260},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.235},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1051000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1051000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.41},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5,"hasTire":false},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+        {"enableHubcaps":false}
+    ],
+},
+
+"Wheels_01_19x10_R_White": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi EVOtarmac 19x10 Rear Wheels (White) D&S",
+        "value":2100,
+    },
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_19x10","tire_R_255_35_19_Custom_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01_White", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheels_Me_01_White", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_01_17x9_R_White": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x9 Rear Wheels (White) D&S",
+        "value":500,
+    }
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_17x9","tire_R_255_35_17_Custom_drift", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01_White", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+        ["Wheels_Me_01_White", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0, 0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0, 0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0, 0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+
+
+
+
+
+//Other Wheels
+
+
+
+
+
+
+
+"Wheels_02_19x10_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Folk ET73 Super Rear Wheels 19x10 D&S",
+        "value":2100,
+    },
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_19x10","tire_R_255_35_19_Custom_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_02", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheels_Me_02", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+		["Inner_Rim", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Inner_Rim", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+		["Wheel_Plugs_01", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheel_Plugs_01", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_03_19x10_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi Terminus 19x10 Rear Wheels D&S",
+        "value":2100,
+    },
+    "slotType" : "wheel_R_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_R_19x10","tire_R_255_35_19_Custom_sport", "Rear Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_03", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheels_Me_03", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+		["Inner_Rim_Chrome", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Inner_Rim_Chrome", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+		["Wheel_Plugs_01", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheel_Plugs_01", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+		["Wheel_Plugs_02", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+        ["Wheel_Plugs_02", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.571, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.33, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //rear wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //rear wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+}

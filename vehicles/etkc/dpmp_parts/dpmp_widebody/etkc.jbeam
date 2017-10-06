@@ -1,0 +1,41 @@
+{
+"etkc_gauges_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Race Gauges",
+        "value":200,
+    },
+    "slotType" : "gauges",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etkc_rpm_dpmp", ["etkc_dash"]],
+    ],
+    "props": [
+        ["func",     "mesh",                  "idRef:","idX:","idY:", "baseRotation",            "rotation",              "translation",             "min", "max", "offset", "multiplier"],
+        //displays
+        ["disp_R",   "etkc_displayR_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_N",   "etkc_displayN_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_1",   "etkc_display1_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_2",   "etkc_display2_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_3",   "etkc_display3_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_4",   "etkc_display4_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_5",   "etkc_display5_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+        ["disp_6",   "etkc_display6_dpmp",     "f7r","f7l","f8r",      {"x":225, "y":0, "z":0},   {"x":0, "y":0, "z":0},   {"x":0, "y":0.033, "z":0}, -1, 1, 0, 1],
+    ],
+    "glowMap":{
+            "etkc_gauges_race":{"simpleFunction":"lowhighbeam", "off":"etkc_gauges_race", "on":"etkc_gauges_race_on"},
+            //boost
+            "etki_boost_1":{"simpleFunction":"boost_1", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_2":{"simpleFunction":"boost_2", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_3":{"simpleFunction":"boost_3", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_4":{"simpleFunction":"boost_4", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_5":{"simpleFunction":"boost_5", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_6":{"simpleFunction":"boost_6", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_7":{"simpleFunction":"boost_7", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_8":{"simpleFunction":"boost_8", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_9":{"simpleFunction":"boost_9", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_10":{"simpleFunction":"boost_10", "off":"invis", "on":"etki_gauges_on"},
+            "etki_boost_11":{"simpleFunction":"boost_11", "off":"invis", "on":"etki_gauges_on"},
+    },
+},
+}

@@ -1,0 +1,28 @@
+{
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"Value":7550,
+"0-100 km/h":9,
+"TorquePeakRPM":"1950 - 3500",
+"Weight":1780,
+"Off-Road Score":34,
+"Configuration":"Highway Patrol (A)",
+"default_color":"Pearl White",
+"0-100 mph":26.2,
+"60-100 mph":17.8,
+"0-60 mph":8.5,
+"Config Type":"Custom",
+"100-0 km/h":47.1,
+"Top Speed":50.1774,
+"Power":197.225,
+"Torque":385.206,
+"Description":"Highway Patrol version of the Moonhawk used mainly in highway police chases",
+"Transmission":"Automatic",
+"Weight/Power":9.03553,
+"60-0 mph":136.8,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":3750
+}

@@ -1,0 +1,271 @@
+{
+"midsize_engine_v6_mod1_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"2.7L V6 Race Engine",
+        "value":1200,
+    }
+    "slotType" : "midsize_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_exhaust","midsize_exhaust", "Exhaust"],
+        ["midsize_transmission","midsize_transmission_6M_V6_dpmp", "Transmission"],
+        ["midsize_enginetuning_v6","", "Engine Tuning"],
+        ["midsize_radiator","midsize_radiator_v6", "Radiator"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_engine_v6", ["midsize_engine"]],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 126],
+        [1000, 185],
+        [2000, 243],
+        [3000, 299],
+        [4000, 324],
+        [5000, 343],
+        [6000, 344],
+        [7000, 320],
+        [8000, 257],
+    ],
+        "idleRPM":1200,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+        "maxRPM":8000,
+        "inertia":0.11,
+        "friction":21
+        "brakingCoefRPS":0.14
+        "burnEfficiency":0.34
+        "throttleSensitivity":1.1
+         "clutchTorque":280
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.02
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":6
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":150
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2000,
+        "clutchLaunchTargetRPM":2700,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2800,3300,3700,4000,4200]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6300
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--2.7L V6 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":24},
+         ["e1r", 0.17, -1.74, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e1l", 0.17, -1.50, 0.30],
+         ["e2r", -0.30, -1.74, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e2l", -0.30, -1.50, 0.30],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", 0.17, -1.81, 0.75,{"isExhaust":true,"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e3l", 0.17, -1.26, 0.79],
+         ["e4r", -0.30, -1.81, 0.75,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+         ["e4l", -0.30, -1.26, 0.79],
+         ["tc1", 0, -1.65, 0.42],
+         {"engineGroup":""}
+         {"group":""},
+
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"midsize_enginetuning_v6_mod1_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"V6 Engine Tuning Stage 1 DPMP",
+        "value":1200,
+    }
+    "slotType" : "midsize_enginetuning_v6",
+    "mainEngine": {
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 136],
+        [1000, 195],
+        [2000, 240],
+        [3000, 289],
+        [4000, 310],
+        [5000, 341],
+        [6000, 359],
+        [7000, 377],
+        [8000, 387],
+        [9000, 367],
+        [10000, 317],
+    ],
+        "idleRPM":1200,
+        "maxRPM":9500,
+        },
+}
+"midsize_transmission_6M_V6_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"V6 6-Speed Manual Racing Transmission DPMP",
+        "value":270,
+    }
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$gear_R", "range", ":1", "Transmission", -2.95, -6.0, -0.5, "Reverse Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_1", "range", ":1", "Transmission", 2.85, 0.5, 6.0, "1st Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_2", "range", ":1", "Transmission", 2.21, 0.5, 6.0, "2nd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_3", "range", ":1", "Transmission", 1.64, 0.5, 6.0, "3rd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_4", "range", ":1", "Transmission", 1.31, 0.5, 6.0, "4th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_5", "range", ":1", "Transmission", 1.0, 0.5, 6.0, "5th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_6", "range", ":1", "Transmission", 0.82, 0.5, 6.0, "6th Gear Ratio", "Torque multiplication ratio"]
+    ],
+    "slotType" : "midsize_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["midsize_differential_FT","midsize_differential_F_trans_dpmp", "Front Differential"],
+        ["midsize_transfer_case","midsize_transfer_case_FWD", "Transfercase"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":["$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6"]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2500,2900,3200,3400,3400]
+        "lowShiftUpRPM":4800,
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_transmission", ["midsize_engine","midsize_transmission"]],
+         ["midsize_shifter_M", ["midsize_body"]],
+
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        //["gear_M"   ,"midsize_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["clutch"     ,"midsize_clutchpedal", "f7r","f7l","f8r",  {"x":90, "y":0, "z":0} , {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+     ],
+
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.27, -1.34, 0.39],
+         ["tra1l", 0.35, -1.34, 0.39],
+         ["ta1", 0, -1.34, 0.39],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

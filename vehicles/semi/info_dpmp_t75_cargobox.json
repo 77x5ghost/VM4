@@ -1,0 +1,23 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Body Style":"Box Truck",
+"Value":42500,
+"TorquePeakRPM":1100,
+"Off-Road Score":34,
+"Configuration":"T75 Cargo Box Upfit (M)",
+"Description":"3-axle heavy-duty truck with a cargo box",
+"default_color":"Navy Blue",
+"0-60 mph":21.9,
+"Config Type":"Factory",
+"100-0 km/h":48.3,
+"Top Speed":37.9399,
+"Transmission":"Manual",
+"Torque":1636.67,
+"Weight":8120,
+"Power":351.777,
+"Weight/Power":23.1339,
+"60-0 mph":132.6,
+"PowerPeakRPM":1500,
+"0-100 km/h":23.6
+}

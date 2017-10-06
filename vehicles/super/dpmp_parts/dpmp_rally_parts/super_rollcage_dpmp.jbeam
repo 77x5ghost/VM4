@@ -1,0 +1,77 @@
+{
+"super_rollcage_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Roll Cage DPMP",
+        "value":2200,
+    }
+    "slotType" : "super_rollcage",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["super_rollcage_dpmp", ["super_body"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //redefine nodes to make them heavier
+         //roof
+         {"selfCollision":true}
+         {"group":"super_body"},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.0},
+         ["rf1r",-0.60, -0.13, 1.09{"group":["super_body","gps","super_windshield"]}],
+         ["rf1l", 0.60, -0.13, 1.09{"group":["super_body","gps","super_windshield"]}],
+         ["rf3r",-0.60, 0.50, 1.08],
+         ["rf3l", 0.60, 0.50, 1.08],
+         ["rf4r",-0.57, 0.87, 1.05],
+         ["rf4l", 0.57, 0.87, 1.05],
+         //a pillar
+         ["p1r",-0.675, -0.48, 0.95{"group":["super_body","gps","super_windshield"]}],
+         ["p1l", 0.675, -0.48, 0.95{"group":["super_body","gps","super_windshield"]}],
+
+         ["p2r",-0.715, -0.43, 0.945{"group":""}],
+         ["p2l", 0.715, -0.43, 0.945{"group":""}],
+         ["p2rr",-0.675, -0.43, 0.935{"group":""}],
+         ["p2ll", 0.675, -0.43, 0.935{"group":""}],
+         {"selfCollision":false},
+         //b pillar
+         ["p3r",-0.80, 0.45, 0.80],
+         ["p3l", 0.80, 0.45, 0.80],
+         ["p4r",-0.72, 0.48, 0.95],
+         ["p4l", 0.72, 0.48, 0.95],
+         //c pillar
+         {"selfCollision":true},
+         ["p5r",-0.76, 0.86, 0.82],
+         ["p5l", 0.76, 0.86, 0.82],
+         ["p6r",-0.73, 1.22, 0.85],
+         ["p6l", 0.73, 1.22, 0.85],
+         ["p7r",-0.69, 1.50, 0.84],
+         ["p7l", 0.69, 1.50, 0.84],
+         ["p8r",-0.63, 1.80, 0.82],
+         ["p8l", 0.63, 1.80, 0.82],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2501000,"beamDamp":50},
+          {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+          //left cage
+          ["rf3l", "q1l"],
+          ["rf3l", "rf1l"],
+          ["rf3l", "f4ll"],
+          ["rf1l", "f1ll"],
+          ["rf1l", "f4ll"],
+          ["f1ll", "q1l"],
+
+           //right cage
+          ["rf3r", "q1r"],
+          ["rf3r", "rf1r"],
+          ["rf3r", "f4rr"],
+          ["rf1r", "f1rr"],
+          ["rf1r", "f4rr"],
+          ["f1rr", "q1r"],
+    ],
+}
+}

@@ -1,0 +1,12 @@
+{
+
+"fullsize_skin_fire": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Fire Department Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "fire",
+}
+}

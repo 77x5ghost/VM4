@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
+    </contributor>
+    <created>2016-08-31T15:37:16</created>
+    <modified>2016-08-31T15:37:16</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="hatch_lettering_dpmpnomi-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpdiesel-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmp50-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpcapri-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpk-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmphr-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpv6-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpgtz-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpclassic-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpsp-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">50 50 50 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hatch_lettering_dpmpnomim-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="hatch_lettering_dpmpnomi-material" name="hatch_lettering_dpmpnomi">
+      <instance_effect url="#hatch_lettering_dpmpnomi-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpdiesel-material" name="hatch_lettering_dpmpdiesel">
+      <instance_effect url="#hatch_lettering_dpmpdiesel-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmp50-material" name="hatch_lettering_dpmp50">
+      <instance_effect url="#hatch_lettering_dpmp50-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpcapri-material" name="hatch_lettering_dpmpcapri">
+      <instance_effect url="#hatch_lettering_dpmpcapri-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpk-material" name="hatch_lettering_dpmpk">
+      <instance_effect url="#hatch_lettering_dpmpk-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmphr-material" name="hatch_lettering_dpmphr">
+      <instance_effect url="#hatch_lettering_dpmphr-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpv6-material" name="hatch_lettering_dpmpv6">
+      <instance_effect url="#hatch_lettering_dpmpv6-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpgtz-material" name="hatch_lettering_dpmpgtz">
+      <instance_effect url="#hatch_lettering_dpmpgtz-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpclassic-material" name="hatch_lettering_dpmpclassic">
+      <instance_effect url="#hatch_lettering_dpmpclassic-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpsp-material" name="hatch_lettering_dpmpsp">
+      <instance_effect url="#hatch_lettering_dpmpsp-effect"/>
+    </material>
+    <material id="hatch_lettering_dpmpnomim-material" name="hatch_lettering_dpmpnomim">
+      <instance_effect url="#hatch_lettering_dpmpnomim-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="hatch_lettering_dpmpnomil-mesh" name="hatch_lettering_dpmpnomil">
+      <mesh>
+        <source id="hatch_lettering_dpmpnomil-mesh-positions">
+          <float_array id="hatch_lettering_dpmpnomil-mesh-positions-array" count="18">59.48022 176.4802 70.4287 69.82761 175.2631 70.43279 69.5017 174.1335 74.68185 58.88082 175.476 74.67381 56.13731 176.655 70.42871 55.7774 175.6395 74.67146</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomil-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomil-mesh-normals">
+          <float_array id="hatch_lettering_dpmpnomil-mesh-normals-array" count="18">0.1147818 0.9591196 0.2586787 0.112585 0.9581168 0.2633188 0.08758962 0.9659273 0.2435418 0.08362346 0.9670419 0.2404939 0.0508148 0.9702733 0.236617 0.05090534 0.9702846 0.2365513</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomil-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomil-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpnomil-mesh-map-0-array" count="24">0.4296614 0.9718612 0.4177148 0.8041657 0.7970887 0.8039242 0.7970887 0.8039242 0.8190631 0.9716018 0.4296614 0.9718612 0.8190631 0.9716018 0.7970887 0.8039242 0.9196573 0.8039242 0.9196573 0.8039242 0.9328513 0.9715089 0.8190631 0.9716018</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomil-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomil-mesh-colors-geom-hatch_lettering_ibishu-map0" name="geom-hatch_lettering_ibishu-map0">
+          <float_array id="hatch_lettering_dpmpnomil-mesh-colors-geom-hatch_lettering_ibishu-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomil-mesh-colors-geom-hatch_lettering_ibishu-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpnomil-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpnomil-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpnomi-material" count="4">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpnomil-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpnomil-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpnomil-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpnomil-mesh-colors-geom-hatch_lettering_ibishu-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>2 0 0 0 1 1 1 1 0 2 2 2 0 2 3 3 3 3 4 4 2 0 5 5 3 3 6 6 0 2 7 7 4 4 8 8 4 4 9 9 5 5 10 10 3 3 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpnomin-mesh" name="hatch_lettering_dpmpnomin">
+      <mesh>
+        <source id="hatch_lettering_dpmpnomin-mesh-positions">
+          <float_array id="hatch_lettering_dpmpnomin-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomin-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomin-mesh-normals">
+          <float_array id="hatch_lettering_dpmpnomin-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomin-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomin-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpnomin-mesh-map-0-array" count="36">0.5694056 0.6572246 0.6485841 0.6572246 0.6264592 0.8258839 0.6264592 0.8258839 0.5479795 0.8259026 0.5694056 0.6572246 0.3533219 0.4744506 0.6684548 0.474651 0.6516137 0.6429469 0.6516137 0.6429469 0.3300623 0.6430674 0.3533219 0.4744506 0.5479795 0.8259026 0.3875743 0.8259412 0.3958462 0.6572246 0.3958462 0.6572246 0.5694056 0.6572246 0.5479795 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomin-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomin-mesh-colors-geom-hatch_lettering_zxi-map0" name="geom-hatch_lettering_zxi-map0">
+          <float_array id="hatch_lettering_dpmpnomin-mesh-colors-geom-hatch_lettering_zxi-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomin-mesh-colors-geom-hatch_lettering_zxi-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpnomin-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpnomin-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpnomi-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpnomin-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpnomin-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpnomin-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpnomin-mesh-colors-geom-hatch_lettering_zxi-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpnomip-mesh" name="hatch_lettering_dpmpnomip">
+      <mesh>
+        <source id="hatch_lettering_dpmpnomip-mesh-positions">
+          <float_array id="hatch_lettering_dpmpnomip-mesh-positions-array" count="18">0 179.7791 63.21291 0 178.9747 68.1201 13.19999 179.6252 63.21288 13.19999 178.7303 68.11967 -13.19643 179.6253 63.21288 -13.19643 178.7303 68.12054</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomip-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomip-mesh-normals">
+          <float_array id="hatch_lettering_dpmpnomip-mesh-normals-array" count="18">0 0.9861579 0.1658093 -0.0114445 0.9837116 0.1793893 -0.01300108 0.9844236 0.1753321 0 0.9868317 0.1617506 0.0130316 0.9844231 0.175332 0.0114445 0.9837116 0.1793893</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomip-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomip-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpnomip-mesh-map-0-array" count="24">0.4932752 0.2964793 0.9389684 0.2964784 0.9389684 0.4807335 0.9389684 0.4807335 0.4932752 0.4807174 0.4932752 0.2964793 0.4932752 0.2964793 0.4932752 0.4807174 0.04161947 0.480701 0.04161947 0.480701 0.04161947 0.2964784 0.4932752 0.2964793</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomip-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomip-mesh-colors-geom-hatch_lettering_covet-map0" name="geom-hatch_lettering_covet-map0">
+          <float_array id="hatch_lettering_dpmpnomip-mesh-colors-geom-hatch_lettering_covet-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomip-mesh-colors-geom-hatch_lettering_covet-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpnomip-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpnomip-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpnomi-material" count="4">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpnomip-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpnomip-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpnomip-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpnomip-mesh-colors-geom-hatch_lettering_covet-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 4 1 1 1 5 2 2 2 5 2 3 3 1 3 4 4 0 0 5 5 0 0 6 6 1 3 7 7 3 4 8 8 3 4 9 9 2 5 10 10 0 0 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpds-mesh" name="hatch_lettering_dpmpds">
+      <mesh>
+        <source id="hatch_lettering_dpmpds-mesh-positions">
+          <float_array id="hatch_lettering_dpmpds-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpds-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpds-mesh-normals">
+          <float_array id="hatch_lettering_dpmpds-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpds-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpds-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpds-mesh-map-0-array" count="36">0.5694056 0.6572246 0.6485841 0.6572246 0.6264592 0.8258839 0.6264592 0.8258839 0.5479795 0.8259026 0.5694056 0.6572246 0.3533219 0.4744506 0.6684548 0.474651 0.6516137 0.6429469 0.6516137 0.6429469 0.3300623 0.6430674 0.3533219 0.4744506 0.5479795 0.8259026 0.3875743 0.8259412 0.3958462 0.6572246 0.3958462 0.6572246 0.5694056 0.6572246 0.5479795 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpds-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpds-mesh-colors-geom-hatch_lettering_zxi-map0" name="geom-hatch_lettering_zxi-map0">
+          <float_array id="hatch_lettering_dpmpds-mesh-colors-geom-hatch_lettering_zxi-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpds-mesh-colors-geom-hatch_lettering_zxi-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpds-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpds-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpdiesel-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpds-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpds-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpds-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpds-mesh-colors-geom-hatch_lettering_zxi-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmp50-mesh" name="hatch_lettering_dpmp50">
+      <mesh>
+        <source id="hatch_lettering_dpmp50-mesh-positions">
+          <float_array id="hatch_lettering_dpmp50-mesh-positions-array" count="18">0 179.7791 63.21291 0 178.9747 68.1201 13.19999 179.6252 63.21288 13.19999 178.7303 68.11967 -13.19643 179.6253 63.21288 -13.19643 178.7303 68.12054</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmp50-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmp50-mesh-normals">
+          <float_array id="hatch_lettering_dpmp50-mesh-normals-array" count="18">0 0.9861579 0.1658093 -0.0114445 0.9837116 0.1793893 -0.01300108 0.9844236 0.1753321 0 0.9868317 0.1617506 0.0130316 0.9844231 0.175332 0.0114445 0.9837116 0.1793893</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmp50-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmp50-mesh-map-0">
+          <float_array id="hatch_lettering_dpmp50-mesh-map-0-array" count="24">0.4932752 0.2964793 0.9389684 0.2964784 0.9389684 0.4807335 0.9389684 0.4807335 0.4932752 0.4807174 0.4932752 0.2964793 0.4932752 0.2964793 0.4932752 0.4807174 0.04161942 0.480701 0.04161942 0.480701 0.04161942 0.2964784 0.4932752 0.2964793</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmp50-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmp50-mesh-colors-geom-hatch_lettering_covet-map0" name="geom-hatch_lettering_covet-map0">
+          <float_array id="hatch_lettering_dpmp50-mesh-colors-geom-hatch_lettering_covet-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmp50-mesh-colors-geom-hatch_lettering_covet-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmp50-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmp50-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmp50-material" count="4">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmp50-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmp50-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmp50-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmp50-mesh-colors-geom-hatch_lettering_covet-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 4 1 1 1 5 2 2 2 5 2 3 3 1 3 4 4 0 0 5 5 0 0 6 6 1 3 7 7 3 4 8 8 3 4 9 9 2 5 10 10 0 0 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpcapri-mesh" name="hatch_lettering_dpmpcapri">
+      <mesh>
+        <source id="hatch_lettering_dpmpcapri-mesh-positions">
+          <float_array id="hatch_lettering_dpmpcapri-mesh-positions-array" count="18">0 179.7791 63.21291 0 178.9747 68.1201 13.19999 179.6252 63.21288 13.19999 178.7303 68.11967 -13.19643 179.6253 63.21288 -13.19643 178.7303 68.12054</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpcapri-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpcapri-mesh-normals">
+          <float_array id="hatch_lettering_dpmpcapri-mesh-normals-array" count="18">0 0.9861579 0.1658093 -0.0114445 0.9837116 0.1793893 -0.01300108 0.9844236 0.1753321 0 0.9868317 0.1617506 0.0130316 0.9844231 0.175332 0.0114445 0.9837116 0.1793893</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpcapri-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpcapri-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpcapri-mesh-map-0-array" count="24">0.4932752 0.2964793 0.9389684 0.2964784 0.9389684 0.4807335 0.9389684 0.4807335 0.4932752 0.4807174 0.4932752 0.2964793 0.4932752 0.2964793 0.4932752 0.4807174 0.04161942 0.480701 0.04161942 0.480701 0.04161942 0.2964784 0.4932752 0.2964793</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpcapri-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpcapri-mesh-colors-geom-hatch_lettering_covet-map0" name="geom-hatch_lettering_covet-map0">
+          <float_array id="hatch_lettering_dpmpcapri-mesh-colors-geom-hatch_lettering_covet-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpcapri-mesh-colors-geom-hatch_lettering_covet-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpcapri-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpcapri-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpcapri-material" count="4">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpcapri-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpcapri-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpcapri-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpcapri-mesh-colors-geom-hatch_lettering_covet-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 4 1 1 1 5 2 2 2 5 2 3 3 1 3 4 4 0 0 5 5 0 0 6 6 1 3 7 7 3 4 8 8 3 4 9 9 2 5 10 10 0 0 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpk-mesh" name="hatch_lettering_dpmpk">
+      <mesh>
+        <source id="hatch_lettering_dpmpk-mesh-positions">
+          <float_array id="hatch_lettering_dpmpk-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpk-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpk-mesh-normals">
+          <float_array id="hatch_lettering_dpmpk-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpk-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpk-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpk-mesh-map-0-array" count="36">0.5694056 0.6572246 0.6485841 0.6572246 0.6264592 0.8258839 0.6264592 0.8258839 0.5479795 0.8259026 0.5694056 0.6572246 0.6770992 0.4744506 0.992232 0.474651 0.9753909 0.6429469 0.9753909 0.6429469 0.6538395 0.6430674 0.6770992 0.4744506 0.5479795 0.8259026 0.3875743 0.8259412 0.3958462 0.6572246 0.3958462 0.6572246 0.5694056 0.6572246 0.5479795 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpk-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpk-mesh-colors-geom-hatch_lettering_dxi-map0" name="geom-hatch_lettering_dxi-map0">
+          <float_array id="hatch_lettering_dpmpk-mesh-colors-geom-hatch_lettering_dxi-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpk-mesh-colors-geom-hatch_lettering_dxi-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpk-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpk-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpk-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpk-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpk-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpk-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpk-mesh-colors-geom-hatch_lettering_dxi-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmphr-mesh" name="hatch_lettering_dpmphr">
+      <mesh>
+        <source id="hatch_lettering_dpmphr-mesh-positions">
+          <float_array id="hatch_lettering_dpmphr-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmphr-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmphr-mesh-normals">
+          <float_array id="hatch_lettering_dpmphr-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmphr-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmphr-mesh-map-0">
+          <float_array id="hatch_lettering_dpmphr-mesh-map-0-array" count="36">0.5723028 0.6572246 0.6514814 0.6572246 0.6293565 0.8258839 0.6293565 0.8258839 0.5508767 0.8259026 0.5723028 0.6572246 0.6973802 0.6572516 1.012513 0.657452 0.9956719 0.8257479 0.9956719 0.8257479 0.6741206 0.8258684 0.6973802 0.6572516 0.5508767 0.8259026 0.3904716 0.8259412 0.3987435 0.6572246 0.3987435 0.6572246 0.5723028 0.6572246 0.5508767 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmphr-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmphr-mesh-colors-geom-hatch_lettering_dx-map0" name="geom-hatch_lettering_dx-map0">
+          <float_array id="hatch_lettering_dpmphr-mesh-colors-geom-hatch_lettering_dx-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmphr-mesh-colors-geom-hatch_lettering_dx-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmphr-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmphr-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmphr-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmphr-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmphr-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmphr-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmphr-mesh-colors-geom-hatch_lettering_dx-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpv6-mesh" name="hatch_lettering_dpmpv6">
+      <mesh>
+        <source id="hatch_lettering_dpmpv6-mesh-positions">
+          <float_array id="hatch_lettering_dpmpv6-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpv6-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpv6-mesh-normals">
+          <float_array id="hatch_lettering_dpmpv6-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpv6-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpv6-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpv6-mesh-map-0-array" count="36">0.5723028 0.6572246 0.6514814 0.6572246 0.6293565 0.8258839 0.6293565 0.8258839 0.5508767 0.8259026 0.5723028 0.6572246 0.6973802 0.6572516 1.012513 0.657452 0.9956719 0.8257479 0.9956719 0.8257479 0.6741206 0.8258684 0.6973802 0.6572516 0.5508767 0.8259026 0.3904716 0.8259412 0.3987435 0.6572246 0.3987435 0.6572246 0.5723028 0.6572246 0.5508767 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpv6-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpv6-mesh-colors-geom-hatch_lettering_dx-map0" name="geom-hatch_lettering_dx-map0">
+          <float_array id="hatch_lettering_dpmpv6-mesh-colors-geom-hatch_lettering_dx-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpv6-mesh-colors-geom-hatch_lettering_dx-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpv6-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpv6-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpv6-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpv6-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpv6-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpv6-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpv6-mesh-colors-geom-hatch_lettering_dx-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpgtz-mesh" name="hatch_lettering_dpmpgtz">
+      <mesh>
+        <source id="hatch_lettering_dpmpgtz-mesh-positions">
+          <float_array id="hatch_lettering_dpmpgtz-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpgtz-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpgtz-mesh-normals">
+          <float_array id="hatch_lettering_dpmpgtz-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpgtz-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpgtz-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpgtz-mesh-map-0-array" count="36">0.5723028 0.6572246 0.6514814 0.6572246 0.6293565 0.8258839 0.6293565 0.8258839 0.5508767 0.8259026 0.5723028 0.6572246 0.6973802 0.6572516 1.012513 0.657452 0.9956719 0.8257479 0.9956719 0.8257479 0.6741206 0.8258684 0.6973802 0.6572516 0.5508767 0.8259026 0.3904716 0.8259412 0.3987435 0.6572246 0.3987435 0.6572246 0.5723028 0.6572246 0.5508767 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpgtz-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpgtz-mesh-colors-geom-hatch_lettering_dx-map0" name="geom-hatch_lettering_dx-map0">
+          <float_array id="hatch_lettering_dpmpgtz-mesh-colors-geom-hatch_lettering_dx-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpgtz-mesh-colors-geom-hatch_lettering_dx-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpgtz-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpgtz-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpgtz-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpgtz-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpgtz-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpgtz-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpgtz-mesh-colors-geom-hatch_lettering_dx-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpclassic-mesh" name="hatch_lettering_dpmpclassic">
+      <mesh>
+        <source id="hatch_lettering_dpmpclassic-mesh-positions">
+          <float_array id="hatch_lettering_dpmpclassic-mesh-positions-array" count="18">0 179.7791 63.21291 0 178.9747 68.1201 13.19999 179.6252 63.21288 13.19999 178.7303 68.11967 -13.19643 179.6253 63.21288 -13.19643 178.7303 68.12054</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpclassic-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpclassic-mesh-normals">
+          <float_array id="hatch_lettering_dpmpclassic-mesh-normals-array" count="18">0 0.9861579 0.1658093 -0.0114445 0.9837116 0.1793893 -0.01300108 0.9844236 0.1753321 0 0.9868317 0.1617506 0.0130316 0.9844231 0.175332 0.0114445 0.9837116 0.1793893</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpclassic-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpclassic-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpclassic-mesh-map-0-array" count="24">0.4932752 0.2964793 0.9389684 0.2964784 0.9389684 0.4807335 0.9389684 0.4807335 0.4932752 0.4807174 0.4932752 0.2964793 0.4932752 0.2964793 0.4932752 0.4807174 0.04161942 0.480701 0.04161942 0.480701 0.04161942 0.2964784 0.4932752 0.2964793</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpclassic-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpclassic-mesh-colors-geom-hatch_lettering_covet-map0" name="geom-hatch_lettering_covet-map0">
+          <float_array id="hatch_lettering_dpmpclassic-mesh-colors-geom-hatch_lettering_covet-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpclassic-mesh-colors-geom-hatch_lettering_covet-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpclassic-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpclassic-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpclassic-material" count="4">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpclassic-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpclassic-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpclassic-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpclassic-mesh-colors-geom-hatch_lettering_covet-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 4 1 1 1 5 2 2 2 5 2 3 3 1 3 4 4 0 0 5 5 0 0 6 6 1 3 7 7 3 4 8 8 3 4 9 9 2 5 10 10 0 0 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpsp-mesh" name="hatch_lettering_dpmpsp">
+      <mesh>
+        <source id="hatch_lettering_dpmpsp-mesh-positions">
+          <float_array id="hatch_lettering_dpmpsp-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpsp-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpsp-mesh-normals">
+          <float_array id="hatch_lettering_dpmpsp-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpsp-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpsp-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpsp-mesh-map-0-array" count="36">0.5694056 0.6572246 0.6485841 0.6572246 0.6264592 0.8258839 0.6264592 0.8258839 0.5479795 0.8259026 0.5694056 0.6572246 0.05600529 0.4744506 0.3711386 0.474651 0.3542974 0.6429469 0.3542974 0.6429469 0.03274565 0.6430674 0.05600529 0.4744506 0.5479795 0.8259026 0.3875743 0.8259412 0.3958462 0.6572246 0.3958462 0.6572246 0.5694056 0.6572246 0.5479795 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpsp-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpsp-mesh-colors-geom-hatch_lettering_lxi-map0" name="geom-hatch_lettering_lxi-map0">
+          <float_array id="hatch_lettering_dpmpsp-mesh-colors-geom-hatch_lettering_lxi-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpsp-mesh-colors-geom-hatch_lettering_lxi-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpsp-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpsp-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpsp-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpsp-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpsp-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpsp-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpsp-mesh-colors-geom-hatch_lettering_lxi-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="hatch_lettering_dpmpnomim-mesh" name="hatch_lettering_dpmpnomim">
+      <mesh>
+        <source id="hatch_lettering_dpmpnomim-mesh-positions">
+          <float_array id="hatch_lettering_dpmpnomim-mesh-positions-array" count="30">-61.54832 176.2369 70.42952 -54.95992 176.7152 70.42871 -54.74446 175.7301 74.5155 -60.94173 175.2572 74.51413 -60.94173 175.2572 74.51413 -61.54832 176.2369 70.42952 -69.77203 175.2696 70.43276 -69.33242 174.2015 74.51226 -58.90577 175.4987 74.51458 -59.48428 176.473 70.42927</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomim-mesh-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomim-mesh-normals">
+          <float_array id="hatch_lettering_dpmpnomim-mesh-normals-array" count="30">-0.08380651 0.9663695 0.2431183 -0.110081 0.962683 0.2472323 -0.1130438 0.962612 0.2461693 -0.08133435 0.9669786 0.241531 -0.1185375 0.9602639 0.2526705 -0.112585 0.958209 0.2629833 -0.1150587 0.9590769 0.2587142 -0.120949 0.9610614 0.2484598 -0.05398863 0.9700872 0.2366773 -0.05292063 0.9699071 0.2376546</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomim-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomim-mesh-map-0">
+          <float_array id="hatch_lettering_dpmpnomim-mesh-map-0-array" count="36">0.5694056 0.6572246 0.6485841 0.6572246 0.6264592 0.8258839 0.6264592 0.8258839 0.5479795 0.8259026 0.5694056 0.6572246 0.05600559 0.4744506 0.3711386 0.474651 0.3542974 0.6429469 0.3542974 0.6429469 0.03274595 0.6430674 0.05600559 0.4744506 0.5479795 0.8259026 0.3875743 0.8259412 0.3958462 0.6572246 0.3958462 0.6572246 0.5694056 0.6572246 0.5479795 0.8259026</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomim-mesh-map-0-array" count="18" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="hatch_lettering_dpmpnomim-mesh-colors-geom-hatch_lettering_lxi-map0" name="geom-hatch_lettering_lxi-map0">
+          <float_array id="hatch_lettering_dpmpnomim-mesh-colors-geom-hatch_lettering_lxi-map0-array" count="54">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#hatch_lettering_dpmpnomim-mesh-colors-geom-hatch_lettering_lxi-map0-array" count="18" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="hatch_lettering_dpmpnomim-mesh-vertices">
+          <input semantic="POSITION" source="#hatch_lettering_dpmpnomim-mesh-positions"/>
+        </vertices>
+        <polylist material="hatch_lettering_dpmpnomim-material" count="6">
+          <input semantic="VERTEX" source="#hatch_lettering_dpmpnomim-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#hatch_lettering_dpmpnomim-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#hatch_lettering_dpmpnomim-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#hatch_lettering_dpmpnomim-mesh-colors-geom-hatch_lettering_lxi-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 </vcount>
+          <p>9 0 0 0 0 1 1 1 3 2 2 2 3 2 3 3 8 3 4 4 9 0 5 5 5 4 6 6 6 5 7 7 7 6 8 8 7 6 9 9 4 7 10 10 5 4 11 11 8 3 12 12 2 8 13 13 1 9 14 14 1 9 15 15 9 0 16 16 8 3 17 17</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="hatch_lettering_dpmpnomil" name="hatch_lettering_dpmpnomil" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpnomil-mesh" name="hatch_lettering_dpmpnomil">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpnomi-material" target="#hatch_lettering_dpmpnomi-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpnomin" name="hatch_lettering_dpmpnomin" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpnomin-mesh" name="hatch_lettering_dpmpnomin">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpnomi-material" target="#hatch_lettering_dpmpnomi-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpnomip" name="hatch_lettering_dpmpnomip" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpnomip-mesh" name="hatch_lettering_dpmpnomip">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpnomi-material" target="#hatch_lettering_dpmpnomi-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpds" name="hatch_lettering_dpmpds" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpds-mesh" name="hatch_lettering_dpmpds">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpdiesel-material" target="#hatch_lettering_dpmpdiesel-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmp50" name="hatch_lettering_dpmp50" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmp50-mesh" name="hatch_lettering_dpmp50">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmp50-material" target="#hatch_lettering_dpmp50-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpcapri" name="hatch_lettering_dpmpcapri" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpcapri-mesh" name="hatch_lettering_dpmpcapri">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpcapri-material" target="#hatch_lettering_dpmpcapri-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpk" name="hatch_lettering_dpmpk" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpk-mesh" name="hatch_lettering_dpmpk">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpk-material" target="#hatch_lettering_dpmpk-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmphr" name="hatch_lettering_dpmphr" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmphr-mesh" name="hatch_lettering_dpmphr">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmphr-material" target="#hatch_lettering_dpmphr-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpv6" name="hatch_lettering_dpmpv6" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpv6-mesh" name="hatch_lettering_dpmpv6">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpv6-material" target="#hatch_lettering_dpmpv6-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpgtz" name="hatch_lettering_dpmpgtz" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpgtz-mesh" name="hatch_lettering_dpmpgtz">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpgtz-material" target="#hatch_lettering_dpmpgtz-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpclassic" name="hatch_lettering_dpmpclassic" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpclassic-mesh" name="hatch_lettering_dpmpclassic">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpclassic-material" target="#hatch_lettering_dpmpclassic-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpsp" name="hatch_lettering_dpmpsp" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpsp-mesh" name="hatch_lettering_dpmpsp">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpsp-material" target="#hatch_lettering_dpmpsp-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="hatch_lettering_dpmpnomim" name="hatch_lettering_dpmpnomim" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#hatch_lettering_dpmpnomim-mesh" name="hatch_lettering_dpmpnomim">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="hatch_lettering_dpmpnomim-material" target="#hatch_lettering_dpmpnomim-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

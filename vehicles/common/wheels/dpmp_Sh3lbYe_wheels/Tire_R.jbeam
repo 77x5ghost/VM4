@@ -1,0 +1,195 @@
+{
+"tire_R_225_35_19_Custom_sport": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"225/35R19 Custom Sport Rear Tires D&S",
+        "value":250,
+    },
+    "slotType" : "tire_R_19x8",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["Tire_Custom", ["wheel_RR","tire_RR"], [], {"pos":{"x":-0.55, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.05, "y":1.03, "z":1.03}}],
+        ["Tire_Custom", ["wheel_RL","tire_RL"], [], {"pos":{"x":0.441, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.05, "y":1.03, "z":1.03}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$tirepressure_R", "range", "psi", "Tires", 28, 0, 50, "Rear Tire Pressure", "Relative to atmospheric pressure"],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":false},
+        {"enableTreadReinfBeams":true},
+
+        //general settings
+        {"radius":0.32},
+        {"tireWidth":0.205},
+        {"numRays":16},
+
+        //tire options
+        {"wheelSideBeamSpring":0,"wheelSideBeamDamp":20},
+        {"wheelSideBeamSpringExpansion":401000,"wheelSideBeamDampExpansion":20},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":1.0},
+
+        {"wheelReinfBeamSpring":41000,"wheelReinfBeamDamp":70},
+        {"wheelReinfBeamPrecompression":1.0},
+
+        {"wheelTreadBeamSpring":291000,"wheelTreadBeamDamp":35},
+        {"wheelTreadBeamPrecompression":1.0},
+
+        {"wheelTreadReinfBeamSpring":101000,"wheelTreadReinfBeamDamp":35},
+        {"wheelTreadReinfBeamPrecompression":1.0},
+
+        {"wheelPeripheryBeamSpring":161000,"wheelPeripheryBeamDamp":20},
+        {"wheelPeripheryBeamPrecompression":1.0},
+
+         //deform values
+        {"wheelSideBeamDeform":14000,"wheelSideBeamStrength":16000},
+        {"wheelReinfBeamDeform":101000,"wheelReinfBeamStrength":1001000},
+        {"wheelTreadBeamDeform":14000,"wheelTreadBeamStrength":16000},
+        {"wheelTreadReinfBeamDeform":14000,"wheelTreadReinfBeamStrength":16000},
+        {"wheelPeripheryBeamDeform":101000,"wheelPeripheryBeamStrength":1001000},
+
+        //general tire values
+        {"nodeWeight":0.17},
+        {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+        {"frictionCoef":1.33},
+        {"triangleCollision":false},
+        {"pressurePSI":"$tirepressure_R"},
+        {"maxPressurePSI":1200},
+        {"dragCoef":10},
+    ],
+},
+
+"tire_R_255_35_19_Custom_sport": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"255/35R19 Custom Sport Rear Tires D&S",
+        "value":410,
+    },
+    "slotType" : "tire_R_19x10",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["Tire_Custom_R19", ["wheel_RR","tire_RR"], [], {"pos":{"x":-0.435, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.31, "y":1.1, "z":1.1}}],
+         ["Tire_Custom_R19", ["wheel_RL","tire_RL"], [], {"pos":{"x": 0.569, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.31, "y":1.1, "z":1.1}}],
+    ],
+    "variables": [
+         ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+         ["$tirepressure_R", "range", "psi", "Tires", 28, 0, 50, "Rear Tire Pressure", "Relative to atmospheric pressure"],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":false},
+        {"enableTreadReinfBeams":true},
+
+        //general settings
+        {"radius":0.33},
+        {"tireWidth":0.235},
+        {"numRays":16},
+
+        //tire options
+        {"wheelSideBeamSpring":0,"wheelSideBeamDamp":20},
+        {"wheelSideBeamSpringExpansion":421000,"wheelSideBeamDampExpansion":20},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99}
+
+        {"wheelReinfBeamSpring":41000,"wheelReinfBeamDamp":85},
+        {"wheelReinfBeamPrecompression":0.99},
+
+        {"wheelTreadBeamSpring":251000,"wheelTreadBeamDamp":40},
+        {"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":111000,"wheelTreadReinfBeamDamp":40},
+        {"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":141000,"wheelPeripheryBeamDamp":20},
+        {"wheelPeripheryBeamPrecompression":0.98},
+
+        //deform values
+        {"wheelSideBeamDeform":14000,"wheelSideBeamStrength":16000},
+        {"wheelReinfBeamDeform":101000,"wheelReinfBeamStrength":1001000},
+        {"wheelTreadBeamDeform":14000,"wheelTreadBeamStrength":16000},
+        {"wheelTreadReinfBeamDeform":14000,"wheelTreadReinfBeamStrength":16000},
+        {"wheelPeripheryBeamDeform":101000,"wheelPeripheryBeamStrength":1001000},
+
+        //general tire values
+        {"nodeWeight":0.17},
+        {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+        {"frictionCoef":1.32},
+        {"triangleCollision":false},
+        {"pressurePSI":"$tirepressure_R"},
+        {"maxPressurePSI":1200},
+        {"dragCoef":10},
+    ],
+},
+
+"tire_R_255_35_17_Custom_drift": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"255/35R17 Custom Drift Rear Tires D&S",
+        "value":200,
+    }
+    "slotType" : "tire_R_17x9",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Tire_Custom_R19", ["wheel_RR","tire_RR"], [], {"pos":{"x":-0.437, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.22, "y":1, "z":1}}],
+        ["Tire_Custom_R19", ["wheel_RL","tire_RL"], [], {"pos":{"x": 0.563, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.22, "y":1, "z":1}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$tirepressure_R", "range", "psi", "Tires", 28, 0, 50, "Rear Tire Pressure", "Relative to atmospheric pressure"]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":false},
+        {"enableTreadReinfBeams":true},
+
+        //general settings
+        {"radius":0.305},
+        {"tireWidth":0.235},
+        {"numRays":16},
+
+        //tire options
+        {"wheelSideBeamSpring":0,"wheelSideBeamDamp":20},
+        {"wheelSideBeamSpringExpansion":411000,"wheelSideBeamDampExpansion":20},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":1.0},
+
+        {"wheelReinfBeamSpring":41000,"wheelReinfBeamDamp":70},
+        {"wheelReinfBeamPrecompression":1.0},
+
+        {"wheelTreadBeamSpring":241000,"wheelTreadBeamDamp":30},
+        {"wheelTreadBeamPrecompression":1.0},
+
+        {"wheelTreadReinfBeamSpring":71000,"wheelTreadReinfBeamDamp":30},
+        {"wheelTreadReinfBeamPrecompression":1.0},
+
+        {"wheelPeripheryBeamSpring":181000,"wheelPeripheryBeamDamp":20},
+        {"wheelPeripheryBeamPrecompression":1.0},
+
+        //deform values
+        {"wheelSideBeamDeform":13000,"wheelSideBeamStrength":15000},
+        {"wheelReinfBeamDeform":101000,"wheelReinfBeamStrength":1001000},
+        {"wheelTreadBeamDeform":13000,"wheelTreadBeamStrength":15000},
+        {"wheelTreadReinfBeamDeform":13000,"wheelTreadReinfBeamStrength":15000},
+        {"wheelPeripheryBeamDeform":101000,"wheelPeripheryBeamStrength":1001000},
+
+        //general tire values
+        {"nodeWeight":0.16},
+        {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+        {"frictionCoef":1.17},
+        {"triangleCollision":false},
+        {"pressurePSI":"$tirepressure_R"},
+        {"maxPressurePSI":1200},
+        {"dragCoef":10},
+    ],
+}
+}

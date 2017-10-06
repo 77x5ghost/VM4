@@ -1,0 +1,22 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Value":1200,
+"TorquePeakRPM":"1900 - 2750",
+"Off-Road Score":36,
+"Configuration":"Service (M)",
+"PowerPeakRPM":"2600 - 3550",
+"0-100 km/h":28.6,
+"0-60 mph":23.1,
+"Config Type":"Factory",
+"100-0 km/h":47.1,
+"Top Speed":28.8281,
+"Transmission":"Manual",
+"Torque":69.1723,
+"Weight":560,
+"Description":"Service version of the base Ibishu Pigeon",
+"Weight/Power":22.4,
+"60-0 mph":145.7,
+"Power":25.6417,
+"default_color":"Flame Orange"
+}

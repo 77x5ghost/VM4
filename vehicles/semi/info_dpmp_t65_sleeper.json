@@ -1,0 +1,23 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Body Style":"Semi Truck",
+"Value":30000,
+"TorquePeakRPM":1250,
+"Off-Road Score":34,
+"Configuration":"T65 Long Haul Fifth Wheel Upfit (M)",
+"Description":"2-axle heavy-duty truck with a fifth wheel and a sleeper cab",
+"default_color":"Forest Green",
+"0-60 mph":18.3,
+"Config Type":"Factory",
+"100-0 km/h":50.8,
+"Top Speed":41.9146,
+"Transmission":"Manual",
+"Torque":1355.66,
+"Weight":6010,
+"Power":303.51,
+"Weight/Power":19.835,
+"60-0 mph":144.3,
+"PowerPeakRPM":1550,
+"0-100 km/h":19.5
+}

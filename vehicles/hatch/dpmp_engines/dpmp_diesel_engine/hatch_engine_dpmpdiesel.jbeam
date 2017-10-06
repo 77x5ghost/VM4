@@ -1,0 +1,291 @@
+{
+"hatch_engine_dpmpdiesel": {
+    "information":{
+        "authors":"Slammington & DjPlopper",
+        "name":"1.9L Diesel I4 Engine DPMP",
+        "value":700,
+    },
+
+    "slotType" : "hatch_engine",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_exhaust","hatch_exhaust", "Exhaust"],
+        ["hatch_transmission","hatch_transmission_5M", "Transmission"],
+        ["hatch_intake_dpmpdiesel","hatch_intake_dpmpdiesel", "Intake & Exhaust",{"coreSlot":true}],
+        ["hatch_radiator","hatch_radiator", "Radiator"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_engine_sohc", ["hatch_engine"]],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [500, 200],
+        [1000, 230],
+        [1500, 240],
+        [2000, 250],
+	[2500, 240],
+        [3000, 220],
+	[3500. 200],
+        [4000, 180],
+	[4500, 160],
+        [5000, 140],
+	[5500, 100],
+	[6000, 80],
+       
+    ],
+ 
+        "idleRPM":800,
+        "maxRPM":5500,
+        "inertia":0.10,
+        "friction":10
+        "brakingCoefRPS":0.25
+        "burnEfficiency":0.33
+        "throttleSensitivity":1.0
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.2
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":3
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":130
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2300,
+        "clutchLaunchTargetRPM":3000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":5000
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--1.5L I4 Engine--
+        {"selfCollision":false},
+        {"collision":true}
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_engine"},
+        {"nodeWeight":10},
+         {"engineGroup":"engine_block"}
+        ["e1r", 0.12, -1.62, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        ["e2r", -0.37, -1.62, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        ["e1l", 0.12, -1.31, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        ["e2l", -0.37, -1.31, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.07}],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+         {"engineGroup":["engine_block","engine_intake"]}
+        ["e3r", 0.12, -1.62, 0.74,{"isExhaust":true}],
+        ["e3l", 0.12, -1.2, 0.74],
+        ["e4r", -0.37, -1.62, 0.74],
+        ["e4l", -0.37, -1.2, 0.74],
+        {"engineGroup":""},
+        {"group":""},
+        ["tc1", 0.0, -1.62, 0.35{"nodeWeight":16}],
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+          ["e1r","e3r"{"isExhaust":true}],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_intake_dpmpdiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Stock Intake & Exhaust DPMP",
+        "value":100,
+    }
+    "slotType" : "hatch_intake_dpmpdiesel",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_airbox_dpmpHR", ["hatch_engine","hatch_airbox"]],
+         ["hatch_header_dpmpHR", ["hatch_engine"]],
+    ],
+        "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"hatch_airbox"},
+         {"nodeWeight":1},
+         {"engineGroup":"engine_intake"},
+         ["airb", 0.57, -1.55, 0.75],
+         {"engineGroup":""},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":50600,"beamDamp":120},
+          {"beamDeform":11000,"beamStrength":26000},
+          ["airb","e1r"],
+          ["airb","e2r"],
+          ["airb","e3r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e3l"],
+          ["airb","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmission_5MDdpmp": {
+    "information":{
+        "authors":"Slammington & DjPlopper",
+        "name":"5-Speed Diesel Manual Transmission DPMP",
+        "value":250,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_F","hatch_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.0, 0, 3.15, 1.89, 1.22, 0.89, 0.67]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        "lowShiftUpRPM":5000,
+    }, 
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M",       "hatch_shifter_M",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch",       "hatch_clutchpedal",  "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+     ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--5 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,11 @@
+{
+"pickup_skin_blazer": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Blazer Livery",
+        "value":1200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "blazer",
+}
+}

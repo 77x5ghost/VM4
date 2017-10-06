@@ -1,0 +1,22 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Value":9800,
+"TorquePeakRPM":1650,
+"Off-Road Score":34,
+"Configuration":"Diesel (M)",
+"PowerPeakRPM":"2950 - 4050",
+"0-100 km/h":21.2,
+"0-60 mph":18.8,
+"Config Type":"Factory",
+"100-0 km/h":42.6,
+"Top Speed":28.0203,
+"Transmission":"Manual",
+"Torque":118.63,
+"Weight":1065,
+"Description":"Diesel version of the Miramar, it features a slow and polluting 1.2 Diesel engine",
+"Weight/Power":23.6667,
+"60-0 mph":125,
+"Power":45.1513,
+"default_color":"Savannah Yellow"
+}

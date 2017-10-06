@@ -1,0 +1,265 @@
+{
+"sunburst_sparkengine_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"800cc V2 Spark Hybrid Engine",
+        "value":1600,
+    }
+    "slotType" : "sunburst_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["sunburst_exhaust_I4","sunburst_exhaust_I4", "Exhaust"],
+        ["sunburst_transmission","sunburst_transmission_CVT", "Transmission"],
+        ["sunburst_radiator","sunburst_radiator", "Radiator"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["electricMotor", "mainEngine", "dummy", 0],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["ecu", ["sunburst_engine","sunburst_transmission","sunburst_engine_bay"]],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 412],
+        [2000, 412],
+        [3000, 400],
+        [3500, 375],
+        [4000, 350],
+        [5000, 275],
+        [6000, 225],
+        [6500, 160],
+    ],
+ 
+
+        "energyStorage": "mainBattery",
+        "requiredEnergyType":"electricEnergy",
+        "maxRPM":6000,
+        "inertia":0.08,
+        "friction":11
+        "brakingCoefRPS":0.15
+        "electricalEfficiency":0.98
+        "throttleSensitivity":1.2
+        //"clutchTorque":220
+        "torqueReactionNodes:":["e1r","e2r","e4l"]
+        "particulates":0.005
+
+        //cooling and oil system
+        "thermalsEnabled":true
+       "engineBlockMaterial":"aluminum"
+        "oilVolume":1
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":130
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":0,
+        "clutchLaunchTargetRPM":2800,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,3300,3800,4000,4200,4200]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6400
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--1.8L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sunburst_engine"},
+         {"nodeWeight":15.2},
+         {"engineGroup":"engine_block"}
+         ["e1r", -0.34, -1.62, 0.32,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e1l", -0.34, -1.31, 0.32],
+         ["e2r", 0.17, -1.62, 0.32,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e2l", 0.17, -1.31, 0.32],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.34, -1.62, 0.74,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e3l", -0.34, -1.31, 0.74],
+         ["e4r", 0.17, -1.62, 0.74,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e4l", 0.17, -1.31, 0.74],
+         {"engineGroup":""},
+         {"chemEnergy":200,"burnRate":0.3,"flashPoint":600,"specHeat":0.1,"smokePoint":580,"selfIgnitionCoef":false},
+         ["tc1", 0.0, -1.6, 0.45],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"specHeat":false,"smokePoint":false,"selfIgnitionCoef":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":600000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"{"isExhaust":true}],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_bat_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Battery Grid DPMP",
+        "value":250,
+    }
+    "slotType" : "sunburst_fueltank",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_fueltank", ["sunburst_body"]],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["electricBattery", "mainBattery"],
+    ],
+    "mainBattery": {
+        "energyType":"electricEnergy",
+        "batteryCapacity": 50,
+    }
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":1},
+         {"nodeWeight":0.5},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":""},
+         {"engineGroup":["fuel"]}
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":2,"smokePoint":220,"containerBeam":"fuelTank"},
+         ["ft1", 0, 1, 0.33],
+         ["ft1l", 0.3, 1, 0.35],
+         ["ft1r", -0.3, 1, 0.35],
+         {"selfIgnitionCoef":false},
+         ["ft2", 0, 0.8, 0.35],
+         ["ft2l", 0.3, 0.8, 0.3],
+         ["ft2r", -0.3, 0.8, 0.35],
+         ["ft3", 0.0, 1.2, 0.3],
+         ["ft3l", 0.3, 1.2, 0.35],
+         ["ft3r", -0.3, 1.2, 0.3],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false,"specHeat":false,"selfIgnitionCoef":false,"smokePoint":false,"containerBeam":false},
+         {"engineGroup":""}
+         {"selfCollision":false},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":160600,"beamDamp":100},
+          {"beamDeform":3800,"beamStrength":24000},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          //connect fuel particles to tank
+          {"breakGroupType":1},
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1","rx4r"],
+          {"breakGroup":"fueltank","beamSpring":160600,"beamDamp":100},
+          ["ft1","rx4l"],
+          ["ft1","f4l"],
+          ["ft1","f4r"],
+
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1l","rx4l"],
+          {"breakGroup":"fueltank","beamSpring":160600,"beamDamp":100},
+          ["ft1l","rx4r"],
+          ["ft1l","f4l"],
+          ["ft1l","f4r"],
+
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1r","rx4r"],
+          {"breakGroup":"fueltank","beamSpring":160600,"beamDamp":100},
+          ["ft1r","rx4l"],
+          ["ft1r","f4l"],
+          ["ft1r","f4r"],
+
+          ["ft2","rx4r"],
+          ["ft2","rx4l"],
+          ["ft2","f4l"],
+          ["ft2","f4r"],
+
+          ["ft2l","rx4r"],
+          ["ft2l","rx4l"],
+          ["ft2l","f4l"],
+          ["ft2l","f4r"],
+
+          ["ft2r","rx4r"],
+          ["ft2r","rx4l"],
+          ["ft2r","f4l"],
+          ["ft2r","f4r"],
+
+          ["ft3","rx4r"],
+          ["ft3","rx4l"],
+          ["ft3","f4l"],
+          ["ft3","f4r"],
+
+          ["ft3l","rx4r"],
+          ["ft3l","rx4l"],
+          ["ft3l","f4l"],
+          ["ft3l","f4r"],
+
+          ["ft3r","rx4r"],
+          ["ft3r","rx4l"],
+          ["ft3r","f4l"],
+          ["ft3r","f4r"],
+
+          {"breakGroupType":0},
+          {"beamSpring":1000,"beamDamp":20},
+          {"beamDeform":"FLT_MAX","beamStrength":100},
+          ["f4l","f4r",{"containerBeam":"fuelTank","highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f4l","rx2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f4r","rx2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+}
+}

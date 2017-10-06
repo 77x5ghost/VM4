@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_drag": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Drag Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "drag",
+  }}

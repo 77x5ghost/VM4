@@ -1,0 +1,11 @@
+{
+"midsize_skin_taxig": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"German Taxi Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "taxig",
+}
+}

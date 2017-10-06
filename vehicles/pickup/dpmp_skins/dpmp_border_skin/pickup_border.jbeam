@@ -1,0 +1,11 @@
+{
+"pickup_skin_border": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Border Patrol Livery",
+        "value":50,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "border",
+}
+}

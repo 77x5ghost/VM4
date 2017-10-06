@@ -1,0 +1,231 @@
+{
+"fullsize_engine_dpmpDrag": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"7.0L V8 Drag Engine DPMP",
+        "value":2400,
+    }
+    "slotType" : "fullsize_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["fullsize_exhaust","fullsize_exhaust", "Exhaust"],
+        ["fullsize_transmission","fullsize_transmission_dpmpDrag", "Transmission"],
+        ["fullsize_enginetuning","", "Engine Tuning"],
+        ["fullsize_radiator","fullsize_radiator", "Radiator"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["gavril_v8_fullsize", ["fullsize_engine"]],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [500, 885],
+        [1000, 1205],
+        [2000, 1455],
+        [3000, 1565],
+        [4000, 1575],
+        [5000, 1550],
+        [6000, 1510],
+    ],
+ 
+        //engine performance
+        "idleRPM":750,
+        "maxRPM":6100,
+        "revLimiterRPMDrop":0,
+        "inertia":0.2,
+        "friction":20
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.21
+        "throttleSensitivity":1.3
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.055
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":8
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":1800
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+		
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "V8",
+        "maxLoadMix": 0.7,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.6,
+        "eqLowGain": -4,
+        "eqLowFreq": 100,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 5000,
+        //"eqHighWidth": 0,
+        "lowCutFreq":90,
+        //"eqFundamentalGain": -10,
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1600,
+        "clutchLaunchTargetRPM":2200,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2600,2850,3050,3150,3150]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":5300
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //4.5L V8 Engine
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true}
+         {"group":"fullsize_engine"},
+         {"nodeWeight":28},
+         {"engineGroup":"engine_block"}
+         ["e1r", -0.13, -1.15, 0.32,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.2}],
+         ["e1l", 0.13, -1.15, 0.32,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":500,"conductionRadius":0.2}],
+         ["e2r", -0.13, -1.69, 0.32],
+         ["e2l", 0.13, -1.69, 0.32],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.32, -1.15, 0.7],
+         ["e3l", 0.32, -1.15, 0.7],
+         ["e4r", -0.32, -1.69, 0.7{"isExhaust":true}],
+         ["e4l", 0.32, -1.69, 0.7],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"specHeat":false,"smokePoint":false,"selfIgnitionCoef":false,"baseTemp":false,"conductionRadius":false},
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":10500750,"beamDamp":182.5},
+          {"beamDeform":792000.1,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"{"isExhaust":true}],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"fullsize_transmission_dpmpDrag": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"4-Speed Automatic Drag Transmission DPMP",
+        "value":1600,
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-2.38, 0, 2.75 ,1.21 , 0.98, 0.68]
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":16,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter":0.28,
+        "converterStiffness":9.5,
+        "couplingAVRatio":0.91,
+        "stallTorqueRatio":1.85,
+        "lockupClutchTorque":300,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1.5
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":1.5
+        "lowShiftDownRPM":1300,
+        "lowShiftUpRPM":2300,
+        "highShiftDownRPM":3100,
+        "torqueConverterLockupRPM":1800
+        "torqueConverterLockupMinGear":3
+    }, 
+    "slotType" : "fullsize_transmission",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["fullsize_transmission", ["fullsize_engine","fullsize_transmission"]],
+
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--4 Speed Auto--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":true},
+         {"collision":true}
+         {"group":"fullsize_transmission"},
+         {"nodeWeight":33.25},
+         ["tra1", 0.0, -0.60, 0.43],
+         {"group":""},
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["gear_A"      , "fullsize_needle_gear"  , "f7r", "f7l", "f8r", {"x":5, "y":0, "z":0} , {"x":0, "y":0, "z":0}      , {"x":-0.07, "y":0, "z":0}, 0, 1, 0, 1],
+        //automatic transmission
+        ["gear_A"      , "fullsize_shifter_A"    , "f7r", "f7l", "f8r", {"x":17.5, "y":0, "z":0} , {"x":0, "y":0, "z":-25}    , {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":10500750,"beamDamp":182.5},
+          {"beamDeform":792000.1,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

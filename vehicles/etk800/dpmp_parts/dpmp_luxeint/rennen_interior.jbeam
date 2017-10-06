@@ -1,0 +1,12 @@
+{
+"etk800_skin_interior_luxe": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Brown Interior DPMP",
+        "value":800,
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "luxe",
+  },
+}
+}

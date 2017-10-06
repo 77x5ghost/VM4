@@ -1,0 +1,65 @@
+{
+"tire_R_115_100_15_drag": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"115/100R15 Skinny Drag Rear Tires",
+        "value":60,
+    },
+    "slotType" : "tire_R_15x4",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["tire_01a_15x4_27", ["wheel_RR","tire_RR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":0.96, "z":0.96}}],
+        ["tire_01a_15x4_27", ["wheel_RL","tire_RL"], [], {"pos":{"x":0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":0.96, "z":0.96}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$tirepressure_R", "range", "psi", "Tires", 40, 0, 60, "Rear Tire Pressure", "Relative to atmospheric pressure"]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+        {"enableTireReinfBeams":false},
+        {"enableTireLbeams":true},
+        {"enableTireSideReinfBeams":false},
+        {"enableTreadReinfBeams":true},
+
+        //general settings
+        {"radius":0.34},
+        {"tireWidth":0.105},
+        {"numRays":16},
+
+        //tire options
+        {"wheelSideBeamSpring":100,"wheelSideBeamDamp":40},
+        {"wheelSideBeamSpringExpansion":351000,"wheelSideBeamDampExpansion":20},
+        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
+
+        {"wheelReinfBeamSpring":65000,"wheelReinfBeamDamp":60},
+        {"wheelReinfBeamPrecompression":1.00},
+
+        {"wheelTreadBeamSpring":251000,"wheelTreadBeamDamp":35},
+        {"wheelTreadBeamPrecompression":0.99},
+
+        {"wheelTreadReinfBeamSpring":101000,"wheelTreadReinfBeamDamp":35},
+        {"wheelTreadReinfBeamPrecompression":0.99},
+
+        {"wheelPeripheryBeamSpring":151000,"wheelPeripheryBeamDamp":20},
+        {"wheelPeripheryBeamPrecompression":0.99},
+
+        //general tire values
+        {"nodeWeight":0.13},
+        {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+        {"frictionCoef":1.35},
+        {"triangleCollision":false},
+        {"pressurePSI":"$tirepressure_R"},
+        {"maxPressurePSI":1500},
+        {"dragCoef":10},
+
+        //deform values
+        {"wheelSideBeamDeform":22000,"wheelSideBeamStrength":28000}
+        {"wheelReinfBeamDeform":101000,"wheelReinfBeamStrength":101000},
+        {"wheelTreadBeamDeform":14000,"wheelTreadBeamStrength":18000},
+        {"wheelTreadReinfBeamDeform":14000,"wheelTreadReinfBeamStrength":18000},
+        {"wheelPeripheryBeamDeform":101000,"wheelPeripheryBeamStrength":101000},
+    ],
+},
+}

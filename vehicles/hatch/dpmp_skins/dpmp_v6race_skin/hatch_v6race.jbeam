@@ -1,0 +1,12 @@
+{
+
+"hatch_skin_v6race": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"V6 Race Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "v6race",
+}
+}

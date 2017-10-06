@@ -1,0 +1,11 @@
+{
+"pickup_skin_baja": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Baja Race Livery",
+        "value":50,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "baja",
+}
+}

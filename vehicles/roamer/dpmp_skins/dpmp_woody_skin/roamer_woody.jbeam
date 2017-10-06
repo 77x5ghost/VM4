@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_woody": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Woody Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "woody",
+}
+}

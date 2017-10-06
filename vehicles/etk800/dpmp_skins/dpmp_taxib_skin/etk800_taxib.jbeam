@@ -1,0 +1,12 @@
+{
+
+"etk800_skin_taxib": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Barcelona Taxi Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "taxib",
+}
+}

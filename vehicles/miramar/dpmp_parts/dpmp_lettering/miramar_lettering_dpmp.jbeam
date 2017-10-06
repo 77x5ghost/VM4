@@ -1,0 +1,65 @@
+{
+"miramar_lettering_dpmpcitymar": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"CITYmar Lettering DPMP",
+        "value":25,
+    }
+    "slotType" : "miramar_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["miramar_lettering_dpmpcitymar", ["miramar_body"]],
+         ["miramar_lettering_dpmpcitymar_FL", ["miramar_fender_L"]],
+         ["miramar_lettering_dpmpcitymar_FR", ["miramar_fender_R"]],
+    ],
+}
+"miramar_lettering_dpmpgtz": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"GTz X-Spec Lettering DPMP",
+        "value":25,
+    }
+    "slotType" : "miramar_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["miramar_lettering_miramar", ["miramar_body"]],
+         ["miramar_lettering_miramar_FL", ["miramar_fender_L"]],
+         ["miramar_lettering_miramar_FR", ["miramar_fender_R"]],
+         ["miramar_lettering_dpmpgtz", ["miramar_body"]],
+         ["miramar_lettering_gtz", ["miramar_body"]],
+    ],
+}
+"miramardpmp_lettering_s": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"CITYmar S Lettering DPMP",
+        "value":25,
+    }
+    "slotType" : "miramar_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["miramar_lettering_dpmpcitymar", ["miramar_body"]],
+         ["miramar_lettering_dpmpcitymar_FL", ["miramar_fender_L"]],
+         ["miramar_lettering_dpmpcitymar_FR", ["miramar_fender_R"]],
+         ["miramardpmp_lettering_s", ["miramar_body"]],
+         ["miramardpmp_lettering_s_FL", ["miramar_fender_L"]],
+         ["miramardpmp_lettering_s_FR", ["miramar_fender_R"]],
+    ],
+}
+"miramar_lettering_dpmpdiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel Lettering DPMP",
+        "value":25,
+    }
+    "slotType" : "miramar_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["miramar_lettering_miramar", ["miramar_body"]],
+         ["miramar_lettering_miramar_FL", ["miramar_fender_L"]],
+         ["miramar_lettering_miramar_FR", ["miramar_fender_R"]],
+         ["miramar_lettering_dpmpdiesel", ["miramar_body"]],
+    ],
+}
+}
+}

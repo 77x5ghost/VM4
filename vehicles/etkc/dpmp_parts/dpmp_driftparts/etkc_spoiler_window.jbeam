@@ -1,0 +1,14 @@
+{
+"etki_spoiler_window": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Window Spoiler",
+        "value":200,
+    }
+    "slotType" : "etkc_mod",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etkc_spoiler_window", ["etkc_body"]],
+    ],
+}
+}

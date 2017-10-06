@@ -1,0 +1,496 @@
+{
+"hatch_transmission_4A_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 4-Speed Automatic Transmission",
+        "value":300,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_FT","hatch_differential_F_dpmp", "Front Differential"],
+        ["hatch_transfer_case","hatch_transfer_case_FWD", "transfercase"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-1.95, 0, 2.72, 1.52, 0.98, 0.64]
+        "parkLockTorque":1500,
+        "oneWayViscousCoef":8,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter": 0.25,
+        "converterStiffness":9,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":200,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":1.5
+        "lowShiftDownRPM":1800,
+        "lowShiftUpRPM":2700,
+        "highShiftDownRPM":3300,
+        "torqueConverterLockupRPM":2200
+        "torqueConverterLockupMinGear":2
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_A", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //automatic transmission
+        ["gear_A",       "hatch_shifter_A",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0.2, "z":0.01}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0},      0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--4 Speed Auto--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmission_4M_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 4-Speed Manual Transmission",
+        "value":150,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_FT","hatch_differential_F_dpmp", "Front Differential"],
+        ["hatch_transfer_case","hatch_transfer_case_FWD", "transfercase"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.15, 0, 3.25, 1.65, 1.03, 0.82],
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2500,2900,3200,3400,3400]
+        "lowShiftUpRPM":4800,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M",       "hatch_shifter_M",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch",       "hatch_clutchpedal",  "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--5 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmission_5M_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 5-Speed Manual Transmission",
+        "value":250,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_FT","hatch_differential_F_dpmp", "Front Differential"],
+        ["hatch_transfer_case","hatch_transfer_case_FWD", "transfercase"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.15, 0, 3.25, 1.895, 1.26, 0.94, 0.77],
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        "lowShiftUpRPM":5000,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M",       "hatch_shifter_M",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch",       "hatch_clutchpedal",  "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}, {"x":0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--5 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_transmission_6M_race_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy Race 6-Speed Manual Transmission",
+        "value":700,
+    },
+
+    "slotType" : "hatch_transmission",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_FT","hatch_differential_F_dpmp", "Front Differential"],
+        ["hatch_transfer_case","hatch_transfer_case_FWD", "transfercase"],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$gear_R", "range", ":1", "Transmission", -3.58, -5.0, -0.5, "Reverse Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_1", "range", ":1", "Transmission", 3.27, 0.5, 5.0, "1st Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_2", "range", ":1", "Transmission", 2.13, 0.5, 5.0, "2nd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_3", "range", ":1", "Transmission", 1.52, 0.5, 5.0, "3rd Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_4", "range", ":1", "Transmission", 1.15, 0.5, 5.0, "4th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_5", "range", ":1", "Transmission", 0.92,  0.5, 5.0, "5th Gear Ratio", "Torque multiplication ratio"]
+        ["$gear_6", "range", ":1", "Transmission", 0.74, 0.5, 5.0, "6th Gear Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":["$gear_R", 0, "$gear_1", "$gear_2", "$gear_3", "$gear_4", "$gear_5", "$gear_6"]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "transmissionShiftDelay":0.15,
+        "lowShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        "lowShiftUpRPM":5500,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_M", ["hatch_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M"   ,"hatch_shifter_M", "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0, "z":0.0}, 0, 1, 0, 1],
+        ["parkingbrake"     ,"hatch_parkingbrake", "f7r","f7l","f8r",  {"x":90, "y":0, "z":0} , {"x":-35, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+        ["clutch"     ,"hatch_clutchpedal", "f1l","f1r","f6l", {"x":0, "y":0, "z":180}, {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--6 Speed Manual--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_differential_F_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 3.89 Open Front Differential",
+        "value":200,
+    },
+    "slotType" : "hatch_differential_FT",
+
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "transfercase", 1, {"diffType":"open", "gearRatio": 3.89, "friction":4}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          {"optional":true},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_differential_F_LSD_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 4.25 Limited Slip Front Differential",
+        "value":450,
+    },
+
+    "slotType" : "hatch_differential_FT",
+
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "transfercase", 1, {"diffType":"lsd", "gearRatio": 4.25, "lsdPreload":50, "lsdLockCoef":0.15, "lsdRevLockCoef":0.01, "friction":4}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          {"optional":true},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_differential_F_locking": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy 4.10 Locking Front Differential",
+        "value":750,
+    },
+    "slotType" : "hatch_differential_FT",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        //front diff
+        ["differential", "differential_F", "transfercase", 1, {"diffType":["open","locked"], "gearRatio":4.10, "lockTorque":20000, "friction":5}]
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          {"optional":true},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_differential_F_race_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Legacy Adjustable Race Limited Slip Front Differential",
+        "value":800,
+    },
+
+    "slotType" : "hatch_differential_FT",
+
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 50, 0, 500, "Front LSD Preload", "Initial cross torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.20, 0, 0.5, "Front LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.10, 0, 0.5, "Front LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+        ["$finaldrive", "range", ":1", "Differentials", 4.39, 2.0, 6.0, "Final Drive Ratio", "Torque multiplication ratio"]
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "transfercase", 1, {"diffType":"lsd", "gearRatio":"$finaldrive", "lsdPreload":"$lsdpreload_F", "lsdLockCoef":"$lsdlockcoef_F", "lsdRevLockCoef":"$lsdlockcoefrev_F", "friction":4}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_halfshaft", ["hatch_differential","hatch_hub_F","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.06, "beamShortBound":0.06},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":5000,"beamStrength":8000},
+          {"beamLimitSpring":5001000,"beamLimitDamp":100},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          {"optional":true},
+          ["fw1r","tra3", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.12, "beamShortBound":0.12},
+          ["fw1l","tra2", {"name":"axle_FL"}],
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

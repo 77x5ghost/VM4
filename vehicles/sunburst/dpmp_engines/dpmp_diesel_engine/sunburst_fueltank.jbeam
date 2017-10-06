@@ -1,0 +1,115 @@
+{
+"sunburst_fueltank_diesel_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Diesel Fuel Tank DPMP",
+        "value":250,
+    }
+    "slotType" : "sunburst_fueltank",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_fueltank", ["sunburst_body"]],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["fuelTank", "mainTank"],
+    ],
+    "mainTank": {
+        "energyType":"diesel",
+        "fuelCapacity": 50,
+        "fuel": {"[engineGroup]:":["fuel"]},
+    }
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":1},
+         {"nodeWeight":0.5},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":""},
+         {"engineGroup":["fuel"]}
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":2,"smokePoint":220,"containerBeam":"fuelTank"},
+         ["ft1", 0, 1, 0.33],
+         ["ft1l", 0.3, 1, 0.35],
+         ["ft1r", -0.3, 1, 0.35],
+         {"selfIgnitionCoef":false},
+         ["ft2", 0, 0.8, 0.35],
+         ["ft2l", 0.3, 0.8, 0.3],
+         ["ft2r", -0.3, 0.8, 0.35],
+         ["ft3", 0.0, 1.2, 0.3],
+         ["ft3l", 0.3, 1.2, 0.35],
+         ["ft3r", -0.3, 1.2, 0.3],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false,"specHeat":false,"selfIgnitionCoef":false,"smokePoint":false,"containerBeam":false},
+         {"engineGroup":""}
+         {"selfCollision":false},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":160600,"beamDamp":100},
+          {"beamDeform":3800,"beamStrength":24000},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          //connect fuel particles to tank
+          {"breakGroupType":1},
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1","rx4r"],
+          {"breakGroup":"fueltank","beamSpring":160600,"beamDamp":100},
+          ["ft1","rx4l"],
+          ["ft1","f4l"],
+          ["ft1","f4r"],
+
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1l","rx4l"],
+          {"breakGroup":"fueltank","beamSpring":160600,"beamDamp":100},
+          ["ft1l","rx4r"],
+          ["ft1l","f4l"],
+          ["ft1l","f4r"],
+
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1r","rx4r"],
+          {"breakGroup":"fueltank","beamSpring":160600,"beamDamp":100},
+          ["ft1r","rx4l"],
+          ["ft1r","f4l"],
+          ["ft1r","f4r"],
+
+          ["ft2","rx4r"],
+          ["ft2","rx4l"],
+          ["ft2","f4l"],
+          ["ft2","f4r"],
+
+          ["ft2l","rx4r"],
+          ["ft2l","rx4l"],
+          ["ft2l","f4l"],
+          ["ft2l","f4r"],
+
+          ["ft2r","rx4r"],
+          ["ft2r","rx4l"],
+          ["ft2r","f4l"],
+          ["ft2r","f4r"],
+
+          ["ft3","rx4r"],
+          ["ft3","rx4l"],
+          ["ft3","f4l"],
+          ["ft3","f4r"],
+
+          ["ft3l","rx4r"],
+          ["ft3l","rx4l"],
+          ["ft3l","f4l"],
+          ["ft3l","f4r"],
+
+          ["ft3r","rx4r"],
+          ["ft3r","rx4l"],
+          ["ft3r","f4l"],
+          ["ft3r","f4r"],
+
+          {"breakGroupType":0},
+          {"beamSpring":1000,"beamDamp":20},
+          {"beamDeform":"FLT_MAX","beamStrength":100},
+          ["f4l","f4r",{"containerBeam":"fuelTank","highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f4l","rx2l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f4r","rx2r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+    ],
+}
+}

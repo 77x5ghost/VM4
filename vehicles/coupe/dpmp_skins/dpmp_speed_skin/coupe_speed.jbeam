@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_speed": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Top Speed Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "speed",
+  }}

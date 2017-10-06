@@ -1,0 +1,12 @@
+{
+
+"hatch_skin_harlequin": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Harlequin Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "harlequin",
+}
+}

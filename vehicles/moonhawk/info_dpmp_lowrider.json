@@ -1,0 +1,28 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Value":2700,
+"0-100 km/h":9.7,
+"TorquePeakRPM":"1700 - 2700",
+"Weight":1615,
+"Off-Road Score":21,
+"Configuration":"Lowrider (M)",
+"default_color":"Straw Yellow",
+"0-100 mph":34.1,
+"60-100 mph":25.1,
+"0-60 mph":9.1,
+"Config Type":"Custom",
+"100-0 km/h":42.7,
+"Top Speed":52.8032,
+"Power":153.14,
+"Torque":320.391,
+"Description":"This inline 6 Moonhawk lowrider was built in New Mexico with little money, the result is a very low but not so good car",
+"Transmission":"Manual",
+"Weight/Power":10.5556,
+"60-0 mph":121.5,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":4250
+}

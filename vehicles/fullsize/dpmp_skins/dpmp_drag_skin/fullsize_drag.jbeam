@@ -1,0 +1,11 @@
+{
+"fullsize_skin_prodrag": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Alder Drag Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "prodrag",
+}
+}

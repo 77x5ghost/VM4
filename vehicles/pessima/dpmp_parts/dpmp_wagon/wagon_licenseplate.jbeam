@@ -1,0 +1,14 @@
+{
+"pessima_licenseplate_R_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear License Plate",
+        "value":0,
+    }
+    "slotType" : "pessima_licenseplate_R_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["licenseplate", ["pessima_tailgate"],[],{"pos":{"x":0.0, "y":2.228, "z":0.655}, "rot":{"x":5, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+}
+}

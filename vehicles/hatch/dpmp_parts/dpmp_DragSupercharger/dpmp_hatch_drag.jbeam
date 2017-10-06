@@ -1,0 +1,184 @@
+{
+"hatch_transmission_4A_drag_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"5-Speed Automatic Drag Transmission DPMP",
+        "value":300,
+    },
+    "slotType" : "hatch_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_differential_F","hatch_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-2.38, 0, 2.75 ,1.21 , 0.98, 0.68, 0.60]
+        "parkLockTorque":1500,
+        "oneWayViscousCoef":8,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter": 0.25,
+        "converterStiffness":9,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":200,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1
+        "gearboxDecisionSmoothingDown":1
+        "gearboxDecisionSmoothingUp":1.5
+        "lowShiftDownRPM":1800,
+        "lowShiftUpRPM":2700,
+        "highShiftDownRPM":3300,
+        "torqueConverterLockupRPM":2200
+        "torqueConverterLockupMinGear":2
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_transmission", ["hatch_engine","hatch_transmission"]],
+        ["hatch_shifterbase_A", ["hatch_body"]],
+    ],
+    "props": [
+        ["func", "mesh", "idRef:", "idX:", "idY:", "baseRotation", "rotation", "translation", "min", "max", "offset", "multiplier"]
+        //automatic transmission
+        ["gear_A",       "hatch_shifter_A",    "f7r","f7l","f8r", {"x":85, "y":0, "z":0}, {"x":0, "y":0, "z":0},   {"x":0, "y":0.2, "z":0.01}, 0, 1, 0, 1],
+        ["parkingbrake", "hatch_parkingbrake", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":-35, "y":0, "z":0}, {"x":0, "y":0, "z":0},      0, 1, 0, 1],
+     ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--4 Speed Auto--
+        {"selfCollision":false},
+        {"collision":true},
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_transmission"},
+        {"nodeWeight":10},
+        ["tra1", 0.37, -1.43, 0.39],
+        {"group":"hatch_differential"},
+        ["tra2", 0.25, -1.25, 0.325],
+        ["tra3", 0.0, -1.25, 0.325{"nodeWeight":16}],
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":6440460,"beamDamp":145},
+          {"beamDeform":780000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          ["tra1","tra2"],
+          ["tra1","tra3"],
+          ["tra2","tra3"],
+          ["tra2","e2l"],
+          ["tra3","e2l"],
+          ["tra2","e1l"],
+          ["tra3","e1l"],
+          ["tra2","e3l"],
+          ["tra3","e3l"],
+          ["tra2","e4l"],
+          ["tra3","e4l"],
+          ["tra3","e1l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+"hatch_sc_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Supercharger DPMP",
+        "value":100,
+    }
+    "slotType" : "hatch_intake",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_airbox", ["hatch_engine","hatch_airbox"]],
+         ["hatch_header", ["hatch_engine"]],
+    ],
+    "supercharger": {
+        "gearRatio":3.2,
+        "clutchEngageRPM":0,
+        "pressureRatePSI":500,
+        "pressurePSIPer1kRPM":9.2,
+        "crankLossPer1kRPM":0.05,
+        "type":"roots",
+        "lobes":4,
+        "twistedLobes":true,
+        "boostController":[
+            //throttle in %, factor
+            [0,     0.2],
+            [100,     1],
+        ],
+    },
+    "engine":{
+        "idleRPM":750,
+        "shiftDownRPM":2200,
+        "shiftUpRPM":5500,
+        "maxRPM":6100,
+        "revLimiterRPMDrop":0,
+        "inertia":0.25,
+        "burnEfficiency":0.22
+        "cylinderWallTemperatureDamageThreshold":180
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"hatch_airbox"},
+         {"nodeWeight":1},
+         ["airb", 0.56, -1.52, 0.73],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":50600,"beamDamp":120},
+          {"beamDeform":11000,"beamStrength":26000},
+          ["airb","e1r"],
+          ["airb","e2r"],
+          ["airb","e3r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e3l"],
+          ["airb","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"hatch_radiator_drag_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"High Performance Drag Radiator DPMP",
+        "value":140,
+    }
+    "slotType" : "hatch_radiator",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_radiator", ["hatch_rad"]],
+    ],
+    "engine":{
+        "radiatorArea":0.35,
+        "radiatorEffectiveness":250000,
+        "coolantVolume":6.5,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":100,
+        "radiatorFanMaxAirSpeed":6,
+        "thermostatTemperature":90
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

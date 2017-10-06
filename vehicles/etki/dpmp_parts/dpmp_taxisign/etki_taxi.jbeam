@@ -1,0 +1,117 @@
+{
+"sunburst_taxisign": {
+    "information":{
+        "authors":"BeamNG, edited by Bernd",
+        "name":"Taxisign DPMP",
+        "value":50,
+    }
+    "slotType" : "etki_mod",
+  "glowMap":{
+            "taxi":                   {"simpleFunction":"lightbar", "off":"taxi", "on":"taxi_on"},
+        },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["taxisign", ["beaconlight"],[],{"pos":{"x":0,"y":00.0,"z":-0.03}}],
+    ],
+
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":0.76},
+         {"frictionCoef":0.7},
+		 {"group":"beaconlight"},
+         {"nodeMaterial":"|NM_METAL"},
+		 {"nodeOffset":{"x":"0", "y":0, "z":-0.03}},
+		     ["bl1l", 0.15989, -0.08174, 1.37388],
+		 ["bl2l", 0.15989, 0.07826, 1.37388],
+
+		 ["bl3", 0.00000, -0.00174, 1.44425],
+
+		 ["bl1r", -0.15989, -0.08174, 1.37388],
+		 ["bl2r", -0.15989, 0.07826, 1.37388],
+
+       
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+		  //Main shape
+      {"deformGroup":"beaconlight_break"}
+        {"deformationTriggerRatio":0.1}
+        ["bl1r","bl1l"],
+        ["bl2r","bl2l"],
+        ["bl1r","bl2r"],
+        ["bl1l","bl2l"],
+
+        ["bl1r","bl2l"],
+        ["bl1l","bl2r"],
+
+        ["bl1r","bl3"],
+        ["bl2r","bl3"],
+        ["bl1l","bl3"],
+        ["bl2l","bl3"],
+
+
+		  //attach
+		  {"beamSpring":300000,"beamDamp":60},
+          {"beamDeform":4000,"beamStrength":5000},
+
+		  {"breakGroup":"light_attach"},
+      ["bl2r","rf2r"],
+      ["bl2l","rf2l"],
+      ["bl1r","rf2r"],
+      ["bl1l","rf2l"],
+      ["bl2r","rf1r"],
+      ["bl2l","rf1l"],
+      ["bl1r","rf1r"],
+      ["bl1l","rf1l"],
+      ["bl2r","rf3r"],
+      ["bl2l","rf3l"],
+
+      ["bl3","rf2r"],
+      ["bl3","rf2"],
+      ["bl3","rf2l"],
+
+      ["bl2r","rf2r"],
+      ["bl2l","rf2l"],
+      ["bl1r","rf2r"],
+      ["bl1l","rf2l"],
+
+      ["bl3","rf3r"],
+      ["bl3","rf3l"],
+
+
+      ["bl1r","rf5"],
+      ["bl1l","rf5"],
+      ["bl2r","rf5"],
+      ["bl2l","rf5"],
+
+      ["bl3","rf5"],
+
+      {"deformGroup":""}
+
+
+          {"breakGroup":""},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"beaconlight"},
+            {"dragCoef":3},
+
+            ["bl3","bl2r","bl1r"],
+            ["bl3","bl2l","bl2r"],
+            ["bl3","bl1l","bl2l"],
+            ["bl3","bl1r","bl1l"],
+
+            ["bl1r","bl2r","bl2l"],
+            ["bl1r","bl2l","bl1l"],
+    ],
+}
+}

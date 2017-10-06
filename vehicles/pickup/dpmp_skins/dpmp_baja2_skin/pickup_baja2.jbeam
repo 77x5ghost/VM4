@@ -1,0 +1,11 @@
+{
+"pickup_skin_baja2": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Baja 1994 Race Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "baja2",
+}
+}

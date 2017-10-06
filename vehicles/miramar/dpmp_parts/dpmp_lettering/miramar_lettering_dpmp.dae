@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
+    </contributor>
+    <created>2016-07-02T19:21:32</created>
+    <modified>2016-07-02T19:21:32</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="miramardpmp_lettering_s-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="miramar_lettering_dpmpgtz-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="miramar_lettering_dpmpcitymar-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="miramar_lettering_dpmpdiesel-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.5 0.5 0.5 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="miramardpmp_lettering_s-material" name="miramardpmp_lettering_s">
+      <instance_effect url="#miramardpmp_lettering_s-effect"/>
+    </material>
+    <material id="miramar_lettering_dpmpgtz-material" name="miramar_lettering_dpmpgtz">
+      <instance_effect url="#miramar_lettering_dpmpgtz-effect"/>
+    </material>
+    <material id="miramar_lettering_dpmpcitymar-material" name="miramar_lettering_dpmpcitymar">
+      <instance_effect url="#miramar_lettering_dpmpcitymar-effect"/>
+    </material>
+    <material id="miramar_lettering_dpmpdiesel-material" name="miramar_lettering_dpmpdiesel">
+      <instance_effect url="#miramar_lettering_dpmpdiesel-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="miramardpmp_lettering_s-mesh" name="miramardpmp_lettering_s">
+      <mesh>
+        <source id="miramardpmp_lettering_s-mesh-positions">
+          <float_array id="miramardpmp_lettering_s-mesh-positions-array" count="18">-23.1707 226.1908 74.82026 -31.37351 225.8558 74.78635 -29.70006 225.9402 74.79326 -31.3751 226.6983 70.30943 -29.75745 226.783 70.30363 -23.17717 227.0449 70.28001</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s-mesh-normals">
+          <float_array id="miramardpmp_lettering_s-mesh-normals-array" count="18">-0.05035734 0.9814802 0.1848267 -0.0443136 0.9817666 0.1848537 -0.04452729 0.9817682 0.184793 -0.05072224 0.9814853 0.1846999 -0.03845357 0.9820311 0.1847602 -0.03842401 0.9820256 0.1847954</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s-mesh-map-0">
+          <float_array id="miramardpmp_lettering_s-mesh-map-0-array" count="24">0.4512509 0.6208399 0.3592596 0.6212085 0.3624144 0.3819206 0.3624144 0.3819206 0.4513381 0.3822296 0.4512509 0.6208399 0.3592596 0.6212085 3.3549e-4 0.6226469 6.91299e-4 0.3806615 6.91299e-4 0.3806615 0.3624144 0.3819206 0.3592596 0.6212085</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s-mesh-colors-geom-miramar_lettering_gtz-map0" name="geom-miramar_lettering_gtz-map0">
+          <float_array id="miramardpmp_lettering_s-mesh-colors-geom-miramar_lettering_gtz-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s-mesh-colors-geom-miramar_lettering_gtz-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramardpmp_lettering_s-mesh-vertices">
+          <input semantic="POSITION" source="#miramardpmp_lettering_s-mesh-positions"/>
+        </vertices>
+        <polylist material="miramardpmp_lettering_s-material" count="4">
+          <input semantic="VERTEX" source="#miramardpmp_lettering_s-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramardpmp_lettering_s-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramardpmp_lettering_s-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramardpmp_lettering_s-mesh-colors-geom-miramar_lettering_gtz-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>1 0 0 0 2 1 1 1 4 2 2 2 4 2 3 3 3 3 4 4 1 0 5 5 2 1 6 6 0 4 7 7 5 5 8 8 5 5 9 9 4 2 10 10 2 1 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramardpmp_lettering_s_FR-mesh" name="miramardpmp_lettering_s_FR">
+      <mesh>
+        <source id="miramardpmp_lettering_s_FR-mesh-positions">
+          <float_array id="miramardpmp_lettering_s_FR-mesh-positions-array" count="12">-80.24257 -82.09126 53.65791 -80.4501 -82.14888 56.91697 -80.36362 -88.77214 56.9794 -80.16142 -88.67906 53.79392</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FR-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s_FR-mesh-normals">
+          <float_array id="miramardpmp_lettering_s_FR-mesh-normals-array" count="6">-0.9978708 -0.01362758 -0.06378239 -0.9978738 -0.01360976 -0.06373876</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FR-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s_FR-mesh-map-0">
+          <float_array id="miramardpmp_lettering_s_FR-mesh-map-0-array" count="12">0.4500102 -0.3728063 0.03893882 -0.3777711 0.03536349 -0.6369514 0.03536349 -0.6369514 0.4442326 -0.6261348 0.4500102 -0.3728063</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FR-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s_FR-mesh-colors-geom-miramar_lettering_gtz_FR-map0" name="geom-miramar_lettering_gtz_FR-map0">
+          <float_array id="miramardpmp_lettering_s_FR-mesh-colors-geom-miramar_lettering_gtz_FR-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FR-mesh-colors-geom-miramar_lettering_gtz_FR-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramardpmp_lettering_s_FR-mesh-vertices">
+          <input semantic="POSITION" source="#miramardpmp_lettering_s_FR-mesh-positions"/>
+        </vertices>
+        <polylist material="miramardpmp_lettering_s-material" count="2">
+          <input semantic="VERTEX" source="#miramardpmp_lettering_s_FR-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramardpmp_lettering_s_FR-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramardpmp_lettering_s_FR-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramardpmp_lettering_s_FR-mesh-colors-geom-miramar_lettering_gtz_FR-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>2 0 0 0 1 0 1 1 0 0 2 2 0 1 3 3 3 1 4 4 2 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramardpmp_lettering_s_FL-mesh" name="miramardpmp_lettering_s_FL">
+      <mesh>
+        <source id="miramardpmp_lettering_s_FL-mesh-positions">
+          <float_array id="miramardpmp_lettering_s_FL-mesh-positions-array" count="12">80.37497 -68.57604 53.6579 80.58249 -68.63365 56.91696 80.54335 -75.25692 56.97939 80.34115 -75.16383 53.79391</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FL-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s_FL-mesh-normals">
+          <float_array id="miramardpmp_lettering_s_FL-mesh-normals-array" count="6">0.997959 -0.006436526 -0.06353449 0.9979506 -0.006498456 -0.06365895</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FL-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s_FL-mesh-map-0">
+          <float_array id="miramardpmp_lettering_s_FL-mesh-map-0-array" count="12">0.03536349 -0.3728063 0.04114103 -0.6261348 0.4500102 -0.6369514 0.4500102 -0.6369514 0.4464348 -0.3777711 0.03536349 -0.3728063</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FL-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramardpmp_lettering_s_FL-mesh-colors-geom-miramar_lettering_gtz_FL-map0" name="geom-miramar_lettering_gtz_FL-map0">
+          <float_array id="miramardpmp_lettering_s_FL-mesh-colors-geom-miramar_lettering_gtz_FL-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramardpmp_lettering_s_FL-mesh-colors-geom-miramar_lettering_gtz_FL-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramardpmp_lettering_s_FL-mesh-vertices">
+          <input semantic="POSITION" source="#miramardpmp_lettering_s_FL-mesh-positions"/>
+        </vertices>
+        <polylist material="miramardpmp_lettering_s-material" count="2">
+          <input semantic="VERTEX" source="#miramardpmp_lettering_s_FL-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramardpmp_lettering_s_FL-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramardpmp_lettering_s_FL-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramardpmp_lettering_s_FL-mesh-colors-geom-miramar_lettering_gtz_FL-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>2 0 0 0 3 0 1 1 0 0 2 2 0 1 3 3 1 1 4 4 2 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramar_lettering_dpmpgtz-mesh" name="miramar_lettering_dpmpgtz">
+      <mesh>
+        <source id="miramar_lettering_dpmpgtz-mesh-positions">
+          <float_array id="miramar_lettering_dpmpgtz-mesh-positions-array" count="18">-37.0385 226.3931 70.22686 -23.30813 227.0596 70.28245 -37.02957 226.8237 67.89986 -23.31183 227.4956 67.91804 -29.60601 226.8132 70.28264 -29.61546 227.2494 67.9157</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpgtz-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpgtz-mesh-normals">
+          <float_array id="miramar_lettering_dpmpgtz-mesh-normals-array" count="18">-0.0476098 0.982289 0.1812226 -0.0475794 0.9822904 0.1812229 -0.05682665 0.9817708 0.1813753 -0.05682599 0.9817599 0.1814343 -0.03842353 0.9826856 0.1812531 -0.03842335 0.9826803 0.1812826</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpgtz-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpgtz-mesh-map-0">
+          <float_array id="miramar_lettering_dpmpgtz-mesh-map-0-array" count="24">0.3469316 0.3530584 0.3474507 0.226905 0.7550102 0.2260604 0.7550102 0.2260604 0.7555014 0.3500855 0.3469316 0.3530584 7.31901e-4 0.353048 9.35301e-4 0.2270299 0.3474507 0.226905 0.3474507 0.226905 0.3469316 0.3530584 7.31901e-4 0.353048</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpgtz-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpgtz-mesh-colors-geom-miramar_lettering_miramatic-map0" name="geom-miramar_lettering_miramatic-map0">
+          <float_array id="miramar_lettering_dpmpgtz-mesh-colors-geom-miramar_lettering_miramatic-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpgtz-mesh-colors-geom-miramar_lettering_miramatic-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramar_lettering_dpmpgtz-mesh-vertices">
+          <input semantic="POSITION" source="#miramar_lettering_dpmpgtz-mesh-positions"/>
+        </vertices>
+        <polylist material="miramar_lettering_dpmpgtz-material" count="4">
+          <input semantic="VERTEX" source="#miramar_lettering_dpmpgtz-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramar_lettering_dpmpgtz-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramar_lettering_dpmpgtz-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramar_lettering_dpmpgtz-mesh-colors-geom-miramar_lettering_miramatic-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>4 0 0 0 5 1 1 1 2 2 2 2 2 2 3 3 0 3 4 4 4 0 5 5 1 4 6 6 3 5 7 7 5 1 8 8 5 1 9 9 4 0 10 10 1 4 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramar_lettering_dpmpcitymar-mesh" name="miramar_lettering_dpmpcitymar">
+      <mesh>
+        <source id="miramar_lettering_dpmpcitymar-mesh-positions">
+          <float_array id="miramar_lettering_dpmpcitymar-mesh-positions-array" count="18">29.62919 227.0343 68.97759 38.34617 226.5019 68.97808 29.62474 226.3181 72.85912 38.35225 225.7857 72.86237 22.66372 226.5827 72.82635 22.65681 227.2968 68.97681</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar-mesh-normals">
+          <float_array id="miramar_lettering_dpmpcitymar-mesh-normals-array" count="18">0.04834175 0.9822481 0.1812512 0.04837208 0.9822129 0.1814334 0.05990797 0.9816613 0.1809753 0.05993938 0.9816759 0.1808864 0.03662312 0.9826301 0.1819255 0.03646999 0.9825854 0.1821976</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar-mesh-map-0">
+          <float_array id="miramar_lettering_dpmpcitymar-mesh-map-0-array" count="24">0.5265715 6.46748e-5 0.5268396 0.2268404 9.35301e-4 0.2270299 9.35301e-4 0.2270299 0.001301527 9.3281e-5 0.5265715 6.46748e-5 0.5268396 0.2268404 0.5265715 6.46748e-5 0.9467164 1.88824e-5 0.9467164 1.88824e-5 0.9462998 0.2249259 0.5268396 0.2268404</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar-mesh-colors-geom-miramar_lettering_miramar-map0" name="geom-miramar_lettering_miramar-map0">
+          <float_array id="miramar_lettering_dpmpcitymar-mesh-colors-geom-miramar_lettering_miramar-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar-mesh-colors-geom-miramar_lettering_miramar-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramar_lettering_dpmpcitymar-mesh-vertices">
+          <input semantic="POSITION" source="#miramar_lettering_dpmpcitymar-mesh-positions"/>
+        </vertices>
+        <polylist material="miramar_lettering_dpmpcitymar-material" count="4">
+          <input semantic="VERTEX" source="#miramar_lettering_dpmpcitymar-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramar_lettering_dpmpcitymar-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramar_lettering_dpmpcitymar-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramar_lettering_dpmpcitymar-mesh-colors-geom-miramar_lettering_miramar-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 2 1 1 1 3 2 2 2 3 2 3 3 1 3 4 4 0 0 5 5 2 1 6 6 0 0 7 7 5 4 8 8 5 4 9 9 4 5 10 10 2 1 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramar_lettering_dpmpcitymar_FL-mesh" name="miramar_lettering_dpmpcitymar_FL">
+      <mesh>
+        <source id="miramar_lettering_dpmpcitymar_FL-mesh-positions">
+          <float_array id="miramar_lettering_dpmpcitymar_FL-mesh-positions-array" count="18">80.34081 -74.81509 53.98995 80.48199 -74.82508 56.21045 80.1746 -88.47972 54.24463 80.31308 -88.49213 56.40788 80.45162 -78.58521 56.26904 80.3101 -78.70553 54.0672</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FL-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar_FL-mesh-normals">
+          <float_array id="miramar_lettering_dpmpcitymar_FL-mesh-normals-array" count="12">0.9979415 -0.009047925 -0.06349104 0.9979311 -0.009138703 -0.06363981 0.9978398 -0.0149939 -0.06396257 0.9978826 -0.01484274 -0.06332546</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FL-mesh-normals-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar_FL-mesh-map-0">
+          <float_array id="miramar_lettering_dpmpcitymar_FL-mesh-map-0-array" count="24">0.9468948 0.01182252 0.9462084 0.2072031 0.6880008 0.2123582 0.6880008 0.2123582 0.6797385 0.01862019 0.9468948 0.01182252 0.007692158 0.2245752 0.00854361 0.03423088 0.6797385 0.01862019 0.6797385 0.01862019 0.6880008 0.2123582 0.007692158 0.2245752</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FL-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar_FL-mesh-colors-geom-miramar_lettering_miramar_FL-map0" name="geom-miramar_lettering_miramar_FL-map0">
+          <float_array id="miramar_lettering_dpmpcitymar_FL-mesh-colors-geom-miramar_lettering_miramar_FL-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FL-mesh-colors-geom-miramar_lettering_miramar_FL-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramar_lettering_dpmpcitymar_FL-mesh-vertices">
+          <input semantic="POSITION" source="#miramar_lettering_dpmpcitymar_FL-mesh-positions"/>
+        </vertices>
+        <polylist material="miramar_lettering_dpmpcitymar-material" count="4">
+          <input semantic="VERTEX" source="#miramar_lettering_dpmpcitymar_FL-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramar_lettering_dpmpcitymar_FL-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramar_lettering_dpmpcitymar_FL-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramar_lettering_dpmpcitymar_FL-mesh-colors-geom-miramar_lettering_miramar_FL-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 1 0 1 1 4 0 2 2 4 1 3 3 5 1 4 4 0 1 5 5 3 2 6 6 2 2 7 7 5 2 8 8 5 3 9 9 4 3 10 10 3 3 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramar_lettering_dpmpcitymar_FR-mesh" name="miramar_lettering_dpmpcitymar_FR">
+      <mesh>
+        <source id="miramar_lettering_dpmpcitymar_FR-mesh-positions">
+          <float_array id="miramar_lettering_dpmpcitymar_FR-mesh-positions-array" count="18">-80.34081 -68.92765 53.98996 -80.48199 -68.93764 56.21045 -80.26569 -82.59229 54.24464 -80.40417 -82.6047 56.40789 -80.31171 -78.6468 54.17302 -80.45135 -78.61161 56.35193</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FR-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar_FR-mesh-normals">
+          <float_array id="miramar_lettering_dpmpcitymar_FR-mesh-normals-array" count="12">-0.9979487 -0.004094958 -0.06388968 -0.9979749 -0.004183053 -0.06347143 -0.9978724 -0.01268833 -0.06395238 -0.9978843 -0.01279443 -0.06374478</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FR-mesh-normals-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar_FR-mesh-map-0">
+          <float_array id="miramar_lettering_dpmpcitymar_FR-mesh-map-0-array" count="24">0.6751068 0.0279296 0.6726894 0.2196511 0.008378624 0.2072031 0.008378624 0.2072031 0.007692158 0.01182252 0.6751068 0.0279296 0.9460433 0.03423088 0.9468948 0.2245752 0.6726894 0.2196511 0.6726894 0.2196511 0.6751068 0.0279296 0.9460433 0.03423088</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FR-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpcitymar_FR-mesh-colors-geom-miramar_lettering_miramar_FR-map0" name="geom-miramar_lettering_miramar_FR-map0">
+          <float_array id="miramar_lettering_dpmpcitymar_FR-mesh-colors-geom-miramar_lettering_miramar_FR-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpcitymar_FR-mesh-colors-geom-miramar_lettering_miramar_FR-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramar_lettering_dpmpcitymar_FR-mesh-vertices">
+          <input semantic="POSITION" source="#miramar_lettering_dpmpcitymar_FR-mesh-positions"/>
+        </vertices>
+        <polylist material="miramar_lettering_dpmpcitymar-material" count="4">
+          <input semantic="VERTEX" source="#miramar_lettering_dpmpcitymar_FR-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramar_lettering_dpmpcitymar_FR-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramar_lettering_dpmpcitymar_FR-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramar_lettering_dpmpcitymar_FR-mesh-colors-geom-miramar_lettering_miramar_FR-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>4 0 0 0 5 0 1 1 1 0 2 2 1 1 3 3 0 1 4 4 4 1 5 5 2 2 6 6 3 2 7 7 5 2 8 8 5 3 9 9 4 3 10 10 2 3 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="miramar_lettering_dpmpdiesel-mesh" name="miramar_lettering_dpmpdiesel">
+      <mesh>
+        <source id="miramar_lettering_dpmpdiesel-mesh-positions">
+          <float_array id="miramar_lettering_dpmpdiesel-mesh-positions-array" count="18">-37.0385 226.3931 70.22686 -23.30813 227.0596 70.28245 -37.02957 226.8237 67.89986 -23.31183 227.4956 67.91804 -29.60601 226.8132 70.28264 -29.61546 227.2494 67.9157</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpdiesel-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpdiesel-mesh-normals">
+          <float_array id="miramar_lettering_dpmpdiesel-mesh-normals-array" count="18">-0.0476098 0.982289 0.1812226 -0.0475794 0.9822904 0.1812229 -0.05682665 0.9817708 0.1813753 -0.05682599 0.9817599 0.1814343 -0.03842353 0.9826856 0.1812531 -0.03842335 0.9826803 0.1812826</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpdiesel-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpdiesel-mesh-map-0">
+          <float_array id="miramar_lettering_dpmpdiesel-mesh-map-0-array" count="24">0.3469316 0.3530584 0.3474507 0.226905 0.7550102 0.2260604 0.7550102 0.2260604 0.7555014 0.3500855 0.3469316 0.3530584 7.31901e-4 0.353048 9.35301e-4 0.2270299 0.3474507 0.226905 0.3474507 0.226905 0.3469316 0.3530584 7.31901e-4 0.353048</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpdiesel-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="miramar_lettering_dpmpdiesel-mesh-colors-geom-miramar_lettering_miramatic-map0" name="geom-miramar_lettering_miramatic-map0">
+          <float_array id="miramar_lettering_dpmpdiesel-mesh-colors-geom-miramar_lettering_miramatic-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#miramar_lettering_dpmpdiesel-mesh-colors-geom-miramar_lettering_miramatic-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="miramar_lettering_dpmpdiesel-mesh-vertices">
+          <input semantic="POSITION" source="#miramar_lettering_dpmpdiesel-mesh-positions"/>
+        </vertices>
+        <polylist material="miramar_lettering_dpmpdiesel-material" count="4">
+          <input semantic="VERTEX" source="#miramar_lettering_dpmpdiesel-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#miramar_lettering_dpmpdiesel-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#miramar_lettering_dpmpdiesel-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#miramar_lettering_dpmpdiesel-mesh-colors-geom-miramar_lettering_miramatic-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>4 0 0 0 5 1 1 1 2 2 2 2 2 2 3 3 0 3 4 4 4 0 5 5 1 4 6 6 3 5 7 7 5 1 8 8 5 1 9 9 4 0 10 10 1 4 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="miramardpmp_lettering_s" name="miramardpmp_lettering_s" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramardpmp_lettering_s-mesh" name="miramardpmp_lettering_s">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramardpmp_lettering_s-material" target="#miramardpmp_lettering_s-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramardpmp_lettering_s_FR" name="miramardpmp_lettering_s_FR" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramardpmp_lettering_s_FR-mesh" name="miramardpmp_lettering_s_FR">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramardpmp_lettering_s-material" target="#miramardpmp_lettering_s-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramardpmp_lettering_s_FL" name="miramardpmp_lettering_s_FL" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramardpmp_lettering_s_FL-mesh" name="miramardpmp_lettering_s_FL">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramardpmp_lettering_s-material" target="#miramardpmp_lettering_s-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramar_lettering_dpmpgtz" name="miramar_lettering_dpmpgtz" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramar_lettering_dpmpgtz-mesh" name="miramar_lettering_dpmpgtz">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramar_lettering_dpmpgtz-material" target="#miramar_lettering_dpmpgtz-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramar_lettering_dpmpcitymar" name="miramar_lettering_dpmpcitymar" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramar_lettering_dpmpcitymar-mesh" name="miramar_lettering_dpmpcitymar">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramar_lettering_dpmpcitymar-material" target="#miramar_lettering_dpmpcitymar-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramar_lettering_dpmpcitymar_FL" name="miramar_lettering_dpmpcitymar_FL" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramar_lettering_dpmpcitymar_FL-mesh" name="miramar_lettering_dpmpcitymar_FL">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramar_lettering_dpmpcitymar-material" target="#miramar_lettering_dpmpcitymar-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramar_lettering_dpmpcitymar_FR" name="miramar_lettering_dpmpcitymar_FR" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramar_lettering_dpmpcitymar_FR-mesh" name="miramar_lettering_dpmpcitymar_FR">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramar_lettering_dpmpcitymar-material" target="#miramar_lettering_dpmpcitymar-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="miramar_lettering_dpmpdiesel" name="miramar_lettering_dpmpdiesel" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#miramar_lettering_dpmpdiesel-mesh" name="miramar_lettering_dpmpdiesel">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="miramar_lettering_dpmpdiesel-material" target="#miramar_lettering_dpmpdiesel-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

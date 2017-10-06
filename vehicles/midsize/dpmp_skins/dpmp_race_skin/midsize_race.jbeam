@@ -1,0 +1,11 @@
+{
+"midsize_skin_race": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Race Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "race",
+}
+}

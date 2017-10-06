@@ -1,0 +1,12 @@
+{
+
+"moonhawk_skin_daytona": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Daytona Stripe",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "daytona",
+}
+}

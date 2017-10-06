@@ -1,0 +1,74 @@
+{
+"steelwheel_04a_16x8_R_dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Heavy Duty 16x8 Rear Steel Wheels DPMP",
+        "value":1300,
+    }
+    "slotType" : "wheel_R_8",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_R_16x8_dually","tire_R_225_75_16_dpmp","Rear Tires"],
+	],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //inner
+        ["steelwheel_04a_16x8", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.57, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["steelwheel_04a_16x8", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.57, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+        //spacers
+        ["spacer_heavy", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.596, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["spacer_heavy", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x": 0.596, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR WHEELS--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"nodeWeight":12.0},
+        {"selfCollision":true}
+        {"collision":true}
+        {"group":"wheelhub_RR"},
+        ["rw1r", -0.35, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1l", 0.35, 0.0, 0.0],
+        {"collision":true}
+        //wheel nodes
+        {"group":"wheelhub_RR"},
+        ["rw1rr", -0.65, 0.0, 0.0],
+        {"group":"wheelhub_RL"},
+        ["rw1ll", 0.65, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR WHEELS--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamSpring":801000,"beamDamp":6},
+        {"beamDeform":110000,"beamStrength":1400000},
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.215},
+        {"wheelOffset":-0.08},
+        {"hubWidth":0.225},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":3201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":3201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":3201000, "hubSideBeamDamp":10}
+        {"hubBeamDeform":55000, "hubBeamStrength":155000},
+        {"hubNodeWeight":1.9},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+    ],
+}
+}

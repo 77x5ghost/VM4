@@ -1,0 +1,11 @@
+{
+"etk_skin_drift": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Drift",
+        "value":100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "drift",
+},
+}

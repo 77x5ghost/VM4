@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
+    </contributor>
+    <created>2016-08-16T17:08:38</created>
+    <modified>2016-08-16T17:08:38</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">49.13434</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <YF_dofdist>0</YF_dofdist>
+          <shiftx>0</shiftx>
+          <shifty>0</shifty>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_lights>
+    <light id="Lamp-light" name="Lamp">
+      <technique_common>
+        <point>
+          <color sid="color">1 1 1</color>
+          <constant_attenuation>1</constant_attenuation>
+          <linear_attenuation>0</linear_attenuation>
+          <quadratic_attenuation>0.00111109</quadratic_attenuation>
+        </point>
+      </technique_common>
+      <extra>
+        <technique profile="blender">
+          <adapt_thresh>0.000999987</adapt_thresh>
+          <area_shape>1</area_shape>
+          <area_size>0.1</area_size>
+          <area_sizey>0.1</area_sizey>
+          <area_sizez>1</area_sizez>
+          <atm_distance_factor>1</atm_distance_factor>
+          <atm_extinction_factor>1</atm_extinction_factor>
+          <atm_turbidity>2</atm_turbidity>
+          <att1>0</att1>
+          <att2>1</att2>
+          <backscattered_light>1</backscattered_light>
+          <bias>1</bias>
+          <blue>1</blue>
+          <buffers>1</buffers>
+          <bufflag>0</bufflag>
+          <bufsize>2880</bufsize>
+          <buftype>2</buftype>
+          <clipend>30.002</clipend>
+          <clipsta>1.000799</clipsta>
+          <compressthresh>0.04999995</compressthresh>
+          <dist sid="blender_dist">29.99998</dist>
+          <energy sid="blender_energy">1</energy>
+          <falloff_type>2</falloff_type>
+          <filtertype>0</filtertype>
+          <flag>0</flag>
+          <gamma sid="blender_gamma">1</gamma>
+          <green>1</green>
+          <halo_intensity sid="blnder_halo_intensity">1</halo_intensity>
+          <horizon_brightness>1</horizon_brightness>
+          <mode>8192</mode>
+          <ray_samp>1</ray_samp>
+          <ray_samp_method>1</ray_samp_method>
+          <ray_samp_type>0</ray_samp_type>
+          <ray_sampy>1</ray_sampy>
+          <ray_sampz>1</ray_sampz>
+          <red>1</red>
+          <samp>3</samp>
+          <shadhalostep>0</shadhalostep>
+          <shadow_b sid="blender_shadow_b">0</shadow_b>
+          <shadow_g sid="blender_shadow_g">0</shadow_g>
+          <shadow_r sid="blender_shadow_r">0</shadow_r>
+          <sky_colorspace>0</sky_colorspace>
+          <sky_exposure>1</sky_exposure>
+          <skyblendfac>1</skyblendfac>
+          <skyblendtype>1</skyblendtype>
+          <soft>3</soft>
+          <spotblend>0.15</spotblend>
+          <spotsize>75</spotsize>
+          <spread>1</spread>
+          <sun_brightness>1</sun_brightness>
+          <sun_effect_type>0</sun_effect_type>
+          <sun_intensity>1</sun_intensity>
+          <sun_size>1</sun_size>
+          <type>0</type>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images/>
+  <library_effects>
+    <effect id="fullsize_lettering_dpmpb-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="fullsize_lettering_dpmpb-material" name="fullsize_lettering_dpmpb">
+      <instance_effect url="#fullsize_lettering_dpmpb-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="fullsize_lettering_trunkdpmpb-mesh" name="fullsize_lettering_trunkdpmpb">
+      <mesh>
+        <source id="fullsize_lettering_trunkdpmpb-mesh-positions">
+          <float_array id="fullsize_lettering_trunkdpmpb-mesh-positions-array" count="72">-59.21152 275.3495 82.71201 -59.20883 275.1398 84.29298 -59.21152 275.3495 82.71201 -59.20883 275.1398 84.29298 59.67152 275.2775 82.83074 59.66843 274.9206 85.51982 71.38167 273.6646 82.76315 71.31841 273.3156 85.43621 -72.12561 273.5854 82.65796 -72.06143 273.3858 84.22038 42.88869 277.4828 70.8597 47.79461 277.1859 70.8549 42.94305 277.5872 68.05061 47.02149 277.332 68.04366 41.67712 277.6443 68.05217 41.66882 277.5378 70.85737 65.14593 274.6742 82.80546 65.11185 274.3205 85.48856 -55.22807 275.7709 82.72491 -57.96606 275.2711 84.29841 -65.16747 274.503 84.26662 -65.19017 274.71 82.69241 -49.26892 276.1953 82.73791 -49.33829 275.9526 84.32661</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_trunkdpmpb-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fullsize_lettering_trunkdpmpb-mesh-normals">
+          <float_array id="fullsize_lettering_trunkdpmpb-mesh-normals-array" count="72">0.1343745 0.982219 0.131109 0.1343764 0.9822021 0.1312329 0.1093192 0.9853383 0.1309878 0.1093809 0.9853436 0.1308969 -0.1058693 0.9857233 0.1309251 -0.1058396 0.9857304 0.1308956 -0.1327279 0.9824427 0.1311103 -0.1326684 0.9824545 0.1310814 -0.1593078 0.9784311 0.1315053 -0.1593091 0.9784389 0.1314453 0.1593407 0.978446 0.1313546 0.1593078 0.9784311 0.1315053 0.05322498 0.9978768 0.03753823 0.05386614 0.9978216 0.03808778 0.04501497 0.9982647 0.03796517 0.04492348 0.9982665 0.03802627 0.06039762 0.9975529 0.03521919 0.06106811 0.9974772 0.03619527 -0.1047102 0.9858511 0.1308954 -0.1047098 0.9858471 0.1309254 -0.1002554 0.9852799 0.1384653 -0.08188366 0.9827262 0.1659647 -0.07181119 0.9857331 0.1522287 -0.07056003 0.9865285 0.1475901</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_trunkdpmpb-mesh-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fullsize_lettering_trunkdpmpb-mesh-map-0">
+          <float_array id="fullsize_lettering_trunkdpmpb-mesh-map-0-array" count="96">0.3965542 1.0028 0.3976105 0.8483928 0.6979165 0.8483933 0.6979165 0.8483933 0.6971616 1.0028 0.3965542 1.0028 -0.04284638 0.7265801 -0.04280596 0.6028402 0.384803 0.6028613 0.384803 0.6028613 0.3844701 0.7266017 -0.04284638 0.7265801 0.384803 0.6028613 0.9542607 0.602898 0.9528823 0.7266393 0.9528823 0.7266393 0.3844701 0.7266017 0.384803 0.6028613 0.3976105 0.8483928 0.3965542 1.0028 0.006081998 1.0028 0.006081998 1.0028 0.007363975 0.8483933 0.3976105 0.8483928 0.9276232 0.9927853 0.9250425 0.8517291 0.9851451 0.8518064 0.9851451 0.8518064 0.9855391 0.9926684 0.9276232 0.9927853 0.9276232 0.9927853 0.6946794 0.9925605 0.7313999 0.8513855 0.7313999 0.8513855 0.9250425 0.8517291 0.9276232 0.9927853 0.7136661 0.7277402 0.7137015 0.8509691 0.624198 0.8526156 0.624198 0.8526156 0.4289283 0.7276475 0.7136661 0.7277402 0.4289283 0.7276475 0.624198 0.8526156 0.008998095 0.8509674 0.008998095 0.8509674 0.003682553 0.727679 0.4289283 0.7276475</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_trunkdpmpb-mesh-map-0-array" count="48" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fullsize_lettering_trunkdpmpb-mesh-colors-geom-fullsize_lettering_trunk-map0" name="geom-fullsize_lettering_trunk-map0">
+          <float_array id="fullsize_lettering_trunkdpmpb-mesh-colors-geom-fullsize_lettering_trunk-map0-array" count="144">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_trunkdpmpb-mesh-colors-geom-fullsize_lettering_trunk-map0-array" count="48" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="fullsize_lettering_trunkdpmpb-mesh-vertices">
+          <input semantic="POSITION" source="#fullsize_lettering_trunkdpmpb-mesh-positions"/>
+        </vertices>
+        <polylist material="fullsize_lettering_dpmpb-material" count="16">
+          <input semantic="VERTEX" source="#fullsize_lettering_trunkdpmpb-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#fullsize_lettering_trunkdpmpb-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#fullsize_lettering_trunkdpmpb-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#fullsize_lettering_trunkdpmpb-mesh-colors-geom-fullsize_lettering_trunk-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>17 0 0 0 16 1 1 1 4 2 2 2 4 2 3 3 5 3 4 4 17 0 5 5 3 4 6 6 2 5 7 7 21 6 8 8 21 6 9 9 20 7 10 10 3 4 11 11 21 6 12 12 8 8 13 13 9 9 14 14 9 9 15 15 20 7 16 16 21 6 17 17 16 1 18 18 17 0 19 19 7 10 20 20 7 10 21 21 6 11 22 22 16 1 23 23 10 12 24 24 12 13 25 25 14 14 26 26 14 14 27 27 15 15 28 28 10 12 29 29 10 12 30 30 11 16 31 31 13 17 32 32 13 17 33 33 12 13 34 34 10 12 35 35 0 18 36 36 1 19 37 37 19 20 38 38 19 20 39 39 18 21 40 40 0 18 41 41 18 21 42 42 19 20 43 43 23 22 44 44 23 22 45 45 22 23 46 46 18 21 47 47</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="fullsize_lettering_hooddpmpb-mesh" name="fullsize_lettering_hooddpmpb">
+      <mesh>
+        <source id="fullsize_lettering_hooddpmpb-mesh-positions">
+          <float_array id="fullsize_lettering_hooddpmpb-mesh-positions-array" count="36">43.91435 -229.5519 61.36764 40.50578 -229.9274 61.36226 39.62204 -229.9667 62.84361 43.78123 -229.49 62.81437 34.20799 -230.4666 61.35868 34.18555 -230.4356 62.8469 -43.98482 -229.5536 61.25574 -43.97071 -229.5217 62.77539 -39.2719 -229.9537 61.25838 -39.29473 -229.9222 62.77274 41.08586 -229.8392 62.84273 42.00618 -229.7975 61.36315</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_hooddpmpb-mesh-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fullsize_lettering_hooddpmpb-mesh-normals">
+          <float_array id="fullsize_lettering_hooddpmpb-mesh-normals-array" count="30">0.1283647 -0.9902945 0.05328691 0.1288498 -0.9901785 0.05426216 0.09985953 -0.9944143 0.03418171 0.1140803 -0.9925418 0.04297083 0.08526623 -0.9960585 0.02443534 0.0859242 -0.9960575 0.02205538 -0.08531033 -0.9961648 0.01943963 -0.08458298 -0.9961809 0.02166545 0.08578836 -0.9960119 0.02450656 0.08603203 -0.9959757 0.0251168</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_hooddpmpb-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fullsize_lettering_hooddpmpb-mesh-map-0">
+          <float_array id="fullsize_lettering_hooddpmpb-mesh-map-0-array" count="48">0.6920445 0.8637626 0.6844558 0.9762232 0.4887757 0.9786482 0.4887757 0.9786482 0.5526356 0.863633 0.6920445 0.8637626 0.009976208 0.8632851 0.4472889 0.8635643 0.3856288 0.9787074 0.3856288 0.9787074 0.008696436 0.9789628 0.009976208 0.8632851 0.009976208 0.8632851 0.008696436 0.9789628 -0.3020611 0.9791672 -0.3020611 0.9791672 -0.3028544 0.8630854 0.009976208 0.8632851 0.4887757 0.9786482 0.3856288 0.9787074 0.4472889 0.8635643 0.4472889 0.8635643 0.5526356 0.863633 0.4887757 0.9786482</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_hooddpmpb-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="fullsize_lettering_hooddpmpb-mesh-colors-geom-fullsize_lettering_hood-map0" name="geom-fullsize_lettering_hood-map0">
+          <float_array id="fullsize_lettering_hooddpmpb-mesh-colors-geom-fullsize_lettering_hood-map0-array" count="72">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#fullsize_lettering_hooddpmpb-mesh-colors-geom-fullsize_lettering_hood-map0-array" count="24" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="fullsize_lettering_hooddpmpb-mesh-vertices">
+          <input semantic="POSITION" source="#fullsize_lettering_hooddpmpb-mesh-positions"/>
+        </vertices>
+        <polylist material="fullsize_lettering_dpmpb-material" count="8">
+          <input semantic="VERTEX" source="#fullsize_lettering_hooddpmpb-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#fullsize_lettering_hooddpmpb-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#fullsize_lettering_hooddpmpb-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#fullsize_lettering_hooddpmpb-mesh-colors-geom-fullsize_lettering_hood-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 0 0 3 1 1 1 10 2 2 2 10 2 3 3 11 3 4 4 0 0 5 5 4 4 6 6 1 4 7 7 2 4 8 8 2 5 9 9 5 5 10 10 4 5 11 11 8 6 12 12 9 6 13 13 7 6 14 14 7 7 15 15 6 7 16 16 8 7 17 17 10 2 18 18 2 8 19 19 1 9 20 20 1 9 21 21 11 3 22 22 10 2 23 23</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="fullsize_lettering_trunkdpmpb" name="fullsize_lettering_trunkdpmpb" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#fullsize_lettering_trunkdpmpb-mesh" name="fullsize_lettering_trunkdpmpb">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="fullsize_lettering_dpmpb-material" target="#fullsize_lettering_dpmpb-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="fullsize_lettering_hooddpmpb" name="fullsize_lettering_hooddpmpb" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#fullsize_lettering_hooddpmpb-mesh" name="fullsize_lettering_hooddpmpb">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="fullsize_lettering_dpmpb-material" target="#fullsize_lettering_dpmpb-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6858805 -0.3173701 0.6548619 7.481132 0.7276338 0.3124686 -0.6106656 -6.50764 -0.01081678 0.8953432 0.4452454 5.343665 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+      <node id="Lamp" name="Lamp" type="NODE">
+        <matrix sid="transform">-0.2908646 -0.7711008 0.5663932 4.076245 0.9551712 -0.1998834 0.2183912 1.005454 -0.05518906 0.6045247 0.7946723 5.903862 0 0 0 1</matrix>
+        <instance_light url="#Lamp-light"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

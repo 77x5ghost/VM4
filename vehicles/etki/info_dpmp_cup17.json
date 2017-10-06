@@ -1,0 +1,30 @@
+{
+"Performance Class":"7",
+"Drivetrain":"RWD",
+"100-200 km/h":18.3,
+"0-100 km/h":5.6,
+"Value":18500,
+"0-200 km/h":23.9,
+"TorquePeakRPM":"3350 - 5200",
+"Transmission":"Manual",
+"Description":"Racing car used in the 2400ti Cup Racing, it features race suspensions and wheels. Beside this is based on a normal 2400ti",
+"Configuration":"#17 '2400ti Cup Racing' Race Car (M)",
+"0-100 mph":13.9,
+"Weight":1465,
+"60-100 mph":8.6,
+"0-60 mph":5.3,
+"Config Type":"Custom",
+"100-0 km/h":36.3,
+"PowerPeakRPM":"4750 - 6150",
+"Power":207.036,
+"Torque":296.33,
+"default_color":"Pearl White",
+"Off-Road Score":25,
+"Weight/Power":7.07729,
+"60-0 mph":102.5,
+"Years":{
+  "min":1987,
+  "max":1989
+},
+"Top Speed":66.4139
+}

@@ -1,0 +1,91 @@
+{
+"hatch_transfer_case_FWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"FWD Transfer Case DPMP",
+        "value":500,
+    },
+    "slotType" : "hatch_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "transfercase", "gearbox", 1, {"outputPortOverride":[2], "friction":3}],
+    ],
+},
+"hatch_transfer_case_RWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"RWD Transfer Case DPMP",
+        "value":700,
+    },
+    "slotType" : "hatch_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "transfercase", "gearbox", 1, {"friction":3}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_transfercase_2_dpmp", ["hatch_body","hatch_subframe_F","hatch_engine","hatch_transmission"]],
+    ],
+},
+"hatch_transfer_case_4WD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4WD Hi/Lo Transfer Case",
+        "value":650,
+    },
+    "slotType" : "hatch_transfer_case",
+    "controller": [
+        ["fileName"],
+        ["4wd", {"shaftName":"transfercase_F", "rangeBoxName":"rangebox"}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["rangeBox", "rangebox", "gearbox", 1, {"gearRatios":[1,2.2]}]
+        //locked center diff
+        ["differential", "transfercase", "rangebox", 1, {"diffType":"locked", "lockTorque":8000, "friction":5}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_transfercase_2_dpmp", ["hatch_body","hatch_subframe_F","hatch_engine","hatch_transmission"]],
+    ],
+}
+"hatch_transfer_case_AWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Viscous AWD Transfer Case DPMP",
+        "value":1100,
+    },
+    "slotType" : "hatch_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["splitShaft", "transfercase", "gearbox", 1, {"splitType":"viscous", "primaryOutputID":2, "viscousCoef":15, "viscousTorque":250, "friction":5}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_transfercase_2_dpmp", ["hatch_body","hatch_subframe_F","hatch_engine","hatch_transmission"]],
+    ],
+},
+"hatch_transfer_case_AWD_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":" Race AWD Transfer Case DPMP",
+        "value":2500,
+    },
+    "slotType" : "hatch_transfer_case",
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$difftorquesplit_C", "range", "", "Differentials", 0.5, 0.25, 0.75, "Center LSD Torque Split", "Percent torque to rear wheels", {"minDis":25, "maxDis":75}],
+        ["$lsdpreload_C", "range", "N/m", "Differentials", 50, 0, 500, "Center LSD Preload", "Initial cross torque between front and rear wheels"],
+        ["$lsdlockcoef_C", "range", "", "Differentials", 0.20, 0, 0.5, "Center LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_C", "range", "", "Differentials", 0.05, 0, 0.5, "Center LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "transfercase", "gearbox", 1, {"diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$lsdlockcoef_C", "lsdRevLockCoef":"$lsdlockcoefrev_C", "diffTorqueSplit":"$difftorquesplit_C", "friction":5}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["hatch_transfercase_2_dpmp", ["hatch_body","hatch_subframe_F","hatch_engine","hatch_transmission"]],
+    ],
+},
+}

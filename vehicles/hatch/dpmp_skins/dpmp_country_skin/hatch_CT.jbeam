@@ -1,0 +1,12 @@
+{
+
+"hatch_skin_CT": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Country Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "CT",
+}
+}

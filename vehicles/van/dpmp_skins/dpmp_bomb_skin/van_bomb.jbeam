@@ -1,0 +1,11 @@
+{
+"ambulance_skin_bomb": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Bomb Squad Livery",
+        "value":100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "bomb",
+},
+}

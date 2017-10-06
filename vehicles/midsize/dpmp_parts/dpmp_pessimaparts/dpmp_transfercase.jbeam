@@ -1,0 +1,69 @@
+{
+"midsize_transfer_case_FWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"FWD Transfer Case DPMP",
+        "value":500,
+    },
+    "slotType" : "midsize_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "transfercase", "gearbox", 1, {"outputPortOverride":[2], "friction":3}],
+    ],
+},
+"midsize_transfer_case_RWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"RWD Transfer Case DPMP",
+        "value":700,
+    },
+    "slotType" : "midsize_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["shaft", "transfercase", "gearbox", 1, {"friction":3}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_transfercase_dpmp", ["midsize_engine","midsize_transmission"]],
+    ],
+},
+"midsize_transfer_case_AWD": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Viscous AWD Transfer Case DPMP",
+        "value":1100,
+    },
+    "slotType" : "midsize_transfer_case",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["splitShaft", "transfercase", "gearbox", 1, {"splitType":"viscous", "primaryOutputID":2, "viscousCoef":15, "viscousTorque":500, "friction":5}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_transfercase_dpmp", ["midsize_engine","midsize_transmission"]],
+    ],
+},
+"midsize_transfer_case_AWD_race": {
+    "information":{
+        "authors":"BeamNG",
+        "name":" Race AWD Transfer Case DPMP",
+        "value":2500,
+    },
+    "slotType" : "midsize_transfer_case",
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$difftorquesplit_C", "range", "", "Differentials", 0.5, 0.25, 0.75, "Center LSD Torque Split", "Percent torque to rear wheels", {"minDis":25, "maxDis":75}],
+        ["$lsdpreload_C", "range", "N/m", "Differentials", 50, 0, 500, "Center LSD Preload", "Initial cross torque between front and rear wheels"],
+        ["$lsdlockcoef_C", "range", "", "Differentials", 0.20, 0, 0.5, "Center LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_C", "range", "", "Differentials", 0.05, 0, 0.5, "Center LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "transfercase", "gearbox", 1, {"diffType":"lsd", "lsdPreload":"$lsdpreload_C", "lsdLockCoef":"$lsdlockcoef_C", "lsdRevLockCoef":"$lsdlockcoefrev_C", "diffTorqueSplit":"$difftorquesplit_C", "friction":5}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_transfercase_dpmp", ["midsize_engine","midsize_transmission"]],
+    ],
+},
+}

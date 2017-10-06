@@ -1,0 +1,12 @@
+{
+
+"sunburst_skin_safetycar": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Safety Car Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "safetycar",
+  }
+  }

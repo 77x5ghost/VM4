@@ -1,0 +1,12 @@
+{
+
+"van_skin_sendex": {
+    "information":{
+        "authors":"Gamer Alex (AlexKVideos1) & DjPlopper",
+        "name":"SendEx Livery DPMP",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "sendex",
+}
+}

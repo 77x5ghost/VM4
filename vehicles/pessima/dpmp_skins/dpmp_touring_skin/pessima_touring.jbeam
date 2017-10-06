@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_touring": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Touring Car Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "touring",
+}
+}

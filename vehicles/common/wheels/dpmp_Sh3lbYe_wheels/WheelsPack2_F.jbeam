@@ -1,0 +1,1049 @@
+{
+"Wheels_01_17x7_F": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x7 Front Wheels D&S",
+        "value":600,
+    },
+
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_17x7","tire_F_205_55_17_sport", "Front Tires"],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01",   ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+        ["Wheels_Me_01",   ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":4.5},
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.31, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.57, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.31, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.57, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"breakGroup":""},
+          {"beamDeform":97500,"beamStrength":408000},
+          {"beamSpring":506460,"beamDamp":2.32},
+          //front wheel
+          ["fw1r","fw1rr"],
+          ["fw1l","fw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"disableMeshBreaking":true,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.23},
+            {"wheelOffset":-0.06},
+            {"hubWidth":0.205},
+            {"numRays":16},
+
+            //hub options
+            {"hubTreadBeamSpring":782460, "hubTreadBeamDamp":5.8},
+            {"hubPeripheryBeamSpring":782460, "hubPeripheryBeamDamp":5.8},
+            {"hubSideBeamSpring":1012460, "hubSideBeamDamp":5.8},
+            {"hubNodeWeight":0.38},
+            {"hubNodeMaterial":"|NM_METAL"},
+            {"hubFrictionCoef":0.5,"hasTire":false},
+
+            {"hubBeamDeform":68600, "hubBeamStrength":76000},
+			{"enableHubcaps":false}
+
+
+    ],
+
+},
+
+"Wheels_01_19x8_F": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 19x8 Front Wheels D&S",
+        "value":900,
+    }
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_19x8","tire_F_225_35_19_Custom_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.05, "z":1.05}}],
+        ["Wheels_Me_01", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":1001000,"beamDamp":10},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false},
+
+        //general settings
+        {"hubRadius":0.260},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.235},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1051000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1051000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.41},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5,"hasTire":false},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+        {"enableHubcaps":false}
+    ],
+},
+
+"Wheel_01_19x9_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi EVOtarmac 19x9 Front Wheels D&S",
+        "value":1600,
+    },
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_19x9","tire_F_255_35_19_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["Wheels_Me_01", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheels_Me_01", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_01_17x9_F": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x9 Front Wheels D&S",
+        "value":500,
+    }
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_17x9","tire_F_255_35_17_Custom_drift", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //sport wheels
+        ["Wheels_Me_01", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+        ["Wheels_Me_01", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Black Wheels
+
+
+
+
+
+
+
+
+
+
+
+
+
+"Wheels_01_17x7_F_Black": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x7 Front Wheels (Black) D&S",
+        "value":600,
+    },
+
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_17x7","tire_F_205_55_17_sport", "Front Tires"],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01_Black",   ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+        ["Wheels_Me_01_Black",   ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":4.5},
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.31, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.57, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.31, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.57, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"breakGroup":""},
+          {"beamDeform":97500,"beamStrength":408000},
+          {"beamSpring":506460,"beamDamp":2.32},
+          //front wheel
+          ["fw1r","fw1rr"],
+          ["fw1l","fw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"disableMeshBreaking":true,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.23},
+            {"wheelOffset":-0.06},
+            {"hubWidth":0.205},
+            {"numRays":16},
+
+            //hub options
+            {"hubTreadBeamSpring":782460, "hubTreadBeamDamp":5.8},
+            {"hubPeripheryBeamSpring":782460, "hubPeripheryBeamDamp":5.8},
+            {"hubSideBeamSpring":1012460, "hubSideBeamDamp":5.8},
+            {"hubNodeWeight":0.38},
+            {"hubNodeMaterial":"|NM_METAL"},
+            {"hubFrictionCoef":0.5,"hasTire":false},
+
+            {"hubBeamDeform":68600, "hubBeamStrength":76000},
+			{"enableHubcaps":false}
+
+
+    ],
+
+},
+
+"Wheels_01_19x8_F_Black": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 19x8 Front Wheels (Black) D&S",
+        "value":900,
+    }
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_19x8","tire_F_225_35_19_Custom_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01_Black", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.05, "z":1.05}}],
+        ["Wheels_Me_01_Black", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":1001000,"beamDamp":10},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false},
+
+        //general settings
+        {"hubRadius":0.260},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.235},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1051000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1051000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.41},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5,"hasTire":false},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+        {"enableHubcaps":false}
+    ],
+},
+
+"Wheel_01_19x9_F_Black": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi EVOtarmac 19x9 Front Wheels (Black) D&S",
+        "value":1600,
+    },
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_19x9","tire_F_255_35_19_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["Wheels_Me_01_Black", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheels_Me_01_Black", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_01_17x9_F_Black": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x9 Front Wheels (Black) D&S",
+        "value":500,
+    }
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_17x9","tire_F_255_35_17_Custom_drift", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //sport wheels
+        ["Wheels_Me_01_Black", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+        ["Wheels_Me_01_Black", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+
+
+
+
+
+
+
+
+
+//White Wheels
+
+
+
+
+
+
+
+
+
+
+"Wheels_01_17x7_F_White": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x7 Front Wheels (White) D&S",
+        "value":600,
+    },
+
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_17x7","tire_F_205_55_17_sport", "Front Tires"],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["Wheels_Me_01_White",   ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+        ["Wheels_Me_01_White",   ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0},   "scale":{"x":1.1, "y":0.90, "z":0.90}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":4.5},
+        {"nodeMaterial":"|NM_METAL"},
+		{"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.31, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.57, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.31, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.57, 0.0, 0.0],
+		{"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"breakGroup":""},
+          {"beamDeform":97500,"beamStrength":408000},
+          {"beamSpring":506460,"beamDamp":2.32},
+          //front wheel
+          ["fw1r","fw1rr"],
+          ["fw1l","fw1ll"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"disableMeshBreaking":true,"disableHubMeshBreaking":false},
+
+            //general settings
+            {"hubRadius":0.23},
+            {"wheelOffset":-0.06},
+            {"hubWidth":0.205},
+            {"numRays":16},
+
+            //hub options
+            {"hubTreadBeamSpring":782460, "hubTreadBeamDamp":5.8},
+            {"hubPeripheryBeamSpring":782460, "hubPeripheryBeamDamp":5.8},
+            {"hubSideBeamSpring":1012460, "hubSideBeamDamp":5.8},
+            {"hubNodeWeight":0.38},
+            {"hubNodeMaterial":"|NM_METAL"},
+            {"hubFrictionCoef":0.5,"hasTire":false},
+
+            {"hubBeamDeform":68600, "hubBeamStrength":76000},
+			{"enableHubcaps":false}
+
+
+    ],
+
+},
+
+"Wheels_01_19x8_F_White": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 19x8 Front Wheels (White) D&S",
+        "value":900,
+    }
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_19x8","tire_F_225_35_19_Custom_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //alloy wheels
+        ["Wheels_Me_01_White", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1.05, "z":1.05}}],
+        ["Wheels_Me_01_White", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.55, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1.05, "z":1.05}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":1001000,"beamDamp":10},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false},
+
+        //general settings
+        {"hubRadius":0.260},
+        {"wheelOffset":-0.015},
+        {"hubWidth":0.235},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1051000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1051000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1501000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.41},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5,"hasTire":false},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+        {"enableHubcaps":false}
+    ],
+},
+
+"Wheel_01_19x9_F_White": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi EVOtarmac 19x9 Front Wheels (White) D&S",
+        "value":1600,
+    },
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_19x9","tire_F_255_35_19_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["Wheels_Me_01_White", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheels_Me_01_White", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheels_01_17x9_F_White": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Nomi EVOtarmac 17x9 Front Wheels (White) D&S",
+        "value":500,
+    }
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_F_17x9","tire_F_255_35_17_Custom_drift", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //sport wheels
+        ["Wheels_Me_01_White", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+        ["Wheels_Me_01_White", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.565, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.24, "y":0.93, "z":0.93}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.225},
+        {"wheelOffset":-0.035},
+        {"hubWidth":0.265},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1601000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.44},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+
+
+
+//Other Wheels
+
+
+
+
+
+
+
+
+"Wheel_02_19x9_F": {
+    "information":{
+        "authors":"Sh3lbYe",
+        "name":"Folk ET73 Super 19x9 Front Wheels D&S",
+        "value":1600,
+    },
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_19x9","tire_F_255_35_19_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["Wheels_Me_02", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheels_Me_02", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+		 ["Inner_Rim", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Inner_Rim", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+		 ["Wheel_Plugs_01", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheel_Plugs_01", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],	 
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+
+"Wheel_03_19x9_F": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Nomi Terminus 19x9 Front Wheels D&S",
+        "value":1600,
+    },
+    "slotType" : "wheel_F_5",
+    "slots": [
+        ["type", "default", "description"],
+        ["tire_F_19x9","tire_F_255_35_19_Custom_sport", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["Wheels_Me_03", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheels_Me_03", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+		 ["Inner_Rim_Chrome", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Inner_Rim_Chrome", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+		 ["Wheel_Plugs_01", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheel_Plugs_01", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+		 ["Wheel_Plugs_02", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],
+         ["Wheel_Plugs_02", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.575, "y":-0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.27, "y":1.02, "z":1.02}}],	 
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"collision":true},
+        {"selfCollision":true},
+        //front wheels
+        {"nodeWeight":5.0},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"frictionCoef":0.5},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"breakGroup":""},
+        {"beamDeform":75000,"beamStrength":400000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.255},
+        {"wheelOffset":-0.045},
+        {"hubWidth":0.275},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.48},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+},
+}

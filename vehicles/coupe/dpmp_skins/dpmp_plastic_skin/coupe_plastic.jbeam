@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_plastic": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Plastic Bumpers",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "plastic",
+  }}

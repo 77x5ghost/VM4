@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_police": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"UK Police Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "police",
+}
+}

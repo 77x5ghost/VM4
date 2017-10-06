@@ -1,0 +1,14 @@
+{
+"fullsize_lettering_dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"I6 Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "fullsize_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["fullsize_lettering_trunkdpmp", ["fullsize_trunk"]],
+    ],
+}
+}

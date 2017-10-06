@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_rally": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Rally Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "rally",
+  }}

@@ -1,0 +1,108 @@
+{
+"burnside_leafdpmp_R": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Customizable Rear Leaf Springs DPMP",
+        "value":200,
+    }
+    "slotType" : "burnside_leaf_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["burnside_leafblock_R", ["burnside_axle"]],
+         ["burnside_leaf_R", ["burnside_leaf_R"]],
+],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$rideheight_R", "range", "", "Alignment", 0.895, 0.98, 0.86, "Rear Ride Height", "Percentage of adjustment range"]
+    ],
+    "rails": {
+        "leaf_RL":{
+            "links:":["axsl","lf3l"], "broken:":[], "looped":false, "capped":true
+        },
+        "leaf_RR":{
+            "links:":["axsr","lf3r"], "broken:":[], "looped":false, "capped":true
+        },
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["ax2l", "leaf_RL", true, true, 0.0, 101000, "FLT_MAX", "FLT_MAX"],
+        ["ax2r", "leaf_RR", true, true, 0.0, 101000, "FLT_MAX", "FLT_MAX"],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":3.5},
+         {"group":"burnside_leaf_R"},
+         //shackle nodes
+         ["lf1r",-0.63, 2.17, 0.29],
+         ["lf1l", 0.63, 2.17, 0.29],
+         //anti wrap node
+         {"nodeWeight":2.0},
+         {"group":""},
+         {"collision":false},
+         ["lf3r",-0.70, 1.47, 0.55],
+         ["lf3l", 0.70, 1.47, 0.55],
+    ],
+ "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":14001000,"beamDamp":100},
+          {"beamDeform":78000,"beamStrength":248000},
+          //leaf bottom - stiff locating part
+          ["axsl","rx1l"],
+          ["axsr","rx1r"],
+          ["lf1r","axsr"],
+          ["lf1l","axsl"],
+
+          //anti axle wrap node
+          {"beamSpring":2501000,"beamDamp":150},
+          ["lf3r","rx1r"],
+          ["lf3l","rx1l"],
+          ["lf3r","lf1r"],
+          ["lf3l","lf1l"],
+
+          //leaf spring
+          {"beamType":"|LBEAM"},
+          {"beamSpring":91000,"beamDamp":1000},
+          {"beamPrecompression":"$rideheight_R"},
+          ["ax2r","rx1r",{"id3:":"axsr"}],
+          ["ax2l","rx1l",{"id3:":"axsl"}],
+          ["ax2r","lf1r",{"id3:":"axsr"}],
+          ["ax2l","lf1l",{"id3:":"axsl"}],
+          {"beamPrecompression":1},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamDeform":45000,"beamStrength":80000},
+          {"beamSpring":701000,"beamDamp":500},
+          //lateral location
+          ["axsr","rx1l"],
+          ["axsl","rx1r"],
+          ["axsr","lf1l"],
+          ["axsl","lf1r"],
+
+          //shackle
+          {"beamPrecompression":1.0},
+          {"beamSpring":2501000"beamDamp":250,"beamDeform":75000,"beamStrength":280000},
+          ["lf1r","rx2r"],
+          ["lf1l","rx2l"],
+          ["lf1r","rx2rr"],
+          ["lf1l","rx2ll"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamDeform":38000,"beamStrength":58000},
+          {"beamSpring":0,"beamDamp":500},
+          //pinion damper
+          //["ax3","f15r"],
+          //["ax3","f15l"],
+          //["ax3","f14rr"],
+          //["ax3","f14ll"],
+          //{"beamSpring":0,"beamDamp":1000},
+          //["ax1","tra1"],
+          //["ax2","tra1"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

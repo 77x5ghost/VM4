@@ -1,0 +1,11 @@
+{
+"pickup_skin_sheriff": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Sheriff Livery",
+        "value":50,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "sheriff",
+}
+}

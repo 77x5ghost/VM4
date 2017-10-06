@@ -1,0 +1,12 @@
+{
+
+"van_skin_upd": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"UPD Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "upd",
+}
+}

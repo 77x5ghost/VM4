@@ -1,0 +1,12 @@
+{
+
+"midsize_skin_plastic": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Plastic Bumpers",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "plastic",
+}
+}

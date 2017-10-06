@@ -1,0 +1,22 @@
+{
+"Performance Class":"3",
+"Drivetrain":"RWD",
+"Value":9600,
+"TorquePeakRPM":"2050 - 3650",
+"Off-Road Score":36,
+"Configuration":"Base Tow Package (M)",
+"PowerPeakRPM":"3900 - 5150",
+"0-100 km/h":10.9,
+"0-60 mph":10.1,
+"Config Type":"Factory",
+"100-0 km/h":50.3,
+"Top Speed":39.248,
+"Transmission":"Manual",
+"Torque":153.755,
+"Weight":1110,
+"Description":"Base tow package optioned model, equipped with a tow hitch",
+"Weight/Power":13.7037,
+"60-0 mph":145.7,
+"Power":81.8919,
+"default_color":"Citrus Orange"
+}

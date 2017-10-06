@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.77.0 commit date:2016-04-05, commit time:18:12, hash:abf6f08</authoring_tool>
+    </contributor>
+    <created>2016-07-12T14:39:37</created>
+    <modified>2016-07-12T14:39:37</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="pessima_lettering_dpmpnomi-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmp19-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmp27-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpk-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpLHX-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpas-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpRX-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpRHX-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpHR-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.015625 0.015625 0.015625 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmp22-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmp50-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.64 0.64 0.64 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.0625 0.0625 0.0625 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpfe-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="pessima_lettering_dpmpdiesel-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.5882353 0.5882353 0.5882353 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0 0 0 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">50</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="pessima_lettering_dpmpnomi-material" name="pessima_lettering_dpmpnomi">
+      <instance_effect url="#pessima_lettering_dpmpnomi-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmp19-material" name="pessima_lettering_dpmp19">
+      <instance_effect url="#pessima_lettering_dpmp19-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmp27-material" name="pessima_lettering_dpmp27">
+      <instance_effect url="#pessima_lettering_dpmp27-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpk-material" name="pessima_lettering_dpmpk">
+      <instance_effect url="#pessima_lettering_dpmpk-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpLHX-material" name="pessima_lettering_dpmpLHX">
+      <instance_effect url="#pessima_lettering_dpmpLHX-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpas-material" name="pessima_lettering_dpmpas">
+      <instance_effect url="#pessima_lettering_dpmpas-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpRX-material" name="pessima_lettering_dpmpRX">
+      <instance_effect url="#pessima_lettering_dpmpRX-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpRHX-material" name="pessima_lettering_dpmpRHX">
+      <instance_effect url="#pessima_lettering_dpmpRHX-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpHR-material" name="pessima_lettering_dpmpHR">
+      <instance_effect url="#pessima_lettering_dpmpHR-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmp22-material" name="pessima_lettering_dpmp22">
+      <instance_effect url="#pessima_lettering_dpmp22-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmp50-material" name="pessima_lettering_dpmp50">
+      <instance_effect url="#pessima_lettering_dpmp50-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpfe-material" name="pessima_lettering_dpmpfe">
+      <instance_effect url="#pessima_lettering_dpmpfe-effect"/>
+    </material>
+    <material id="pessima_lettering_dpmpdiesel-material" name="pessima_lettering_dpmpdiesel">
+      <instance_effect url="#pessima_lettering_dpmpdiesel-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="pessima_lettering_dpmpnomi-mesh" name="pessima_lettering_dpmpnomi">
+      <mesh>
+        <source id="pessima_lettering_dpmpnomi-mesh-positions">
+          <float_array id="pessima_lettering_dpmpnomi-mesh-positions-array" count="54">0 219.634 86.67574 0 223.076 80.37885 3.017392 219.605 86.66376 -3.013626 223.0356 80.37891 3.013626 223.0356 80.37891 -3.017391 219.605 86.66376 -45.64802 221.5551 80.38467 -45.60597 219.6989 83.78304 -60.77853 218.2196 83.76225 -60.76847 220.1101 80.38998 60.14452 220.1933 80.39021 47.37637 221.4455 80.38512 47.27906 219.6531 83.66762 60.19526 218.3385 83.68802 -53.27857 221.0714 80.38666 -53.1987 219.2056 83.77905 53.20824 219.2552 83.68793 53.26579 221.0722 80.38666</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpnomi-mesh-positions-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpnomi-mesh-normals">
+          <float_array id="pessima_lettering_dpmpnomi-mesh-normals-array" count="54">0.08414119 0.8721449 0.481958 0.05536067 0.8756392 0.4797826 0.05594116 0.8751305 0.4806427 0.0861864 0.8721799 0.4815331 -1.52596e-4 0.8775817 0.4794273 -1.52594e-4 0.8775689 0.4794508 0.01068162 0.8774849 0.4794855 0.01174986 0.8777031 0.4790607 -0.01138353 0.8774781 0.4794817 -0.01031547 0.8777043 0.4790918 -0.0558803 0.8754686 0.4800336 -0.05539184 0.875985 0.4791473 -0.0835613 0.8725716 0.4812862 -0.0850563 0.8718045 0.4824131 -0.1131035 0.8676251 0.4841842 -0.1138049 0.8667668 0.4855554 0.1116392 0.8678132 0.484187 0.1105096 0.866986 0.4859248</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpnomi-mesh-normals-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpnomi-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpnomi-mesh-map-0-array" count="72">0.7005719 0.8318962 0.952103 0.8318288 0.9562587 0.975832 0.9562587 0.975832 0.7021378 0.9767271 0.7005719 0.8318962 0.2136346 0.6445949 0.2136346 0.9881402 0.0594595 0.9874866 0.0594595 0.9874866 0.05965209 0.6445987 0.2136346 0.6445949 0.2136346 0.9881402 0.2136346 0.6445949 0.3676169 0.6445987 0.3676169 0.6445987 0.367809 0.9874866 0.2136346 0.9881402 0.0431053 0.4972936 0.04490137 0.3490045 0.3708674 0.3490913 0.3708674 0.3490913 0.3673849 0.4971193 0.0431053 0.4972936 0.7018483 0.3492614 0.7023361 0.4966009 0.3673849 0.4971193 0.3673849 0.4971193 0.3708674 0.3490913 0.7018483 0.3492614 0.3990977 0.9768862 0.4012648 0.8320648 0.7005719 0.8318962 0.7005719 0.8318962 0.7021378 0.9767271 0.3990977 0.9768862</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpnomi-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpnomi-mesh-colors-geom-pessima_lettering_trunk-map0" name="geom-pessima_lettering_trunk-map0">
+          <float_array id="pessima_lettering_dpmpnomi-mesh-colors-geom-pessima_lettering_trunk-map0-array" count="108">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpnomi-mesh-colors-geom-pessima_lettering_trunk-map0-array" count="36" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpnomi-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpnomi-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpnomi-material" count="12">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpnomi-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpnomi-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpnomi-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpnomi-mesh-colors-geom-pessima_lettering_trunk-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>17 0 0 0 11 1 1 1 12 2 2 2 12 2 3 3 16 3 4 4 17 0 5 5 1 4 6 6 0 5 7 7 2 6 8 8 2 6 9 9 4 7 10 10 1 4 11 11 0 5 12 12 1 4 13 13 3 8 14 14 3 8 15 15 5 9 16 16 0 5 17 17 7 10 18 18 6 11 19 19 14 12 20 20 14 12 21 21 15 13 22 22 7 10 23 23 9 14 24 24 8 15 25 25 15 13 26 26 15 13 27 27 14 12 28 28 9 14 29 29 13 16 30 30 10 17 31 31 17 0 32 32 17 0 33 33 16 3 34 34 13 16 35 35</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmp19-mesh" name="pessima_lettering_dpmp19">
+      <mesh>
+        <source id="pessima_lettering_dpmp19-mesh-positions">
+          <float_array id="pessima_lettering_dpmp19-mesh-positions-array" count="12">45.65373 224.4617 62.02982 50.33318 224.1773 62.0278 50.30121 224.3608 58.70013 45.64145 224.6331 58.70218</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp19-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp19-mesh-normals">
+          <float_array id="pessima_lettering_dpmp19-mesh-normals-array" count="6">0.06060004 0.9966794 0.05438721 0.05828148 0.9969894 0.05114132</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp19-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp19-mesh-map-0">
+          <float_array id="pessima_lettering_dpmp19-mesh-map-0-array" count="12">0.6532614 0.8219652 0.4534056 0.821879 0.4547711 0.6797575 0.4547711 0.6797575 0.6537859 0.6798448 0.6532614 0.8219652</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp19-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp19-mesh-colors-geom-pessima_lettering_1.8-map0" name="geom-pessima_lettering_1.8-map0">
+          <float_array id="pessima_lettering_dpmp19-mesh-colors-geom-pessima_lettering_1.8-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp19-mesh-colors-geom-pessima_lettering_1.8-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmp19-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmp19-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmp19-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmp19-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmp19-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmp19-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmp19-mesh-colors-geom-pessima_lettering_1.8-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>0 0 0 0 1 0 1 1 2 0 2 2 2 1 3 3 3 1 4 4 0 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmp27-mesh" name="pessima_lettering_dpmp27">
+      <mesh>
+        <source id="pessima_lettering_dpmp27-mesh-positions">
+          <float_array id="pessima_lettering_dpmp27-mesh-positions-array" count="12">45.65373 224.4617 62.02982 50.33318 224.1773 62.0278 50.30121 224.3608 58.70013 45.64145 224.6331 58.70218</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp27-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp27-mesh-normals">
+          <float_array id="pessima_lettering_dpmp27-mesh-normals-array" count="6">0.06060004 0.9966794 0.05438721 0.05828148 0.9969894 0.05114132</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp27-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp27-mesh-map-0">
+          <float_array id="pessima_lettering_dpmp27-mesh-map-0-array" count="12">0.6532614 0.8219652 0.4534056 0.821879 0.4547711 0.6797575 0.4547711 0.6797575 0.6537859 0.6798448 0.6532614 0.8219652</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp27-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp27-mesh-colors-geom-pessima_lettering_1.8-map0" name="geom-pessima_lettering_1.8-map0">
+          <float_array id="pessima_lettering_dpmp27-mesh-colors-geom-pessima_lettering_1.8-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp27-mesh-colors-geom-pessima_lettering_1.8-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmp27-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmp27-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmp27-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmp27-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmp27-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmp27-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmp27-mesh-colors-geom-pessima_lettering_1.8-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>0 0 0 0 1 0 1 1 2 0 2 2 2 1 3 3 3 1 4 4 0 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpk-mesh" name="pessima_lettering_dpmpk">
+      <mesh>
+        <source id="pessima_lettering_dpmpk-mesh-positions">
+          <float_array id="pessima_lettering_dpmpk-mesh-positions-array" count="12">-44.252 224.7133 58.62658 -44.17902 224.5536 61.89537 -50.10098 224.1924 61.91924 -50.06228 224.3741 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpk-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpk-mesh-normals">
+          <float_array id="pessima_lettering_dpmpk-mesh-normals-array" count="6">-0.05823713 0.9970487 0.05002397 -0.06057143 0.9966899 0.05422562</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpk-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpk-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpk-mesh-map-0-array" count="12">0.05365407 0.6514618 0.05676978 0.511855 0.3049224 0.5116954 0.3049224 0.5116954 0.3065757 0.6524815 0.05365407 0.6514618</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpk-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpk-mesh-colors-geom-pessima_lettering_DX-map0" name="geom-pessima_lettering_DX-map0">
+          <float_array id="pessima_lettering_dpmpk-mesh-colors-geom-pessima_lettering_DX-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpk-mesh-colors-geom-pessima_lettering_DX-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpk-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpk-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpk-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpk-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpk-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpk-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpk-mesh-colors-geom-pessima_lettering_DX-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpLHX-mesh" name="pessima_lettering_dpmpLHX">
+      <mesh>
+        <source id="pessima_lettering_dpmpLHX-mesh-positions">
+          <float_array id="pessima_lettering_dpmpLHX-mesh-positions-array" count="12">-44.252 224.7133 58.62658 -44.17902 224.5536 61.89537 -50.10098 224.1924 61.91924 -50.06228 224.3741 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpLHX-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpLHX-mesh-normals">
+          <float_array id="pessima_lettering_dpmpLHX-mesh-normals-array" count="6">-0.05823713 0.9970487 0.05002397 -0.06057143 0.9966899 0.05422562</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpLHX-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpLHX-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpLHX-mesh-map-0-array" count="12">0.362296 0.6514618 0.3654121 0.511855 0.6135644 0.5116954 0.6135644 0.5116954 0.6152177 0.6524815 0.362296 0.6514618</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpLHX-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpLHX-mesh-colors-geom-pessima_lettering_LX-map0" name="geom-pessima_lettering_LX-map0">
+          <float_array id="pessima_lettering_dpmpLHX-mesh-colors-geom-pessima_lettering_LX-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpLHX-mesh-colors-geom-pessima_lettering_LX-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpLHX-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpLHX-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpLHX-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpLHX-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpLHX-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpLHX-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpLHX-mesh-colors-geom-pessima_lettering_LX-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpas-mesh" name="pessima_lettering_dpmpas">
+      <mesh>
+        <source id="pessima_lettering_dpmpas-mesh-positions">
+          <float_array id="pessima_lettering_dpmpas-mesh-positions-array" count="18">43.88535 224.7618 58.73904 35.56533 225.247 58.73762 43.90143 224.6055 61.77678 36.57386 225.0488 61.77644 34.53099 225.164 61.77635 34.62302 225.2929 58.73748</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpas-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpas-mesh-normals">
+          <float_array id="pessima_lettering_dpmpas-mesh-normals-array" count="21">0.05975693 0.9969773 0.04965502 0.05395817 0.9975253 0.04507708 0.05765086 0.9972471 0.04663336 0.06030583 0.996878 0.05096697 0.05624872 0.997339 0.04638147 0.05475068 0.997446 0.0458697 0.0485562 0.9978598 0.04379522</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpas-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpas-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpas-mesh-map-0-array" count="24">0.08367836 0.03564757 0.4734937 0.03558105 0.4262423 0.1779581 0.4262423 0.1779581 0.08292472 0.1779739 0.08367836 0.03564757 0.4262423 0.1779581 0.4734937 0.03558105 0.5219555 0.177954 0.5219555 0.177954 0.4734937 0.03558105 0.5176435 0.03557473</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpas-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpas-mesh-colors-geom-pessima_lettering_turbo-map0" name="geom-pessima_lettering_turbo-map0">
+          <float_array id="pessima_lettering_dpmpas-mesh-colors-geom-pessima_lettering_turbo-map0-array" count="36">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpas-mesh-colors-geom-pessima_lettering_turbo-map0-array" count="12" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpas-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpas-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpas-material" count="4">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpas-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpas-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpas-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpas-mesh-colors-geom-pessima_lettering_turbo-map0" offset="3" set="0"/>
+          <vcount>3 3 3 3 </vcount>
+          <p>0 0 0 0 1 1 1 1 3 2 2 2 3 2 3 3 2 3 4 4 0 0 5 5 3 4 6 6 1 4 7 7 4 4 8 8 4 5 9 9 1 1 10 10 5 6 11 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpRX-mesh" name="pessima_lettering_dpmpRX">
+      <mesh>
+        <source id="pessima_lettering_dpmpRX-mesh-positions">
+          <float_array id="pessima_lettering_dpmpRX-mesh-positions-array" count="12">-44.252 224.7133 58.62658 -44.17902 224.5536 61.89537 -50.10098 224.1924 61.91924 -50.06228 224.3741 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRX-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpRX-mesh-normals">
+          <float_array id="pessima_lettering_dpmpRX-mesh-normals-array" count="6">-0.05823713 0.9970487 0.05002397 -0.06057143 0.9966899 0.05422562</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRX-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpRX-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpRX-mesh-map-0-array" count="12">0.6544771 0.6514618 0.6575931 0.511855 0.9057454 0.5116954 0.9057454 0.5116954 0.9073988 0.6524815 0.6544771 0.6514618</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRX-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpRX-mesh-colors-geom-pessima_lettering_ZX-map0" name="geom-pessima_lettering_ZX-map0">
+          <float_array id="pessima_lettering_dpmpRX-mesh-colors-geom-pessima_lettering_ZX-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRX-mesh-colors-geom-pessima_lettering_ZX-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpRX-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpRX-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpRX-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpRX-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpRX-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpRX-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpRX-mesh-colors-geom-pessima_lettering_ZX-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpRHX-mesh" name="pessima_lettering_dpmpRHX">
+      <mesh>
+        <source id="pessima_lettering_dpmpRHX-mesh-positions">
+          <float_array id="pessima_lettering_dpmpRHX-mesh-positions-array" count="12">-44.252 224.7133 58.62658 -44.17902 224.5536 61.89537 -50.10098 224.1924 61.91924 -50.06228 224.3741 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRHX-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpRHX-mesh-normals">
+          <float_array id="pessima_lettering_dpmpRHX-mesh-normals-array" count="6">-0.05823713 0.9970487 0.05002397 -0.06057143 0.9966899 0.05422562</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRHX-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpRHX-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpRHX-mesh-map-0-array" count="12">0.6675815 0.1683649 0.6706975 0.02875787 0.9188498 0.02859818 0.9188498 0.02859818 0.9205031 0.1693845 0.6675815 0.1683649</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRHX-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpRHX-mesh-colors-geom-pessima_lettering_HX-map0" name="geom-pessima_lettering_HX-map0">
+          <float_array id="pessima_lettering_dpmpRHX-mesh-colors-geom-pessima_lettering_HX-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpRHX-mesh-colors-geom-pessima_lettering_HX-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpRHX-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpRHX-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpRHX-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpRHX-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpRHX-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpRHX-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpRHX-mesh-colors-geom-pessima_lettering_HX-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpHR-mesh" name="pessima_lettering_dpmpHR">
+      <mesh>
+        <source id="pessima_lettering_dpmpHR-mesh-positions">
+          <float_array id="pessima_lettering_dpmpHR-mesh-positions-array" count="12">-36.06074 225.2089 58.62658 -35.98777 225.0492 61.89537 -42.80449 224.616 61.91924 -42.76579 224.7978 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpHR-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpHR-mesh-normals">
+          <float_array id="pessima_lettering_dpmpHR-mesh-normals-array" count="6">-0.06114828 0.9968721 0.05006986 -0.06313669 0.996532 0.05420303</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpHR-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpHR-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpHR-mesh-map-0-array" count="12">0.3958634 0.3198465 0.3990738 0.1802397 0.68106 0.1800799 0.68106 0.1800799 0.6827633 0.3208661 0.3958634 0.3198465</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpHR-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpHR-mesh-colors-geom-pessima_lettering_GTz-map0" name="geom-pessima_lettering_GTz-map0">
+          <float_array id="pessima_lettering_dpmpHR-mesh-colors-geom-pessima_lettering_GTz-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpHR-mesh-colors-geom-pessima_lettering_GTz-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpHR-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpHR-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpHR-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpHR-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpHR-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpHR-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpHR-mesh-colors-geom-pessima_lettering_GTz-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmp22-mesh" name="pessima_lettering_dpmp22">
+      <mesh>
+        <source id="pessima_lettering_dpmp22-mesh-positions">
+          <float_array id="pessima_lettering_dpmp22-mesh-positions-array" count="12">45.65373 224.4617 62.02982 50.33318 224.1773 62.0278 50.30121 224.3608 58.70013 45.64145 224.6331 58.70218</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp22-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp22-mesh-normals">
+          <float_array id="pessima_lettering_dpmp22-mesh-normals-array" count="6">0.06060004 0.9966794 0.05438721 0.05828148 0.9969894 0.05114132</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp22-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp22-mesh-map-0">
+          <float_array id="pessima_lettering_dpmp22-mesh-map-0-array" count="12">0.8713684 0.8219652 0.6715126 0.821879 0.6728781 0.6797575 0.6728781 0.6797575 0.8718929 0.6798448 0.8713684 0.8219652</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp22-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp22-mesh-colors-geom-pessima_lettering_2.0-map0" name="geom-pessima_lettering_2.0-map0">
+          <float_array id="pessima_lettering_dpmp22-mesh-colors-geom-pessima_lettering_2.0-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp22-mesh-colors-geom-pessima_lettering_2.0-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmp22-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmp22-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmp22-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmp22-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmp22-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmp22-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmp22-mesh-colors-geom-pessima_lettering_2.0-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>0 0 0 0 1 0 1 1 2 0 2 2 2 1 3 3 3 1 4 4 0 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmp50-mesh" name="pessima_lettering_dpmp50">
+      <mesh>
+        <source id="pessima_lettering_dpmp50-mesh-positions">
+          <float_array id="pessima_lettering_dpmp50-mesh-positions-array" count="12">-44.29481 224.7114 58.62658 -44.22183 224.5517 61.89537 -51.03855 224.1185 61.91924 -50.99985 224.3003 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp50-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp50-mesh-normals">
+          <float_array id="pessima_lettering_dpmp50-mesh-normals-array" count="6">-0.06114828 0.9968721 0.05006986 -0.06313908 0.9965311 0.05421394</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp50-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp50-mesh-map-0">
+          <float_array id="pessima_lettering_dpmp50-mesh-map-0-array" count="12">0.7043422 0.3104405 0.7072741 0.1790861 0.9647968 0.1789359 0.9647968 0.1789359 0.9663523 0.3113998 0.7043422 0.3104405</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp50-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmp50-mesh-colors-geom-pessima_lettering_4ws-map0" name="geom-pessima_lettering_4ws-map0">
+          <float_array id="pessima_lettering_dpmp50-mesh-colors-geom-pessima_lettering_4ws-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmp50-mesh-colors-geom-pessima_lettering_4ws-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmp50-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmp50-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmp50-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmp50-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmp50-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmp50-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmp50-mesh-colors-geom-pessima_lettering_4ws-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpfe-mesh" name="pessima_lettering_dpmpfe">
+      <mesh>
+        <source id="pessima_lettering_dpmpfe-mesh-positions">
+          <float_array id="pessima_lettering_dpmpfe-mesh-positions-array" count="12">-44.29481 224.7114 58.62658 -44.22183 224.5517 61.89537 -51.03855 224.1185 61.91924 -50.99985 224.3003 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpfe-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpfe-mesh-normals">
+          <float_array id="pessima_lettering_dpmpfe-mesh-normals-array" count="6">-0.06114828 0.9968721 0.05006986 -0.06313908 0.9965311 0.05421394</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpfe-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpfe-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpfe-mesh-map-0-array" count="12">0.07265496 0.3289904 0.07577103 0.1893836 0.3494727 0.1892239 0.3494727 0.1892239 0.351126 0.33001 0.07265496 0.3289904</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpfe-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpfe-mesh-colors-geom-pessima_lettering_4wd-map0" name="geom-pessima_lettering_4wd-map0">
+          <float_array id="pessima_lettering_dpmpfe-mesh-colors-geom-pessima_lettering_4wd-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpfe-mesh-colors-geom-pessima_lettering_4wd-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpfe-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpfe-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpfe-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpfe-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpfe-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpfe-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpfe-mesh-colors-geom-pessima_lettering_4wd-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="pessima_lettering_dpmpdiesel-mesh" name="pessima_lettering_dpmpdiesel">
+      <mesh>
+        <source id="pessima_lettering_dpmpdiesel-mesh-positions">
+          <float_array id="pessima_lettering_dpmpdiesel-mesh-positions-array" count="12">-36.06074 225.2089 58.62658 -35.98777 225.0492 61.89537 -42.80449 224.616 61.91924 -42.76579 224.7978 58.62284</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpdiesel-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpdiesel-mesh-normals">
+          <float_array id="pessima_lettering_dpmpdiesel-mesh-normals-array" count="6">-0.06114828 0.9968721 0.05006986 -0.06313669 0.996532 0.05420303</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpdiesel-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpdiesel-mesh-map-0">
+          <float_array id="pessima_lettering_dpmpdiesel-mesh-map-0-array" count="12">0.3958634 0.3198465 0.3990738 0.1802397 0.68106 0.1800799 0.68106 0.1800799 0.6827633 0.3208661 0.3958634 0.3198465</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpdiesel-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="pessima_lettering_dpmpdiesel-mesh-colors-geom-pessima_lettering_GTz-map0" name="geom-pessima_lettering_GTz-map0">
+          <float_array id="pessima_lettering_dpmpdiesel-mesh-colors-geom-pessima_lettering_GTz-map0-array" count="18">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#pessima_lettering_dpmpdiesel-mesh-colors-geom-pessima_lettering_GTz-map0-array" count="6" stride="3">
+              <param name="R" type="float"/>
+              <param name="G" type="float"/>
+              <param name="B" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="pessima_lettering_dpmpdiesel-mesh-vertices">
+          <input semantic="POSITION" source="#pessima_lettering_dpmpdiesel-mesh-positions"/>
+        </vertices>
+        <polylist material="pessima_lettering_dpmpdiesel-material" count="2">
+          <input semantic="VERTEX" source="#pessima_lettering_dpmpdiesel-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#pessima_lettering_dpmpdiesel-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#pessima_lettering_dpmpdiesel-mesh-map-0" offset="2" set="0"/>
+          <input semantic="COLOR" source="#pessima_lettering_dpmpdiesel-mesh-colors-geom-pessima_lettering_GTz-map0" offset="3" set="0"/>
+          <vcount>3 3 </vcount>
+          <p>1 0 0 0 0 0 1 1 3 0 2 2 3 1 3 3 2 1 4 4 1 1 5 5</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="pessima_lettering_dpmpnomi" name="pessima_lettering_dpmpnomi" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpnomi-mesh" name="pessima_lettering_dpmpnomi">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpnomi-material" target="#pessima_lettering_dpmpnomi-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmp19" name="pessima_lettering_dpmp19" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmp19-mesh" name="pessima_lettering_dpmp19">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmp19-material" target="#pessima_lettering_dpmp19-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmp27" name="pessima_lettering_dpmp27" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmp27-mesh" name="pessima_lettering_dpmp27">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmp27-material" target="#pessima_lettering_dpmp27-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpk" name="pessima_lettering_dpmpk" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpk-mesh" name="pessima_lettering_dpmpk">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpk-material" target="#pessima_lettering_dpmpk-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpLHX" name="pessima_lettering_dpmpLHX" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpLHX-mesh" name="pessima_lettering_dpmpLHX">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpLHX-material" target="#pessima_lettering_dpmpLHX-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpas" name="pessima_lettering_dpmpas" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpas-mesh" name="pessima_lettering_dpmpas">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpas-material" target="#pessima_lettering_dpmpas-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpRX" name="pessima_lettering_dpmpRX" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpRX-mesh" name="pessima_lettering_dpmpRX">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpRX-material" target="#pessima_lettering_dpmpRX-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpRHX" name="pessima_lettering_dpmpRHX" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpRHX-mesh" name="pessima_lettering_dpmpRHX">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpRHX-material" target="#pessima_lettering_dpmpRHX-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpHR" name="pessima_lettering_dpmpHR" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpHR-mesh" name="pessima_lettering_dpmpHR">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpHR-material" target="#pessima_lettering_dpmpHR-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmp22" name="pessima_lettering_dpmp22" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmp22-mesh" name="pessima_lettering_dpmp22">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmp22-material" target="#pessima_lettering_dpmp22-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmp50" name="pessima_lettering_dpmp50" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmp50-mesh" name="pessima_lettering_dpmp50">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmp50-material" target="#pessima_lettering_dpmp50-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpfe" name="pessima_lettering_dpmpfe" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpfe-mesh" name="pessima_lettering_dpmpfe">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpfe-material" target="#pessima_lettering_dpmpfe-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="pessima_lettering_dpmpdiesel" name="pessima_lettering_dpmpdiesel" type="NODE">
+        <matrix sid="transform">0.01 0 0 0 0 0.01 0 0 0 0 0.01 0 0 0 0 1</matrix>
+        <instance_geometry url="#pessima_lettering_dpmpdiesel-mesh" name="pessima_lettering_dpmpdiesel">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="pessima_lettering_dpmpdiesel-material" target="#pessima_lettering_dpmpdiesel-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

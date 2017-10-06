@@ -1,0 +1,115 @@
+{
+"hatch_fueltank_diesel_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Diesel Fuel Tank DPMP",
+        "value":150,
+    },
+    "slotType" : "hatch_fueltank",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_fueltank", ["hatch_body","hatch_lowermounts_a_R","hatch_lowermounts_b_R","hatch_uppermounts_R","hatch_shocktop_R"]],
+    ],
+    "energyStorage": [
+        ["type", "name"],
+        ["fuelTank", "mainTank"],
+    ],
+    "mainTank": {
+        "energyType":"diesel",
+        "fuelCapacity": 35,
+        "fuel": {"[engineGroup]:":["fuel"]},
+    }
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //fuel tank particles
+         {"frictionCoef":1},
+         {"collision":true},
+         {"selfCollision":true},
+         {"group":""},
+         {"nodeWeight":0.5},
+         {"engineGroup":["fuel"]}
+         {"chemEnergy":50,"burnRate":1.2,"flashPoint":220,"vaporPoint":97,"specHeat":0.03,"selfIgnitionCoef":0.9,"smokePoint":220,"containerBeam":"fuelTank"},
+         ["ft1", 0, 0.9, 0.3],
+         ["ft1l", 0.31, 0.9, 0.32,],
+         ["ft1r", -0.31, 0.9, 0.35],
+         {"selfIgnitionCoef":false},
+         ["ft2", 0, 1.0, 0.3],
+         ["ft2l", 0.31, 1.0, 0.35],
+         ["ft2r", -0.31, 1.0, 0.32],
+         ["ft3", 0, 1.1, 0.27],
+         ["ft3l", 0.31, 1.1, 0.35],
+         ["ft3r", -0.31, 1.1, 0.3],
+         {"engineGroup":""}
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"vaporPoint":false,"specHeat":false,"selfIgnitionCoef":false,"smokePoint":false,"containerBeam":false},
+         {"selfCollision":false},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":80000,"beamDamp":50},
+          {"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          //connect fuel particles to tank
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          {"breakGroupType":1},
+          ["ft1","f9r"],
+          {"breakGroup":"fueltank","beamSpring":80000,"beamDamp":50},
+          ["ft1","f9l"],
+          ["ft1","f4l"],
+          ["ft1","f4r"],
+
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1l","f9l"],
+          {"breakGroup":"fueltank","beamSpring":80000,"beamDamp":50},
+          ["ft1l","f9r"],
+          ["ft1l","f4l"],
+          ["ft1l","f4r"],
+
+          {"breakGroup":"","beamSpring":20,"beamDamp":50},
+          ["ft1r","f9r"],
+          {"breakGroup":"fueltank","beamSpring":80000,"beamDamp":50},
+          ["ft1r","f9l"],
+          ["ft1r","f4l"],
+          ["ft1r","f4r"],
+
+          ["ft2","f9r"],
+          ["ft2","f9l"],
+          ["ft2","f4l"],
+          ["ft2","f4r"],
+
+          ["ft2l","f9l"],
+          ["ft2l","f9r"],
+          ["ft2l","f4l"],
+          ["ft2l","f4r"],
+
+          ["ft2r","f9r"],
+          ["ft2r","f9l"],
+          ["ft2r","f4l"],
+          ["ft2r","f4r"],
+
+          ["ft3","f9r"],
+          ["ft3","f9l"],
+          ["ft3","f4l"],
+          ["ft3","f4r"],
+
+          ["ft3l","f9l"],
+          ["ft3l","f9r"],
+          ["ft3l","f4l"],
+          ["ft3l","f4r"],
+
+          ["ft3r","f9r"],
+          ["ft3r","f9l"],
+          ["ft3r","f4l"],
+          ["ft3r","f4r"],
+
+          {"breakGroupType":0},
+          {"beamSpring":1000,"beamDamp":20},
+          {"beamDeform":"FLT_MAX","beamStrength":120},
+          ["f4l","r1l",{"containerBeam": "fuelTank", "highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f4r","r1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f4l","f4r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          {"breakGroup":""},
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+    ],
+},
+}

@@ -1,0 +1,97 @@
+{
+"etk800_lettering_tailgate_854dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"854 Tailgate Lettering DPMP",
+        "value":45,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_854", ["etk800_tailgate"]],
+    ],
+}
+"etk800_lettering_tailgate_858dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"858 Tailgate Lettering DPMP",
+        "value":45,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_dpmp858", ["etk800_tailgate"]],
+    ],
+}
+"etk800_lettering_tailgate_858rennendpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"858t Rennen Tailgate Lettering DPMP",
+        "value":45,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_dpmp858", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_t", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_dpmprennen", ["etk800_tailgate"]],
+    ],
+}
+"etk800_lettering_tailgate_856tdxdpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"856tdx Tailgate Lettering DPMP",
+        "value":45,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_856", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_t", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_dpmpdx", ["etk800_tailgate"]],
+    ],
+}
+"etk800_lettering_tailgate_856tdxrennendpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"856tdx Rennen Tailgate Lettering DPMP",
+        "value":45,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_856", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_t", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_dpmpdx", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_dpmprennen", ["etk800_tailgate"]],
+    ],
+}
+"etk800_lettering_tailgate_854tdx": {
+    "information":{
+        "authors":"DjPLopper",
+        "name":"854tdx Tailgate Lettering DPMP",
+        "value":40,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_854", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_t", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_dpmpdx", ["etk800_tailgate"]],
+    ],
+}
+"etk800_lettering_tailgate_856tpdpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"856ttsport TP Tailgate Lettering DPMP",
+        "value":45,
+    }
+    "slotType" : "etk800_lettering_tailgate",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etk800_lettering_tailgate_856", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_ttsport", ["etk800_tailgate"]],
+         ["etk800_lettering_tailgate_dpmptp", ["etk800_tailgate"]],
+    ],
+}
+}

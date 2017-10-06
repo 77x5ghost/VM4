@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_border": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Border Patrol Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "border",
+}
+}

@@ -1,0 +1,23 @@
+{
+"Performance Class":"5",
+"Drivetrain":"4WD",
+"Body Style":"Pickup",
+"Value":11600,
+"TorquePeakRPM":"3100 - 4700",
+"Off-Road Score":51,
+"Configuration":"D15 V8 4WD Sahara Edition (A)",
+"Description":"The Sahara Edition was a special limited edition built in 1993, it featured off road suspensions with a 3 link off road rear axle, a navigation unit and a roof rack",
+"Transmission":"Automatic",
+"0-60 mph":4.4,
+"Config Type":"Factory",
+"100-0 km/h":45.3,
+"Top Speed":44.2893,
+"default_color":"Light Brown",
+"Torque":666.38,
+"Weight":2150,
+"Power":424.105,
+"Weight/Power":5.07075,
+"60-0 mph":128.6,
+"PowerPeakRPM":"4450 - 5800",
+"0-100 km/h":4.7
+}

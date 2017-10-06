@@ -1,0 +1,12 @@
+{
+
+"sbr_skin_elatodromos": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Elatodromos Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "elatodromos",
+}
+}

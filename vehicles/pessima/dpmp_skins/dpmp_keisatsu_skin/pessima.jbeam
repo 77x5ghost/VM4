@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_keisatsu": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Keisatsu Livery",
+        "value":1300,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "keisatsu",
+  },
+}

@@ -1,0 +1,11 @@
+{
+"super_skin_alt": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Body Coloured",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "alt",
+}
+}

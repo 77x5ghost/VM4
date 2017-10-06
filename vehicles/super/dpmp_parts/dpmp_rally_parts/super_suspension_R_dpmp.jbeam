@@ -1,0 +1,41 @@
+{
+"super_coilover_R_dpmprally": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Rally Rear Coilovers DPMP",
+        "value":1100,
+    }
+    "slotType" : "super_coilover_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["super_coilover_R", ["super_shockbottom_R","super_shocktop_R"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$rideheight_R", "range", "", "Alignment", 1.25, 0.95, 1.6, "Rear Ride Height", "Percentage of adjustment range"]
+        ["$spring_R", "range", "N/m", "Suspension", 85000, 55000, 250000, "Rear Spring Rate", "Spring stiffness"{"stepDis":500}]
+        ["$damp_knee_R", "range", "m/s", "Suspension", 0.1, 0.0, 0.25, "Rear Damping Knee", "Threshold at which shock transitions between slow and fast damping"]
+        ["$damp_bump_R", "range", "N/m/s", "Suspension", 7700, 500, 10000, "Rear Bump Damping", "Shock stiffness in slow compression"{"stepDis":100}]
+        ["$damp_bump_R_fast", "range", "N/m/s", "Suspension", 3100, 500, 5000, "Rear Fast Bump Damping", "Shock stiffness in fast compression"{"stepDis":100}]
+        ["$damp_rebound_R", "range", "N/m/s", "Suspension", 13000, 500, 20000, "Rear Rebound Damping", "Shock stiffness in slow extension"{"stepDis":100}]
+        ["$damp_rebound_R_fast", "range", "N/m/s", "Suspension", 6000, 500, 10000, "Rear Fast Rebound Damping", "Shock stiffness in fast extension"{"stepDis":100}]
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //rear springs and shocks
+          {"beamPrecompression":"$rideheight_R", "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamDeform":170000,"beamStrength":440500},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          {"beamSpring":"$spring_R","beamDamp":"$damp_bump_R"},
+          ["ra2r","rs2r"{"beamDampRebound":"$damp_rebound_R","beamDampVelocitySplit":"$damp_knee_R","beamDampFast":"$damp_bump_R_fast","beamDampReboundFast":"$damp_rebound_R_fast","soundFile":"art/sound/spring_creak.ogg","volumeFactor":4,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":16000}],
+          ["ra2l","rs2l"{"beamDampRebound":"$damp_rebound_R","beamDampVelocitySplit":"$damp_knee_R","beamDampFast":"$damp_bump_R_fast","beamDampReboundFast":"$damp_rebound_R_fast","soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.6,"decayMode":1,"decayFactor":4,"pitchFactor":4,"maxStress":4600}],
+          //bump stops
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.10, "beamShortBound":0.12},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":1001000,"beamLimitDamp":10000},
+          ["ra2r","rs2r"{"beamLimitDampRebound":0}],
+          ["ra2l","rs2l"{"beamLimitDampRebound":0}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

@@ -1,0 +1,30 @@
+{
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"100-200 km/h":7.7,
+"0-100 km/h":5.3,
+"Value":15000,
+"0-200 km/h":13,
+"TorquePeakRPM":"2600 - 4100",
+"default_color":"Citrus Orange",
+"Description":"The Moonhawk Grand Sport is the fastest factory model. it's equipped with race suspension, a limited-slip differential, a supercharger, race wheels and race tires, it was built in only 500 units",
+"Configuration":"Grand Sport (M)",
+"0-100 mph":9.2,
+"Weight":1760,
+"60-100 mph":4.1,
+"0-60 mph":5.1,
+"Config Type":"Factory",
+"100-0 km/h":44.3,
+"PowerPeakRPM":"3800 - 4900",
+"Power":521.218,
+"Torque":946.091,
+"Transmission":"Manual",
+"Off-Road Score":35,
+"Weight/Power":3.37812,
+"60-0 mph":127.2,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"Top Speed":62.7278
+}

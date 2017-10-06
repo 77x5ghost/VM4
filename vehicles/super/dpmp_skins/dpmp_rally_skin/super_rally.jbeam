@@ -1,0 +1,11 @@
+{
+"super_skin_rally": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Rally Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rally",
+}
+}

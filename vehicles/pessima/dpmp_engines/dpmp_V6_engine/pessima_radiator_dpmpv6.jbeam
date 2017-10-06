@@ -1,0 +1,30 @@
+{
+"pessima_radiator_dpmpv6": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"V6 Radiator DPMP",
+        "value":220,
+    }
+    "slotType" : "pessima_radiator",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_radtube", ["pessima_engine","pessima_rad"]],
+         ["pessima_radiator_dpmpv6", ["pessima_rad"]],
+    ],
+    "mainEngine":{ 
+        "radiatorArea":0.4,
+        "radiatorEffectiveness":12500,
+        "coolantVolume":9,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":100,
+        "radiatorFanMaxAirSpeed":2,
+        "thermostatTemperature":90
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

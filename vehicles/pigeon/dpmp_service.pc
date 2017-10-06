@@ -1,0 +1,41 @@
+{
+"vars":{
+  "$trackwidth_R":0
+},
+"parts":{
+  "gps":"gps",
+  "pigeon_bumper_F":"pigeon_bumper_F",
+  "pigeon_brake_R":"pigeon_brake_R",
+  "pigeon_stabilizer_L":"none",
+  "pigeon_frame":"pigeon_frame",
+  "pigeon_engine":"pigeon_engine",
+  "pigeon_licenseplate_F":"pigeon_licenseplate_F",
+  "pigeon_suspension_F":"pigeon_suspension_F",
+  "pigeon_door_R":"pigeon_door_R",
+  "pigeon_radiator":"pigeon_radiator",
+  "pigeon_steer":"pigeon_steer",
+  "pigeon_hood":"pigeon_hood",
+  "pigeon_door_L":"pigeon_door_L",
+  "pigeon_bed_flares":"none",
+  "pigeon_stabilizer_R":"none",
+  "pigeon_spring_R":"pigeon_spring_R",
+  "pigeon_transmission":"pigeon_transmission_3M",
+  "pigeon_licenseplate_R":"pigeon_licenseplate_R",
+  "pigeon_fueltank":"pigeon_fueltank",
+  "pigeon_tailgate":"pigeon_tailgate",
+  "pigeon_bedextension":"none",
+  "pigeon_body":"pigeon_body",
+  "pigeon_differential_R":"pigeon_differential_R",
+  "pigeon_bumper_R":"pigeon_bumper_R",
+  "pigeon_suspension_R":"pigeon_axle_R",
+  "pigeon_bed":"pigeon_bed",
+  "pigeon_mirror_R":"pigeon_mirror_R",
+  "pigeon_wheel_R":"pigeon_wheel_R",
+  "pigeon_exhaust":"pigeon_exhaust",
+  "pigeon_bin":"none",
+  "pigeon_shock_R":"pigeon_shock_R",
+  "pigeon_beacon":"pigeon_beaconlight_orange",
+  "pigeon_sparetire":"pigeon_sparetire"
+},
+"format":2
+}

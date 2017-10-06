@@ -1,0 +1,12 @@
+{
+
+"fullsize_skin_security": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Bear Security Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "security",
+}
+}

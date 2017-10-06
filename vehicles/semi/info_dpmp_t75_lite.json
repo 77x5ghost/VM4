@@ -1,0 +1,23 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Body Style":"Semi Truck",
+"Value":23000,
+"TorquePeakRPM":1250,
+"Off-Road Score":34,
+"Configuration":"T75 Lite Fifth Wheel Upfit (M)",
+"Description":"Basic T75, an excellent truck with only the basic equipment and a good hauling capacity",
+"default_color":"Pearl White",
+"0-60 mph":19.1,
+"Config Type":"Factory",
+"100-0 km/h":50.7,
+"Top Speed":40.4347,
+"Transmission":"Manual",
+"Torque":1355.66,
+"Weight":6800,
+"Power":303.51,
+"Weight/Power":22.4422,
+"60-0 mph":145.5,
+"PowerPeakRPM":1550,
+"0-100 km/h":20.5
+}

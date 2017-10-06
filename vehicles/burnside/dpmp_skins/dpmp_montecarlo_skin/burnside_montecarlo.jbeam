@@ -1,0 +1,12 @@
+{
+
+"burnside_skin_montecarlo": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Monte Carlo Livery",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "montecarlo",
+  }
+  }

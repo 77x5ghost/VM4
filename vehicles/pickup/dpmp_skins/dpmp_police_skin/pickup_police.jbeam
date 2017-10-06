@@ -1,0 +1,11 @@
+{
+"pickup_skin_police": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Police Livery",
+        "value":50,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "police",
+}
+}

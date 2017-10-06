@@ -1,0 +1,76 @@
+{
+"etkc_differential_R_VIP_WELDED": {
+    "information":{
+        "authors":"daniel398767 and Sh3lbYe",
+        "name":"VIP Welded Differential D&S",
+        "value":1900,
+    }
+    "slotType" : "etkc_differential_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etkc_driveshaft", ["etkc_body","etkc_subframe_R","etkc_diff_R","etk_transmission"]],
+         ["etkc_diff", ["etkc_subframe_R","etkc_body"]],
+         ["etkc_halfshaft_R", ["etkc_hub_R","etkc_lowerarm_R","etkc_diff_R"]],
+    ],
+    "slots": [
+        ["type", "default", "description"]
+        ["etkc_driveshaft_R","etkc_driveshaft_R", "Rear Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["differential", "differential_R", "driveshaft_R", 1, {"diffType":"locked", "gearRatio": 4.11, "lockTorque":10000, "friction":8}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--diff weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"etkc_diff_R"},
+         {"nodeWeight":50},
+         ["rdiff", 0, 1.29, 0.30],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //differential node
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4800600,"beamDamp":138},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          ["rdiff","r2"],
+          ["rdiff","rx1"],
+          ["rdiff","r1"],
+          ["rdiff","rx2r"],
+          ["rdiff","rx2l"],
+          ["rdiff","rx1r"],
+          ["rdiff","rx1l"],
+          ["rdiff","rx4r"],
+          ["rdiff","rx4l"],
+          ["rdiff","rx5r"],
+          ["rdiff","rx5l"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.02, "beamShortBound":0.02},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3600,"beamStrength":9500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":230},
+          {"breakGroupType":1},
+          {"optional":true},
+          {"breakGroup":"wheel_RR"},
+          ["rw1r","rdiff", {"name":"axle_RR"}],
+          {"breakGroup":"wheel_RL"},
+          ["rw1l","rdiff", {"name":"axle_RL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+
+          //driveshaft
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.01, "beamShortBound":0.01},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":1500,"beamStrength":3500},
+          {"beamLimitSpring":5001000,"beamLimitDamp":250},
+          {"optional":true},
+          ["rdiff","tra1", {"name":"driveshaft"}],
+          {"optional":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

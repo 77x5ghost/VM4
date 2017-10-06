@@ -1,0 +1,11 @@
+{
+"burnside_skin_bicolorb": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Black Bicolor Livery",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "bicolorb",
+  }
+  }

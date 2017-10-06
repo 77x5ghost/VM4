@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_ird": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"IRD Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "ird",
+}
+}

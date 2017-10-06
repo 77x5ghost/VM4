@@ -1,0 +1,141 @@
+{
+"coupe_seatdpmp_FL": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Red Driver Seat DPMP",
+        "value":220,
+    }
+    "slotType" : "coupe_seat_FL",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_seatsdpmp_FL" ["coupe_seats"],[],{"pos":{"x":0,"y":0.05,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"nodeWeight":15},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"coupe_seats"},
+         ["int5", 0.35, 0.46, 0.95],
+         {"group":""},
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":501000,"beamDamp":150},
+          {"beamDeform":9160,"beamStrength":"FLT_MAX"},
+          //interior flexbody
+          ["int5","f2ll"],
+          ["int5","f3ll"],
+          ["int5","f7l"],
+          ["int5","f8l"],
+          ["int5","f9l"],
+
+          ["int5","p3l"],
+          ["int5","p4l"],
+          ["int5","q1l"],
+          ["int5","q7l"],
+    ],
+}
+"coupe_seatdpmp_FR": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Red Passenger Seat DPMP",
+        "value":220,
+    }
+    "slotType" : "coupe_seat_FR",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_seatsdpmp_FR" ["coupe_seats"],[],{"pos":{"x":0,"y":0.05,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"nodeWeight":15},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"coupe_seats"},
+         ["int6", -0.35, 0.46, 0.95],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":501000,"beamDamp":150},
+          {"beamDeform":9160,"beamStrength":"FLT_MAX"},
+          //interior flexbody
+          ["int6","f2rr"],
+          ["int6","f3rr"],
+          ["int6","f7r"],
+          ["int6","f8r"],
+          ["int6","f9r"],
+
+          ["int6","p3r"],
+          ["int6","p4r"],
+          ["int6","q1r"],
+          ["int6","q7r"],
+    ],
+}
+"coupe_seatsdpmp_R": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Red Rear Seats DPMP",
+        "value":240,
+    }
+    "slotType" : "coupe_seats_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_seatsdpmp_R", ["coupe_seats_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"nodeWeight":7},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"coupe_seats_R"},
+         ["int7", 0.35, 1.17, 0.90],
+         ["int8", -0.35, 1.17, 0.90],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":501000,"beamDamp":150},
+          {"beamDeform":3160,"beamStrength":"FLT_MAX"},
+          //interior flexbody
+          ["int7","int8"],
+
+          ["int7","f4ll"],
+          ["int7","f3ll"],
+          ["int7","tb1l"],
+          ["int7","f8r"],
+          ["int7","f9l"],
+          ["int7","f4l"],
+          ["int7","f3l"],
+          ["int7","f4l"],
+
+          ["int8","f4rr"],
+          ["int8","f3rr"],
+          ["int8","tb1r"],
+          ["int8","f8l"],
+          ["int8","f9r"],
+          ["int8","f4r"],
+          ["int8","f3r"],
+
+          ["int7","tb1"],
+          ["int8","tb1"],
+
+          ["int7","q3l"],
+          ["int8","q3r"],
+    ],
+}
+}

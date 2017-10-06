@@ -1,0 +1,208 @@
+{
+"pessima_lettering_dpmpHR": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HR Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_dpmp22" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpHR", ["pessima_trunk"]],
+
+    ],
+}
+"pessima_lettering_dpmpHR4": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HR 4WD Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_dpmp22" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpHR", ["pessima_trunk"]],
+         ["pessima_lettering_4wd" ["pessima_trunk"]],
+
+    ],
+}
+"pessima_lettering_dpmpnomi": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Nomi's N300 Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_dpmpnomi", ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpRX": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"RX Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_2.0" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpRX", ["pessima_trunk"]],
+         ["pessima_lettering_turbo" ["pessima_trunk"]],
+
+    ],
+}
+"pessima_lettering_dpmpRHX": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"RHX Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_2.0" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpRHX", ["pessima_trunk"]],
+         ["pessima_lettering_turbo" ["pessima_trunk"]],
+
+    ],
+}
+"pessima_lettering_dpmpas": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Aerosport Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_2.0" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpas", ["pessima_trunk"]],
+         ["pessima_lettering_4wd" ["pessima_trunk"]],
+         ["pessima_lettering_GTz" ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmp50": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"50th Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_2.0" ["pessima_trunk"]],
+         ["pessima_lettering_dpmp50", ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpk": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"K-Spec Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_1_8" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpk", ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpLHX": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LHX Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_2.0" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpLHX", ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpfe": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Final Edition Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_2.0" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpfe", ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmp27": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LX V6 Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_dpmp27" ["pessima_trunk"]],
+         ["pessima_lettering_LX", ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpdiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_dpmp19" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpdiesel", ["pessima_trunk"]],
+         ["pessima_lettering_turbo" ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpdiesel4": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel 4WD Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_dpmp19" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpdiesel", ["pessima_trunk"]],
+         ["pessima_lettering_4wd" ["pessima_trunk"]],
+         ["pessima_lettering_turbo" ["pessima_trunk"]],
+    ],
+}
+"pessima_lettering_dpmpdieseldet": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel Base Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk", ["pessima_trunk"]],
+         ["pessima_lettering_dpmp19" ["pessima_trunk"]],
+         ["pessima_lettering_dpmpdiesel", ["pessima_trunk"]],
+    ],
+}
+}

@@ -1,0 +1,166 @@
+{
+"hatch_engine_v6dpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"2.7 DOHC VT6 Engine DPMP",
+        "value":1200,
+    },
+
+    "slotType" : "hatch_engine",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_exhaust","hatch_exhaust", "Exhaust"],
+        ["hatch_transmission","hatch_transmission_6M", "Transmission"],
+        ["hatch_radiator","hatch_radiator", "Radiator"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_engine_v6dpmp", ["hatch_engine"]],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [1000, 195],
+        [2000, 245],
+        [2500, 260],
+        [3000, 263],
+        [4000, 268],
+        [4500, 265],
+        [5000, 258],
+        [6000, 242],
+        [7000, 183],
+        [7500, 150],
+    ],
+ 
+        "idleRPM":650,
+        "maxRPM":6800,
+        "inertia":0.11,
+        "friction":21
+        "brakingCoefRPS":0.14
+        "burnEfficiency":0.34
+        "throttleSensitivity":1.1
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.02
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":6
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":150
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "V6",
+        "mainGain": 5,
+        "maxLoadMix": 0.75,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.8,
+        "eqLowGain": -3,
+        "eqLowFreq": 125,
+        "eqLowWidth": 0.25,
+        "eqHighGain": -15,
+        "eqHighFreq": 4000,
+        "eqHighWidth": 0.1
+        "lowCutFreq":90,
+        "eqFundamentalGain": -22,
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2300,
+        "clutchLaunchTargetRPM":3000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2700,3350,3600,3800,3800]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6400
+    },
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--2.7L V6 Engine--
+        {"selfCollision":false},
+        {"collision":true}
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"group":"hatch_engine"},
+        {"nodeWeight":10},
+        {"engineGroup":"engine_block"}
+        ["e1r", 0.17, -1.74, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+        ["e1l", 0.17, -1.50, 0.30],
+        ["e2r", -0.30, -1.74, 0.30,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12}],
+        ["e2l", -0.30, -1.50, 0.30],
+        {"engineGroup":["engine_block","engine_intake"]}
+        ["e3r", 0.17, -1.81, 0.75,{"isExhaust":true}],
+        ["e3l", 0.17, -1.26, 0.79],
+        ["e4r", -0.30, -1.81, 0.75],
+        ["e4l", -0.30, -1.26, 0.79],
+        {"engineGroup":""},
+        {"group":""},
+        ["tc1", 0, -1.65, 0.42{"nodeWeight":16}],
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+          ["e1r","e3r"{"isExhaust":true}],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,12 @@
+{
+
+"etk800_skin_zoll": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Zoll Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "zoll",
+}
+}

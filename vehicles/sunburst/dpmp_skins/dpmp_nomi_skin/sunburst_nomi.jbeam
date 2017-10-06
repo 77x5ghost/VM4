@@ -1,0 +1,11 @@
+{
+"sunburst_skin_nomi": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Nomi's Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "nomi",
+}
+}

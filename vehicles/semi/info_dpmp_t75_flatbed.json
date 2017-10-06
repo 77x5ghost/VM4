@@ -1,0 +1,23 @@
+{
+"Performance Class":"1",
+"Drivetrain":"RWD",
+"Body Style":"Flatbed",
+"Value":35000,
+"TorquePeakRPM":1100,
+"Off-Road Score":34,
+"Configuration":"T75 Flatbed Upfit (M)",
+"Description":"3-axle heavy-duty truck with a flatbed",
+"default_color":"Fire Red",
+"0-60 mph":21.7,
+"Config Type":"Factory",
+"100-0 km/h":51,
+"Top Speed":41.6547,
+"Transmission":"Manual",
+"Torque":1636.67,
+"Weight":7105,
+"Power":351.777,
+"Weight/Power":20.2422,
+"60-0 mph":145.2,
+"PowerPeakRPM":1500,
+"0-100 km/h":23
+}

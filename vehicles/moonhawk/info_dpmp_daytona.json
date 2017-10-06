@@ -1,0 +1,30 @@
+{
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"100-200 km/h":37.8,
+"0-100 km/h":7.9,
+"Value":10800,
+"0-200 km/h":45.7,
+"TorquePeakRPM":"1950 - 3500",
+"default_color":"Flare Orange",
+"Description":"The V8 Sport Daytona Special is equipped with heavy-duty suspension, a limited-slip differential, 4-barrel carburetors, double side exhaust and sport wheels,",
+"Configuration":"V8 Daytona Special (M)",
+"0-100 mph":21.4,
+"Weight":1755,
+"60-100 mph":14,
+"0-60 mph":7.5,
+"Config Type":"Factory",
+"100-0 km/h":44.2,
+"PowerPeakRPM":3750,
+"Power":197.225,
+"Torque":385.206,
+"Transmission":"Manual",
+"Off-Road Score":34,
+"Weight/Power":8.90863,
+"60-0 mph":126.5,
+"Years":{
+  "min":1973,
+  "max":1975
+},
+"Top Speed":59.034
+}

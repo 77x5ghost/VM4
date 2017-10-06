@@ -1,0 +1,12 @@
+{
+
+"midsize_skin_police": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Police Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "police",
+}
+}

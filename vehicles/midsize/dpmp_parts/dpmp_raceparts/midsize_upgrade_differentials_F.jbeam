@@ -1,0 +1,44 @@
+{
+"midsize_differential_F_race_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Race Limited Slip Front Differential DPMP",
+        "value":250,
+    }
+    "slotType" : "midsize_differential_FT",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_halfshaft_F", ["midsize_tierod_F","midsize_hub_F","midsize_transmission","wheelhub_a_FR","wheelhub_a_FL","wheelhub_b_FR","wheelhub_b_FL"]],
+     ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+        ["$lsdpreload_F", "range", "N/m", "Differentials", 50, 0, 500, "Front LSD Preload", "Initial cross torque between left and right wheels"],
+        ["$lsdlockcoef_F", "range", "", "Differentials", 0.20, 0, 0.5, "Front LSD Forward Locking ", "Locking effect proportional to engine torque", {"minDis":0, "maxDis":100}],
+        ["$lsdlockcoefrev_F", "range", "", "Differentials", 0.10, 0, 0.5, "Front LSD Reverse Locking", "Locking effect proportional to engine braking", {"minDis":0, "maxDis":100}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "gearbox", 1, {"diffType":"lsd", "gearRatio":4.266, "lsdPreload":"$lsdpreload_F", "lsdLockCoef":"$lsdlockcoef_F", "lsdRevLockCoef":"$lsdlockcoefrev_F", "friction":6}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3000600,"beamDamp":150},
+          {"beamDeform":27000,"beamStrength":"FLT_MAX"},
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.03, "beamShortBound":0.03},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3240,"beamStrength":8550},
+          {"beamLimitSpring":7501000,"beamLimitDamp":300},
+          {"optional":true},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          ["fw1r","tra1r", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          ["fw1l","tra1l", {"name":"axle_FL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

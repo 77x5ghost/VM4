@@ -1,0 +1,28 @@
+{
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"Value":12800,
+"0-100 km/h":7.7,
+"TorquePeakRPM":"1950 - 3500",
+"Weight":1770,
+"Off-Road Score":35,
+"Configuration":"Panther (M)",
+"default_color":"Moonlight",
+"0-100 mph":21.2,
+"60-100 mph":14,
+"0-60 mph":7.2,
+"Config Type":"Factory",
+"100-0 km/h":44.2,
+"Top Speed":53.8199,
+"Power":197.225,
+"Torque":385.206,
+"Description":"The Panther was a special version made n 1977 based on the Mk2 Special, it was built in 800 units, all painted in black with purple stripes",
+"Transmission":"Manual",
+"Weight/Power":8.98477,
+"60-0 mph":127.4,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":3750
+}

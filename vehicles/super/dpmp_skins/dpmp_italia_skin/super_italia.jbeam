@@ -1,0 +1,12 @@
+{
+
+"super_skin_italia": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Italia Graphics",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "italia",
+}
+}

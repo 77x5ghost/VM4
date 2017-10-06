@@ -1,0 +1,252 @@
+{
+"burnside_engine_dpmpi4": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"1.6L SOHC I4 Engine DPMP",
+        "value":800,
+    },
+    "slotType" : "burnside_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["burnside_exhaust_R","burnside_exhaust_R", "Right Exhaust"],
+        ["burnside_exhaust_L","burnside_exhaust_L", "Left Exhaust"],
+        ["burnside_transmission","burnside_transmission_4M_dpmpi4", "Transmission"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["burnside_engineblock", ["burnside_engine"]],
+         ["burnside_engine_1_6", ["burnside_engine"]],
+     ],
+    "mainEngine":{
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [1000, 90],
+        [1500, 135],
+        [2000, 164],
+        [2500, 174],
+        [3000, 173],
+        [4000, 168],
+        [5000, 146],
+        [5500, 120],
+        [6000, 50],
+        [7000, 0],
+    ],
+        "idleRPM":750,
+        "maxRPM":6000,
+        "revLimiterRPMDrop":0,
+        "inertia":0.16,
+        "friction":10
+        "brakingCoefRPS":0.25
+        "burnEfficiency":0.29
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.022
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":3
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":120
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+		
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]}
+        "radiator": {"[engineGroup]:":["radiator"]}
+        "engineBlock": {"[engineGroup]:":["engine_block"]}
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1500,
+        "clutchLaunchTargetRPM":2000,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,1600,2200,2400,2400,2400]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4400
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //1.6L I4 Engine
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":"burnside_engine"},
+         {"nodeWeight":16},
+           {"engineGroup":"engine_block"}
+         ["e1r", -0.17, -0.9, 0.29],
+         ["e1l", 0.17, -0.9, 0.29,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.13}],
+         ["e2r", -0.17, -1.63, 0.38],
+         ["e2l", 0.17, -1.63, 0.38,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.13}],
+           {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.13, -0.93, 0.88],
+         ["e3l", 0.13, -0.93, 0.88,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.13}],
+         ["e4r", -0.13, -1.58, 0.88{"group":["miramar_engine","miramar_radtube"]}],
+         ["e4l", 0.13, -1.58, 0.88{"isExhaust":true,"group":["miramar_engine","miramar_radtube"],"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.13}],
+         {"nodeWeight":3},
+         ["e5l", 0.29, -1.08, 0.92,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.5,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.13}],
+         ["e6l", 0.37, -1.48, 0.90,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.5,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.13}],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4600460,"beamDamp":145},
+          {"beamDeform":857999.9,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"{"isExhaust":true}],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          {"beamSpring":1840460,"beamDamp":145},
+          //air filter
+          {"beamDeform":8580,"beamStrength":"FLT_MAX"},
+          ["e4l", "e6l"],
+          ["e3l", "e5l"],
+          ["e6l", "e5l"],
+          ["e6l", "e2l"],
+          ["e5l", "e1l"],
+
+          ["e6l", "e3l"],
+          ["e5l", "e4l"],
+          ["e6l", "e1l"],
+          ["e2l", "e5l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            /*
+            ["e5l", "e1l", "e3l"],
+            ["e4r", "e3r", "e2r"],
+            ["e3r", "e1r", "e2r"],
+            ["e1r", "e1l", "e2r"],
+            ["e2r", "e1l", "e2l"],
+            ["e3l", "e1l", "e3r"],
+            ["e3r", "e1l", "e1r"],
+            ["e4r", "e4l", "e3l"],
+            ["e4r", "e3l", "e3r"],
+            ["e4r", "e2r", "e4l"],
+            ["e4l", "e2r", "e2l"],
+            ["e4l", "e2l", "e6l"],
+            ["e6l", "e3l", "e4l"],
+            ["e6l", "e2l", "e5l"],
+            ["e6l", "e5l", "e3l"],
+            ["e2l", "e1l", "e5l"],
+            */
+    ],
+},
+"burnside_transmission_4M_dpmpi4": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"4-Speed Manual Transmission DPMP",
+        "value":350,
+    },
+    "engine":{
+        "transmissionType":"manual",
+        // -1, 0 (neutral), 1, etc
+        "gears":[-3.5, 0, 3.29, 2.04, 1.39, 1.0]
+        "clutchDuration":0.15
+        "clutchTorque":180
+       },
+        "slots": [
+        ["type", "default", "description"]
+        ["burnside_driveshaft","burnside_driveshaft", "Driveshaft"],
+    ],
+    "slotType" : "burnside_transmission",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["burnside_transmission", ["burnside_engine","burnside_transmission"]],
+         //["burnside_centergauge_A", ["burnside_body"]],
+],
+     "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["gear_M"     ,"burnside_shifter_A", "b2r","b2l","b3r",  {"x":40, "y":0, "z":0} , {"x":0, "y":0, "z":-50}    , {"x":0.0, "y":0, "z":0}, -0.3, 0.9, -0.5, 1.5, {"baseTranslation":{"x":0.735,"y":-0.110,"z":-0.76}}],
+        //clutch
+        ["clutch"     ,"burnside_clutchpedal", "b2r","b2l","b3r",  {"x":90, "y":0, "z":0} , {"x":25, "y":-0.1, "z":0.1}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--3 Speed Manual--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":true},
+         {"collision":true}
+         {"group":"burnside_transmission"},
+         {"nodeWeight":47},
+         ["tra1", 0.0, -0.51, 0.27],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":11001000,"beamDamp":200},
+          {"beamDeform":900000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

@@ -1,0 +1,11 @@
+{
+"fullsize_skin_burnside": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Burnside Trim",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "burnside",
+}
+}

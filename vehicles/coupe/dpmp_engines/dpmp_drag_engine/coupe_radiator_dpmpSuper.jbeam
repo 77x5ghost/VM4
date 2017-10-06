@@ -1,0 +1,29 @@
+{
+"coupe_radiator_dpmpSuper": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Pro Tuned Radiator DPMP",
+        "value":280,
+    }
+    "slotType" : "coupe_radiator",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_radiator", ["coupe_body", "coupe_rad", "coupe_engine_bay"]],
+    ],
+    "mainEngine":{ 
+        "radiatorArea":2.98,
+        "radiatorEffectiveness":1500000,
+        "coolantVolume":8800,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":10000,
+        "radiatorFanMaxAirSpeed":3000,
+        "thermostatTemperature":9000
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

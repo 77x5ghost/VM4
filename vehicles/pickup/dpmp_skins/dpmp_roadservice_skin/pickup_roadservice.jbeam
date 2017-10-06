@@ -1,0 +1,11 @@
+{
+"pickup_skin_roadservice": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Road Maintenance Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "roadservice",
+}
+}

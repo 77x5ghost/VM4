@@ -1,0 +1,400 @@
+{
+"pickup_engine_dpmpv10": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"8.0L V10 Engine DPMP",
+        "value":1300,
+    }
+    "slotType" : "pickup_engine",
+    "slots": [
+        ["type", "default","description"]
+        ["pickup_transmission","pickup_transmission_4A","Transmission"],
+        ["pickup_exhaust_v8","pickup_exhaust_v8","V8 Exhaust"],
+        ["pickup_intake_v10","pickup_intake_dpmpv10", "Intake",{"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[
+            ["rpm", "torque"]
+        [0, 0],
+        [500, 225],
+        [1000, 300],
+        [1500, 450],
+        [2000, 525],
+        [2500, 570],
+        [3000, 600],
+        [3500, 625],
+        [4000, 625],
+        [5000, 530],
+    ],
+        //engine performance
+        "idleRPM":850,
+        "maxRPM":5500,
+        "inertia":0.23,
+        "friction":19,
+        "dynamicFriction":0.035,
+        "burnEfficiency":0.33,
+        "torqueReactionNodes:":["e1l","e2l","e4r"],
+        "particulates":0.052,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true,
+        "engineBlockMaterial":"aluminum",
+        "oilVolume":8,
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":160,
+        "headGasketDamageThreshold":1500000,
+        "pistonRingDamageThreshold":1500000,
+        "connectingRodDamageThreshold":2000000,
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "V8_2",
+        "mainGain": -18,
+        "maxLoadMix": 0.6,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.65,
+        "eqLowGain": -5,
+        "eqLowFreq": 150,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0,
+        "lowCutFreq":90,
+        //"eqFundamentalGain": -15,
+    },
+    
+    "vehicleController": {
+        "clutchLaunchStartRPM":1600,
+        "clutchLaunchTargetRPM":2200,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2600,2850,3050,3150,3150]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":5300
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["dpmp_v10", ["pickup_engine"], [], {"pos":{"x":0, "y":0.05, "z":0.2}, "rot":{"x":0, "y":0.05, "z":0.2}, "scale":{"x":1, "y":1.1, "z":1}}],
+         ["pickup_engbay", ["pickup_cab", "pickup_firewall", "pickup_frontmeat","pickup_engine_intake"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false}
+         {"collision":true}
+         //--4.5L V8 Engine-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":28},
+         {"group":"pickup_engine"},
+         {"engineGroup":"engine_block"}
+         ["e1r", -0.13, -1.14, 0.43,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2}],
+         ["e1l", 0.13, -1.14, 0.43,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.2}],
+         ["e2r", -0.13, -1.68, 0.43],
+         ["e2l", 0.13, -1.68, 0.43],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.32, -1.14, 0.9],
+         ["e3l", 0.32, -1.14, 0.9],
+         ["e4r", -0.32, -1.68, 0.9{"isExhaust":true}],
+         ["e4l", 0.32, -1.68, 0.9],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"specHeat":false,"smokePoint":false,"selfIgnitionCoef":false,"baseTemp":false,"conductionRadius":false},
+         {"engineGroup":""}
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--ENGINE CUBE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["e1r","e1l"],
+          ["e1r","e2r"],
+          ["e1r","e2l"],
+          ["e1r","e3r"],
+          ["e1r","e3l"],
+          ["e1r","e4r"{"isExhaust":true}],
+          ["e1r","e4l"],
+          ["e1l","e2r"],
+          ["e1l","e2l"],
+          ["e1l","e3r"],
+          ["e1l","e3l"],
+          ["e1l","e4r"],
+          ["e1l","e4l"],
+          ["e2r","e2l"],
+          ["e2r","e3r"],
+          ["e2r","e3l"],
+          ["e2r","e4r"],
+          ["e2r","e4l"],
+          ["e2l","e3r"],
+          ["e2l","e3l"],
+          ["e2l","e4r"],
+          ["e2l","e4l"],
+          ["e3r","e3l"],
+          ["e3r","e4r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+          ["e3l","e4l"],
+          ["e4r","e4l"],
+          /*
+          {"breakGroup":"pickup_engbay"},
+          {"beamSpring":168840,"beamDamp":390},
+          {"beamDeform":3000,"beamStrength":4450},
+          ["e4r","f2rr"],
+          ["e4r","f1rr"],
+          ["e4l","f2ll"],
+          ["e4l","f1ll"],
+          {"breakGroup":""},
+          */
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //engine
+    ],
+}
+"pickup_intake_dpmpv10": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Stock Intake DPMP",
+        "value":0,
+    }
+    "slotType" : "pickup_intake_v10",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_intake_stock", ["pickup_engine", "pickup_framecab"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+
+}
+"pickup_supercharger_dpmpv10_stage1": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Stage 1 Supercharger DPMP",
+        "value":600,
+    }
+    "slotType" : "pickup_intake_v10",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_supercharger", ["pickup_engine", "pickup_framecab"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "supercharger": {
+        "gearRatio":1.6,
+        "clutchEngageRPM":0,
+        "pressureRatePSI":500,
+        "pressurePSIPer1kRPM":2.5,
+        "crankLossPer1kRPM":0.05,
+        "type":"roots",
+        "boostController":[
+            //throttle in %, factor
+            [0,     0.2],
+            [100,     1],
+        ],
+    },
+    "mainEngine": {
+        //engine performance
+        "idleRPM":850,
+        "maxRPM":5500,
+        "inertia":0.17,
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.32
+        "throttleSensitivity":1.22
+        //supercharger name
+        "supercharger":"supercharger",
+    },
+    "vehicleController": {
+        "highShiftUpRPM":5600,
+    },
+}
+"pickup_supercharger_dpmpv10_stage2": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Stage 2 Supercharger DPMP",
+        "value":1600,
+    }
+    "slotType" : "pickup_intake_v10",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_supercharger", ["pickup_engine", "pickup_framecab"], [], {"pos":{"x":0, "y":0, "z":0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "supercharger": {
+        "gearRatio":2.0,
+        "clutchEngageRPM":0,
+        "pressureRatePSI":500,
+        "pressurePSIPer1kRPM":3.9,
+        "crankLossPer1kRPM":0.05,
+        "type":"roots",
+        "boostController":[
+            //throttle in %, factor
+            [0,     0.2],
+            [100,     1],
+        ],
+    },
+    "mainEngine": {
+        //engine performance
+        "idleRPM":900,
+        "maxRPM":5500,
+        "inertia":0.26,
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.29
+        "revLimiterRPMDrop":50,
+        "throttleSensitivity":1.25
+        //supercharger name
+        "supercharger":"supercharger",
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":220,
+    },
+    "vehicleController": {
+        "highShiftUpRPM":5700,
+        "revMatchThrottle":0.3,
+    },
+}
+"pickup_transmission_dpmp6M": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"6-Speed Manual Transmission DPMP",
+        "value":300,
+    },
+    "slots": [
+        ["type", "default", "description"]
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-2.9, 0, 2.66, 1.78, 1.3, 1.0, 0.74, 0.5]
+        "friction": 1,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2600,2850,3050,3150,3150]
+        "lowShiftUpRPM":4400,
+    },
+    "slotType" : "pickup_transmission",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "props": [
+        ["func"        , "mesh"                , "idRef:", "idX:", "idY:", "baseRotation"      , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //pedal
+        ["clutch"       , "pickup_clutchpedal"   , "fr8", "fr8l", "fr1l", {"x":-90, "y":0, "z":0}, {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         //--5 Speed Manual-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":35},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.59, 0.48],
+         {"group":""},
+
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+    ],
+},
+"pickup_transmission_dpmp6A": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"6-Speed Automatic Transmission DPMP",
+        "value":600,
+    }
+    "slotType" : "pickup_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["pickup_transfer_case","pickup_transfer_case_4WD","Transfer Case", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        //premultiplied to account for 3.55 differential ratio instead of 3.15
+        //source ratios: [-3.4, 0, 4.17, 2.34, 1.52, 1.14, 0.87, 0.69]
+        "gearRatios":[-2.9, 0, 2.66, 1.78, 1.3, 1.0, 0.74, 0.5]
+        "parkLockTorque":2500,
+        "oneWayViscousCoef":17,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter":0.285,
+        "converterStiffness":10,
+        "couplingAVRatio":0.88,
+        "stallTorqueRatio":1.9,
+        "lockupClutchTorque":350,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "calculateOptimalLoadShiftPoints": true
+        "transmissionGearChangeDelay":1.5
+        "gearboxDecisionSmoothingDown":1.5
+        "gearboxDecisionSmoothingUp":1.5
+        "lowShiftDownRPM":1300,
+        "lowShiftUpRPM":2300,
+        "torqueConverterLockupRPM":1800
+        "torqueConverterLockupMinGear":3
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pickup_transmission", ["pickup_engine","pickup_transmission"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         //--6 Speed Auto-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":40},
+         {"group":"pickup_transmission"},
+         ["tra1", 0.0, -0.59, 0.48],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":12600840,"beamDamp":390},
+          {"beamDeform":142500,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+    ],
+}
+}

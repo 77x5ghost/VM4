@@ -1,0 +1,22 @@
+{
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"Value":9500,
+"TorquePeakRPM":"1350 - 3300",
+"Off-Road Score":35,
+"Configuration":"232 i6 RoadSport Package (A)",
+"PowerPeakRPM":"3300 - 4300",
+"0-100 km/h":11.6,
+"0-60 mph":10.7,
+"Config Type":"Factory",
+"100-0 km/h":43.7,
+"Top Speed":43.2393,
+"Transmission":"Automatic",
+"Torque":257.854,
+"Weight":1525,
+"Description":"The RoadSport Package adds heavy-duty springs and shocks, 4-barrel carburetors, and hidden headlights",
+"Weight/Power":12.9237,
+"60-0 mph":127.3,
+"Power":118.398,
+"default_color":"Solar Yellow"
+}

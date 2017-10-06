@@ -1,0 +1,98 @@
+{
+"legran_rollcage_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Roll Cage",
+        "value":2100,
+    }
+    "slotType" : "legran_seats_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["legran_rollcage_dpmp", ["legran_body"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //redefine nodes to make them heavier
+         {"selfCollision":true}
+         {"group":"legran_body"},
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":3.8},
+         ["rf1r", -0.60, -0.18, 1.29,{"group":["legran_body","gps","legran_windshield","legran_roof"]}]
+         ["rf1", 0, -0.22, 1.32,{"nodeWeight":2.6,"group":["legran_body","gps","legran_windshield","legran_roof"]}]
+         ["rf1l", 0.60, -0.18, 1.29,{"group":["legran_body","gps","legran_windshield","legran_roof"]}]
+
+         ["rf2r", -0.60, 0.27, 1.30{"group":["legran_body","legran_roof","legran_seats"]}],
+         ["rf2", 0, 0.27, 1.33{"nodeWeight":2.6,"group":["legran_body","legran_roof","legran_seats"]}],
+         ["rf2l", 0.60, 0.27, 1.30{"group":["legran_body","legran_roof","legran_seats"]}],
+
+         ["rf3r", -0.60, 0.71, 1.30],
+         ["rf3l", 0.60, 0.71, 1.30],
+
+         //pillars
+         {"nodeWeight":3.8},
+         //a pillar
+         ["p1r", -0.67, -0.50, 1.08{"group":["legran_body","gps","legran_windshield"]}],
+         ["p1l", 0.67, -0.50, 1.08{"group":["legran_body","gps","legran_windshield"]}],
+         ["p2r", -0.73, -0.46, 1.05{"group":""}],
+         ["p2l", 0.73, -0.46, 1.05{"group":""}],
+         ["p2rr", -0.65, -0.38, 1.03{"group":"","selfCollision":false}]
+         ["p2ll", 0.65, -0.38, 1.03{"group":"","selfCollision":false}]
+
+         //b pillar
+         {"nodeWeight":3.8},
+         ["p3r", -0.78, 0.10, 0.52],
+         ["p3l", 0.78, 0.10, 0.52],
+         ["p4r", -0.78, 0.27, 0.52],
+         ["p4l", 0.78, 0.27, 0.52],
+
+         {"nodeWeight":3.8},
+         ["p5r", -0.755, 0.15, 0.82],
+         ["p5l", 0.755, 0.15, 0.82],
+         ["p6r", -0.755, 0.28, 0.82],
+         ["p6l", 0.755, 0.28, 0.82],
+
+         ["p7r", -0.71, 0.19, 1.05],
+         ["p7l", 0.71, 0.19, 1.05],
+         ["p8r", -0.71, 0.30, 1.05],
+         ["p8l", 0.71, 0.30, 1.05],
+
+         //c pillar
+         {"nodeWeight":3.8},
+         ["p9r", -0.72, 0.96, 1.05],
+         ["p9l", 0.72, 0.96, 1.05],
+         ["p10r", -0.67, 1.31, 1.07],
+         ["p10l", 0.67, 1.31, 1.07],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":2400600,"beamDamp":60},
+          {"beamDeform":360000,"beamStrength":"FLT_MAX"},
+          //left cage
+          ["rf3l", "q1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf3l", "rf1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf3l", "f4ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf1l", "f1ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf1l", "f4ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f1ll", "q1l",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+           //right cage
+          ["rf3r", "q1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf3r", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf3r", "f4rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf1r", "f1rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf1r", "f4rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["f1rr", "q1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+
+          //crossing bars
+          ["rf3l", "rf3r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf3l", "f4rr",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf1l", "rf1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["q1l", "q1r",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+          ["rf3r", "f4ll",{"highlight":{"radius":0.005, "col":"#ff0000ff" }}],
+    ],
+}
+}

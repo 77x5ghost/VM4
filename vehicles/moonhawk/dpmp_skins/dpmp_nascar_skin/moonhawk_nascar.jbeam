@@ -1,0 +1,12 @@
+{
+
+"moonhawk_skin_nascar": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"NASCAR Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "nascar",
+}
+}

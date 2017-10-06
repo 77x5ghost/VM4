@@ -1,0 +1,11 @@
+{
+"pickup_skin_diesel": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Diesel Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "diesel",
+}
+}

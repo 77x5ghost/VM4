@@ -1,0 +1,12 @@
+{
+
+"van_skin_yeti": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Yeti Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "yeti",
+}
+}

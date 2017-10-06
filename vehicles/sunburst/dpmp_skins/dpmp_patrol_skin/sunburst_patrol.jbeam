@@ -1,0 +1,11 @@
+{
+"sunburst_skin_patrol": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Police Patrol Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "patrol",
+}
+}

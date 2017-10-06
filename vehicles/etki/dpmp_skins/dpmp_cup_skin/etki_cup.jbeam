@@ -1,0 +1,12 @@
+{
+
+"etki_skin_cup": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"#82 Cup Racing Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "cup",
+  }
+  }

@@ -1,0 +1,27 @@
+{
+"burnsidedpmpi6_fenderlettering_L": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Left Fender i6 Lettering DPMP",
+        "value":20,
+    }
+    "slotType" : "burnside_fenderlettering_L",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["burnsidedpmpi6_lettering_fender_L", ["burnside_fender_L"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+    ],
+}
+
+"burnsidedpmpi6_fenderlettering_R": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Right Fender i6 Lettering DPMP",
+        "value":20,
+    }
+    "slotType" : "burnside_fenderlettering_R",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["burnsidedpmpi6_lettering_fender_R", ["burnside_fender_R"],[],{"pos":{"x":0.0, "y":0.0, "z":0.0}}],
+    ],
+}
+}

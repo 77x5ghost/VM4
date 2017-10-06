@@ -1,0 +1,14 @@
+{
+"fullsize_lettering_dpmpb": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Burnside Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "fullsize_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["fullsize_lettering_trunkdpmpb", ["fullsize_trunk"]],
+    ],
+}
+}

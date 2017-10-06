@@ -1,0 +1,12 @@
+{
+
+"sunburst_skin_gymkhana": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Gymkhana Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "gymkhana",
+  }
+  }

@@ -1,0 +1,95 @@
+{
+"sunburst_glass_conv_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Glass",
+        "value":800,
+    }
+    "slotType" : "sunburst_glass_conv_dpmp",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //glass
+         {"deformGroup":"windshield_break", "deformMaterialBase":"sunburst_windshield", "deformMaterialDamaged":"sunburst_windshield_dmg"}
+         ["sunburst_windshield", ["sunburst_windshield"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+
+         {"deformGroup":"windshield_break", "deformMaterialBase":"sunburst_glass_int", "deformMaterialDamaged":"sunburst_glass_int"}
+         ["sunburst_windshield_int", ["sunburst_windshield"]],
+
+         {"deformGroup":"windshield_break", "deformMaterialBase":"glass_invisible", "deformMaterialDamaged":"glass_mirror"}
+         ["sunburst_windshield_dmg", ["sunburst_windshield"]],
+
+         {"deformGroup":"backlight_break", "deformMaterialBase":"sunburst_glass", "deformMaterialDamaged":"sunburst_glass_dmg"}
+         ["sunburst_bodyglass_RL", ["sunburst_body"],[]{"deformSound":"GlassBreakSound9", "deformVolume":0.8}],
+         ["sunburst_bodyglass_RR", ["sunburst_body"],[]{"deformSound":"GlassBreakSound9", "deformVolume":0.8}],
+         {"deformGroup":"backlight_break", "deformMaterialBase":"sunburst_glass_int", "deformMaterialDamaged":"sunburst_glass_dmg"}
+         ["sunburst_bodyglass_RL_int", ["sunburst_body"]],
+         ["sunburst_bodyglass_RR_int", ["sunburst_body"]],
+
+         {"deformGroup":""}
+         ["sunburst_wipers", ["sunburst_body", "sunburst_engine_bay"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_GLASS"},
+         {"nodeWeight":3.33},
+         {"group":["sunburst_windshield","gps"]},
+         ["wi1", 0, -0.64, 1.12],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //weak windshield beams
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1470600,"beamDamp":120},
+          {"beamDeform":10500,"beamStrength":"FLT_MAX"},
+          {"deformGroup":"windshield_break","deformationTriggerRatio":0.03},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          ["rf1","wi1"],
+          ["rf1r","wi1"],
+          ["rf1l","wi1"],
+          ["wi1","f6r"],
+          ["wi1","f6l"],
+          ["wi1","p1r"],
+          ["wi1","p1l"],
+          ["wi1","f6rr"],
+          ["wi1","f6ll"],
+
+          ["wi1","p2rr"],
+          ["wi1","p2ll"],
+
+          {"beamDeform":7500,"beamStrength":13500},
+          ["rf1","f6r"],
+          ["rf1","f6l"],
+
+          ["p1r","p1l"],
+
+          ["rf1r","f6r"],
+          ["rf1l","f6l"],
+
+          //brittle glass beams
+          {"beamSpring":1470600,"beamDamp":60},
+          {"beamDeform":8500,"beamStrength":8500},
+          {"disableMeshBreaking":true,"disableTriangleBreaking":true},
+          {"deformGroup":"backlight_break", "deformationTriggerRatio":0.03}
+          {"breakGroup":"backlight"},
+          ["q1l","p7l"],
+          ["q1r","p7r"],
+          ["q1l","p6l"],
+          ["q1r","p6r"],
+		  
+          ["p5l","p7l"],
+          ["p5r","p7r"],
+          ["p6l","p7l"],
+          ["p6r","p7r"],
+          ["p5l","p6l"],
+          ["p5r","p6r"],
+          {"breakGroup":""},
+          {"deformGroup":""}
+          {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

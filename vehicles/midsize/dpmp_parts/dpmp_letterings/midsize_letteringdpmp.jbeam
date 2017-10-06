@@ -1,0 +1,176 @@
+{
+"midsize_lettering_dpmpDXS": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"DXS Trunk Lettering DPMP",
+        "value":5,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpDXS", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+    ],
+}
+"midsize_lettering_dpmpLXS": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LXS Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpLXS", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+
+    ],
+}
+"midsize_lettering_dpmpnomi": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Nomi's N400 Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_dpmpnomi2", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpnomi1", ["midsize_trunk"]],
+    ],
+}
+"midsize_lettering_dpmpbase": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Base Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+
+    ],
+}
+"midsize_lettering_dpmpHR": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HR-Tec Trunk Lettering DPMP",
+        "value":9,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_LX", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpHR", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+
+    ],
+}
+"midsize_lettering_dpmpzen": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Zen Trunk Lettering DPMP",
+        "value":9,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_LX", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpzen", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+
+    ],
+}
+"midsize_lettering_dpmpdiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpdiesel", ["midsize_trunk"]],
+         ["midsize_lettering_DX", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+
+    ],
+}
+"midsize_lettering_dpmpHX": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HX Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpHX", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+
+    ],
+}
+"midsize_lettering_dpmpawd": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LX AWD Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpawd", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+    ],
+}
+"midsize_lettering_dpmpawdv6": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LX V6 AWD Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmpawd", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+         ["midsize_lettering_V6", ["midsize_trunk"]],
+    ],
+}
+"midsize_lettering_dpmp2000": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LX Millennium Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "midsize_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_lettering_pessima", ["midsize_trunk"]],
+         ["midsize_lettering_dpmp2000", ["midsize_trunk"]],
+         ["midsize_badge_trunk", ["midsize_trunk"]],
+         ["midsize_lettering_ibishu", ["midsize_trunk"]],
+         ["midsize_lettering_V6", ["midsize_trunk"]],
+    ],
+}
+}

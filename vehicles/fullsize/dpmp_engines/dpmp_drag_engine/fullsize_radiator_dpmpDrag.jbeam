@@ -1,0 +1,29 @@
+{
+"fullsize_radiator_dpmpDrag": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Drag Radiator DPMP",
+        "value":220,
+    }
+    "slotType" : "fullsize_radiator",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["fullsize_radiator", ["fullsize_body","fullsize_shocktop_F"]],
+    ],
+    "mainEngine":{
+        "radiatorArea":2.50,
+        "radiatorEffectiveness":1000000,
+        "coolantVolume":500,
+        "radiatorFanType":"electric",
+        "radiatorFanTemperature":1000,
+        "radiatorFanMaxAirSpeed":100,
+        "thermostatTemperature":2000
+        },
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

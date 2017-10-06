@@ -1,0 +1,348 @@
+{
+"midsize_antenna_trunk": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Trunk Antenna DPMP",
+        "value":100,
+    }
+    "slotType" : "midsize_trunk_accessory",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["fullsize_antenna_trunk", ["midsize_trunk","midsize_antenna_trunk"], [], {"pos":{"x":0, "y":-0.08, "z":-0.01}}],
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"midsize_antenna_trunk"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":0.14},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_RUBBER"},
+         //base
+         ["antb1r",-0.07, 2.47, 1.007],
+         ["antb1l", 0.07, 2.47, 1.007],
+         ["antb2", 0.0, 2.37, 1.018],
+         //antenna
+         ["ant1", 0.0, 2.432, 1.06],
+         ["ant2", 0.0, 2.442, 1.29],
+         ["ant3", 0.0, 2.452, 1.54],
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":35000,"beamDamp":50},
+          {"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
+          //base
+          ["antb1r","antb1l"],
+          ["antb1r","antb2"],
+          ["antb1l","antb2"],
+
+          ["antb1r","ant1"],
+          ["antb2","ant1"],
+          ["antb1l","ant1"],
+          //antenna
+          ["ant1","ant2"],
+          ["ant2","ant3"],
+
+          {"beamSpring":5000,"beamDamp":10},
+          ["antb1r","ant2"],
+          ["antb2","ant2"],
+          ["antb1l","ant2"],
+          ["antb1r","ant3"],
+          ["antb2","ant3"],
+          ["antb1l","ant3"],
+          //attach to trunk
+          {"beamSpring":65000,"beamDamp":50},
+          {"beamDeform":3200,"beamStrength":3200},
+            {"breakGroup":"midsize_antenna_trunk"}
+          ["antb1r","t2r"],
+          ["antb1l","t2r"],
+          ["antb1r","t2l"],
+          ["antb1l","t2l"],
+          ["antb2","t2r"],
+          ["antb2","t2l"],
+          ["antb1r","t5"],
+          ["antb1l","t5"],
+          ["antb2","t5"],
+          ["ant1","t2r"],
+          ["ant1","t2r"],
+          ["ant1","t5"],
+
+          ["antb1r","t5"],
+          ["antb1l","t5"],
+          ["antb2","t5"],
+            {"breakGroup":""}
+    ],
+}
+"midsize_spotlight_L": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Left Spotlight DPMP",
+        "value":60,
+    }
+    "slotType" : "midsize_spotlight_L",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["spotlight_arm_L", ["midsize_body"], [], {"pos":{"x": -0.2, "y":0, "z":0}}],
+         ["spotlight_L", ["midsize_spotlight_L"], [], {"pos":{"x": -0.2, "y":0, "z":0}}],
+         {"deformGroup":"midsize_spotlight_L_break", "deformMaterialBase":"pickup_glass", "deformMaterialDamaged":"pickup_glass_dmg"}
+         ["spotlight_glass_L", ["midsize_spotlight_L"],[], {"pos":{"x": -0.2, "y":0, "z":0},"deformSound":"GlassBreakSound3", "deformVolume":0.5}],
+         {"deformGroup":"midsize_spotlight_L_break", "deformMaterialBase":"light_generic", "deformMaterialDamaged":"light_generic_dmg"}
+         ["spotlight_inner_L", ["midsize_spotlight_L"], [], {"pos":{"x": -0.2, "y":0, "z":0}}],
+         {"deformGroup":""}
+    ],
+     "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"midsize_spotlight_L"},
+         {"selfCollision":true}
+         {"collision":true}
+         {"nodeWeight":1.0},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_PLASTIC"},
+         ["spot1l",0.96, -0.71, 1.10],
+         ["spot2l",0.81, -0.71, 1.10],
+         ["spot3l",0.96, -0.71, 1.26],
+         ["spot4l",0.81, -0.71, 1.26],
+         ["spot5l",0.89, -0.62, 1.18],
+         {"group":""},
+
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        {
+            "lightInnerAngle":0
+            "lightOuterAngle":120
+            "lightBrightness":0.35
+            "lightRange":150
+            "lightColor":{"r":255, "g":255, "b":200, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":true
+            "flareName":"vehicleHeadLightFlare"
+            "flareScale":0.2
+            "cookieName":"art/special/BNG_light_cookie_headlight.png"
+            "texSize":512
+            "shadowSoftness":0.5
+        }
+        ["highbeam"    , "SPOTLIGHT"        , "spot1l", "spot2l", "spot4l", {"x":0, "y":0, "z":0} , {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-0.05, "y":0.5, "z":-0.0},"deformGroup":"midsize_spotlight_L_break"}],,
+     ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":1176840,"beamDamp":78},
+          {"beamDeform":36750,"beamStrength":"FLT_MAX"},
+          //left light
+          {"deformationTriggerRatio":0.05}
+          {"deformGroup":"midsize_spotlight_L_break"},
+          ["spot1l","spot2l"],
+          ["spot1l","spot3l"],
+          ["spot1l","spot4l"],
+          ["spot1l","spot5l"],
+          ["spot2l","spot3l"],
+          ["spot2l","spot4l"],
+          ["spot2l","spot5l"],
+          ["spot3l","spot4l"],
+          ["spot3l","spot5l"],
+          ["spot4l","spot5l"],
+          //attach
+          {"beamSpring":1176840,"beamDamp":78},
+          {"beamDeform":8250,"beamStrength":7120},
+          {"breakGroup":"midsize_spotlight_L"},
+          ["spot1l","f6ll"],
+          ["spot2l","f6ll"],
+          ["spot3l","f6ll"],
+          ["spot4l","f6ll"],
+          ["spot5l","f6ll"],
+          ["spot1l","p1l"],
+          ["spot2l","p1l"],
+          ["spot3l","p1l"],
+          ["spot4l","p1l"],
+          ["spot5l","p1l"],
+          ["spot1l","p2l"],
+          ["spot2l","p2l"],
+          ["spot3l","p2l"],
+          ["spot4l","p2l"],
+          ["spot5l","p2l"],
+          ["spot1l","p2ll"],
+          ["spot2l","p2ll"],
+          ["spot3l","p2ll"],
+          ["spot4l","p2ll"],
+          ["spot5l","p2ll"],
+          {"breakGroup":""},
+          {"deformGroup":""},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":4},
+            {"group":"midsize_spotlight_L"},
+            ["spot4l","spot2l","spot1l"],
+            ["spot4l","spot1l","spot3l"],
+            //
+            ["spot3l","spot1l","spot5l"],
+            ["spot5l","spot1l","spot2l"],
+            ["spot5l","spot2l","spot4l"],
+            ["spot3l","spot5l","spot4l"],
+    ],
+}
+"midsize_lightbar_a": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Police Light Bar DPMP",
+    },
+    "slotType" : "midsize_roofacessory",
+    "glowMap":{
+            "lightbarglassR":                   {"simpleFunction":"lightbar", "off":"lightbarglassR", "on":"lightbarglassR_on"},
+            "lightbarglassB":                   {"simpleFunction":"lightbar", "off":"lightbarglassB", "on":"lightbarglassB_on"},
+        },
+
+		"flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["lightbar_base", ["midsize_lightbar"], [], {"pos":{"x": 0.0, "y":0.36, "z":1.43}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.35, "z":1.35}}],
+        //glass
+        {"deformGroup":"lightbar_R", "deformMaterialBase":"lightbarglassB", "deformMaterialDamaged":"lightbarglassB_dmg"}
+        ["lightbar_R_blue", ["midsize_lightbar"], [], {"pos":{"x": 0.0, "y":0.36, "z":1.43}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.35, "z":1.35},"deformSound":"GlassBreakSound3", "deformVolume":0.5}],
+        {"deformGroup":"lightbar_L", "deformMaterialBase":"lightbarglassR", "deformMaterialDamaged":"lightbarglassR_dmg"}
+        ["lightbar_L_red", ["midsize_lightbar"], [], {"pos":{"x": 0.0, "y":0.36, "z":1.43}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1.1, "y":1.35, "z":1.35},"deformSound":"GlassBreakSound4", "deformVolume":0.5}],
+        {"deformGroup":""}
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"group":"midsize_lightbar"},
+         {"collision":true}
+         {"selfCollision":true}
+         {"nodeMaterial":"|NM_GLASS"},
+         {"frictionCoef":0.7},
+         {"nodeWeight":0.95},
+         ["lb1", 0.0, 0.285, 1.59],
+         ["lb2", 0.0, 0.422, 1.59],
+         ["lb3", 0.0, 0.245, 1.5],
+         ["lb4", 0.0, 0.482, 1.5],
+         ["lb1l", 0.558, 0.285, 1.59],
+         ["lb2l", 0.558, 0.422, 1.59],
+         ["lb3l", 0.638, 0.245, 1.48],
+         ["lb4l", 0.638, 0.482, 1.48],
+         ["lb1r", -0.558, 0.285, 1.59],
+         ["lb2r", -0.558, 0.422, 1.59],
+         ["lb3r", -0.638, 0.245, 1.48],
+         ["lb4r", -0.638, 0.482, 1.48],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":750750,"beamDamp":36.5},
+          {"beamDeform":2340,"beamStrength":"FLT_MAX"},
+          //left side
+          {"deformationTriggerRatio":0.1},
+          {"deformGroup":"lightbar_L"}
+          ["lb1","lb2"],
+          ["lb1","lb3"],
+          ["lb1","lb4"],
+          ["lb1","lb1l"],
+          ["lb1","lb2l"],
+          ["lb1","lb3l"],
+          ["lb1","lb4l"],
+          ["lb2","lb3"],
+          ["lb2","lb4"],
+          ["lb2","lb1l"],
+          ["lb2","lb2l"],
+          ["lb2","lb3l"],
+          ["lb2","lb4l"],
+          ["lb3","lb4"],
+          ["lb3","lb1l"],
+          ["lb3","lb2l"],
+          ["lb3","lb3l"],
+          ["lb3","lb4l"],
+          ["lb4","lb1l"],
+          ["lb4","lb2l"],
+          ["lb4","lb3l"],
+          ["lb4","lb4l"],
+          ["lb1l","lb2l"],
+          ["lb1l","lb3l"],
+          ["lb1l","lb4l"],
+          ["lb2l","lb3l"],
+          ["lb2l","lb4l"],
+          ["lb3l","lb4l"],
+          //right side
+          {"deformGroup":"lightbar_R"}
+          ["lb1","lb2"],
+          ["lb1","lb3"],
+          ["lb1","lb4"],
+          ["lb1","lb1r"],
+          ["lb1","lb2r"],
+          ["lb1","lb3r"],
+          ["lb1","lb4r"],
+          ["lb2","lb3"],
+          ["lb2","lb4"],
+          ["lb2","lb1r"],
+          ["lb2","lb2r"],
+          ["lb2","lb3r"],
+          ["lb2","lb4r"],
+          ["lb3","lb4"],
+          ["lb3","lb1r"],
+          ["lb3","lb2r"],
+          ["lb3","lb3r"],
+          ["lb3","lb4r"],
+          ["lb4","lb1r"],
+          ["lb4","lb2r"],
+          ["lb4","lb3r"],
+          ["lb4","lb4r"],
+          ["lb1r","lb2r"],
+          ["lb1r","lb3r"],
+          ["lb1r","lb4r"],
+          ["lb2r","lb3r"],
+          ["lb2r","lb4r"],
+          ["lb3r","lb4r"],
+          //attachment
+          {"beamDeform":5760,"beamStrength":15600},
+          //left
+          {"deformGroup":"lightbar_L"}
+          {"breakGroup":"lightbar_left"},
+          ["lb3l","rf1l"],
+          ["lb3l","rf1"],
+          ["lb4l","rf2l"],
+          ["lb4l","rf2l"],
+          ["lb1l","rf1l"],
+          ["lb1l","rf1l"],
+          ["lb2l","rf2l"],
+          ["lb2l","rf2l"],
+          {"breakGroup":""},
+          //right
+          {"deformGroup":"lightbar_R"}
+          {"breakGroup":"lightbar_right"},
+          ["lb3r","rf1r"],
+          ["lb3r","rf1"],
+          ["lb4r","rf2r"],
+          ["lb4r","rf2r"],
+          ["lb1r","rf1r"],
+          ["lb1r","rf1r"],
+          ["lb2r","rf2r"],
+          ["lb2r","rf2r"],
+          {"deformGroup":""}
+          {"breakGroup":""},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"dragCoef":14},
+            //rear end
+            {"group":"midsize_lightbar"},
+            ["lb1r", "lb3r", "lb3"],
+            ["lb1r", "lb3", "lb1"],
+            ["lb3", "lb3l", "lb1l"],
+            ["lb3", "lb1l", "lb1"],
+            ["lb2l", "lb4l", "lb4"],
+            ["lb2l", "lb4", "lb2"],
+            ["lb4", "lb4r", "lb2r"],
+            ["lb2", "lb4", "lb2r"],
+            ["lb1l", "lb2l", "lb1"],
+            ["lb2l", "lb2", "lb1"],
+            ["lb2", "lb2r", "lb1r"],
+            ["lb1", "lb2", "lb1r"],
+            ["lb1l", "lb3l", "lb4l"],
+            ["lb1l", "lb4l", "lb2l"],
+            ["lb2r", "lb4r", "lb3r"],
+            ["lb2r", "lb3r", "lb1r"],
+    ],
+},
+}

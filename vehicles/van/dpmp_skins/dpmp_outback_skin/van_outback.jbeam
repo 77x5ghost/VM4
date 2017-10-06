@@ -1,0 +1,11 @@
+{
+"van_skin_outback": {
+    "information":{
+        "authors":"DjPlopper & Carbender",
+        "name":"Traveler Outback Van Decals DPMP",
+        "value":1550,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "outback",
+}
+}

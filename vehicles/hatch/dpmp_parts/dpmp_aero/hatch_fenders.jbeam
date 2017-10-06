@@ -1,0 +1,367 @@
+{
+"hatch_fender_R2_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Aftermarket Right Fender DPMP",
+        "value":35,
+    },
+
+    "slotType" : "hatch_fender_R",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_mudflap_FR","", "Front Right Mudflap"],
+        ["hatch_lip_FR","", "Front Right Splitter", {"nodeOffset":{"x":0, "y":0.09, "z":-0.01}}],
+
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_fender_R", ["hatch_fender_R"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--FENDER--
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"collision":true}
+        {"selfCollision":true},
+        {"nodeWeight":0.6},
+        //R
+        {"group":"hatch_fender_R"},
+        ["fe1r", -0.78, -0.79, 0.20],
+        ["fe2r", -0.82, -0.81, 0.55],
+        ["fe3r", -0.84, -1.00, 0.55],
+        ["fe4r", -0.85, -1.25, 0.64],
+        ["fe5r", -0.82, -1.59, 0.49],
+        ["fe6r", -0.76, -0.78, 0.85],
+        ["fe7r", -0.76, -1.26, 0.82],
+        ["fe8r", -0.75, -1.51, 0.78],
+        ["fe9r", -0.74, -1.76, 0.72],
+        {"group":""},
+        {"selfCollision":false},
+        {"collision":false},
+        //rigidifier
+        ["fe10r",-0.52, -1.25, 0.38],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--FENDER--
+          {"beamSpring":801000,"beamDamp":50},
+          {"beamDeform":8050,"beamStrength":"FLT_MAX"},
+          //fender main shape
+          ["fe1r","fe2r"],
+          ["fe2r","fe6r"],
+          ["fe3r","fe7r"],
+          ["fe4r","fe7r"],
+          ["fe5r","fe8r"],
+          ["fe5r","fe9r"],
+          ["fe2r","fe3r"],
+          ["fe3r","fe4r"],
+          ["fe5r","fe6r"],
+          ["fe6r","fe7r"],
+          ["fe7r","fe8r"],
+          ["fe8r","fe9r"],
+          {"beamDeform":4045,"beamStrength":"FLT_MAX"},
+          //surficial crossing
+          ["fe1r","fe3r"],
+          ["fe2r","fe7r"],
+          ["fe3r","fe6r"],
+          ["fe4r","fe6r"],
+          ["fe4r","fe8r"],
+          ["fe5r","fe7r"],
+          {"beamDeform":2655,"beamStrength":"FLT_MAX"},
+          //rigids
+          ["fe1r","fe4r"],
+          ["fe3r","fe5r"],
+          ["fe1r","fe6r"],
+          ["fe1r","fe7r"],
+          ["fe6r","fe8r"],
+          ["fe7r","fe9r"],
+          //rigidifier
+          {"beamSpring":401000,"beamDamp":50},
+          {"beamDeform":2315,"beamStrength":"FLT_MAX"},
+          //r
+          ["fe1r","fe10r"],
+          ["fe2r","fe10r"],
+          ["fe3r","fe10r"],
+          ["fe4r","fe10r"],
+          ["fe5r","fe10r"],
+          ["fe6r","fe10r"],
+          ["fe7r","fe10r"],
+          ["fe8r","fe10r"],
+          ["fe9r","fe10r"],
+          //attach
+          {"beamSpring":901000,"beamDamp":50},
+          {"beamDeform":11915,"beamStrength":76550},
+          {"disableTriangleBreaking":true},
+          //firewall
+          //r
+          {"breakGroup":"hatch_fender_a_R"},
+          ["fe2r","f5r"],
+          ["fe2r","f5rr"],
+          ["fe3r","f5rr"],
+          ["fe6r","f6rr"],
+          ["fe1r","f1rr"],
+          {"beamDeform":9555,"beamStrength":76550},
+          //middle
+          //r
+          {"breakGroup":"hatch_fender_b_R"},
+          ["fe7r","s2rr"],
+          ["fe8r","s2rr"],
+          ["fe8r","s3rr"],
+          ["fe4r","s2rr"],
+          ["fe4r","s3rr"],
+          {"beamDeform":6775,"beamStrength":76550},
+          //front
+          //r
+          {"breakGroup":"hatch_fender_c_R"},
+          ["fe9r","s7r"],
+          ["fe9r","s3rr"],
+          ["fe5r","s7r"],
+          ["fe5r","s3rr"],
+          {"breakGroup":""},
+          //fender support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":601000,"beamDamp":50},
+          {"beamDeform":8360,"beamStrength":234600},
+          ["fe1r","f2rr"],
+          ["fe1r","f1r"],
+          ["fe6r","f6r"],
+          ["fe7r","f6r"],
+          ["fe7r","f6rr"],
+          ["fe9r","s4r"],
+          ["fe8r","s4r"],
+          ["fe5r","s4r"],
+          ["fe4r","s3r"],
+          ["fe4r","s2r"],
+          ["fe7r","fs1r"],
+          //inter part triangle breaking triggers
+          {"beamType":"|SUPPORT", "beamLongBound":1.5},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamDeform":1000,"beamStrength":1000},
+          {"breakGroup":"hatch_fender_body_R"},
+          ["fe5r","s3r"],
+          {"beamType":"|SUPPORT", "beamLongBound":0.5},
+          ["fe2r","f5r"],
+          {"breakGroup":""},
+          {"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //right fender
+            {"group":"hatch_fender_R"},
+            {"dragCoef":8},
+            ["fe3r","fe2r","fe1r"],
+            ["fe6r","fe2r","fe3r"],
+            ["fe7r","fe6r","fe3r"],
+            ["fe7r","fe3r","fe4r"],
+            ["fe7r","fe4r","fe8r"],
+            ["fe8r","fe4r","fe5r"],
+            ["fe9r","fe8r","fe5r"],
+
+            //bridge to door
+            {"dragCoef":0},
+            {"optional":true}
+            {"breakGroup":["hatch_doorhinge_a_R","hatch_doorhinge_b_R","hatch_fender_body_R"]},
+            ["d7r","d4r","fe2r"],
+            ["d7r","fe2r","fe6r"],
+            ["d4r","d1r","fe1r"],
+            ["d4r","fe1r","fe2r"],
+
+            {"breakGroup":"hatch_fender_body_R"},
+            ["fe3r","fe1r","s2r"],
+            ["fe4r","fe3r","s2r"],
+            ["fe4r","s2r","fe5r"],
+            ["fe5r","s2r","s3r"],
+            ["fe9r","fe5r","s3r"],
+            {"optional":false}
+            {"breakGroup":""},
+            {"group":""},
+    ],
+},
+
+"hatch_fender_L2_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Aftermarket Left Fender DPMP",
+        "value":35,
+    },
+
+    "slotType" : "hatch_fender_L",
+
+    "slots": [
+        ["type", "default", "description"]
+        ["hatch_mudflap_FL","", "Front Left Mudflap"],
+        ["hatch_lip_FL","", "Front Left Splitter", {"nodeOffset":{"x":0, "y":0.09, "z":-0.01}}],
+    ],
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["hatch_fender_L", ["hatch_fender_L"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--FENDER--
+        {"nodeMaterial":"|NM_METAL"},
+        {"frictionCoef":0.5},
+        {"collision":true}
+        {"selfCollision":true},
+        {"nodeWeight":0.6},
+        //L
+        {"group":"hatch_fender_L"},
+        ["fe1l", 0.78, -0.79, 0.20],
+        ["fe2l", 0.82, -0.81, 0.55],
+        ["fe3l", 0.84, -1.00, 0.55],
+        ["fe4l", 0.85, -1.25, 0.64],
+        ["fe5l", 0.82, -1.59, 0.49],
+        ["fe6l", 0.76, -0.78, 0.85],
+        ["fe7l", 0.76, -1.26, 0.82],
+        ["fe8l", 0.75, -1.51, 0.78],
+        ["fe9l", 0.74, -1.76, 0.72],
+        {"group":""},
+        {"selfCollision":false},
+        {"collision":false},
+        //rigidifier
+        ["fe10l", 0.52, -1.25, 0.38],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--FENDER--
+          {"beamSpring":801000,"beamDamp":50},
+          {"beamDeform":8050,"beamStrength":"FLT_MAX"},
+          //fender main shape
+          ["fe1l","fe2l"],
+          ["fe2l","fe6l"],
+          ["fe3l","fe7l"],
+          ["fe4l","fe7l"],
+          ["fe5l","fe8l"],
+          ["fe5l","fe9l"],
+          ["fe2l","fe3l"],
+          ["fe3l","fe4l"],
+          ["fe5l","fe6l"],
+          ["fe6l","fe7l"],
+          ["fe7l","fe8l"],
+          ["fe8l","fe9l"],
+          {"beamDeform":4045,"beamStrength":"FLT_MAX"},
+          //surficial crossing
+          ["fe1l","fe3l"],
+          ["fe2l","fe7l"],
+          ["fe3l","fe6l"],
+          ["fe4l","fe6l"],
+          ["fe4l","fe8l"],
+          ["fe5l","fe7l"],
+          {"beamDeform":2655,"beamStrength":"FLT_MAX"},
+          //rigids
+          ["fe1l","fe4l"],
+          ["fe3l","fe5l"],
+          ["fe1l","fe6l"],
+          ["fe1l","fe7l"],
+          ["fe6l","fe8l"],
+          ["fe7l","fe9l"],
+          //rigidifier
+          {"beamSpring":401000,"beamDamp":50},
+          {"beamDeform":2315,"beamStrength":"FLT_MAX"},
+          //l
+          ["fe1l","fe10l"],
+          ["fe2l","fe10l"],
+          ["fe3l","fe10l"],
+          ["fe4l","fe10l"],
+          ["fe5l","fe10l"],
+          ["fe6l","fe10l"],
+          ["fe7l","fe10l"],
+          ["fe8l","fe10l"],
+          ["fe9l","fe10l"],
+          //attach
+          {"beamSpring":901000,"beamDamp":50},
+          {"beamDeform":11915,"beamStrength":76550},
+          {"disableTriangleBreaking":true},
+          //firewall
+          //l
+          {"breakGroup":"hatch_fender_a_L"},
+          ["fe2l","f5l"],
+          ["fe2l","f5ll"],
+          ["fe3l","f5ll"],
+          ["fe6l","f6ll"],
+          ["fe1l","f1ll"],
+          {"beamDeform":9555,"beamStrength":76550},
+          //middle
+          //l
+          {"breakGroup":"hatch_fender_b_L"},
+          ["fe7l","s2ll"],
+          ["fe8l","s2ll"],
+          ["fe8l","s3ll"],
+          ["fe4l","s2ll"],
+          ["fe4l","s3ll"],
+          {"beamDeform":6775,"beamStrength":76550},
+          //front
+          //l
+          {"breakGroup":"hatch_fender_c_L"},
+          ["fe9l","s7l"],
+          ["fe9l","s3ll"],
+          ["fe5l","s7l"],
+          ["fe5l","s3ll"],
+          {"breakGroup":""},
+          //fender support beams
+          {"beamType":"|SUPPORT", "beamLongBound":4},
+          {"beamSpring":601000,"beamDamp":50},
+          {"beamDeform":8360,"beamStrength":234600},
+          ["fe1l","f2ll"],
+          ["fe1l","f1l"],
+          ["fe6l","f6l"],
+          ["fe7l","f6l"],
+          ["fe7l","f6ll"],
+          ["fe9l","s4l"],
+          ["fe8l","s4l"],
+          ["fe5l","s4l"],
+          ["fe4l","s3l"],
+          ["fe4l","s2l"],
+          ["fe7l","fs1l"],
+          //inter part triangle breaking triggers
+          {"beamType":"|SUPPORT", "beamLongBound":1.5},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamDeform":1000,"beamStrength":1000},
+          {"breakGroup":"hatch_fender_body_L"},
+          ["fe5l","s3l"],
+          {"beamType":"|SUPPORT", "beamLongBound":0.5},
+          ["fe2l","f5l"],
+          {"breakGroup":""},
+          {"disableTriangleBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            //left fender
+            {"group":"hatch_fender_L"},
+            {"dragCoef":8},
+            ["fe2l","fe3l","fe1l"],
+            ["fe2l","fe6l","fe3l"],
+            ["fe6l","fe7l","fe3l"],
+            ["fe3l","fe7l","fe4l"],
+            ["fe4l","fe7l","fe8l"],
+            ["fe4l","fe8l","fe5l"],
+            ["fe8l","fe9l","fe5l"],
+
+            //bridge to door
+            {"dragCoef":0},
+            {"optional":true}
+            {"breakGroup":["hatch_doorhinge_a_L","hatch_doorhinge_b_L","hatch_fender_body_L"]},
+            ["d4l","d7l","fe2l"],
+            ["d7l","fe6l","fe2l"],
+            ["d1l","d4l","fe1l"],
+            ["d4l","fe2l","fe1l"],
+
+            {"breakGroup":["hatch_fender_body_L"]},
+            ["fe1l","fe3l","s2l"],
+            ["fe3l","fe4l","s2l"],
+            ["fe5l","s2l","fe4l"],
+            ["fe5l","s3l","s2l"],
+            ["fe5l","fe9l","s3l"],
+            {"optional":false}
+            {"breakGroup":""},
+            {"group":""},
+    ],
+},
+}

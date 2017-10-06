@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_spark": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Spark Sports Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "spark",
+}
+}

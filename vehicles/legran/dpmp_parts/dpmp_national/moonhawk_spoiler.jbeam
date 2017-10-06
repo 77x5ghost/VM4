@@ -1,0 +1,121 @@
+{
+"legran_platespoiler_dpmp_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Plate Spoiler DPMP",
+        "value":200,
+    },
+    "slotType" : "legran_spoiler",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["legran_platespoiler_dpmp", ["legran_spoiler"]],
+//         ["legran_platespoiler_mounts_dpmp", ["legran_spoiler","legran_trunk"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--SPOILER--
+         {"nodeWeight":0.5},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"legran_spoiler"},
+         {"collision":true},
+         {"selfCollision":true},
+
+         ["sp2r",-0.7, 2.24, 0.86],
+         ["sp2", 0.0, 2.27, 0.91],
+         ["sp2l", 0.7, 2.24, 0.86],
+
+         ["sp3r",-0.7, 2.21, 0.85],
+         ["sp3", 0.0, 2.22, 0.87],
+         ["sp3l", 0.7, 2.21, 0.85],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},//--FRONT BUMPER--
+          {"beamSpring":501000,"beamDamp":50},
+          {"beamDeform":28450,"beamStrength":"FLT_MAX"},
+          //main shape
+          ["sp2r","sp2"],
+          ["sp2l","sp2"],
+          ["sp3r","sp3"],
+          ["sp3l","sp3"],
+
+          ["sp2r","sp3r"],
+          ["sp2","sp3"],
+          ["sp2l","sp3l"],
+
+          //crossing
+          {"beamDeform":13895,"beamStrength":"FLT_MAX"},
+          ["sp2r","sp3"],
+          ["sp2","sp3r"],
+          ["sp2l","sp3"],
+          ["sp2","sp3l"],
+         {"beamSpring":451000,"beamDamp":50},
+          //rigids
+          {"beamDeform":4895,"beamStrength":"FLT_MAX"},
+          ["sp2r","sp2l"],
+          ["sp3r","sp3l"],
+          ["sp2r","sp2l"],
+          ["sp2l","sp2r"],
+
+          //attach
+		  {"beamSpring":401000,"beamDamp":50},
+          {"beamDeform":8000,"beamStrength":18340},
+          {"optional":true},
+          {"breakGroup":"spoiler_R"},
+          ["sp2r","t4rr"],
+          ["sp3r","t4rr"],
+          ["sp2r","t3rr"],
+          ["sp3r","t3rr"],
+          ["sp3r","t3r"],
+          ["sp3r","t4r"],
+
+          {"breakGroup":"spoiler_L"},
+          ["sp2l","t4ll"],
+          ["sp3l","t4ll"],
+          ["sp2l","t3ll"],
+          ["sp3l","t3ll"],
+          ["sp3l","t3l"],
+          ["sp3l","t4l"],
+
+          {"breakGroup":"spoiler_M"},
+          ["sp2","t4"],
+          ["sp3","t4"],
+          ["sp2","t3"],
+          ["sp3","t3"],
+          ["sp3","t3r"],
+          ["sp3","t4r"],
+          ["sp3","t3l"],
+          ["sp3","t4l"],
+
+          {"optional":false},
+          {"breakGroup":""},
+          {"breakGroupType":0},
+          //support beams
+          {"beamPrecompression":1,"beamType":"|SUPPORT", "beamLongBound":6},
+          {"beamSpring":506460,"beamDamp":55},
+          {"beamDeform":14450,"beamStrength":234600},
+          {"beamPrecompression":0.95},
+          ["sp2","t3"],
+          ["sp2","t4"],
+          ["sp2","t3r"],
+          ["sp2","t4r"],
+          ["sp2","t3l"],
+          ["sp2","t4l"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            {"group":"legran_spoiler"},
+            {"groundModel":"plastic"},
+            {"dragCoef":10},
+            ["sp2","sp2l","sp3l"{"liftCoef":100}],
+            ["sp2","sp3l","sp3"{"liftCoef":100}],
+            ["sp2r","sp2","sp3r"{"liftCoef":100}],
+            ["sp2","sp3","sp3r"{"liftCoef":100}],
+            {"group":""},
+    ],
+},
+}

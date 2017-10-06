@@ -1,0 +1,77 @@
+{
+
+"legran_transmission_5M_HE_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"High Efficiency 5-Speed Manual Transmission",
+        "value":400,
+    }
+    "slotType" : "legran_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["legran_differential_F","legran_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.1, 0, 3.25, 1.65, 1.03, 0.81, 0.64]
+        "friction": 0.75,
+    },
+    "clutch": {},
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,2700,2950,3050,3150,3150]
+        "lowShiftUpRPM":4500,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["legran_transmission", ["legran_engine","legran_transmission"]],
+        ["legran_shifter_M", ["legran_body"]],
+        ["legran_shifterbase_M", ["legran_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //manual transmission
+        ["clutch"     ,"legran_clutchpedal", "f1l","f1r","f6l",  {"x":0, "y":0, "z":180} , {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"legran_transmission"},
+         {"nodeWeight":12},
+         ["tra1r",-0.30, -1.31, 0.29],
+         ["tra1l", 0.26, -1.31, 0.29],
+         ["ta1", 0, -1.33, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

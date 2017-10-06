@@ -1,0 +1,22 @@
+{
+"Performance Class":"4",
+"Drivetrain":"RWD",
+"Value":30000,
+"TorquePeakRPM":"1550 - 3500",
+"Off-Road Score":34,
+"Configuration":"Monte Carlo (A)",
+"PowerPeakRPM":"3550 - 4750",
+"0-100 km/h":6.9,
+"0-60 mph":6.5,
+"Config Type":"Factory",
+"100-0 km/h":43,
+"Top Speed":44.0348,
+"Transmission":"Automatic",
+"Torque":541.553,
+"Weight":1780,
+"Description":"The Monte Carlo was a special sport edition of the Special. It celebrated the partecipation at the 1954 Monte Carlo Rally. It featured a bigger engine, magnum wheels and a double white stripe",
+"Weight/Power":6.69173,
+"60-0 mph":120.2,
+"Power":266.723,
+"default_color":"Pearl White"
+}

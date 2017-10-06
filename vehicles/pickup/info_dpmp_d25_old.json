@@ -1,0 +1,23 @@
+{
+"Performance Class":"3",
+"Drivetrain":"4WD",
+"Body Style":"Pickup",
+"Value":5350,
+"TorquePeakRPM":"1200 - 4100",
+"Off-Road Score":46,
+"Configuration":"D25 Extended Cab Old Off-Roader (A)",
+"Description":"Old pickup truck used for many miles, equipped with an old and slow i6 engine. It will reach your destination, but don't ask anything fancy to this truck",
+"Transmission":"Automatic",
+"0-60 mph":12.1,
+"Config Type":"Factory",
+"100-0 km/h":44.5,
+"Top Speed":43.2954,
+"default_color":"Light Brown",
+"Torque":290.144,
+"Weight":2250,
+"Power":166.661,
+"Weight/Power":13.5542,
+"60-0 mph":129.7,
+"PowerPeakRPM":"4150 - 5200",
+"0-100 km/h":12.9
+}

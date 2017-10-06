@@ -1,0 +1,12 @@
+{
+
+"etk800_skin_heritage": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Heritage Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "heritage",
+}
+}

@@ -1,0 +1,499 @@
+{
+"sunburst_engine_1.9dieseldpmp": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"1.9L I4 Diesel Engine DPMP",
+        "value":1600,
+    }
+    "slotType" : "sunburst_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["sunburst_exhaust_I4","sunburst_exhaust_I4", "Exhaust"],
+        ["sunburst_transmission","sunburst_transmission_CVT", "Transmission"],
+        ["sunburst_radiator","sunburst_radiator", "Radiator"],
+        ["sunburst_intake_diesel","sunburst_turbo_dpmpdiesel", "Intake",{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_engine", ["sunburst_engine","sunburst_transmission"]],
+         ["sunburst_intake_NA", ["sunburst_engine"]],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [500, 190],
+        [1000, 230],
+        [1500, 290],
+        [2000, 320],
+        [2500, 318],
+        [3000, 290],
+        [3500, 260],
+        [4000, 240],
+        [4500, 200],
+        [5000, 150],
+
+    ],
+ 
+        "idleRPM":950,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
+        "maxRPM":5000,
+        "inertia":0.08,
+        "friction":11
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.39
+        "throttleSensitivity":1.2
+        //"clutchTorque":220
+        "torqueReactionNodes:":["e1r","e2r","e4l"]
+        "particulates":0.04
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":5
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":130
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2000,
+        "clutchLaunchTargetRPM":2800,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,3300,3800,4000,4200,4200]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":4100
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--1.8L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sunburst_engine"},
+         {"nodeWeight":15.2},
+         {"engineGroup":"engine_block"}
+         ["e1r", -0.34, -1.62, 0.32,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e1l", -0.34, -1.31, 0.32],
+         ["e2r", 0.17, -1.62, 0.32,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e2l", 0.17, -1.31, 0.32],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.34, -1.62, 0.74,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e3l", -0.34, -1.31, 0.74],
+         ["e4r", 0.17, -1.62, 0.74,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e4l", 0.17, -1.31, 0.74],
+         {"engineGroup":""},
+         {"chemEnergy":200,"burnRate":0.3,"flashPoint":600,"specHeat":0.1,"smokePoint":580,"selfIgnitionCoef":false},
+         ["tc1", 0.0, -1.6, 0.45],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false,"specHeat":false,"smokePoint":false,"selfIgnitionCoef":false},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":600000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"{"isExhaust":true}],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_turbo_dpmpdiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Turbocharger DPMP",
+        "value":1600,
+    }
+    "slotType" : "sunburst_intake_diesel",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_turbo", ["sunburst_engine"]],
+         ["sunburst_intercooler", ["sunburst_engine_bay"]],
+    ],
+    "turbocharger": {
+        "wastegateStart":10,
+        "wastegateLimit":12,
+        "maxExhaustPower": 14000,
+        "backPressureCoef": 0.000035,
+        "frictionCoef": 1.4,
+        "inertia":3.6,
+        "damageThresholdTemperature": 620,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -0.5],
+            [30000,     0],
+            [60000,     6],
+            [90000,     9],
+            [150000,    12],
+            [200000,    15],
+            [250000,    18],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.0],
+            [650,   0.45,   0.1],
+            [1400,  0.75,   0.55],
+            [2000,  0.85,    0.8],
+            [2500,  0.95,    0.85],
+            [3000,  0.9,    0.9],
+            [4000,  0.75,    0.95],
+            [5000,  0.75,    1.0],
+            [6000,  0.75,    1.0],
+            [7000,  0.7,    1.0],
+            [8000,  0.4,    1.0],
+            [9000,  0.3,    1.0],
+        ],
+    },
+    "mainEngine":{ 
+        "idleRPM":950,
+        "maxRPM":5000,
+        "revLimiterRPMDrop":50,
+        "burnEfficiency":0.36
+        "inertia":0.06,
+        "cylinderWallTemperatureDamageThreshold":150
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2400,
+        "clutchLaunchTargetRPM":3200,
+        "highShiftUpRPM":4600
+        "cvtHighRPM":6000,
+        "revMatchThrottle":0.3,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--turbo and intercooler weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":14.25},
+         ["turbo", 0.0, -1.33, 0.66],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3000600,"beamDamp":150},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_turbo_dpmpcup": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Race Turbocharger DPMP",
+        "value":3200,
+    }
+    "slotType" : "sunburst_intake_diesel",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_turbo", ["sunburst_engine"]],
+         ["sunburst_intercooler", ["sunburst_engine_bay"]],
+    ],
+    "turbocharger": {
+        "wastegateStart":16,
+        "wastegateLimit":18,
+        "maxExhaustPower": 70000,
+        "backPressureCoef": 0.00004,
+        "frictionCoef": 15.4,
+        "inertia":15.6,
+        "pressureRatePSI": 75,
+        "damageThresholdTemperature": 680,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -2.5],
+            [30000,     0],
+            [60000,     10],
+            [90000,     14],
+            [150000,    17],
+            [200000,    21],
+            [250000,    26],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.0],
+            [650,   0.45,   0.3],
+            [1400,  0.68,   0.45],
+            [2000,  0.85,    0.49],
+            [2500,  0.89,    0.55],
+            [3000,  0.99,    0.65],
+            [4000,  0.99,    0.75],
+            [5000,  1.0,    0.8],
+            [6000,  1.0,    1.0],
+            [7000,  1.0,    1.0],
+            [8000,  0.9,    1.0],
+            [9000,  0.8,    1.0],
+        ],
+    },
+    "mainEngine":{ 
+        "idleRPM":1000,
+        "maxRPM":5000,
+        "revLimiterRPMDrop":50,
+        "burnEfficiency":0.33
+        "inertia":0.05,
+        "cylinderWallTemperatureDamageThreshold":150
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2400,
+        "clutchLaunchTargetRPM":3200,
+        "highShiftUpRPM":4600
+        "cvtHighRPM":6000,
+        "revMatchThrottle":0.3,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--turbo and intercooler weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":14.25},
+         ["turbo", 0.0, -1.33, 0.66],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3000600,"beamDamp":150},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_transmission_6DCT_diesel": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"6-Speed Diesel Dual-Clutch Transmission DPMP",
+        "value":1400,
+    }
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["dctGearbox", "gearbox", "mainEngine", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.64, 0, 3.77, 2.09, 1.32, 0.91, 0.72, 0.61]
+        "parkLockTorque":2000,
+    },
+    "vehicleController": {
+        "automaticModes":"PRNDM",
+        "calculateOptimalLoadShiftPoints": false,
+        "lowShiftDownRPM":[0,0,0,3300,3800,4000,4200,4200]
+        "lowShiftUpRPM":5600,
+    }, 
+    "slotType" : "sunburst_transmission",
+    "slots": [
+        ["type", "default", "description"],
+        ["sunburst_transfer_case","sunburst_transfer_case_FWD", "Transfer Case"{"coreSlot":true}],
+        ["sunburst_differential_F","sunburst_differential_F", "Front Differential"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_transmission_awd", ["sunburst_engine","sunburst_transmission"]],
+         ["sunburst_auto", ["sunburst_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //displays
+        ["disp_R",         "sunburst_displayR", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_N",         "sunburst_displayN", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_1",         "sunburst_display1", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_2",         "sunburst_display2", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_3",         "sunburst_display3", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_4",         "sunburst_display4", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_5",         "sunburst_display5", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_6",         "sunburst_display6", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["gear_A",         "sunburst_shifter_auto", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":0.1}     , {"x":0, "y":0.25, "z":0}, 0, 1, -0.1, 1],
+        //shifter paddles
+        ["steering"  , "sunburst_paddles"      , "f7r","f7l","f8r",  {"x":20, "y":0, "z":0}, {"x":0, "y":0, "z":0}    , {"x":0, "y":0, "z":0}, -1000, 1000, 0, 1, {"baseTranslation":{"x":0.68,"y":-0.16,"z":-0.48}},],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--6 Speed DCT--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sunburst_transmission"},
+         {"nodeWeight":29.45},
+         ["tra1", 0.24, -1.43, 0.30],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":600000,"beamStrength":"FLT_MAX"},
+          ["tra1","e2l"],
+          ["tra1","e4l"],
+          ["tra1","e2r"],
+          ["tra1","e4r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_transmission_6M_dpmpdiesel": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"6-Speed Diesel Manual Transmission DPMP",
+        "value":600,
+    }
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["frictionClutch", "clutch", "mainEngine", 1],
+        ["manualGearbox", "gearbox", "clutch", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-3.64, 0, 3.77, 2.09, 1.32, 0.91, 0.72, 0.61]
+        "friction": 1,
+    },
+    "vehicleController": {
+        "lowShiftDownRPM":[0,0,0,3300,3800,4000,4200,4200]
+        "lowShiftUpRPM":5600,
+    }, 
+    "slotType" : "sunburst_transmission",
+    "slots": [
+        ["type", "default", "description"],
+        ["sunburst_transfer_case","sunburst_transfer_case_FWD", "Transfer Case"{"coreSlot":true}],
+        ["sunburst_differential_F","sunburst_differential_F", "Front Differential"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_transmission_awd", ["sunburst_engine","sunburst_transmission"]],
+         ["sunburst_manual", ["sunburst_body"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //displays
+        ["disp_R",         "sunburst_displayR", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_N",         "sunburst_displayN", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_1",         "sunburst_display1", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_2",         "sunburst_display2", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_3",         "sunburst_display3", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_4",         "sunburst_display4", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_5",         "sunburst_display5", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["disp_6",         "sunburst_display6", "f7r","f7l","f8r", {"x":225, "y":0, "z":0}, {"x":0, "y":0, "z":0}     , {"x":0, "y":0.013, "z":0}, -1, 1, 0, 1],
+        ["clutch"     ,"sunburst_clutchpedal", "f7r","f7l","f8r",  {"x":90, "y":0, "z":0} , {"x":-25, "y":0, "z":0}    , {"x":0.0, "y":0, "z":0}, 0, 1, 0, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--6 Speed Manual--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sunburst_transmission"},
+         {"nodeWeight":22.8},
+         ["tra1", 0.24, -1.43, 0.30],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION CONE--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":600000,"beamStrength":"FLT_MAX"},
+          ["tra1","e2l"],
+          ["tra1","e4l"],
+          ["tra1","e2r"],
+          ["tra1","e4r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

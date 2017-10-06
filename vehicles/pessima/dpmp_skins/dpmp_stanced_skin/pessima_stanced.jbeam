@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_stanced": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Stance Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "stanced",
+}
+}

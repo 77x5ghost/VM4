@@ -1,0 +1,12 @@
+{
+
+"fullsize_skin_russia": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Russian Police Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "russia",
+}
+}

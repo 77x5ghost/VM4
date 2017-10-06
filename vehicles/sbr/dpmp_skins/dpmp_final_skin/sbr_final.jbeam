@@ -1,0 +1,12 @@
+{
+
+"sbr_skin_final": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Final Edition Trim",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "final",
+}
+}

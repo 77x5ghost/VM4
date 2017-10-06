@@ -1,0 +1,23 @@
+{
+"Performance Class":"6",
+"Drivetrain":"4WD",
+"Body Style":"Pickup",
+"Value":15500,
+"TorquePeakRPM":"2700 - 4650",
+"Off-Road Score":50,
+"Configuration":"D15 Behemoth (M)",
+"Description":"This D15 Extended Cab is tuned By Agate Customs, one of the most famous East Coast Tuners, Equipped with 4-wheel drive and supercharged powerful V8 engine",
+"Transmission":"Manual",
+"0-60 mph":10.2,
+"Config Type":"Custom",
+"100-0 km/h":44.7,
+"Top Speed":43.8446,
+"default_color":"Pearl White",
+"Torque":319.125,
+"Weight":2715,
+"Power":222.185,
+"Weight/Power":12.2297,
+"60-0 mph":132,
+"PowerPeakRPM":5250,
+"0-100 km/h":11.1
+}

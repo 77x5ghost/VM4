@@ -1,0 +1,254 @@
+{
+"pessima_lettering_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":" Lettering",
+        "value":5,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_DX_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"DX Tailgate Lettering",
+        "value":5,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_1_8", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_DX", ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_LX_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"LX Tailgate Lettering",
+        "value":7,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_2_0" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_LX", ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_HX_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"HX Tailgate Lettering",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_1_8" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_HX", ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_ZX_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"ZX Tailgate Lettering",
+        "value":9,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon_wagon", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_2_0" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_ZX", ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_ZX_4ws_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"ZX AWS Tailgate Lettering",
+        "value":9,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_2_0" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_ZX", ["pessima_tailgate"],[],{"pos":{"x":0.07,"y":0.0045,"z":0}}],
+         ["wagon_pessima_lettering_4ws", ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_GTz_wagon": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"GTz Tailgate Lettering",
+        "value":12,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_2_0" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_turbo" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_4wd" ["pessima_tailgate"]],
+         ["wagon_pessima_lettering_GTz", ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_dpmpHRw": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HR Trunk Lettering DPMP",
+        "value":7,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp22" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpHR", ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_dpmpHR4w": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HR 4WD Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp22" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpHR", ["pessima_tailgate"]],
+         ["pessima_lettering_4wd" ["pessima_tailgate"]],
+
+    ],
+}
+"pessima_lettering_dpmpasw": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Aerosport Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_2.0" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpas", ["pessima_tailgate"]],
+         ["pessima_lettering_4wd" ["pessima_tailgate"]],
+         ["pessima_lettering_GTz" ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmp50w": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"50th Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_2.0" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp50", ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmpLHXw": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LHX Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_2.0" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpLHX", ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmpfew": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Final Edition Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_2.0" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpfe", ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmp27w": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"LX V6 Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp27" ["pessima_tailgate"]],
+         ["pessima_lettering_LX", ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmpdieselw": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp19" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpdiesel", ["pessima_tailgate"]],
+         ["pessima_lettering_turbo" ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmpdiesel4w": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel 4WD Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp19" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpdiesel", ["pessima_tailgate"]],
+         ["pessima_lettering_4wd" ["pessima_tailgate"]],
+         ["pessima_lettering_turbo" ["pessima_tailgate"]],
+    ],
+}
+"pessima_lettering_dpmpdieseldetw": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Diesel Base Trunk Lettering DPMP",
+        "value":8,
+    }
+    "slotType" : "pessima_lettering_wagon",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["pessima_lettering_trunk_wagon", ["pessima_tailgate"]],
+         ["pessima_lettering_dpmp19" ["pessima_tailgate"]],
+         ["pessima_lettering_dpmpdiesel", ["pessima_tailgate"]],
+    ],
+}
+}

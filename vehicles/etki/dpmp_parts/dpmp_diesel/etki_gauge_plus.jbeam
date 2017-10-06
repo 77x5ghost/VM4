@@ -1,0 +1,40 @@
+{
+"etki_gauges_metric_diesel_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Metric Diesel Gauges DPMP",
+        "value":150,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etki_needle_speedo", "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":-3.45},  {"x":0, "y":0, "z":0}, 0, 73, -35, 1],
+        ["rpm",        "etki_needle_tacho",  "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":-0.03}, {"x":0, "y":0, "z":0}, 0, 6500, -3500, 1.22],
+        ["fuel",       "etki_needle_fuel",   "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":-195},    {"x":0, "y":0, "z":0}, 0, 1, -1.04, 1],
+        ["watertemp",    "etki_needle_temp",    "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":3},     {"x":0, "y":0, "z":0}, 60, 120, 0, 1],
+        ["oiltemp",    "etki_needle_oil",    "f7r","f7l","f8r", {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":-4},     {"x":0, "y":0, "z":0}, 60, 120, 10, 1],
+        ["turboBoost",    "etki_needle_boost",    "f7r","f7l","f8r", {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":-12},     {"x":0, "y":0, "z":0}, 0, 30, -10, 1],
+    ],
+    "skinName" : "metric_diesel",
+},
+"etki_gauges_imperial_diesel_dpmp": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Imperial Diesel Gauges DPMP",
+        "value":150,
+    },
+    "slotType" : "skin_gauges",
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //needles
+        ["wheelspeed", "etki_needle_speedo", "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":-3.45},  {"x":0, "y":0, "z":0}, 0, 73, -35, 1],
+        ["rpm",        "etki_needle_tacho",  "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":-0.03}, {"x":0, "y":0, "z":0}, 0, 6500, -3500, 1.22],
+        ["fuel",       "etki_needle_fuel",   "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":-195},    {"x":0, "y":0, "z":0}, 0, 1, -1.04, 1],
+        ["watertemp",    "etki_needle_temp",    "f7r","f7l","f8r", {"x":12, "y":0, "z":0}, {"x":0, "y":0, "z":3},     {"x":0, "y":0, "z":0}, 60, 120, 0, 1],
+        ["oiltemp",    "etki_needle_oil",    "f7r","f7l","f8r", {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":-4},     {"x":0, "y":0, "z":0}, 60, 120, 10, 1],
+        ["turboBoost",    "etki_needle_boost",    "f7r","f7l","f8r", {"x":28, "y":0, "z":0}, {"x":0, "y":0, "z":-12},     {"x":0, "y":0, "z":0}, 0, 30, -10, 1],
+    ],
+    "skinName" : "imperial_diesel",
+},
+}

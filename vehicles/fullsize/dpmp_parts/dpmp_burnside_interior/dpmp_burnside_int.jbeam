@@ -1,0 +1,11 @@
+{
+"fullsize_skin_interior_burnside": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Burnside Interior DPMP",
+        "value":50,
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "burnside",
+  },
+}

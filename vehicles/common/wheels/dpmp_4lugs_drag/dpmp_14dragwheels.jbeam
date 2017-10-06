@@ -1,0 +1,532 @@
+{
+"wheel_09k_14x4_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x4 Front Wheels DPMP",
+        "value":180,
+    },
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x4_27","tire_01k_14x4_27_drag_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_09k_14x4_dpmp", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+        ["wheel_09k_14x4_dpmp", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x":0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true}
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.193},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.11},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+},
+"wheel_09k_14x7_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x7 Front Wheels DPMP",
+        "value":270,
+    },
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x7_27_wide","tire_01k_14x7_27_wide_drag_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_09k_14x7_dpmp", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["wheel_09k_14x7_dpmp", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.52, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"selfCollision":true}
+        {"collision":true}
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":100800,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.194},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.19},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+"wheel_09k_14x8_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x8 Front Wheels DPMP",
+        "value":300,
+    },
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x8_27","tire_01k_14x8_27_drag_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_09k_14x8_dpmp", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["wheel_09k_14x8_dpmp", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true}
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.195},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.21},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1151000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1151000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.55},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+}
+"wheel_09k_14x9_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x9 Front Wheels DPMP",
+        "value":330,
+    }
+    "slotType" : "wheel_F_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x9_27","tire_01k_14x9_27_drag_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_09k_14x9_dpmp", ["wheel_FR","wheelhub_a_FR","wheelhub_b_FR"], [], {"pos":{"x":-0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":1, "y":1, "z":1}}],
+         ["wheel_09k_14x9_dpmp", ["wheel_FL","wheelhub_a_FL","wheelhub_b_FL"], [], {"pos":{"x": 0.54, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true}
+        {"group":"wheelhub_a_FR"},
+        ["fw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FR"},
+        ["fw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_FL"},
+        ["fw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_FL"},
+        ["fw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["fw1r","fw1rr"],
+        ["fw1l","fw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.195},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.24},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1801000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.58},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+}
+"wheel_09k_14x4r_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x4 Rear Wheels DPMP",
+        "value":180,
+    },
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x4_27r","tire_01k_14x4_27_dragr_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        //wheels
+        ["wheel_09k_14x4_dpmp", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":1, "z":1}}],
+        ["wheel_09k_14x4_dpmp", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x":0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.93, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true}
+        {"group":"wheelhub_a_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.193},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.11},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1701000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.45},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+},
+"wheel_09k_14x7r_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x7 Rear Wheels DPMP",
+        "value":270,
+    },
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x7_27_wider","tire_01k_14x7_27_wide_dragr_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_09k_14x7_dpmp", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":1, "z":1}}],
+         ["wheel_09k_14x7_dpmp", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x":0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.93, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"selfCollision":true}
+        {"collision":true}
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"group":"wheelhub_a_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":100800,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+         {"hubRadius":0.194},
+        {"wheelOffset":-0.055},
+        {"hubWidth":0.19},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1101000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1101000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1651000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.47},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":68600, "hubBeamStrength":76000},
+    ],
+}
+"wheel_09k_14x8r": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x8 Rear Wheels DPMP",
+        "value":300,
+    },
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x8_27r","tire_01k_14x8_27_dragr_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_09k_14x8_dpmp", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":1, "z":1}}],
+         ["wheel_09k_14x8_dpmp", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x":0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.93, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true}
+        {"group":"wheelhub_a_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.195},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.21},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1151000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1151000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1751000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.55},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+}
+"wheel_09k_14x9r_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Alder Dragger 14x9 Rear Wheels DPMP",
+        "value":330,
+    }
+    "slotType" : "wheel_R_4",
+    "slots": [
+        ["type", "default", "description"]
+        ["tire_01k_14x9_27r","tire_01k_14x9_27_dragr_dpmp", "Front Tires"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //wheels
+         ["wheel_09k_14x9_dpmp", ["wheel_RR","wheelhub_RR"], [], {"pos":{"x":-0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":180}, "scale":{"x":0.93, "y":1, "z":1}}],
+         ["wheel_09k_14x9_dpmp", ["wheel_RL","wheelhub_RL"], [], {"pos":{"x":0.51, "y":0.0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":0.93, "y":1, "z":1}}],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //front wheels
+        {"nodeWeight":5.0},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"chemEnergy":200,"burnRate":0.5,"flashPoint":300,"smokePoint":200,"selfIgnition":0,"specHeat":1},
+        {"selfCollision":true}
+        {"group":"wheelhub_a_RR"},
+        ["rw1r", -0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RR"},
+        ["rw1rr", -0.60, 0.0, 0.0],
+        {"group":"wheelhub_a_RL"},
+        ["rw1l", 0.33, 0.0, 0.0],
+        {"group":"wheelhub_b_RL"},
+        ["rw1ll", 0.60, 0.0, 0.0],
+        {"chemEnergy":false,"burnRate":false,"flashPoint":false,"smokePoint":false,"selfIgnition":false,"specHeat":false},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+        {"beamDeform":58500,"beamStrength":434000},
+        {"beamSpring":801000,"beamDamp":6},
+        //front wheel
+        ["rw1r","rw1rr"],
+        ["rw1l","rw1ll"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        {"disableMeshBreaking":true,"disableHubMeshBreaking":false,"enableHubcaps":false,"hasTire":false},
+
+        //general settings
+        {"hubRadius":0.195},
+        {"wheelOffset":-0.075},
+        {"hubWidth":0.24},
+        {"numRays":16},
+
+        //hub options
+        {"hubTreadBeamSpring":1201000, "hubTreadBeamDamp":10},
+        {"hubPeripheryBeamSpring":1201000, "hubPeripheryBeamDamp":10},
+        {"hubSideBeamSpring":1801000, "hubSideBeamDamp":10},
+        {"hubNodeWeight":0.58},
+        {"hubNodeMaterial":"|NM_METAL"},
+        {"hubFrictionCoef":0.5},
+        {"hubBeamDeform":55600, "hubBeamStrength":63000},
+    ],
+}
+}

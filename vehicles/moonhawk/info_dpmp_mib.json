@@ -1,0 +1,28 @@
+{
+"Performance Class":"6",
+"Drivetrain":"RWD",
+"Value":7600,
+"0-100 km/h":6.6,
+"TorquePeakRPM":"2150 - 3800",
+"Weight":1780,
+"Off-Road Score":35,
+"Configuration":"MIB Special (A)",
+"default_color":"Pure Black",
+"0-100 mph":14.8,
+"60-100 mph":8.6,
+"0-60 mph":6.2,
+"Config Type":"Custom",
+"100-0 km/h":46.7,
+"Top Speed":54.2209,
+"Power":320.434,
+"Torque":619.117,
+"Description":"All the informations about this car are TOP SECRET",
+"Transmission":"Automatic",
+"Weight/Power":5.5625,
+"60-0 mph":133.1,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":"3650 - 4700"
+}

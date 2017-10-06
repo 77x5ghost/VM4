@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_nomis": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Nomi's Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "nomis",
+  }}

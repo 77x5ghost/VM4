@@ -1,0 +1,12 @@
+{
+
+"van_skin_bml": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"BML Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "bml",
+}
+}

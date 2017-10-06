@@ -1,0 +1,14 @@
+{
+"sunburst_lettering_spark_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Spark Trunk Lettering",
+        "value":5,
+    }
+    "slotType" : "sunburst_lettering_trunk",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_lettering_08", ["sunburst_trunk"]],
+    ],
+}
+}

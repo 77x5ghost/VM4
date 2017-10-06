@@ -1,0 +1,12 @@
+{
+
+"sbr_skin_policed": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Dubai Police Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "policed",
+}
+}

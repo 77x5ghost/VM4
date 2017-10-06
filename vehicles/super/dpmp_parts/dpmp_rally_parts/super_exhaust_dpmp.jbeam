@@ -1,0 +1,50 @@
+{
+"super_exhaust_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Big Exhaust DPMP",
+        "value":800,
+    }
+    "slotType" : "super_exhaust",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["super_exhaust_big_dpmp", ["super_exhaust","super_chassis","super_body","super_shocktop_R","super_uppermounts_R","super_lowermounts_R"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"group":"super_exhaust"},
+         {"nodeWeight":5},
+         ["exh1r",-0.5, 2.09, 0.28],
+         ["exh1l",0.5, 2.09, 0.28],
+//         ["e2r",-0.11, 1.05, 0.31{"isExhaust":true}],
+         {"engineGroup":["engine_block","engine_intake"]}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":10800,"beamDamp":258},
+          {"beamDeform":1000,"beamStrength":"FLT_MAX"},
+          {"group":"super_exhaust"},
+			["exh1l","c6l"{"isExhaust":true}],
+			["exh1r","c6r"{"isExhaust":true}],
+			["exh1l","c12l"],
+			["exh1r","c12r"],
+			["exh1l","c12r"],
+			["exh1r","c12l"],
+			["exh1l","c12"],
+			["exh1r","c12"],
+			["exh1l","c6l"],
+			["exh1r","c6r"],
+			["exh1l","c6r"],
+			["exh1r","c6l"],
+			["exh1l","c6"],
+			["exh1r","c6"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

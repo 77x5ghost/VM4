@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_fbi": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"FBI Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "fbi",
+}
+}

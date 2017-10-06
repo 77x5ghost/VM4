@@ -1,0 +1,239 @@
+{
+"coupe_engine_I4_dpmpDrag": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"2.0L I4 Supercharged Drag Engine DPMP",
+        "value":980,
+    }
+    "slotType" : "coupe_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["coupe_exhaust_I4","coupe_exhaust_I4", "I4 Exhaust"],
+        ["coupe_transmission","coupe_transmission_6A_dpmpDrag", "Transmission"],
+        ["coupe_radiator","coupe_radiator", "Radiator"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_engine", ["coupe_engine"]],
+
+    ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [500, 885],
+        [1000, 1205],
+        [2000, 1455],
+        [3000, 1565],
+        [4000, 1575],
+        [5000, 1550],
+        [6000, 1510],
+    ],
+ 
+        "idleRPM":750,
+        "maxRPM":6300,
+        "revLimiterRPMDrop":0,
+        "inertia":0.2,
+        "friction":13
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.22
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.04
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":4
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":130
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+		
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0.05,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2000,
+        "clutchLaunchTargetRPM":2700,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2800,3300,3700,4000,4200]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6000
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //2.0L I4 Engine
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true}
+         {"group":"coupe_engine"},
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":19},
+         {"chemEnergy":2000,"burnRate":0.39,"flashPoint":6,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":550,"baseTemp":500,"conductionRadius":0.12},
+         ["e1r", -0.16, -0.97, 0.31],
+         ["e1l", 0.16, -0.97, 0.31],
+         ["e2r", -0.16, -1.53, 0.31],
+         ["e2l", 0.16, -1.53, 0.31],
+         {"chemEnergy":false,"burnRate":false,"flashPoint":false, "specHeat": false,"selfIgnitionCoef":false,"smokePoint":false,"baseTemp":false,"conductionRadius":false},
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.20, -0.97, 0.79],
+         ["e3l", 0.20, -0.97, 0.79{"isExhaust":true}],
+         ["e4r", -0.20, -1.53, 0.79],
+         ["e4l", 0.20, -1.53, 0.79],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":7700550,"beamDamp":125},
+          {"beamDeform":660000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"{"isExhaust":true}],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+
+    ],
+}
+"coupe_transmission_6A_dpmpDrag": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"4-Speed Drag Automatic Transmission DPMP",
+        "value":350,
+    }
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-2.29, 0, 3.06, 1.62, 1.00, 0.7],
+        "parkLockTorque":5000,
+        "oneWayViscousCoef":15,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter":0.34,
+        "converterStiffness":12,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":0.75
+        "gearboxDecisionSmoothingDown":2
+        "gearboxDecisionSmoothingUp":2
+        "lowShiftDownRPM":2000,
+        "lowShiftUpRPM":4500,
+        "highShiftDownRPM":2400,
+        "wheelSlipUpThreshold":400,
+    },
+    "slotType" : "coupe_transmission",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["coupe_transmission", ["coupe_engine","coupe_transmission"]],
+         ["coupe_shifterbase_a", ["coupe_dash","coupe_transmission"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //auto shifter
+        ["gear_A",         "coupe_shifter_A", "f7r","f7l","f8r", {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":0.1}     , {"x":0, "y":0.25, "z":0}, 0, 1, -0.2, 0.5],
+     ],
+
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--5 Speed Manual--
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":true},
+         {"collision":true}
+         {"group":"coupe_transmission"},
+         {"nodeWeight":20.9},
+         ["tra1", 0.0, -0.09, 0.32],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //--TRANSMISSION CONE--
+          {"beamSpring":7700550,"beamDamp":125},
+          {"beamDeform":660000,"beamStrength":"FLT_MAX"},
+          ["tra1","e1r"],
+          ["tra1","e3r"],
+          ["tra1","e1l"],
+          ["tra1","e3l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+
+    ],
+}
+}

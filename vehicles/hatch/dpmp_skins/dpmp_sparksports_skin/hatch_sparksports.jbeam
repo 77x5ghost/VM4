@@ -1,0 +1,12 @@
+{
+
+"hatch_skin_sparksports": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Spark Sports Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "sparksports",
+}
+}

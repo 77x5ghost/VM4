@@ -1,0 +1,190 @@
+{
+"legran_supercharger_stage3_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Stage 3 Supercharger DPMP",
+        "value":500,
+    }
+    "slotType" : "legran_intake_v6",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["legran_supercharger", ["legran_engine","legran_airbox"]],
+    ],
+    "supercharger": {
+        "gearRatio":1.7,
+        "clutchEngageRPM":0,
+        "pressureRatePSI":500,
+        "pressurePSIPer1kRPM":4.9,
+        "crankLossPer1kRPM":0.04,
+        "type":"roots",
+        "lobes":3,
+        "twistedLobes":true,
+        "boostController":[
+            //throttle in %, factor
+            [0,     0.2],
+            [100,     1],
+        ],
+    },
+    "mainEngine": {
+        //engine performance
+        "burnEfficiency":0.22,
+
+        //supercharger name
+        "supercharger":"supercharger",
+    },
+    "vehicleController": {
+        //"highShiftUpRPM":5800,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"legran_airbox"},
+         {"engineGroup":"engine_intake"},
+         {"nodeWeight":5},
+         ["airb", 0.40, -1.72, 0.66],
+         {"engineGroup":""},
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":100600,"beamDamp":150},
+          {"beamDeform":12000,"beamStrength":36000},
+          ["airb","e1r"],
+          ["airb","e2r"],
+          ["airb","e3r"],
+          ["airb","e4r"],
+          ["airb","e1l"],
+          ["airb","e2l"],
+          ["airb","e3l"],
+          ["airb","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"legran_transmission_4Adrag_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"a4-Speed Automatic Transmission",
+        "value":250,
+    }
+    "slotType" : "legran_transmission",
+    "slots": [
+        ["type", "default", "description"]
+        ["legran_differential_F","legran_differential_F", "Front Differential"],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "gearRatios":[-2.29, 0, 3.06, 1.62, 1.00, 0.7],
+        "parkLockTorque":5000,
+        "oneWayViscousCoef":15,
+        "friction": 1,
+    },
+    "torqueConverter": {
+        "converterDiameter": 0.258,
+        "converterStiffness":12,
+        "couplingAVRatio":0.9,
+        "stallTorqueRatio":1.8,
+        "lockupClutchTorque":250,
+    },
+    "vehicleController": {
+        "automaticModes":"PRND21",
+        "transmissionGearChangeDelay":1
+        "gearboxDecisionSmoothingDown":3
+        "gearboxDecisionSmoothingUp":3
+        "lowShiftDownRPM":1300,
+        "lowShiftUpRPM":2300,
+        "highShiftDownRPM":3300,
+        "torqueConverterLockupRPM":1600
+        "torqueConverterLockupMinGear":3
+    },
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["legran_transmission", ["legran_engine","legran_transmission"]],
+        ["legran_shifterbase_A", ["legran_body"]],
+        //["legran_gearindicator_A", ["legran_dash"]],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        //automatic transmission
+        ["gear_A"   ,"legran_shifter_A", "f1l","f1r","f6l", {"x":0, "y":0, "z":0}, {"x":1, "y":0, "z":0}     , {"x":0, "y":0, "z":-0.1}, 0, 1, -0.17, 1],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--4 Speed Auto--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"legran_transmission"},
+         {"nodeWeight":14},
+         ["tra1r",-0.30, -1.31, 0.29],
+         ["tra1l", 0.26, -1.31, 0.29],
+         ["ta1", 0, -1.33, 0.31],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //--TRANSMISSION--
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":540000,"beamStrength":"FLT_MAX"},
+          ["tra1l","e2r"],
+          ["tra1l","e4r"],
+          ["tra1l","e2l"],
+          ["tra1l","e4l"],
+          ["tra1r","e1r"],
+          ["tra1r","e3r"],
+          ["tra1r","e1l"],
+          ["tra1r","e3l"],
+          ["tra1r","tra1l"],
+          ["ta1","e1l"],
+          ["ta1","e2l"],
+          ["ta1","e4l"],
+          ["ta1","e3l"],
+          ["ta1","tra1l"],
+          ["ta1","tra1r"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"legran_differential_F_drag_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.33 Open Front Differential",
+        "value":120,
+    },
+    "slotType" : "legran_differential_F",
+
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_F", "gearbox", 1, {"diffType":"open", "gearRatio": 4.33, "friction":7}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["legran_halfshaft_F", ["legran_halfshaft_F","legran_transmission","legran_engine","wheelhub_FR","wheelhub_FL","wheelhub_FR","wheelhub_FL"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //halfshafts
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.08, "beamShortBound":0.08},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":3240,"beamStrength":8550},
+          {"beamLimitSpring":7501000,"beamLimitDamp":300},
+          {"optional":true},
+          {"breakGroupType":1},
+          {"breakGroup":"wheel_FR"},
+          ["fw1r","tra1r", {"name":"axle_FR"}],
+          {"breakGroup":"wheel_FL"},
+          ["fw1l","tra1l", {"name":"axle_FL"}],
+          {"breakGroup":""},
+          {"optional":false},
+          {"breakGroupType":0},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+},
+}

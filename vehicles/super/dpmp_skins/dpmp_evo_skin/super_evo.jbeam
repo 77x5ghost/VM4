@@ -1,0 +1,11 @@
+{
+"super_skin_evo": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Evoluzione Graphics",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "evo",
+}
+}

@@ -1,0 +1,28 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Value":4500,
+"0-100 km/h":10.6,
+"TorquePeakRPM":"1700 - 2700",
+"Weight":1625,
+"Off-Road Score":34,
+"Configuration":"I6 Launch Edition (A)",
+"default_color":"Royal Blue",
+"0-100 mph":34.4,
+"60-100 mph":24.4,
+"0-60 mph":10,
+"Config Type":"Factory",
+"100-0 km/h":47.4,
+"Top Speed":53.6806,
+"Power":153.14,
+"Torque":320.391,
+"Description":"The Launch Edition was a special Moonhawk sold only in 1973 in order to sell more units, in fact this version was very well equipped but didn't cost a lot",
+"Transmission":"Automatic",
+"Weight/Power":10.6209,
+"60-0 mph":136.1,
+"Years":{
+  "min":1973,
+  "max":1975
+},
+"PowerPeakRPM":4250
+}

@@ -1,0 +1,11 @@
+{
+"midsize_skin_drift": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Drift Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "drift",
+}
+}

@@ -1,0 +1,12 @@
+{
+
+"sbr_skin_keisuke": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"RedStars Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "keisuke",
+}
+}

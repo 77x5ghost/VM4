@@ -1,0 +1,12 @@
+{
+
+"sbr_skin_policea": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Australian Police Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "policea",
+}
+}

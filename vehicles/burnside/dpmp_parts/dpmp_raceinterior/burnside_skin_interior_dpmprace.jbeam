@@ -1,0 +1,11 @@
+{
+"burnside_skin_dpmprace": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Race Interior",
+        "value":100,
+    },
+    "slotType" : "skin_interior",
+    "skinName" : "raceskin",
+  },
+}

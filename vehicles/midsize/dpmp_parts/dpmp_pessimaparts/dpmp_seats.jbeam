@@ -1,0 +1,54 @@
+{
+"midsize_coupe_seats_R_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Refitted Rear Seats DPMP",
+        "value":300,
+    }
+    "slotType" : "midsize_seats_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_coupe_seats_R_dpmp", ["midsize_seats"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"collision":true},
+         {"selfCollision":false},
+         {"nodeWeight":8},
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         //seats flexbody
+         {"group":"midsize_seats"},
+         ["int7", 0.42, 1.2, 0.90],
+         ["int8", -0.42, 1.2, 0.90],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1.0},
+          {"beamSpring":501000,"beamDamp":150},
+          {"beamDeform":3160,"beamStrength":"FLT_MAX"},
+          //interior flexbody
+          ["int7","int8"],
+
+          ["int7","f4ll"],
+          ["int7","f3ll"],
+          ["int7","tb1l"],
+          ["int7","f8r"],
+          ["int7","f9l"],
+          ["int7","f4l"],
+          ["int7","f3l"],
+          ["int7","f4l"],
+
+          ["int8","f4rr"],
+          ["int8","f3rr"],
+          ["int8","tb1r"],
+          ["int8","f8l"],
+          ["int8","f9r"],
+          ["int8","f4r"],
+          ["int8","f3r"],
+
+          ["int7","tb1"],
+          ["int8","tb1"],
+    ],
+}
+}

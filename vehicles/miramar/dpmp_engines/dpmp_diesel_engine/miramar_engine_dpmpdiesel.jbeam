@@ -1,0 +1,203 @@
+{
+"miramar_engine_dpmp1.2diesel": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"1.2L SOHC I4 Diesel Engine DPMP",
+        "value":800,
+    },
+    "slotType" : "miramar_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["miramar_exhaust","miramar_exhaust", "Exhaust"],
+        ["miramar_transmission","miramar_transmission_4M", "Transmission"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["miramar_engineblock", ["miramar_engine"]],
+         ["miramar_engine_1_6", ["miramar_engine"]],
+         ["miramar_radtube", ["miramar_radtube","miramar_radsupport"]],
+         ["miramar_ignitioncoil", ["miramar_engine","miramar_body"]],
+
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["rpmspin"  , "miramar_coolingfan", "e2r","e2l","e4r",  {"x":7, "y":0, "z":0}, {"x":0, "y":1, "z":0}    , {"x":0, "y":0, "z":0}, -360, 360, 0, 1],
+     ],
+    "mainEngine": {
+        "torque":[            ["rpm", "torque"]
+        [0, 0],
+        [1000, 90],
+        [1500, 120],
+        [1750, 133],
+        [2000, 130],
+        [2250, 138],
+        [2500, 133],
+        [3000, 125],
+        [3500, 115],
+        [4000, 105],
+        [4500, 75],
+    ],
+ 
+        "idleRPM":800,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
+        "maxRPM":4250,
+        "revLimiterRPMDrop":0,
+        "inertia":0.16,
+        "friction":10
+        "brakingCoefRPS":0.25
+        "burnEfficiency":0.29
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1l","e2l","e4r"]
+        "particulates":0.1
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":3
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":120
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+        "soundConfig": "soundConfig",
+    },
+    "soundConfig": {
+        "sampleName": "I4",
+        "mainGain": -18,
+        "maxLoadMix": 0.65,
+        "minLoadMix": 0,
+        "onLoadGain":1,
+        "offLoadGain":0.7,
+        "eqLowGain": 10,
+        "eqLowFreq": 400,
+        //"eqLowWidth": 0,
+        "eqHighGain": -5,
+        "eqHighFreq": 6000,
+        //"eqHighWidth": 0.5,
+        "lowCutFreq":80,
+        "fundamentalFrequencyCylinderCount":4
+        "eqFundamentalGain": 10
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":1800,
+        "clutchLaunchTargetRPM":2200,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2500,2900,3200,3300]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":5800
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //1.6L I4 Engine
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"selfCollision":false},
+         {"collision":true},
+         {"group":"miramar_engine"},
+         {"nodeWeight":16},
+           {"engineGroup":"engine_block"}
+         ["e1r", -0.17, -0.9, 0.29],
+         ["e1l", 0.17, -0.9, 0.29,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.13}],
+         ["e2r", -0.17, -1.63, 0.38],
+         ["e2l", 0.17, -1.63, 0.38,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.13}],
+           {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.13, -0.93, 0.88],
+         ["e3l", 0.13, -0.93, 0.88,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.13}],
+         ["e4r", -0.13, -1.58, 0.88{"group":["miramar_engine","miramar_radtube"]}],
+         ["e4l", 0.13, -1.58, 0.88{"isExhaust":true,"group":["miramar_engine","miramar_radtube"],"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.13}],
+         {"nodeWeight":3},
+         ["e5l", 0.29, -1.08, 0.92,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.5,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.13}],
+         ["e6l", 0.37, -1.48, 0.90,{"chemEnergy":2000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.5,"selfIgnitionCoef":false,"smokePoint":650,"baseTemp":"thermals","conductionRadius":0.13}],
+         {"engineGroup":""}
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":4600460,"beamDamp":145},
+          {"beamDeform":857999.9,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"{"isExhaust":true}],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+          {"beamSpring":1840460,"beamDamp":145},
+          //air filter
+          {"beamDeform":8580,"beamStrength":"FLT_MAX"},
+          ["e4l", "e6l"],
+          ["e3l", "e5l"],
+          ["e6l", "e5l"],
+          ["e6l", "e2l"],
+          ["e5l", "e1l"],
+
+          ["e6l", "e3l"],
+          ["e5l", "e4l"],
+          ["e6l", "e1l"],
+          ["e2l", "e5l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+            ["id1:","id2:","id3:"],
+            /*
+            ["e5l", "e1l", "e3l"],
+            ["e4r", "e3r", "e2r"],
+            ["e3r", "e1r", "e2r"],
+            ["e1r", "e1l", "e2r"],
+            ["e2r", "e1l", "e2l"],
+            ["e3l", "e1l", "e3r"],
+            ["e3r", "e1l", "e1r"],
+            ["e4r", "e4l", "e3l"],
+            ["e4r", "e3l", "e3r"],
+            ["e4r", "e2r", "e4l"],
+            ["e4l", "e2r", "e2l"],
+            ["e4l", "e2l", "e6l"],
+            ["e6l", "e3l", "e4l"],
+            ["e6l", "e2l", "e5l"],
+            ["e6l", "e5l", "e3l"],
+            ["e2l", "e1l", "e5l"],
+            */
+    ],
+},
+}

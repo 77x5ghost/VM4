@@ -1,0 +1,25 @@
+{
+"etkc_spring_R_tt_daniel398767VIP": {
+    "information":{
+        "authors":"daniel398767",
+        "name":"Stanced VIP Rear Springs D&S",
+        "value":350,
+    }
+    "slotType" : "etkc_spring_R",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["etkc_spring_R", ["etkc_spring_R","etkc_lowerarm_R"]],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //rear progressive springs
+          {"beamPrecompression":0.90, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":0.14},
+          {"beamDeform":143500,"beamStrength":197500},
+          {"beamSpring":48000,"beamDamp":0},
+          {"beamLimitSpring":251000,"beamLimitDamp":0},
+          ["rh1l","r1ll",{"soundFile":"art/sound/spring_creak.ogg","volumeFactor":4,"decayMode":0,"decayFactor":3,"pitchFactor":1,"maxStress":24000}],
+          ["rh1r","r1rr",{"soundFile":"art/sound/spring_compress2.ogg","volumeFactor":0.6,"decayMode":1,"decayFactor":4,"pitchFactor":2,"maxStress":1600}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

@@ -1,0 +1,12 @@
+{
+
+"sunburst_skin_WRC": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"WRC Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "WRC",
+  }
+  }

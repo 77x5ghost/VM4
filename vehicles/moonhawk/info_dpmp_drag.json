@@ -1,0 +1,30 @@
+{
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"100-200 km/h":5.6,
+"0-100 km/h":3.6,
+"Value":13000,
+"0-200 km/h":9.2,
+"TorquePeakRPM":"3150 - 4650",
+"default_color":"Sky Blue",
+"Description":"The Drag Pak upgraded the Sport Moonhawk with drag parts, this car was a very capable drag racer sold directly from the factory",
+"Configuration":"Drag Pak (A)",
+"0-100 mph":6.5,
+"Weight":1795,
+"60-100 mph":3.1,
+"0-60 mph":3.5,
+"Config Type":"Factory",
+"100-0 km/h":27,
+"PowerPeakRPM":"4400 - 5950",
+"Power":823.241,
+"Torque":1305.14,
+"Transmission":"Automatic",
+"Off-Road Score":39,
+"Weight/Power":2.18104,
+"60-0 mph":83.4,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"Top Speed":81.5176
+}

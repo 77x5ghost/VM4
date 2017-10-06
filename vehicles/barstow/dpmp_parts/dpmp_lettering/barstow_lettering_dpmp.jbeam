@@ -1,0 +1,92 @@
+{
+"barstow_lettering_dpmpluxei6": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Luxe Lettering DPMP",
+        "value":60,
+    }
+    "slotType" : "barstow_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["barstow_lettering_dpmpluxe", ["barstow_trunk"]],
+         ["barstow_lettering_barstow", ["barstow_trunk"]],
+    ],
+}
+"barstow_lettering_dpmproadsport": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"RoadSport i6 Lettering DPMP",
+        "value":60,
+    }
+    "slotType" : "barstow_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["barstow_lettering_roadsport_fender_L", ["barstow_fender_L"]],
+         ["barstow_lettering_roadsport_fender_R", ["barstow_fender_R"]],
+         ["barstow_lettering_rs_grille", ["barstow_grille"]],
+         ["barstow_lettering_rs", ["barstow_trunk"]],
+         ["barstow_lettering_barstow", ["barstow_trunk"]],
+    ],
+}
+"barstow_lettering_dpmpluxev8": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Luxe V8 Lettering DPMP",
+        "value":70,
+    }
+    "slotType" : "barstow_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["barstow_lettering_dpmpluxe", ["barstow_trunk"]],
+         ["barstow_lettering_barstow", ["barstow_trunk"]],
+         ["barstow_lettering_v8_grille", ["barstow_grille"]],
+         ["barstow_lettering_v8", ["barstow_trunk"]],
+    ],
+}
+"barstow_lettering_dpmpbrastow": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Brastow Lettering DPMP",
+        "value":70,
+    }
+    "slotType" : "barstow_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["barstow_lettering_dpmpbrastow", ["barstow_trunk"]],
+    ],
+}
+"barstow_lettering_dpmpbs": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"BlackSport Lettering DPMP",
+        "value":80,
+    }
+    "slotType" : "barstow_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["barstow_lettering_dpmpbs_fender_L", ["barstow_fender_L"]],
+         ["barstow_lettering_dpmpbs_fender_R", ["barstow_fender_R"]],
+         ["barstow_lettering_dpmpbs_grille", ["barstow_grille"]],
+         ["barstow_lettering_dpmpbs", ["barstow_trunk"]],
+         ["barstow_lettering_barstow", ["barstow_trunk"]],
+         ["barstow_lettering_v8_grille", ["barstow_grille"]],
+         ["barstow_lettering_v8", ["barstow_trunk"]],
+    ],
+}
+"barstow_lettering_dpmpvenom": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"Venom Lettering DPMP",
+        "value":100,
+    }
+    "slotType" : "barstow_lettering",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["barstow_lettering_dpmpvenom_fender_L", ["barstow_fender_L"]],
+         ["barstow_lettering_dpmpvenom_fender_R", ["barstow_fender_R"]],
+         ["barstow_lettering_barstow", ["barstow_trunk"]],
+         ["barstow_lettering_v8_grille", ["barstow_grille"]],
+         ["barstow_lettering_v8", ["barstow_trunk"]],
+    ],
+}
+}

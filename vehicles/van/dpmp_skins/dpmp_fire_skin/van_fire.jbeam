@@ -1,0 +1,12 @@
+{
+
+"van_skin_fire": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Fire Chief Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "fire",
+}
+}

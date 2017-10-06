@@ -1,0 +1,12 @@
+{
+
+"fullsize_skin_sheriff": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Sheriff Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "sheriff",
+}
+}

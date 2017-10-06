@@ -1,0 +1,69 @@
+{
+"legran_steering_drag_dpmp": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Drag Steering DPMP",
+        "value":130,
+    },
+    "slotType" : "legran_steering",
+
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["legran_tierod_F", ["legran_tierod_F","legran_hub_F"]],
+    ],
+    "rails": {"steeringrack":{"links:":["fh6r", "fh6l"], "broken:":[], "looped":false, "capped":true},
+    },
+    "slidenodes": [
+        ["id:", "railName", "attached", "fixToRail", "tolerance", "spring", "strength", "capStrength"],
+        ["fx5r", "steeringrack", true, true, 0.0, 12001000, 190000, 190000],
+        ["fx5l", "steeringrack", true, true, 0.0, 12001000, 190000, 190000],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$toe_FR", "range", "", "Alignment", 1.00, 0.95, 1.05, "Front Right Toe", "Percentage of adjustment range"]
+        ["$toe_FL", "range", "", "Alignment", 1.00, 0.95, 1.05, "Front Left Toe", "Percentage of adjustment range"]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--steering rod--
+         {"selfCollision":false},
+         {"collision":true},
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"legran_tierod_F"},
+         {"nodeWeight":4.5},
+         ["fh6r", -0.35, -1.18, 0.27],
+         ["fh6l", 0.35, -1.18, 0.27],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:","id2:"],
+          {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"beamSpring":14001000,"beamDamp":100,"beamDeform":44550,"beamStrength":83250},
+          ["fh6r","fh6l"],
+          {"beamPrecompression":1},
+          ["fh3r","fh6r"{"beamPrecompression":"$toe_FR"}],
+          ["fh3l","fh6l"{"beamPrecompression":"$toe_FL"}],
+          //steering damper
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":0,"beamDeform":15120,"beamStrength":37800},
+          {"beamLimitSpring":0,"beamLimitDamp":0},
+          ["fh3r","f10rr",{"beamDampVelocitySplit":0.1,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+          ["fh3l","f10ll",{"beamDampVelocitySplit":0.1,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+          ["fh5r","fx2r",{"beamDampVelocitySplit":0.1,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+          ["fh5l","fx2l",{"beamDampVelocitySplit":0.1,"beamDampFast":500,"beamDampReboundFast":500,"beamDamp":0,"beamDampRebound":0}],
+          {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "hydros": [
+        ["id1:","id2:"],
+        {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":4001000,"beamDamp":100,"beamDeform":44550,"beamStrength":83250},
+        ["fh6r","fx5l",{"factor":-0.06,"steeringWheelLock":20,"beamPrecompression":1}],
+        ["fh6l","fx5r",{"factor":0.06,"steeringWheelLock":20,"beamPrecompression":1}],
+        {"beamPrecompression":1.0, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "input": {
+        "FFBcoef":3,
+    },
+},
+}

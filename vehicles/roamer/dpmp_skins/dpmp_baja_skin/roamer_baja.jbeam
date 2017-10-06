@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_baja": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Baja Race Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "baja",
+}
+}

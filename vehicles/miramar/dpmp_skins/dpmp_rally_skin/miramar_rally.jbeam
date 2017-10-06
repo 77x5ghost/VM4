@@ -1,0 +1,11 @@
+{
+"miramar_skin_rally": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Okudai Y/B",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rally",
+  }
+  }

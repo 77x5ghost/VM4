@@ -1,0 +1,11 @@
+{
+"pickup_skin_grizzly": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Grizzly Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "grizzly",
+}
+}

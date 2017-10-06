@@ -1,0 +1,12 @@
+{
+
+"burnside_skin_race": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Race Livery",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "race",
+  }
+  }

@@ -1,0 +1,11 @@
+{
+"ambulance_skin_rambulance": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rambulance Livery",
+        "value":100,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rambulance",
+},
+}

@@ -1,0 +1,12 @@
+{
+
+"etk800_skin_notarzt": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Notarzt Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "notarzt",
+}
+}

@@ -1,0 +1,30 @@
+{
+"Performance Class":"7",
+"Drivetrain":"RWD",
+"100-200 km/h":34.2,
+"0-100 km/h":7.5,
+"Value":50000,
+"0-200 km/h":41.7,
+"TorquePeakRPM":"1950 - 3500",
+"default_color":"Pearl White",
+"Description":"Race Moonhawk that raced in the Trans AM championship during the 70s, one of the best handling muscle cars ever made",
+"Configuration":"#88 'Bruckell Racing' Trans AM Race Car (M)",
+"0-100 mph":19.9,
+"Weight":1720,
+"60-100 mph":12.8,
+"0-60 mph":7.1,
+"Config Type":"Factory",
+"100-0 km/h":39.4,
+"PowerPeakRPM":3750,
+"Power":197.225,
+"Torque":385.206,
+"Transmission":"Manual",
+"Off-Road Score":34,
+"Weight/Power":8.73096,
+"60-0 mph":112.7,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"Top Speed":60.7754
+}

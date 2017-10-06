@@ -1,0 +1,32 @@
+{
+"midsize_driveshaft_R": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Driveshaft",
+        "value":200,
+    }
+    "slotType" : "midsize_driveshaft_R",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        ["shaft", "driveshaft", "transfercase", 1, {"breakTriggerBeam":"driveshaft", "electricsName":"driveshaft", "friction":2, "primaryOutputID":2}]
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_driveshaft_mounts_dpmp", ["midsize_body"]],
+//         ["midsize_transfercase_dpmp", ["midsize_engine","midsize_transmission"]],
+    ],
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["driveshaft", "midsize_driveshaft_dpmp", "f3r", "f3l", "f8r",    {"x":0, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":0.005, "beamShortBound":0.005},
+          {"beamSpring":0,"beamDamp":0,"beamDeform":1200,"beamStrength":4500},
+          {"beamLimitSpring":7501000,"beamLimitDamp":250},
+          ["rdiff","tra1", {"name":"driveshaft","optional":true,"breakGroup":"driveshaft","deformGroup":"driveshaft"}],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

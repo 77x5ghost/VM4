@@ -1,0 +1,429 @@
+{
+"sunburst_engine_2.4_dpmpHTI": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"2.4L HTI I4 Engine DPMP",
+        "value":2400,
+    }
+    "slotType" : "sunburst_engine",
+    "slots": [
+        ["type", "default", "description"]
+        ["sunburst_exhaust_I4","sunburst_exhaust_I4", "Exhaust"],
+        ["sunburst_transmission","sunburst_transmission_6M", "Transmission"],
+        ["sunburst_intake_dpmpHTI","sunburst_turbo_stage1_dpmpHTI", "Intake",{"coreSlot":true}],
+        ["sunburst_radiator","sunburst_radiator", "Radiator"],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_engine_dpmpHTI", ["sunburst_engine","sunburst_transmission"]],
+    ],
+    "powertrain": [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine": {
+        "torque":[
+        ["rpm", "torque"]
+        [0, 0],
+        [500, 147],
+        [1000, 188],
+        [2000, 225],
+        [3000, 253],
+        [4000, 275],
+        [4500, 282],
+        [5000, 280],
+        [5300, 279],
+        [6000, 280],
+        [6400, 257],
+        [7000, 239],
+        [7500, 209],
+        [8000, 175],
+        [9000, 145],
+    ],
+        "idleRPM":1000,
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"gasoline",
+        "maxRPM":8200,
+        "inertia":0.075,
+        "friction":12
+        "brakingCoefRPS":0.15
+        "burnEfficiency":0.41
+        "throttleSensitivity":1.2
+        "torqueReactionNodes:":["e1r","e2r","e4l"]
+        "particulates":0.02
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"aluminum"
+        "oilVolume":6
+
+        //engine durability
+        "cylinderWallTemperatureDamageThreshold":180
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":2000000
+
+        //node beam interface
+        "waterDamage": {"[engineGroup]:":["engine_intake"]},
+        "radiator": {"[engineGroup]:":["radiator"]},
+        "engineBlock": {"[engineGroup]:":["engine_block"]},
+        "breakTriggerBeam":"engine",
+    },
+    "vehicleController": {
+        "clutchLaunchStartRPM":2000,
+        "clutchLaunchTargetRPM":2700,
+        //**highShiftDown can be overwritten by automatic transmissions**
+        "highShiftDownRPM":[0,0,0,2800,3300,3700,4000,4200]
+        //**highShiftUp can be overwritten by intake modifications**
+        "highShiftUpRPM":6300
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--2.0L I4 Engine--
+         {"selfCollision":false},
+         {"collision":true}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":"sunburst_engine"}
+         {"engineGroup":"engine_block"}
+         {"nodeWeight":15.68},
+         ["e1r", -0.34, -1.57, 0.35,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":1000,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":900,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e1l", -0.34, -1.26, 0.35],
+         ["e2r", 0.17, -1.57, 0.35,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":1000,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":900,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e2l", 0.17, -1.26, 0.35],
+         {"engineGroup":["engine_block","engine_intake"]}
+         ["e3r", -0.34, -1.57, 0.77,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":1000,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":900,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e3l", -0.34, -1.26, 0.77],
+         ["e4r", 0.17, -1.57, 0.77,{"isExhaust":true,"chemEnergy":1000,"burnRate":0.39,"flashPoint":800,"specHeat": 0.2,"selfIgnitionCoef":false,"smokePoint":900,"baseTemp":"thermals","conductionRadius":0.15}],
+         ["e4l", 0.17, -1.26, 0.77],
+         {"engineGroup":""},
+         ["tc1", 0.0, -1.6, 0.45,{"chemEnergy":200,"burnRate":0.3,"flashPoint":1000,"specHeat":0.1,"smokePoint":900,"selfIgnitionCoef":false}],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":8400600,"beamDamp":150},
+          {"beamDeform":600000,"beamStrength":"FLT_MAX"},
+          //engine
+          ["e1r","e1l"],
+          ["e2r","e2l"],
+          ["e3r","e3l"],
+          ["e4r","e4l"],
+
+          ["e1r","e2r"],
+          ["e1l","e2l"],
+          ["e3r","e4r"],
+          ["e3l","e4l"],
+
+          ["e1r","e3r"],
+          ["e1l","e3l"],
+          ["e2r","e4r"{"isExhaust":true}],
+          ["e2l","e4l"],
+
+          ["e2r","e3r"],
+          ["e2l","e3l"],
+          ["e2r","e3l"],
+          ["e2l","e3r"],
+
+          ["e1r","e4r"],
+          ["e1l","e4l"],
+          ["e1r","e4l"],
+          ["e1l","e4r"],
+
+          ["e1r","e2l"],
+          ["e1l","e2r"],
+          ["e3r","e4l"],
+          ["e3l","e4r"],
+
+          ["e1r","e3l"],
+          ["e1l","e3r"],
+          ["e2r","e4l"],
+          ["e2l","e4r"],
+
+          ["tc1","e3l"],
+          ["tc1","e3r"],
+          ["tc1","e4l"],
+          ["tc1","e4r"],
+          ["tc1","e1l"],
+          ["tc1","e1r"],
+          {"disableMeshBreaking":true},
+          {"beamDeform":90000,"beamStrength":90000}
+          ["tc1","e2l"{"name":"driveshaft"}],
+          ["tc1","e2r"{"name":"driveshaft"}],
+          {"disableMeshBreaking":false},
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_turbo_stage1_dpmpHTI": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HTI Stock Turbocharger DPMP",
+        "value":1600,
+    }
+    "slotType" : "sunburst_intake_dpmpHTI",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_turbo", ["sunburst_engine"]],
+         ["sunburst_intercooler_dpmpHTI", ["sunburst_engine_bay"]],
+    ],
+    "turbocharger": {
+        "wastegateStart":18,
+        "wastegateLimit":22,
+        "maxExhaustPower": 17000,
+        "backPressureCoef": 0.000035,
+        "frictionCoef": 1.4,
+        "inertia":3.6,
+        "damageThresholdTemperature": 800,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -0.5],
+            [30000,     0],
+            [60000,     6],
+            [90000,     9],
+            [150000,    12],
+            [200000,    15],
+            [250000,    18],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.0],
+            [650,   0.45,   0.1],
+            [1400,  0.75,   0.55],
+            [2000,  0.85,    0.8],
+            [2500,  0.95,    0.85],
+            [3000,  0.9,    0.9],
+            [4000,  0.75,    0.95],
+            [5000,  0.75,    1.0],
+            [6000,  0.75,    1.0],
+            [7000,  0.7,    1.0],
+            [8000,  0.4,    1.0],
+            [9000,  0.3,    1.0],
+        ],
+    },
+    "mainEngine":{
+        "idleRPM":1000,
+        "maxRPM":8300,
+        "revLimiterRPMDrop":50,
+        "burnEfficiency":0.36
+        "inertia":0.06,
+        "cylinderWallTemperatureDamageThreshold":180
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "highShiftUpRPM":6900
+        "clutchLaunchStartRPM":2200,
+        "clutchLaunchTargetRPM":2900,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--turbo and intercooler weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":14.25},
+         ["turbo", 0.0, -1.33, 0.66],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3000600,"beamDamp":150},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_turbo_stage2_dpmpHTI": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HTI RS Turbocharger DPMP",
+        "value":3200,
+    }
+    "slotType" : "sunburst_intake_dpmpHTI",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_turbo", ["sunburst_engine"]],
+         ["sunburst_intercooler_dpmpHTI", ["sunburst_engine_bay"]],
+    ],
+    "turbocharger": {
+        "wastegateStart":21,
+        "wastegateLimit":25,
+        "maxExhaustPower": 70000,
+        "backPressureCoef": 0.00004,
+        "frictionCoef": 15.4,
+        "inertia":15.6,
+        "pressureRatePSI": 75,
+        "damageThresholdTemperature": 680,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -2.5],
+            [30000,     0],
+            [60000,     10],
+            [90000,     14],
+            [150000,    17],
+            [200000,    21],
+            [250000,    26],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.0],
+            [650,   0.45,   0.3],
+            [1400,  0.68,   0.45],
+            [2000,  0.85,    0.49],
+            [2500,  0.89,    0.55],
+            [3000,  0.99,    0.65],
+            [4000,  0.99,    0.75],
+            [5000,  1.0,    0.8],
+            [6000,  1.0,    1.0],
+            [7000,  1.0,    1.0],
+            [8000,  0.9,    1.0],
+            [9000,  0.8,    1.0],
+        ],
+    },
+    "mainEngine":{
+        "idleRPM":1000,
+        "maxRPM":8450,
+        "revLimiterRPMDrop":50,
+        "burnEfficiency":0.33
+        "inertia":0.05,
+        "cylinderWallTemperatureDamageThreshold":150
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+    "vehicleController": {
+        "highShiftUpRPM":6900
+        "clutchLaunchStartRPM":2200,
+        "clutchLaunchTargetRPM":2900,
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--turbo and intercooler weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":14.25},
+         ["turbo", 0.0, -1.33, 0.66],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3000600,"beamDamp":150},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+"sunburst_turbo_stage3_dpmpHTI": {
+    "information":{
+        "authors":"DjPlopper",
+        "name":"HTI Racing Variable Boost Turbocharger DPMP",
+        "value":3900,
+    }
+    "slotType" : "sunburst_intake_dpmpHTI",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["sunburst_turbo", ["sunburst_engine"]],
+         ["sunburst_intercooler_dpmpHTI", ["sunburst_engine_bay"]],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$wastegateStart", "range", "psi", "Turbocharger", 28, 6, 68, "Wastegate Start", "Pressure at which the wastegate begins to open"{"stepDis":0.5}]
+        ["$wastegateLimit", "range", "psi", "Turbocharger", 32, 8, 70, "Wastegate Limit", "Pressure at which the wastegate is fully opened"{"stepDis":0.5}]
+    ],
+    "mainEngine":{
+        "idleRPM":1100,
+        //turbocharger name
+        "turbocharger":"turbocharger",
+        "maxRPM":8600,
+        "burnEfficiency":0.24,
+        "inertia":0.10,
+        "cylinderWallTemperatureDamageThreshold":180
+    },
+    "turbocharger": {
+        "wastegateStart":"$wastegateStart",
+        "wastegateLimit":"$wastegateLimit",
+        "maxExhaustPower": 180000,
+        "backPressureCoef": 0.000040,
+        "frictionCoef": 20.3,
+        "inertia":20.4,
+        "pressureRatePSI": 95,
+        "damageThresholdTemperature": 900,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         -1],
+            [30000,     -0.5],
+            [60000,     5],
+            [90000,     18],
+            [150000,    30],
+            [200000,    36],
+            [250000,    40],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.0,    0.0],
+            [650,   0.23,   0.15],
+            [1400,  0.33,   0.23],
+            [2000,  0.41,    0.29],
+            [2500,  0.54,    0.41],
+            [3000,  0.72,    0.61],
+            [4000,  0.98,    0.77],
+            [5000,  1.13,    0.87],
+            [6000,  1.18,    1.0],
+            [7000,  1.11,    1.00],
+            [8000,  1.2,    1.0],
+            [9000,  1.25,    1.0],
+        ],
+    },
+    "vehicleController": {
+        "highShiftUpRPM":7700
+    },
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--turbo and intercooler weight--
+         {"selfCollision":false},
+         {"collision":false}
+         {"nodeMaterial":"|NM_METAL"},
+         {"frictionCoef":0.5},
+         {"group":""},
+         {"nodeWeight":14.25},
+         ["turbo", 0.0, -1.33, 0.66],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          {"beamSpring":3000600,"beamDamp":150},
+          {"beamDeform":30000,"beamStrength":"FLT_MAX"},
+          ["turbo","e1r"],
+          ["turbo","e2r"],
+          ["turbo","e3r"],
+          ["turbo","e4r"],
+          ["turbo","e1l"],
+          ["turbo","e2l"],
+          ["turbo","e3l"],
+          ["turbo","e4l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

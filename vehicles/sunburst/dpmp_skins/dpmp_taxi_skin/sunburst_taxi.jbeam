@@ -1,0 +1,11 @@
+{
+"sunburst_skin_taxi": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Taxi Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "taxi",
+  }
+  }

@@ -1,0 +1,23 @@
+{
+"Performance Class":"4",
+"Drivetrain":"4WD",
+"Body Style":"Pickup",
+"Value":4100,
+"TorquePeakRPM":"1200 - 4100",
+"Off-Road Score":64,
+"Configuration":"D15 4WD Old Off-Roader (M)",
+"Description":"This 1989 D15 was turned into a 4WD pickup with an aftermarket front differential and some Off-Road accessories",
+"default_color":"Forest Green",
+"0-60 mph":9.9,
+"Config Type":"Custom",
+"100-0 km/h":44.6,
+"Top Speed":41.6607,
+"Transmission":"Manual",
+"Torque":290.144,
+"Weight":2155,
+"Power":166.661,
+"Weight/Power":12.9819,
+"60-0 mph":131.7,
+"PowerPeakRPM":"4150 - 5200",
+"0-100 km/h":10.7
+}

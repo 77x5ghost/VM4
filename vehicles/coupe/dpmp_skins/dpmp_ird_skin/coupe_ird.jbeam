@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_ird": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"IRD Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "ird",
+  }}

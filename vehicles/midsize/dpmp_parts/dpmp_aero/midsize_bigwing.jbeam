@@ -1,0 +1,906 @@
+{
+"midsize_bigwing_01a": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Nomi GTT Wing",
+        "value":600,
+    }
+    "slotType" : "midsize_spoiler_big",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["bigwing_01a_a", ["midsize_wing_a"],[],{"pos":{"x":0,"y":0.1,"z":0.00}}],
+         ["bigwing_01a_b", ["midsize_wing_b"],[],{"pos":{"x":0,"y":0.1,"z":0.00}}],
+         ["bigwing_01a_c", ["midsize_wing_c"],[],{"pos":{"x":0,"y":0.1,"z":0.00}}],
+         ["bigwing_01a_d", ["midsize_trunk"],[],{"pos":{"x":0,"y":0.08,"z":0.053},"rot":{"x":-1.5,"y":0,"z":0}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--TRUNK--
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_wing_b"},
+         {"collision":true}
+         {"nodeWeight":0.40},
+         {"selfCollision":true},
+         //left wing support lower
+         ["sp1l", 0.54, 1.97, 0.94],
+         ["sp2l", 0.54, 2.135, 0.92],
+
+         //left wing support upper
+         ["sp3l", 0.54, 2.02, 1.19],
+         ["sp4l", 0.54, 2.20, 1.24],
+
+         {"group":"midsize_wing_c"},
+         //right wing support lower
+         ["sp1r", -0.54, 1.97, 0.94],
+         ["sp2r", -0.54, 2.135, 0.92],
+
+         //right wing support upper
+         ["sp3r", -0.54, 2.02, 1.19],
+         ["sp4r", -0.54, 2.20, 1.24],
+
+         //wing
+         {"nodeWeight":0.35},
+         {"group":"midsize_wing_a"},
+         ["wing1rr", -0.82, 1.92, 1.25],
+         ["wing1r", -0.366, 1.95, 1.22],
+         ["wing1", 0.0, 1.95, 1.22],
+         ["wing1l", 0.366, 1.95, 1.22],
+         ["wing1ll", 0.82, 1.92, 1.25],
+
+         ["wing2ll", 0.82, 2.26, 1.30],
+         ["wing2l", 0.360, 2.26, 1.30],
+         ["wing2", 0.0, 2.26, 1.30],
+         ["wing2r", -0.360, 2.26, 1.30],
+         ["wing2rr", -0.82, 2.26, 1.30],
+
+         ["wing3rr", -0.82, 1.92, 1.05],
+         ["wing3ll", 0.82, 1.92, 1.05],
+         ["wing4rr", -0.82, 2.26, 1.15],
+         ["wing4ll", 0.82, 2.26, 1.15],
+         {"group":""},
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //left wing support
+          {"beamSpring":351000,"beamDamp":25},
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          ["sp1l","sp2l"],
+          ["sp1l","sp3l"],
+          ["sp1l","sp4l"],
+          ["sp2l","sp3l"],
+          ["sp2l","sp4l"],
+          ["sp3l","sp4l"],
+
+          //right wing support
+          ["sp1r","sp2r"],
+          ["sp1r","sp3r"],
+          ["sp1r","sp4r"],
+          ["sp2r","sp3r"],
+          ["sp2r","sp4r"],
+          ["sp3r","sp4r"],
+
+          //left wing
+          {"beamSpring":161000,"beamDamp":25},
+          {"beamDeform":5000,"beamStrength":25000},
+          ["wing1l","wing1"],
+          ["wing1l","wing2"],
+          ["wing1l","wing2l"],
+          ["wing1l","wing1ll"],
+          ["wing1l","wing2ll"],
+          ["wing1l","wing3ll"],
+          ["wing1l","wing4ll"],
+
+          ["wing1","wing2"],
+          ["wing1","wing2l"],
+          ["wing1","wing1ll"],
+          ["wing1","wing2ll"],
+          ["wing1","wing3ll"],
+          ["wing1","wing4ll"],
+
+          ["wing2","wing2l"],
+          ["wing2","wing1ll"],
+          ["wing2","wing2ll"],
+          ["wing2","wing3ll"],
+          ["wing2","wing4ll"],
+
+          ["wing2l","wing1ll"],
+          ["wing2l","wing2ll"],
+          ["wing2l","wing3ll"],
+          ["wing2l","wing4ll"],
+
+          ["wing1ll","wing2ll"],
+          ["wing1ll","wing3ll"],
+          ["wing1ll","wing4ll"],
+
+          ["wing2ll","wing3ll"],
+          ["wing2ll","wing4ll"],
+
+          ["wing3ll","wing4ll"],
+
+          //right wing
+          ["wing1r","wing1"],
+          ["wing1r","wing2"],
+          ["wing1r","wing2r"],
+          ["wing1r","wing1rr"],
+          ["wing1r","wing2rr"],
+          ["wing1r","wing3rr"],
+          ["wing1r","wing4rr"],
+
+          ["wing1","wing2r"],
+          ["wing1","wing1rr"],
+          ["wing1","wing2rr"],
+          ["wing1","wing3rr"],
+          ["wing1","wing4rr"],
+
+          ["wing2","wing2r"],
+          ["wing2","wing1rr"],
+          ["wing2","wing2rr"],
+          ["wing2","wing3rr"],
+          ["wing2","wing4rr"],
+
+          ["wing2r","wing1rr"],
+          ["wing2r","wing2rr"],
+          ["wing2r","wing3rr"],
+          ["wing2r","wing4rr"],
+
+          ["wing1rr","wing2rr"],
+          ["wing1rr","wing3rr"],
+          ["wing1rr","wing4rr"],
+
+          ["wing2rr","wing3rr"],
+          ["wing2rr","wing4rr"],
+
+          ["wing3rr","wing4rr"],
+
+          //cross-wing stiffeners
+          {"beamDeform":2000,"beamStrength":25000},
+          {"beamSpring":101000,"beamDamp":25},
+          ["wing3rr","wing3ll"],
+          ["wing3rr","wing4ll"],
+
+          ["wing4rr","wing3ll"],
+          ["wing4rr","wing4ll"],
+
+          //left support trunk attach
+          {"breakGroup":"spoiler_trunk_L"},
+          {"beamSpring":351000,"beamDamp":25},
+          {"beamDeform":4800,"beamStrength":5600},
+          ["sp1l","t2ll"],
+          ["sp1l","t3ll"],
+          ["sp1l","t3l"],
+          ["sp1l","t2l"],
+          ["sp1l","t5"],
+
+          ["sp2l","t2ll"],
+          ["sp2l","t3ll"],
+          ["sp2l","t3l"],
+          ["sp2l","t2l"],
+          ["sp2l","t5"],
+
+          //right support trunk attach
+          {"breakGroup":"spoiler_trunk_R"},
+          {"beamDeform":4800,"beamStrength":5600},
+          ["sp1r","t2rr"],
+          ["sp1r","t3rr"],
+          ["sp1r","t3r"],
+          ["sp1r","t2r"],
+          ["sp1r","t5"],
+
+          ["sp2r","t1rr"],
+          ["sp2r","t3rr"],
+          ["sp2r","t3r"],
+          ["sp2r","t2r"],
+          ["sp2r","t5"],
+
+          //left support trunk rigidifiers
+          {"beamSpring":51000,"beamDamp":100},
+          {"beamDeform":4800,"beamStrength":5600},
+          {"breakGroup":"spoiler_trunk_L"},
+          ["sp3l","t2ll"],
+          ["sp3l","t3ll"],
+          ["sp3l","t3l"],
+          ["sp3l","t2l"],
+
+          ["sp4l","t2ll"],
+          ["sp4l","t3ll"],
+          ["sp4l","t3l"],
+          ["sp4l","t2l"],
+
+          //right support trunk rigidifiers
+          {"breakGroup":"spoiler_trunk_R"},
+          ["sp3r","t2rr"],
+          ["sp3r","t3rr"],
+          ["sp3r","t3r"],
+          ["sp3r","t2r"],
+
+          ["sp4r","t2rr"],
+          ["sp4r","t3rr"],
+          ["sp4r","t3r"],
+          ["sp4r","t2r"],
+
+          //left support wing attach
+          {"beamSpring":251000,"beamDamp":50},
+          {"beamDeform":4800,"beamStrength":5600},
+          {"breakGroup":"spoiler_L"},
+          ["sp3l","wing1l"],
+          ["sp3l","wing2l"],
+          ["sp3l","wing1ll"],
+          ["sp3l","wing2ll"],
+
+          ["sp4l","wing1l"],
+          ["sp4l","wing2l"],
+          ["sp4l","wing1ll"],
+          ["sp4l","wing2ll"],
+          
+          ["sp1l","wing1l"],
+          ["sp1l","wing2l"],
+          ["sp1l","wing1ll"],
+          ["sp1l","wing2ll"],
+
+          ["sp2l","wing1l"],
+          ["sp2l","wing2l"],
+          ["sp2l","wing1ll"],
+          ["sp2l","wing2ll"],
+		  
+          ["sp3l","wing1"],
+          ["sp3l","wing2"],
+          ["sp4l","wing1"],
+          ["sp4l","wing2"],
+
+          //right support wing attach
+          {"breakGroup":"spoiler_R"},
+          ["sp3r","wing1r"],
+          ["sp3r","wing2r"],
+          ["sp3r","wing1rr"],
+          ["sp3r","wing2rr"],
+
+          ["sp4r","wing1r"],
+          ["sp4r","wing2r"],
+          ["sp4r","wing1rr"],
+          ["sp4r","wing2rr"],
+          
+          ["sp1r","wing1r"],
+          ["sp1r","wing2r"],
+          ["sp1r","wing1rr"],
+          ["sp1r","wing2rr"],
+
+          ["sp2r","wing1r"],
+          ["sp2r","wing2r"],
+          ["sp2r","wing1rr"],
+          ["sp2r","wing2rr"],
+		  
+          ["sp3r","wing1"],
+          ["sp3r","wing2"],
+          ["sp4r","wing1"],
+          ["sp4r","wing2"],
+          {"breakGroup":""},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":50}
+        ["wing3ll","wing2ll","wing1l",{"liftCoef":350}],
+        ["wing2ll","wing2l","wing1l",{"liftCoef":350}],
+
+        ["wing1l","wing2l","wing2",{"liftCoef":350}],
+        ["wing1l","wing2","wing1",{"liftCoef":350}],
+
+        ["wing1","wing2","wing1r",{"liftCoef":350}],
+        ["wing2","wing2r","wing1r",{"liftCoef":350}],
+
+        ["wing1r","wing2r","wing2rr",{"liftCoef":350}],
+        ["wing1r","wing2rr","wing3rr",{"liftCoef":350}],
+        
+        //side
+        ["wing2ll","wing1ll","wing3ll",{"liftCoef":50}],
+        ["wing2ll","wing3ll","wing4ll",{"liftCoef":50}],
+        ["wing2rr","wing3rr","wing1rr",{"liftCoef":50}],
+        ["wing2rr","wing4rr","wing3rr",{"liftCoef":50}],
+    ],
+}
+"midsize_bigwing_02a": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Nomi GTRX Wing",
+        "value":900,
+    }
+    "slotType" : "midsize_spoiler_big",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["bigwing_02a_a", ["midsize_wing_a"],[],{"pos":{"x":0,"y":0.1,"z":0.015}}],
+         ["bigwing_02a_b", ["midsize_wing_b"],[],{"pos":{"x":0,"y":0.1,"z":0.015}}],
+         ["bigwing_02a_c", ["midsize_wing_c"],[],{"pos":{"x":0,"y":0.1,"z":0.015}}],
+         ["bigwing_02a_d", ["midsize_trunk"],[],{"pos":{"x":0,"y":0.1,"z":0.015}}],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--TRUNK--
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_wing_b"},
+         {"collision":true}
+         {"nodeWeight":0.50},
+         {"selfCollision":true},
+         //left wing support lower
+         ["sp1l", 0.30, 1.78, 0.97],
+         ["sp2l", 0.30, 2.02, 0.94],
+
+         //left wing support upper
+         ["sp3l", 0.30, 2.00, 1.29],
+         ["sp4l", 0.30, 2.23, 1.33],
+
+         {"group":"midsize_wing_c"},
+         //right wing support lower
+         ["sp1r", -0.30, 1.78, 0.97],
+         ["sp2r", -0.30, 2.02, 0.94],
+
+         //right wing support upper
+         ["sp3r", -0.30, 2.00, 1.29],
+         ["sp4r", -0.30, 2.23, 1.33],
+
+         //wing
+         {"nodeWeight":0.4},
+         {"group":"midsize_wing_a"},
+         ["wing1rr", -0.87, 1.90, 1.28],
+         ["wing1r", -0.366, 1.90, 1.28],
+         ["wing1", 0.0, 1.90, 1.28],
+         ["wing1l", 0.366, 1.90, 1.28],
+         ["wing1ll", 0.87, 1.90, 1.28],
+
+         ["wing2ll", 0.87, 2.40, 1.50],
+         ["wing2l", 0.360, 2.40, 1.50],
+         ["wing2", 0.0, 2.40, 1.50],
+         ["wing2r", -0.360, 2.40, 1.50],
+         ["wing2rr", -0.87, 2.40, 1.50],
+
+         ["wing3rr", -0.87, 1.90, 1.50],
+         ["wing3ll", 0.87, 1.90, 1.50],
+         ["wing4rr", -0.87, 2.40, 1.27],
+         ["wing4ll", 0.87, 2.40, 1.27],
+         {"group":""},
+    ],
+     "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //left wing support
+          {"beamSpring":551000,"beamDamp":35},
+          {"beamDeform":50000,"beamStrength":"FLT_MAX"},
+          ["sp1l","sp2l"],
+          ["sp1l","sp3l"],
+          ["sp1l","sp4l"],
+          ["sp2l","sp3l"],
+          ["sp2l","sp4l"],
+          ["sp3l","sp4l"],
+
+          //right wing support
+          ["sp1r","sp2r"],
+          ["sp1r","sp3r"],
+          ["sp1r","sp4r"],
+          ["sp2r","sp3r"],
+          ["sp2r","sp4r"],
+          ["sp3r","sp4r"],
+
+          //left wing
+          {"beamSpring":271000,"beamDamp":35},
+          {"beamDeform":14000,"beamStrength":19000},
+          ["wing1l","wing1"],
+          ["wing1l","wing2"],
+          ["wing1l","wing2l"],
+          ["wing1l","wing1ll"],
+          ["wing1l","wing2ll"],
+          ["wing1l","wing3ll"],
+          ["wing1l","wing4ll"],
+
+          ["wing1","wing2"],
+          ["wing1","wing2l"],
+          ["wing1","wing1ll"],
+          ["wing1","wing2ll"],
+          ["wing1","wing3ll"],
+          ["wing1","wing4ll"],
+
+          ["wing2","wing2l"],
+          ["wing2","wing1ll"],
+          ["wing2","wing2ll"],
+          ["wing2","wing3ll"],
+          ["wing2","wing4ll"],
+
+          ["wing2l","wing1ll"],
+          ["wing2l","wing2ll"],
+          ["wing2l","wing3ll"],
+          ["wing2l","wing4ll"],
+
+          ["wing1ll","wing2ll"],
+          ["wing1ll","wing3ll"],
+          ["wing1ll","wing4ll"],
+
+          ["wing2ll","wing3ll"],
+          ["wing2ll","wing4ll"],
+
+          ["wing3ll","wing4ll"],
+
+          //right wing
+          ["wing1r","wing1"],
+          ["wing1r","wing2"],
+          ["wing1r","wing2r"],
+          ["wing1r","wing1rr"],
+          ["wing1r","wing2rr"],
+          ["wing1r","wing3rr"],
+          ["wing1r","wing4rr"],
+
+          ["wing1","wing2r"],
+          ["wing1","wing1rr"],
+          ["wing1","wing2rr"],
+          ["wing1","wing3rr"],
+          ["wing1","wing4rr"],
+
+          ["wing2","wing2r"],
+          ["wing2","wing1rr"],
+          ["wing2","wing2rr"],
+          ["wing2","wing3rr"],
+          ["wing2","wing4rr"],
+
+          ["wing2r","wing1rr"],
+          ["wing2r","wing2rr"],
+          ["wing2r","wing3rr"],
+          ["wing2r","wing4rr"],
+
+          ["wing1rr","wing2rr"],
+          ["wing1rr","wing3rr"],
+          ["wing1rr","wing4rr"],
+
+          ["wing2rr","wing3rr"],
+          ["wing2rr","wing4rr"],
+
+          ["wing3rr","wing4rr"],
+
+          //cross-wing stiffeners
+          {"beamDeform":6000,"beamStrength":29000},
+          {"beamSpring":151000,"beamDamp":35},
+          ["wing3rr","wing3ll"],
+          ["wing3rr","wing4ll"],
+
+          ["wing4rr","wing3ll"],
+          ["wing4rr","wing4ll"],
+
+          //left support trunk attach
+          {"breakGroup":"spoiler_trunk_L"},
+          {"beamSpring":451000,"beamDamp":35},
+          {"beamDeform":6000,"beamStrength":6500},
+          ["sp1l","t1ll"],
+          ["sp1l","t3ll"],
+          ["sp1l","t3l"],
+          ["sp1l","t2l"],
+          ["sp1l","t5"],
+
+          ["sp2l","t1ll"],
+          ["sp2l","t3ll"],
+          ["sp2l","t3l"],
+          ["sp2l","t2l"],
+          ["sp2l","t5"],
+
+          //right support trunk attach
+          {"breakGroup":"spoiler_trunk_R"},
+          {"beamDeform":6000,"beamStrength":6500},
+          ["sp1r","t1rr"],
+          ["sp1r","t3rr"],
+          ["sp1r","t3r"],
+          ["sp1r","t2r"],
+          ["sp1r","t5"],
+
+          ["sp2r","t1rr"],
+          ["sp2r","t3rr"],
+          ["sp2r","t3r"],
+          ["sp2r","t2r"],
+          ["sp2r","t5"],
+
+          //left support trunk rigidifiers
+          {"beamSpring":51000,"beamDamp":100},
+          {"beamDeform":4800,"beamStrength":5600},
+          {"breakGroup":"spoiler_trunk_L"},
+          ["sp3l","t1ll"],
+          ["sp3l","t3ll"],
+          ["sp3l","t3l"],
+          ["sp3l","t2l"],
+
+          ["sp4l","t1ll"],
+          ["sp4l","t3ll"],
+          ["sp4l","t3l"],
+          ["sp4l","t2l"],
+
+          //right support trunk rigidifiers
+          {"breakGroup":"spoiler_trunk_R"},
+          ["sp3r","t1rr"],
+          ["sp3r","t3rr"],
+          ["sp3r","t3r"],
+          ["sp3r","t2r"],
+
+          ["sp4r","t1rr"],
+          ["sp4r","t3rr"],
+          ["sp4r","t3r"],
+          ["sp4r","t2r"],
+
+          //left support wing attach
+          {"beamSpring":351000,"beamDamp":50},
+          {"beamDeform":6000,"beamStrength":6500},
+          {"breakGroup":"spoiler_L"},
+          ["sp3l","wing1l"],
+          ["sp3l","wing2l"],
+          ["sp3l","wing1ll"],
+          ["sp3l","wing2ll"],
+
+          ["sp4l","wing1l"],
+          ["sp4l","wing2l"],
+          ["sp4l","wing1ll"],
+          ["sp4l","wing2ll"],
+		  
+          ["sp1l","wing1l"],
+          ["sp1l","wing2l"],
+          ["sp1l","wing1ll"],
+          ["sp1l","wing2ll"],
+
+          ["sp2l","wing1l"],
+          ["sp2l","wing2l"],
+          ["sp2l","wing1ll"],
+          ["sp2l","wing2ll"],
+		  
+          ["sp3l","wing1"],
+          ["sp3l","wing2"],
+          ["sp4l","wing1"],
+          ["sp4l","wing2"],
+
+          //right support wing attach
+          {"beamDeform":6000,"beamStrength":6500},
+          {"breakGroup":"spoiler_R"},
+          ["sp3r","wing1r"],
+          ["sp3r","wing2r"],
+          ["sp3r","wing1rr"],
+          ["sp3r","wing2rr"],
+
+          ["sp4r","wing1r"],
+          ["sp4r","wing2r"],
+          ["sp4r","wing1rr"],
+          ["sp4r","wing2rr"],
+          
+          ["sp1r","wing1r"],
+          ["sp1r","wing2r"],
+          ["sp1r","wing1rr"],
+          ["sp1r","wing2rr"],
+
+          ["sp2r","wing1r"],
+          ["sp2r","wing2r"],
+          ["sp2r","wing1rr"],
+          ["sp2r","wing2rr"],
+		  
+          ["sp3r","wing1"],
+          ["sp3r","wing2"],
+          ["sp4r","wing1"],
+          ["sp4r","wing2"],
+          {"breakGroup":""},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":100}
+        ["wing1ll","wing2ll","wing1l",{"liftCoef":750}],
+        ["wing2ll","wing2l","wing1l",{"liftCoef":750}],
+
+        ["wing1l","wing2l","wing2",{"liftCoef":750}],
+        ["wing1l","wing2","wing1",{"liftCoef":750}],
+
+        ["wing1","wing2","wing1r",{"liftCoef":750}],
+        ["wing2","wing2r","wing1r",{"liftCoef":750}],
+
+        ["wing1r","wing2r","wing2rr",{"liftCoef":750}],
+        ["wing1r","wing2rr","wing1rr",{"liftCoef":750}],
+        
+        //side
+        ["wing2ll","wing3ll","wing1ll",{"liftCoef":50}],
+        ["wing2ll","wing1ll","wing4ll",{"liftCoef":50}],
+        ["wing2rr","wing1rr","wing3rr",{"liftCoef":50}],
+        ["wing2rr","wing4rr","wing1rr",{"liftCoef":50}],
+    ],
+}
+"midsize_bigwing_03a": {
+    "information":{
+        "authors":"wrinkle345",
+        "name":"Nomi GTC Wing",
+        "value":650,
+    }
+    "slotType" : "midsize_spoiler_big",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["bigwing_03a_a", ["midsize_wing_a"],[],{"pos":{"x":0,"y":0.12,"z":-0.001},"scale":{"x":1,"y":1,"z":1}}],
+         ["bigwing_03a_b", ["midsize_wing_b"],[],{"pos":{"x":0,"y":0.12,"z":-0.001}}],
+         ["bigwing_03a_c", ["midsize_wing_c"],[],{"pos":{"x":0,"y":0.12,"z":-0.001}}],
+         ["bigwing_03a_d", ["midsize_wing_b","midsize_wing_a"],[],{"pos":{"x":0,"y":0.12,"z":-0.001},"rot":{"x":0.0,"y":0,"z":0}}],
+         ["bigwing_03a_e", ["midsize_wing_c","midsize_wing_a"],[],{"pos":{"x":0,"y":0.12,"z":-0.001},"rot":{"x":0.0,"y":0,"z":0}}],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$spoiler_angle_R", "range", "", "Aerodynamics", 1.0, 0.9, 1.2, "Rear Wing Angle", "Adjust the angle of the rear wing"{"stepDis":10}]
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         //--TRUNK--
+         {"nodeMaterial":"|NM_PLASTIC"},
+         {"frictionCoef":0.5},
+         {"group":"midsize_wing_b"},
+         {"collision":true}
+         {"nodeWeight":0.35},
+         {"selfCollision":true},
+         //left wing support lower
+         ["sp1l", 0.15, 1.90, 0.94],
+         ["sp2l", 0.15, 2.12, 0.925],
+
+         //left wing support upper
+         ["sp3l", 0.15, 1.92, 1.10],
+         ["sp4l", 0.15, 2.12, 1.11],
+         {"group":"midsize_wing_c"},
+         //right wing support lower
+         ["sp1r", -0.15, 1.90, 0.94],
+         ["sp2r", -0.15, 2.12, 0.925],
+
+         //right wing support upper
+         ["sp3r", -0.15, 1.92, 1.10],
+         ["sp4r", -0.15, 2.12, 1.11],
+
+         //wing
+         {"nodeWeight":0.25},
+         {"group":"midsize_wing_a"},
+
+         ["wing1rr", -0.73, 1.87, 1.14],
+         ["wing1r", -0.37, 1.87, 1.11],
+         ["wing1", 0.0, 1.87, 1.11],
+         ["wing1l", 0.37, 1.87, 1.11],
+         ["wing1ll", 0.73, 1.87, 1.14],
+
+         ["wing2ll", 0.73, 2.18, 1.21],
+         ["wing2l", 0.37, 2.16, 1.19],
+         ["wing2", 0.0, 2.16, 1.19],
+         ["wing2r", -0.37, 2.16, 1.19],
+         ["wing2rr", -0.73, 2.18, 1.21],
+
+         ["wing3rr", -0.73, 1.87, 1.07],
+         ["wing3ll", 0.73, 1.87, 1.07],
+         ["wing4rr", -0.73, 2.16, 1.06],
+         ["wing4ll", 0.73, 2.16, 1.06],
+         {"group":""},
+    ],
+     "beams": [
+          ["id1:", "id2:"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+          //left wing support
+          {"beamSpring":301000,"beamDamp":20},
+          {"beamDeform":15000,"beamStrength":"FLT_MAX"},
+          ["sp1l","sp2l"],
+          ["sp1l","sp3l"],
+          ["sp2l","sp3l"],
+          ["sp3l","sp4l"],
+
+          //right wing support
+          ["sp1r","sp2r"],
+          ["sp1r","sp3r"],
+          ["sp2r","sp3r"],
+          ["sp3r","sp4r"],
+		  
+		  //
+		  ["sp3l","sp1r"],
+		  ["sp3r","sp1l"],
+		  
+		  ["sp4r","sp4l"],
+		  ["sp4r","sp3l"],
+		  ["sp3r","sp4l"],
+
+          //left wing
+          {"beamSpring":131000,"beamDamp":20},
+          {"beamDeform":5000,"beamStrength":25000},
+          ["wing1l","wing1"],
+          ["wing1l","wing2"],
+          ["wing1l","wing2l"],
+          ["wing1l","wing1ll"],
+          ["wing1l","wing2ll"],
+          ["wing1l","wing3ll"],
+          ["wing1l","wing4ll"],
+
+          ["wing1","wing2"],
+          ["wing1","wing2l"],
+          ["wing1","wing1ll"],
+          ["wing1","wing2ll"],
+          ["wing1","wing3ll"],
+          ["wing1","wing4ll"],
+
+          ["wing2","wing2l"],
+          ["wing2","wing1ll"],
+          ["wing2","wing2ll"],
+          ["wing2","wing3ll"],
+          ["wing2","wing4ll"],
+
+          ["wing2l","wing1ll"],
+          ["wing2l","wing2ll"],
+          ["wing2l","wing3ll"],
+          ["wing2l","wing4ll"],
+
+          ["wing1ll","wing2ll"],
+          ["wing1ll","wing3ll"],
+          ["wing1ll","wing4ll"],
+
+          ["wing2ll","wing3ll"],
+          ["wing2ll","wing4ll"],
+
+          ["wing3ll","wing4ll"],
+
+          //right wing
+          ["wing1r","wing1"],
+          ["wing1r","wing2"],
+          ["wing1r","wing2r"],
+          ["wing1r","wing1rr"],
+          ["wing1r","wing2rr"],
+          ["wing1r","wing3rr"],
+          ["wing1r","wing4rr"],
+
+          ["wing1","wing2r"],
+          ["wing1","wing1rr"],
+          ["wing1","wing2rr"],
+          ["wing1","wing3rr"],
+          ["wing1","wing4rr"],
+
+          ["wing2","wing2r"],
+          ["wing2","wing1rr"],
+          ["wing2","wing2rr"],
+          ["wing2","wing3rr"],
+          ["wing2","wing4rr"],
+
+          ["wing2r","wing1rr"],
+          ["wing2r","wing2rr"],
+          ["wing2r","wing3rr"],
+          ["wing2r","wing4rr"],
+
+          ["wing1rr","wing2rr"],
+          ["wing1rr","wing3rr"],
+          ["wing1rr","wing4rr"],
+
+          ["wing2rr","wing3rr"],
+          ["wing2rr","wing4rr"],
+
+          ["wing3rr","wing4rr"],
+
+          //cross-wing stiffeners
+          {"beamDeform":2000,"beamStrength":25000},
+          {"beamSpring":101000,"beamDamp":20},
+          ["wing3rr","wing3ll"],
+          ["wing3rr","wing4ll"],
+
+          ["wing4rr","wing3ll"],
+          ["wing4rr","wing4ll"],
+
+          //left support trunk attach
+          {"breakGroup":"spoiler_trunk_L"},
+          {"beamSpring":301000,"beamDamp":20},
+          {"beamDeform":4800,"beamStrength":5600},
+          ["sp1l","t2ll"],
+          ["sp1l","t3ll"],
+          ["sp1l","t3l"],
+          ["sp1l","t2l"],
+          ["sp1l","t5"],
+
+          ["sp2l","t2ll"],
+          ["sp2l","t3ll"],
+          ["sp2l","t3l"],
+          ["sp2l","t2l"],
+          ["sp2l","t5"],
+		  
+		  ["sp2l","sp2r"],
+
+          //right support trunk attach
+          {"breakGroup":"spoiler_trunk_R"},
+          {"beamDeform":4800,"beamStrength":5600},
+          ["sp1r","t2rr"],
+          ["sp1r","t3rr"],
+          ["sp1r","t3r"],
+          ["sp1r","t2r"],
+          ["sp1r","t5"],
+
+          ["sp2r","t1rr"],
+          ["sp2r","t3rr"],
+          ["sp2r","t3r"],
+          ["sp2r","t2r"],
+          ["sp2r","t5"],
+
+          //left support trunk rigidifiers
+          {"beamSpring":41000,"beamDamp":80},
+          {"beamDeform":4800,"beamStrength":5600},
+          {"breakGroup":"spoiler_trunk_L"},
+          ["sp3l","t2ll"],
+          ["sp3l","t3ll"],
+          ["sp3l","t3l"],
+          ["sp3l","t2l"],
+
+          //right support trunk rigidifiers
+          {"breakGroup":"spoiler_trunk_R"},
+          ["sp3r","t2rr"],
+          ["sp3r","t3rr"],
+          ["sp3r","t3r"],
+          ["sp3r","t2r"],
+
+          //left support wing attach
+          {"beamSpring":221000,"beamDamp":40},
+          {"beamDeform":4800,"beamStrength":5600},
+          {"breakGroup":"spoiler_L"},
+          ["sp3l","wing1l"],
+          ["sp3l","wing2l"],
+          ["sp3l","wing1ll"],
+          ["sp3l","wing2ll"],
+
+          ["sp4l","wing1l"],
+          ["sp4l","wing2l"],
+          ["sp4l","wing1ll"],
+          ["sp4l","wing2ll"],
+		  
+          ["sp3l","wing1"],
+          ["sp3l","wing2"],
+          ["sp4l","wing1"],
+          ["sp4l","wing2"],
+		  
+          ["sp3l","wing3ll"],
+          ["sp3l","wing4ll"],
+          ["sp4l","wing3ll"],
+          ["sp4l","wing4ll"],
+
+          //right support wing attach
+          {"breakGroup":"spoiler_R"},
+          ["sp3r","wing1r"],
+          ["sp3r","wing2r"],
+          ["sp3r","wing1rr"],
+          ["sp3r","wing2rr"],
+
+          ["sp4r","wing1r"],
+          ["sp4r","wing2r"],
+          ["sp4r","wing1rr"],
+          ["sp4r","wing2rr"],
+		  
+          ["sp3r","wing1"],
+          ["sp3r","wing2"],
+          ["sp4r","wing1"],
+          ["sp4r","wing2"],
+		  
+          ["sp3r","wing3rr"],
+          ["sp3r","wing4rr"],
+          ["sp4r","wing3rr"],
+          ["sp4r","wing4rr"],
+		  
+		  //height-adjustable struts
+          {"beamSpring":801000,"beamDamp":30},
+          {"beamDeform":5000,"beamStrength":25000},
+          {"breakGroup":"spoiler_R"},
+			  {"disableMeshBreaking":true}
+		  {"beamPrecompression":"$spoiler_angle_R"}
+		  ["sp2r","sp4r"],
+          {"breakGroup":"spoiler_L"},
+		  ["sp2l","sp4l"],
+		  {"beamPrecompression":1}
+			  {"disableMeshBreaking":false}
+          {"breakGroup":""},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":50}
+        ["wing3ll","wing2ll","wing1l",{"liftCoef":350}],
+        ["wing2ll","wing2l","wing1l",{"liftCoef":350}],
+
+        ["wing1l","wing2l","wing2",{"liftCoef":350}],
+        ["wing1l","wing2","wing1",{"liftCoef":350}],
+
+        ["wing1","wing2","wing1r",{"liftCoef":350}],
+        ["wing2","wing2r","wing1r",{"liftCoef":350}],
+
+        ["wing1r","wing2r","wing2rr",{"liftCoef":350}],
+        ["wing1r","wing2rr","wing3rr",{"liftCoef":350}],
+        
+        //side
+        ["wing2ll","wing1ll","wing3ll",{"liftCoef":50}],
+        ["wing2ll","wing3ll","wing4ll",{"liftCoef":50}],
+        ["wing2rr","wing3rr","wing1rr",{"liftCoef":50}],
+        ["wing2rr","wing4rr","wing3rr",{"liftCoef":50}],
+    ],
+}
+}

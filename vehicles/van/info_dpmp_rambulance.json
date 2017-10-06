@@ -1,0 +1,23 @@
+{
+"Performance Class":"3",
+"Drivetrain":"RWD",
+"Body Style":"Van",
+"Value":20000,
+"TorquePeakRPM":"2500 - 4900",
+"Off-Road Score":35,
+"Configuration":"H45 Rambulance (A)",
+"Description":"The Rambulance is the exact opposite of the vehicle it derives from, an ambulance heals people, this demolition derby van tries to kill them",
+"Transmission":"Automatic",
+"0-60 mph":12.1,
+"Config Type":"Factory",
+"100-0 km/h":50.2,
+"Top Speed":42.9597,
+"default_color":"Pearl White",
+"Torque":367.389,
+"Weight":3645,
+"Power":246.354,
+"Weight/Power":14.8171,
+"60-0 mph":144.1,
+"PowerPeakRPM":4750,
+"0-100 km/h":13.2
+}

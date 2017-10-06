@@ -1,0 +1,28 @@
+{
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"Value":8500,
+"0-100 km/h":8.5,
+"TorquePeakRPM":"1950 - 3500",
+"Weight":1765,
+"Off-Road Score":35,
+"Configuration":"V8 Final Edition (A)",
+"default_color":"Gray",
+"0-100 mph":23.8,
+"60-100 mph":15.8,
+"0-60 mph":8,
+"Config Type":"Factory",
+"100-0 km/h":47.3,
+"Top Speed":50.5379,
+"Power":197.225,
+"Torque":385.206,
+"Description":"The last Moonhawk to be built by Bruckell, sold in only 600 units. It featured alloy rims and a custom livery",
+"Transmission":"Automatic",
+"Weight/Power":8.95939,
+"60-0 mph":135.5,
+"Years":{
+  "min":1973,
+  "max":1975
+},
+"PowerPeakRPM":3750
+}

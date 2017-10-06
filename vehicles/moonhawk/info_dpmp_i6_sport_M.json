@@ -1,0 +1,28 @@
+{
+"Performance Class":"5",
+"Drivetrain":"RWD",
+"Value":6700,
+"0-100 km/h":9.7,
+"TorquePeakRPM":"1700 - 2700",
+"Weight":1625,
+"Off-Road Score":34,
+"Configuration":"I6 Sport (M)",
+"default_color":"Aquamarine",
+"0-100 mph":32.2,
+"60-100 mph":23.2,
+"0-60 mph":9,
+"Config Type":"Factory",
+"100-0 km/h":44.1,
+"Top Speed":51.6045,
+"Power":153.14,
+"Torque":320.391,
+"Description":"The I6 Sport is equipped with heavy-duty suspension, a limited-slip differential and sport wheels and tires",
+"Transmission":"Manual",
+"Weight/Power":10.6209,
+"60-0 mph":128.2,
+"Years":{
+  "min":1976,
+  "max":1978
+},
+"PowerPeakRPM":4250
+}

@@ -1,0 +1,12 @@
+{
+
+"etki_skin_rennen": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Rennen Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rennen",
+  }
+  }

@@ -1,0 +1,11 @@
+{
+
+"coupe_skin_cup": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Cup Livery",
+        "value":250,
+    },
+    "slotType" : "paint_design",
+    "skinName" : "cup",
+  }}

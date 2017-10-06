@@ -1,0 +1,12 @@
+{
+
+"burnside_skin_rally": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Rally Livery",
+        "value":1500,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "rally",
+  }
+  }

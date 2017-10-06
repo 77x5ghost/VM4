@@ -1,0 +1,22 @@
+{
+"Performance Class":"2",
+"Drivetrain":"RWD",
+"Value":14000,
+"TorquePeakRPM":"1350 - 3300",
+"Off-Road Score":35,
+"Configuration":"i6 (M)",
+"PowerPeakRPM":"3300 - 4300",
+"0-100 km/h":11.9,
+"0-60 mph":11,
+"Config Type":"Factory",
+"100-0 km/h":48.9,
+"Top Speed":44.6824,
+"Transmission":"Manual",
+"Torque":257.854,
+"Weight":1595,
+"Description":"i6 version equipped with a 3-speed manual transmission",
+"Weight/Power":13.5169,
+"60-0 mph":144.3,
+"Power":118.398,
+"default_color":"Alabaster"
+}

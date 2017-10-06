@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_touge": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Touge Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "touge",
+}
+}

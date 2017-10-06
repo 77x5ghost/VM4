@@ -1,0 +1,84 @@
+{
+"midsize_brake_R_race_mod1_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Racing Rear Brakes DPMP",
+        "value":500,
+    }
+    "slotType" : "midsize_brake_R",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_R","brakepad_R_race", "Rear Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["midsize_brake_R_S_dpmp", ["midsize_hub_R","midsize_lowerarm_a_RR","midsize_lowerarm_a_RL","midsize_lowerarm_b_RR","midsize_lowerarm_b_RL","midsize_lowerarm_c_RR","midsize_lowerarm_c_RL","midsize_upperarm_R","midsize_hub_R"]],
+         //brake discs
+         ["midsize_brakedisc_race_RR_dpmp", ["wheel_RR"], []],
+         ["midsize_brakedisc_race_RL_dpmp", ["wheel_RL"], []],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$braketorque_R", "range", "", "Brakes", 1200, 0, 3000, "Rear Brake Torque", "Strength of the rear brakes"{"minDis":0}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":"$braketorque_R"},
+        {"brakeInputSplit":0.4},
+        {"brakeSplitCoef":0.25},
+        {"parkingTorque":2200},
+        {"brakeSpring":45}
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.305},
+        {"brakeMass":6.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.9},
+    ],
+}
+"midsize_brake_F_race_mod1_dpmp": {
+    "information":{
+        "authors":"wrinkle345 & DjPlopper",
+        "name":"Racing Front Brakes DPMP",
+        "value":250,
+    }
+    "slotType" : "midsize_brake_F",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_F","brakepad_F_race", "Front Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["midsize_brake_F_S_dpmp", ["midsize_hub_F","midsize_shockbottom_F"]],
+        //brake discs
+        ["midsize_brakedisc_race_FR_dpmp", ["wheel_FR", "wheelhub_a_FR", "wheelhub_b_FR"], []],
+        ["midsize_brakedisc_race_FL_dpmp", ["wheel_FL", "wheelhub_a_FL", "wheelhub_b_FL"], []],
+    ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$braketorque_F", "range", "", "Brakes", 2000, 0, 4000, "Front Brake Torque", "Strength of the front brakes"{"minDis":0}]
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brakes
+        {"ABSthreshold":1.8}
+        {"brakeTorque":"$braketorque_F"},
+        {"brakeInputSplit":1},
+        {"brakeSplitCoef":1},
+        {"parkingTorque":0},
+        {"brakeSpring":45},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.335},
+        {"brakeMass":9.5},
+        {"brakeType":"vented-disc"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":1.2},
+    ],
+},
+}

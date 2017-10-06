@@ -1,0 +1,12 @@
+{
+
+"moonhawk_highway": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Highway Patrol Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "highway",
+}
+}

@@ -1,0 +1,12 @@
+{
+
+"pessima_skin_speed": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Top Speed Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "speed",
+}
+}

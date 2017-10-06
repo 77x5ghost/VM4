@@ -1,0 +1,12 @@
+{
+
+"roamer_skin_paramedic": {
+    "information":{
+        "authors":"Djplopper",
+        "name":"Paramedics Livery",
+        "value":200,
+    }
+    "slotType" : "paint_design",
+    "globalSkin" : "paramedic",
+}
+}

@@ -1,0 +1,34 @@
+singleton Material("hatch.skin.HR")
+{
+    mapTo = "hatch.skin.HR";
+    overlayMap[2] = "vehicles/hatch/dpmp_skins/dpmp_HR_skin/hatch_skin_HR.dds";
+    diffuseMap[2] = "vehicles/hatch/dpmp_skins/dpmp_HR_skin/hatch_c_dpmpHR.dds";
+    specularMap[2] = "vehicles/hatch/dpmp_skins/dpmp_HR_skin/hatch_s_dpmpHR";
+    normalMap[2] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[1] = "vehicles/hatch/dpmp_skins/dpmp_HR_skin/hatch_d_dpmpHR.dds";
+    specularMap[1] = "vehicles/hatch/dpmp_skins/dpmp_HR_skin/hatch_s_dpmpHR.dds";
+    normalMap[1] = "vehicles/hatch/hatch_n.dds";
+    diffuseMap[0] = "vehicles/common/null.dds";
+    specularMap[0] = "vehicles/common/null.dds";
+    normalMap[0] = "vehicles/hatch/hatch_n.dds";
+    specularPower[0] = "128";
+    pixelSpecular[0] = "1";
+    specularPower[1] = "32";
+    pixelSpecular[1] = "1";
+    specularPower[2] = "128";
+    pixelSpecular[2] = "1";
+    diffuseColor[0] = "1 1 1 1";
+    diffuseColor[1] = "1 1 1 1";
+    diffuseColor[2] = "1 1 1 1";
+    useAnisotropic[0] = "1";
+    useAnisotropic[1] = "1";
+    useAnisotropic[2] = "1";
+    castShadows = "1";
+    translucent = "1";
+    translucentBlendOp = "None";
+    alphaTest = "0";
+    alphaRef = "0";
+    dynamicCubemap = true;
+    instanceDiffuse[2] = true;
+    materialTag0 = "beamng"; materialTag1 = "vehicle";
+};
